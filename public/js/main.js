@@ -7,12 +7,12 @@
 
 (function($) {
 "use strict";
-    
+
     // Portfolio subpage filters
     function portfolio_init() {
         var portfolio_grid = $('#portfolio_grid'),
             portfolio_filter = $('#portfolio_filters');
-            
+
         if (portfolio_grid) {
 
             portfolio_grid.shuffle({
@@ -43,29 +43,45 @@
         $('#contact-form').validator();
 
         $('#contact-form').on('submit', function (e) {
-            if (!e.isDefaultPrevented()) {
-                var url = "contact_form/contact_form.php";
+            console.log("Submit event triggered");
+
+            if (!this.checkValidity()) {
+                e.preventDefault();
+                console.log("Default action is prevented due to invalid form");
+            } else {
+                e.preventDefault();
+                console.log("Default action is not prevented");
+                var url = window.location.origin + "/contact-form";
+                var token = $('input[name="_token"]').val();
 
                 $.ajax({
                     type: "POST",
+                    headers: {
+                        'X-CSRF-TOKEN': token
+                    },
                     url: url,
                     data: $(this).serialize(),
-                    success: function (data)
-                    {
-                        var messageAlert = 'alert-' + data.type;
+                    success: function (data) {
+                        var messageAlert = 'alert-' + data.server_message;
                         var messageText = data.message;
 
-                        var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + messageText + '</div>';
+                        var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + '<i class="fa fa-info-circle"></i> <em>Your message is on its way:</em> ' + messageText + '</div>';
                         if (messageAlert && messageText) {
                             $('#contact-form').find('.messages').html(alertBox);
                             $('#contact-form')[0].reset();
                         }
+                    },
+                    error: function (xhr, status, error) {
+                        console.log("Error:", error);
+                        console.log("Status:", status);
+                        console.dir(xhr);
                     }
                 });
-                return false;
             }
         });
+
     });
+
     // /Contact form validator
 
     // Hide Mobile menu
