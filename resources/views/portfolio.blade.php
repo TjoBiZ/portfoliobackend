@@ -407,7 +407,7 @@
                   <div class="col-sm-6 col-md-3 subpage-block tilt-effect">
                     <div class="fun-fact-block gray-bg">
                       <i class="pe-7s-icon pe-7s-medal"></i>
-                      <h4>Awards Won</h4>
+                      <h4>Projects Completed</h4>
                       <span class="fun-value">21</span>
                     </div>
                   </div>
