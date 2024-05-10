@@ -985,21 +985,21 @@ Achievements:
 
                       <div class="controls">
                         <div class="form-group">
-                            <input id="form_name" type="text" name="name" class="form-control" placeholder="Full Name" required="required" data-error="Name is required.">
+                            <input id="form_name" type="text" name="name" minlength="2" maxlength="255" class="form-control" placeholder="Full Name" required="required" data-error="Name is required.">
                             <div class="form-control-border"></div>
                             <i class="form-control-icon pe-7s-user"></i>
                             <div class="help-block with-errors"></div>
                         </div>
 
                         <div class="form-group">
-                            <input id="form_email" type="email" name="email" class="form-control" placeholder="Email Address" required="required" data-error="Valid email is required.">
+                            <input id="form_email" type="email" name="email" minlength="5" maxlength="255" class="form-control" placeholder="Email Address" required="required" data-error="Valid email is required.">
                             <div class="form-control-border"></div>
                             <i class="form-control-icon pe-7s-mail"></i>
                             <div class="help-block with-errors"></div>
                         </div>
 
                         <div class="form-group">
-                            <textarea id="form_message" name="message" class="form-control" placeholder="Message for Me" rows="4" required="required" data-error="Please, leave me a message."></textarea>
+                            <textarea id="form_message" name="message" maxlength="5000" class="form-control" placeholder="Message for Me" rows="4" required="required" data-error="Please, leave me a message."></textarea>
                             <div class="form-control-border"></div>
                             <i class="form-control-icon pe-7s-comment"></i>
                             <div class="help-block with-errors"></div>
