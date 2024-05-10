@@ -30,6 +30,8 @@ public_html/storage
 public_html/hot
 
 storage/*.key
+storage/framework/views
+storage/logs
 /.vagrant
 .phpunit.result.cache
 
