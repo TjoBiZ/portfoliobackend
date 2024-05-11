@@ -34,6 +34,8 @@
           gtag('js', new Date());
 
           gtag('config', 'G-C02J53TSVF');
+
+          var appUrl = "{{ config('app.url') }}";
       </script>
       @endif
   </head>
