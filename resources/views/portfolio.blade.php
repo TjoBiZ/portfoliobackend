@@ -26,6 +26,7 @@
     <script src="js/jquery-2.1.3.min.js"></script>
     <script src="js/modernizr.custom.js"></script>
       <!-- Google tag (gtag.js) -->
+      @if(config('app.url') === 'https://solarneutrino.com')
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-C02J53TSVF"></script>
       <script>
           window.dataLayer = window.dataLayer || [];
@@ -34,6 +35,7 @@
 
           gtag('config', 'G-C02J53TSVF');
       </script>
+      @endif
   </head>
 
   <body>
