@@ -44,10 +44,13 @@
 
         $('#contact-form').on('submit', function (e) {
             console.log("Submit event triggered");
-            gtag('event', 'event_submit_contact_form', {
-                'event_category': 'Contact_Form',
-                'event_label': 'submit_contact_form'
-            }); //Event for GA4
+
+            if (appUrl === "https://solarneutrino.com") {
+                gtag('event', 'event_submit_contact_form', {
+                    'event_category': 'Contact_Form',
+                    'event_label': 'submit_contact_form'
+                }); //Event for GA4
+            }
 
             if (!this.checkValidity()) {
                 e.preventDefault();
