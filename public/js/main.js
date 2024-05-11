@@ -44,6 +44,10 @@
 
         $('#contact-form').on('submit', function (e) {
             console.log("Submit event triggered");
+            gtag('event', 'event_submit_contact_form', {
+                'event_category': 'Contact_Form',
+                'event_label': 'submit_contact_form'
+            });
 
             if (!this.checkValidity()) {
                 e.preventDefault();
