@@ -65,7 +65,13 @@
                         var messageAlert = 'alert-' + data.server_message;
                         var messageText = data.message;
 
-                        var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + '<i class="fa fa-info-circle"></i> <em>Your message is on its way:</em> ' + messageText + '</div>';
+                        if (data.validator_message === undefined) {
+                            var server_answer = '<i class="fa fa-info-circle"></i> <em>Your message is on its way:</em> ' + messageText;
+                        } else {
+                            var server_answer = '<i class="fa fa-info-circle"></i> <em>Your message didn\'t pass the server validation check:</em> ' + data.validator_message;
+                        }
+
+                        var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + server_answer + '</div>';
                         if (messageAlert && messageText) {
                             $('#contact-form').find('.messages').html(alertBox);
                             $('#contact-form')[0].reset();
