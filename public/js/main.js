@@ -44,6 +44,12 @@
 
         $('#contact-form').on('submit', function (e) {
             console.log("Submit event triggered");
+            if (appUrl === "https://solarneutrino.com") {
+                gtag('event', 'event_submit_contact_form', {
+                    'event_category': 'Contact_Form',
+                    'event_label': 'submit_contact_form'
+                }); //Event for GA4
+            }
 
             if (!this.checkValidity()) {
                 e.preventDefault();
@@ -53,13 +59,6 @@
                 console.log("Default action is not prevented");
                 var url = window.location.origin + "/contact-form";
                 var token = $('input[name="_token"]').val();
-
-                if (appUrl === "https://solarneutrino.com") {
-                    gtag('event', 'event_submit_contact_form', {
-                        'event_category': 'Contact_Form',
-                        'event_label': 'submit_contact_form'
-                    }); //Event for GA4
-                }
 
                 $.ajax({
                     type: "POST",
