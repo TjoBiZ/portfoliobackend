@@ -27,6 +27,9 @@
     <script src="js/modernizr.custom.js"></script>
       <!-- Google tag (gtag.js) -->
       @if(config('app.url') === 'https://solarneutrino.com')
+
+      @endif
+
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-C02J53TSVF"></script>
       <script>
           window.dataLayer = window.dataLayer || [];
@@ -36,8 +39,10 @@
           gtag('config', 'G-C02J53TSVF');
 
           var appUrl = "{{ config('app.url') }}";
+          var GoogleRecaptchaV3SiteKey = "{{ env('GOOGLE_RECAPTCHAR_V3_FRONTEND') }}";
+
       </script>
-      @endif
+      <script src="https://www.google.com/recaptcha/api.js?render={{ env('GOOGLE_RECAPTCHAR_V3_FRONTEND') }}"></script>
   </head>
 
   <body>
@@ -987,7 +992,8 @@ Achievements:
                     </div>
                     <form id="contact-form" method="post" action="contact-form">
                       @csrf
-                      <div class="messages"></div>
+                        <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+                        <div class="messages"></div>
 
                       <div class="controls">
                         <div class="form-group">

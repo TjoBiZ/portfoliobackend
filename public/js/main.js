@@ -43,7 +43,10 @@
         $('#contact-form').validator();
 
         $('#contact-form').on('submit', function (e) {
+            e.preventDefault();
             console.log("Submit event triggered");
+            var form = this; // Сохраняем ссылку на форму для использования в callback функции
+
             if (appUrl === "https://solarneutrino.com") {
                 gtag('event', 'event_submit_contact_form', {
                     'event_category': 'Contact_Form',
@@ -51,46 +54,66 @@
                 }); //Event for GA4
             }
 
-            if (!this.checkValidity()) {
-                e.preventDefault();
-                console.log("Default action is prevented due to invalid form");
-            } else {
-                e.preventDefault();
-                console.log("Default action is not prevented");
-                var url = window.location.origin + "/contact-form";
-                var token = $('input[name="_token"]').val();
+            // Получение токена reCAPTCHA
+            grecaptcha.ready(function() {
+                grecaptcha.execute(GoogleRecaptchaV3SiteKey, {action: 'submit'}).then(function(token) {
+                    // Добавление токена reCAPTCHA к форме
+                    $('<input>').attr({
+                        type: 'hidden',
+                        name: 'recaptcha_response',
+                        value: token
+                    }).appendTo(form);
 
-                $.ajax({
-                    type: "POST",
-                    headers: {
-                        'X-CSRF-TOKEN': token
-                    },
-                    url: url,
-                    data: $(this).serialize(),
-                    success: function (data) {
-                        var messageAlert = 'alert-' + data.server_message;
-                        var messageText = data.message;
-
-                        if (data.validator_message === undefined) {
-                            var server_answer = '<i class="fa fa-info-circle"></i> <em>Your message is on its way:</em> ' + messageText;
-                        } else {
-                            var server_answer = '<i class="fa fa-info-circle"></i> <em>Your message didn\'t pass the server validation check:</em> ' + data.validator_message;
-                        }
-
-                        var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + server_answer + '</div>';
-                        if (messageAlert && messageText) {
-                            $('#contact-form').find('.messages').html(alertBox);
-                            $('#contact-form')[0].reset();
-                        }
-                    },
-                    error: function (xhr, status, error) {
-                        console.log("Error:", error);
-                        console.log("Status:", status);
-                        console.dir(xhr);
+                    if (!form.checkValidity()) {
+                        console.log("Default action is prevented due to invalid form");
+                        return;
                     }
+
+                    console.log("Default action is not prevented");
+                    var url = window.location.origin + "/contact-form";
+                    var csrfToken = $('input[name="_token"]').val();
+
+                    $.ajax({
+                        type: "POST",
+                        headers: {
+                            'X-CSRF-TOKEN': csrfToken
+                        },
+                        url: url,
+                        data: $(form).serialize(),
+                        success: function (data) {
+                            var messageAlert = 'alert-' + data.server_message;
+                            var messageText = data.message;
+
+                            var server_answer;
+                            if (data.validator_message === undefined) {
+                                if (data.recaptcha_status === false) {
+                                    server_answer = '<i class="fa fa-info-circle"></i> <strong>' + data.recaptcha_message + ':</strong> ' + messageText;
+                                } else {
+                                    server_answer = '<i class="fa fa-info-circle"></i> <em>Your message is on its way:</em> ' + messageText;
+                                }
+                            } else {
+                                server_answer = '<i class="fa fa-info-circle"></i> <em>Your message didn\'t pass the server validation check:</em> ' + data.validator_message;
+                            }
+
+                            var alertBox = '<div class="alert ' + messageAlert + ' alert-dismissable"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + server_answer + '</div>';
+                            if (messageAlert && messageText) {
+                                $(form).find('.messages').html(alertBox);
+                                form.reset();
+                            }
+                        },
+                        error: function (xhr, status, error) {
+                            console.log("Error:", error);
+                            console.log("Status:", status);
+                            console.dir(xhr);
+                            if (xhr.responseJSON.recaptcha_status === false) {
+                                alert(xhr.responseJSON.recaptcha_message);
+                            }
+                        }
+                    });
                 });
-            }
+            });
         });
+
 
     });
 
@@ -303,6 +326,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log('Clicked on an element without class "button_link_project"');
             }
         });
+    }
+    if (typeof Promise === "undefined" || Promise.toString().indexOf("[native code]") === -1) {
+        var script = document.createElement('script');
+        script.src = "https://cdn.jsdelivr.net/npm/es6-promise/dist/es6-promise.auto.min.js";
+        document.head.appendChild(script);
     }
 }, true);
 
