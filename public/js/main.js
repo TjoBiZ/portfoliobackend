@@ -327,11 +327,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
     if (typeof Promise === "undefined" || Promise.toString().indexOf("[native code]") === -1) {
         var script = document.createElement('script');
         script.src = "https://cdn.jsdelivr.net/npm/es6-promise/dist/es6-promise.auto.min.js";
         document.head.appendChild(script);
     }
+
 }, true);
 
 /** End Roman Primerov **/
