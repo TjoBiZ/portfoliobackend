@@ -62,3 +62,5 @@ composer.lock
 *.tmp
 /node_modules
 **/sitemap.xml
+
+telegram-bot.txt

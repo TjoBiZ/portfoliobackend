@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Validator; // Добавляем use для Validator
 use App\Models\ContactFormPost;
+use Illuminate\Support\Facades\Http;
 
 class ContactFormController extends Controller
 {
@@ -74,6 +75,22 @@ class ContactFormController extends Controller
             $contactFormPost->email = $request->email;
             $contactFormPost->message = $request->message;
             $contactFormPost->save();
+
+            $telegram_token = env('TELEGRAM_BOT_TOKEN');
+            $web_link_to_telegram = strtoupper(env('APP_URL'));;
+            $text = <<<EOT
+<b><i>MESSAGE FROM CONTACT FORM FROM $web_link_to_telegram</i></b>
+<b>Name:</b> $request->name
+<b>Email:</b> $request->email
+<b>Message:</b> $request->message
+<b>IP-адрес:</b> $userIP
+EOT;
+            $response = Http::get("https://api.telegram.org/bot{$telegram_token}/sendMessage", [
+                'chat_id' => env('TELEGRAM_CHAT_ID'),
+                'text' => $text,
+                'parse_mode' => 'HTML'
+            ]);
+
             $recaptcha_success = "Form sent!";
             $result['recaptcha_status'] = true;
              $result['recaptcha_message'] = $recaptcha_success;
