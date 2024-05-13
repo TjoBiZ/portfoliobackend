@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Unique - Responsive vCard Template</title>
+    <title>Portfolio - Full Stack Web Developer - PHP, JavaScript, MySQL, HTML/CSS. AWS + LAMP, Linux, SEO, UX/UI eCommerce Design.</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Unique - Responsive vCard Template" />
-    <meta name="keywords" content="vcard, resposnive, retina, resume, jquery, css3, bootstrap, Unique, portfolio" />
-    <meta name="author" content="lmtheme" />
+    <meta name="description" content="🚀 Explore my Full Stack Developer portfolio! Expertise in Laravel & AWS, tailored for recruiters. Ready to showcase my skills & experience for fast-paced initial conversations." />
+    <meta name="keywords" content="Full Stack Web Developer Laravel, Full Stack Developer PHP, FullStack Developer JavaScript, Full-Stack Web Developer AWS, Software Developer Laravel, Software Engineer Laravel AWS, FullStack Web Developer PHP JavaScript California" />
+    <meta name="author" content="Roman Primerov" />
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
