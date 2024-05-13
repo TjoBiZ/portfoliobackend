@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Validator; // Добавляем use для Validator
+use App\Models\ContactFormPost;
 
 class ContactFormController extends Controller
 {
@@ -67,7 +68,12 @@ class ContactFormController extends Controller
             $result['errors'] = $validator->errors();
         }
 
-        if ($response->score >= 0.3) {      // User has been verified and passed the reCAPTCHA check!
+        if ($response->score >= 0.3) {             // User has been verified and passed the reCAPTCHA check!
+            $contactFormPost = new ContactFormPost();
+            $contactFormPost->name = $request->name;
+            $contactFormPost->email = $request->email;
+            $contactFormPost->message = $request->message;
+            $contactFormPost->save();
             $recaptcha_success = "Form sent!";
             $result['recaptcha_status'] = true;
              $result['recaptcha_message'] = $recaptcha_success;

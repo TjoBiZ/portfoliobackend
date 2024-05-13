@@ -26,18 +26,17 @@
     <script src="js/jquery-2.1.3.min.js"></script>
     <script src="js/modernizr.custom.js"></script>
       <!-- Google tag (gtag.js) -->
-      @if(config('app.url') === 'https://solarneutrino.com')
-          <script async src="https://www.googletagmanager.com/gtag/js?id={{ env('GOOGLE_GA4_ANALYTICS_ID') }}"></script>
-          <script>
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
+      <script async src="https://www.googletagmanager.com/gtag/js?id={{ env('GOOGLE_GA4_ANALYTICS_ID') }}"></script>
+      <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
 
-              gtag('config', '{{ env('GOOGLE_GA4_ANALYTICS_ID') }}');
+          gtag('config', '{{ env('GOOGLE_GA4_ANALYTICS_ID') }}');
 
-              var appUrl = "{{ config('app.url') }}";
-          </script>
-      @endif
+          var appUrl = "{{ config('app.url') }}";
+      </script>
+
       <script>
           var GoogleRecaptchaV3SiteKey = "{{ env('GOOGLE_RECAPTCHAR_V3_FRONTEND') }}";
       </script>
