@@ -1,2 +1,9 @@
 User-agent: *
-Disallow:
+Disallow: /login
+Disallow: /register
+Disallow: /password
+Disallow: /admin
+Disallow: /api
+Disallow: /dashboard
+
+Sitemap: https://solarneutrino.com/sitemap.xml
