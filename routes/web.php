@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Http\Request;
 
 use App\Http\Controllers\ContactFormController;
+use App\Http\Controllers\SitemapController;
 
 Route::get('/', function () {
     return view('portfolio');
