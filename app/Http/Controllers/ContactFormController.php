@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Log;
 use Validator; // Добавляем use для Validator
 use App\Models\ContactFormPost;
 use Illuminate\Support\Facades\Http;
+use App\Mail\SendContactFormUserMessage;
+use Illuminate\Support\Facades\Mail;
 
 class ContactFormController extends Controller
 {
@@ -90,6 +92,9 @@ EOT;
                 'text' => $text,
                 'parse_mode' => 'HTML'
             ]);
+
+            Mail::to('j@solarneutrino.com')->send(new SendContactFormUserMessage($result['name'], $result['email'], $result['message'])); // Don't forget to make console command - FOR EXAMPLE: ubuntu@ip-172-31-16-20 ~: composer require aws/aws-sdk-php && composer dump-autoload
+
 
             $recaptcha_success = "Form sent!";
             $result['recaptcha_status'] = true;
