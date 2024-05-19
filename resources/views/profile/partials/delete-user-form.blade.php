@@ -19,11 +19,11 @@
             @csrf
             @method('delete')
 
-            <h2 class="text-lg font-medium text-gray-300">
+            <h2 class="text-lg font-medium text-gray-800">
                 {{ __('Are you sure you want to delete your account?') }}
             </h2>
 
-            <p class="mt-1 text-sm text-gray-300">
+            <p class="mt-1 text-sm text-gray-600">
                 {{ __('Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account.') }}
             </p>
 
@@ -34,7 +34,7 @@
                     id="password"
                     name="password"
                     type="password"
-                    class="mt-1 block w-3/4"
+                    class="mt-1 block w-3/4 text-gray-600"
                     placeholder="{{ __('Password') }}"
                 />
 
