@@ -14,8 +14,24 @@ export default {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                'primary': '#ffffff', // Общий цвет текста для светлой темы
+                'background': '#111827', // Общий фон для темной темы
+                'text': '#d1d5db', // Цвет текста для темной темы
+            },
         },
     },
 
+    darkMode: 'class', // 'media' или 'class', здесь мы выбрали 'class' для ручного переключения
+
     plugins: [forms],
+
+    variants: {
+        extend: {
+            backgroundColor: ['dark'], // Поддержка backgroundColor для темной темы
+            textColor: ['dark'], // Поддержка textColor для темной темы
+            borderColor: ['dark'], // Поддержка borderColor для темной темы
+        },
+    },
 };
+

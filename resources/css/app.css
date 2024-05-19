@@ -2,6 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+.dark body {
+    background-color: #111827;
+}
+
+@layer components {
+    .btn {
+        @apply px-4 py-2 rounded-md text-white;
+        @apply bg-blue-500;
+    }
+    .dark .btn {
+        @apply bg-blue-700;
+    }
+}
+
+/* Пример в файле CSS */
+.text-color {
+    color: #000; /* Светлая тема */
+}
+.dark .text-color {
+    color: #fff; /* Темная тема */
+}
+.dark .bg-gray-100 {
+    background-color: #111827;
+}
+
 body {
     display: flex;
     justify-content: center;
