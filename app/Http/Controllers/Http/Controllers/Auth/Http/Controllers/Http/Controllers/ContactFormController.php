@@ -1,14 +1,16 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Http\Controllers\Auth\Http\Controllers\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
-use Validator; // Добавляем use для Validator
-use App\Models\ContactFormPost;
-use Illuminate\Support\Facades\Http;
 use App\Mail\SendContactFormUserMessage;
+use App\Models\ContactFormPost;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
+use Validator;
+
+// Добавляем use для Validator
 
 class ContactFormController extends Controller
 {

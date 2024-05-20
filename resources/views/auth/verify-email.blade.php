@@ -1,11 +1,19 @@
 <x-guest-layout>
     <div class="mb-4 text-sm text-neutral-300">
-        {{ __('Thanks for signing up! Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you didn\'t receive the email, we will gladly send you another.') }}
+        @if(session('email_verification'))
+            {{ __('Thanks for signing up! Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you didn\'t receive the email, we will gladly send you another. ') }} {{ 'Check your email: ' . session('email_verification') }}
+        @else
+            {{ __('Thanks for signing up! Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you didn\'t receive the email, we will gladly send you another. ') }}
+        @endif
     </div>
 
     @if (session('status') == 'verification-link-sent')
         <div class="mb-4 font-medium text-sm text-green-600">
-            {{ __('A new verification link has been sent to the email address you provided during registration.') }}
+            @if(session('email_verification'))
+                {{ __('A new verification link has been sent to the email address you provided during registration.') }} {{ 'Check your email: ' . session('email_verification') }}
+            @else
+                {{ __('A new verification link has been sent to the email address you provided during registration.') }}
+            @endif
         </div>
     @endif
 

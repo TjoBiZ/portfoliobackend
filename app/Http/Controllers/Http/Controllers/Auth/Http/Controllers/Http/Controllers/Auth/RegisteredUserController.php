@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace App\Http\Controllers\Http\Controllers\Auth\Http\Controllers\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\Http\Controllers\Auth\Http\Controllers\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
@@ -43,7 +43,14 @@ class RegisteredUserController extends Controller
 
         event(new Registered($user));
 
+        // Отправка уведомления с верификацией автоматически
+        $user->sendEmailVerificationNotification();
+
         Auth::login($user);
+
+        if (Auth::check() && !Auth::user()->hasVerifiedEmail()) {
+            return redirect(route('verification.notice'))->with('email_verification',  Auth::User()->email);
+        }
 
         return redirect(route('dashboard', absolute: false));
     }
