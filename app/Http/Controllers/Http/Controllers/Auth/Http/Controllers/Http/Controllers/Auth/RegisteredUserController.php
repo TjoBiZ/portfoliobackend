@@ -41,10 +41,13 @@ class RegisteredUserController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
+        // Assigning the "user" role
+        $user->assignRole('user');
+
         event(new Registered($user));
 
         // Отправка уведомления с верификацией автоматически
-        $user->sendEmailVerificationNotification();
+        //$user->sendEmailVerificationNotification();
 
         Auth::login($user);
 

@@ -7,10 +7,11 @@ use Illuminate\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable implements MustVerifyEmailContract
 {
-    use HasFactory, Notifiable, MustVerifyEmail; // Добавляем использование MustVerifyEmail трейта
+    use HasFactory, Notifiable, MustVerifyEmail, HasRoles; // Добавляем использование MustVerifyEmail трейта
 
     /**
      * The attributes that are mass assignable.
