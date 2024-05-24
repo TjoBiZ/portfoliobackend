@@ -3,9 +3,8 @@
 use App\Http\Controllers\Http\Controllers\Auth\Http\Controllers\Http\Controllers\ContactFormController;
 use App\Http\Controllers\Http\Controllers\Auth\Http\Controllers\Http\Controllers\ProfileController;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
-use App\Http\Middleware\CustomEnsureEmailIsVerified;
 use Illuminate\Support\Facades\Route;
+use Spatie\Permission\Middleware\RoleMiddleware;
 
 // Группа маршрутов для домена solarneutrino.com
 Route::domain('solarneutrino.com')->group(function () {
@@ -31,6 +30,10 @@ Route::domain('admin.solarneutrino.com')->group(function () {
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->middleware(['auth', 'verified'])->name('dashboard');
+
+    Route::get('/contact-messages', function () {
+        return view('contact-messages');
+    })->middleware(['auth', 'verified', RoleMiddleware::class . ':superadmin'])->name('contact-messages');
 
     Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
