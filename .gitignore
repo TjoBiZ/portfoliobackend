@@ -64,3 +64,7 @@ composer.lock
 **/sitemap.xml
 
 telegram-bot.txt
+
+
+#Multidomail logic for route for production and development on local
+/routes/web.php
