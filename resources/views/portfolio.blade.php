@@ -759,7 +759,7 @@ This portfolio showcases my technical skills and commitment to providing tailore
 ⧁ This portfolio serves as a professional showcase and a resource for potential clients and employers to understand my approach to solving technological challenges in the digital world. Whether you're interested in web development, cloud solutions, or custom software, my portfolio offers a detailed and insightful look into my career and achievements.">
                         <img src="images/portfolio/6.jpg" alt="">
                         <div>
-                          <h5 class="name">My new portfolio on the Laravel framework 🇺🇸</h5>
+                          <h5 class="name">My New Full Stack Laravel Showcase Portfolio 🇺🇸</h5>
                           <p>I often receive the same questions from recruiters at first contact, so I decided to
                             create this portfolio site using my favorite framework, Laravel. It showcases my work and experience, highlighting key points succinctly.</p>
                           <small>You are on this site now.</small>
