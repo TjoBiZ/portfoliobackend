@@ -67,4 +67,4 @@ telegram-bot.txt
 
 
 #Multidomail logic for route for production and development on local
-/routes/web.php
+routes/web.php
