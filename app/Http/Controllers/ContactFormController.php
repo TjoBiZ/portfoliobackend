@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Http\Controllers\Auth\Http\Controllers\Http\Controllers;
+namespace App\Http\Controllers;
 
 use App\Mail\SendContactFormUserMessage;
 use App\Models\ContactFormPost;
@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
-use Validator;
+use Illuminate\Support\Facades\Validator;
+//use Validator;
 
 // Добавляем use для Validator
 

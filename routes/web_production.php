@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Controllers\Http\Controllers\Auth\Http\Controllers\Http\Controllers\ContactFormController;
-use App\Http\Controllers\Http\Controllers\Auth\Http\Controllers\Http\Controllers\ContactMessageController;
-use App\Http\Controllers\Http\Controllers\Auth\Http\Controllers\Http\Controllers\ProfileController;
+use App\Http\Controllers\ContactFormController;
+use App\Http\Controllers\ContactMessageController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Spatie\Permission\Middleware\RoleMiddleware;

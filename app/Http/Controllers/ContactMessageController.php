@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Http\Controllers\Auth\Http\Controllers\Http\Controllers;
+namespace App\Http\Controllers;
 
-//use App\Http\Controllers\Controller;
+use App\Http\Controllers\Controller;
 use App\Models\ContactFormPost;
 
 class ContactMessageController extends Controller
