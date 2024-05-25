@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Http\Controllers\Auth\Http\Controllers\Http\Controllers\ContactFormController;
+use App\Http\Controllers\Http\Controllers\Auth\Http\Controllers\Http\Controllers\ContactMessageController;
 use App\Http\Controllers\Http\Controllers\Auth\Http\Controllers\Http\Controllers\ProfileController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -31,9 +32,7 @@ Route::domain('admin.solarneutrino.com')->group(function () {
         return view('dashboard');
     })->middleware(['auth', 'verified'])->name('dashboard');
 
-    Route::get('/contact-messages', function () {
-        return view('contact-messages');
-    })->middleware(['auth', 'verified', RoleMiddleware::class . ':superadmin'])->name('contact-messages');
+    Route::get('/contact-messages', [ContactMessageController::class, 'index'])->middleware(['auth', 'verified', RoleMiddleware::class . ':superadmin'])->name('contact-messages');
 
     Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
