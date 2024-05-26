@@ -763,7 +763,11 @@ This portfolio showcases my technical skills and commitment to providing tailore
                           <p>I often receive the same questions from recruiters at first contact, so I decided to
                             create this portfolio site using my favorite framework, Laravel. It showcases my work and experience, highlighting key points succinctly.</p>
                             <p>Utilized Laravel Breeze for authentication with Frontend designed Tailwind CSS and Spatie for role-based access control. Integrated Laravel Sanctum for secure token-based API and Laravel Multidomain middleware for simpler project integration. Enhanced security by hosting the admin panel on a separate domain (admin.solarneutrino.com). Implemented a contact form with functionalities for email notifications, logging via Eloquent MySQL, and Telegram alerts. Infrastructure set up on EC2, utilizing Route 53 for DNS management and AWS SES for email dispatch.</p>
-                          <small>You are on this site now.</small>
+                            <small class="several_links">
+                                <span class="button_link_project" data-link="solarneutrino.com">You are on this site now</span>
+                                <span class="button_link_project" data-link="admin.solarneutrino.com">Admin Panel</span>
+
+                            </small>
                           <i class="pe-7s-icon pe-7s-photo"></i>
                         </div>
                       </a>
