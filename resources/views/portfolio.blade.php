@@ -624,7 +624,7 @@
                     <figure class="item" data-groups='["all", "laravel", "seocode", "uxui", "aws"]'>
                       <a href="images/portfolio/full/1.jpg" class="lightbox"
                          title="✓ Developed an eCommerce jewelry store platform using Laravel - PHP Framework, integrating original business processes and UX/UI design to achieve specified goals.
-✓ Developed the eCommerce store on multiple EC2 - Ubuntu servers, Apache, RDS (MySQL), incorporating multi-domain functionality (e.g., site.com, site.co.uk, site.com.au, site.co.nz, etc.) within a single Laravel core in one project. All traffic was routed through a Load Balancer, while static content, images, and scripts (*.js, *.css) were stored on S3 Buckets accessed via CloudFront (CDN) within the AWS service environment.
+✓ Developed an eCommerce store on multiple EC2 Ubuntu servers with Apache and RDS (MySQL), integrating multi-domain functionality with a service provider architecture to accommodate high-traffic projects (e.g., site.com, site.co.uk, site.com.au, site.co.nz, etc.) within a unified Laravel core. All traffic was managed through a Load Balancer, with static content, images, and scripts (*.js, *.css) stored in S3 Buckets and delivered via CloudFront (CDN) within the AWS ecosystem.
 ✓ AWS hosting: I configured CodeCommit for GIT branches, managed backups, employed AWS CLI, implemented IAM Roles, created AMIs, handled routing, managed logs, deployed Python Lambdas, worked with SQS, managed Route 53, enabled HTTPS(SSL), engaged with RDS, EFS, and other services.
 ✓ Collaborated with IT teams and globally dispersed business functions.
 ✓ Monitored and improved the quality of web components.
@@ -635,7 +635,7 @@
                         <img src="images/portfolio/1.jpg" alt="">
                         <div>
                           <h5 class="name">Laravel, eCommerece UX/UI, SEO optimized code 🇺🇸 🇬🇧 🇦🇺 🇳🇿 🇨🇦 🇯🇵</h5>
-                          <p>Developed a multi-domain online store using a single Laravel core, hosted on multiple EC2 AWS servers and a CDN. Utilized cloud technologies for maximum reliability, including CDN - CloudFront, RDS, S3, and ELB. Crafted SEO-optimized code and UX/UI to enhance conversion rates.</p>
+                            <p>Developed a multi-domain online store using a single Laravel core, hosted on multiple EC2 AWS servers and a CDN. Designed for high traffic with a service provider architecture ensuring maximum reliability, utilizing cloud technologies such as CloudFront, RDS, S3, and ELB. Implemented SEO-optimized code and UX/UI to enhance conversion rates.</p>
                           <small class="several_links">
                             <span class="button_link_project" data-link="heart-in-diamond.com">Visit
                               1 Site</span>
@@ -762,6 +762,7 @@ This portfolio showcases my technical skills and commitment to providing tailore
                           <h5 class="name">My New Full Stack Laravel Showcase Portfolio 🇺🇸</h5>
                           <p>I often receive the same questions from recruiters at first contact, so I decided to
                             create this portfolio site using my favorite framework, Laravel. It showcases my work and experience, highlighting key points succinctly.</p>
+                            <p>Utilized Laravel Breeze for authentication with Frontend designed Tailwind CSS and Spatie for role-based access control. Integrated Laravel Sanctum for secure token-based API and Laravel Multidomain middleware for simpler project integration. Enhanced security by hosting the admin panel on a separate domain (admin.solarneutrino.com). Implemented a contact form with functionalities for email notifications, logging via Eloquent MySQL, and Telegram alerts. Infrastructure set up on EC2, utilizing Route 53 for DNS management and AWS SES for email dispatch.</p>
                           <small>You are on this site now.</small>
                           <i class="pe-7s-icon pe-7s-photo"></i>
                         </div>
