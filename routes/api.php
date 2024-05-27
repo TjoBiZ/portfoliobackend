@@ -32,31 +32,17 @@ Route::middleware('auth:sanctum')->group(function () {
 
 });
 
-// Маршрут для пользователей, которые уже аутентифицированы в системе и хотят получить токен для API.
-Route::post('/token/get', function (Request $request) {
-    $token = $request->user()->createToken($request->token_name);
-    return ['token' => $token->plainTextToken];
-})->middleware('auth:sanctum')->name('api.token.get');
-
 // Маршрут для аутентификации пользователя через API и выдачи токена для последующих запросов.
 Route::post('/token/create', function (Request $request) {
     $credentials = $request->only('email', 'password');
-    if (Auth::attempt($credentials)) {
-        $token = $request->user()->createToken($request->token_name);
-        return ['token' => $token->plainTextToken];
-    }
-    return response()->json(['message' => 'Unauthorized'], 401);
-})->name('api.token.create');
-
-Route::post('/auth/login', function (Request $request) {
-    $credentials = $request->only(['email', 'password']);
     if (Auth::attempt($credentials)) {
         $user = Auth::user();
         $token = $user->createToken('API Token')->plainTextToken;
         return response()->json(['token' => $token]);
     }
     return response()->json(['message' => 'Unauthorized'], 401);
-})->name('api.auth.login');
+})->name('api.token.create');
+
 
 Route::get('/ip', function (Request $request) {
     return $request->ip();
