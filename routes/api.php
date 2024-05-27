@@ -32,7 +32,17 @@ Route::middleware('auth:sanctum')->group(function () {
 
 });
 
-// Маршрут для аутентификации пользователя через API и выдачи токена для последующих запросов.
+// Маршрут для аутентификации пользователя через API и выдачи токена для последующих запросов. Для POST запроса через POSTMAN или CURL
+// необходимо в body добавить x-www-form-urlencoded и вписать email и password. В ответе будет выдан токен для дальнейших запросов и еще не забыть про поле _token из cookies - csrf токен. и поле remember со значением on.
+
+// POSTMAN:
+// POST http://localhost:8000/api/token/create
+// x-www-form-urlencoded
+// email:admin@admin
+// password:admin
+// _token:5V6toSUHwHnZfEzaM4KMs9lemDe67XcfBrs6OPck
+// remember:on
+
 Route::post('/token/create', function (Request $request) {
     $credentials = $request->only('email', 'password');
     if (Auth::attempt($credentials)) {
