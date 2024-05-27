@@ -6,6 +6,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Spatie\Permission\Middleware\RoleMiddleware;
+use App\Http\Controllers\TokenController;
 
 // Группа маршрутов для домена solarneutrino.com
 Route::domain('solarneutrino.com')->group(function () {
@@ -42,3 +43,5 @@ Route::domain('admin.solarneutrino.com')->group(function () {
 
     require __DIR__.'/auth.php';
 });
+
+Route::middleware('auth')->get('/get-token', [TokenController::class, 'getTokenForAuthenticatedUser']);

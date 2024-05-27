@@ -20,6 +20,9 @@
                         {{ __('Contact Messages') }}
                     </x-nav-link>
                     @endrole
+                    <x-nav-link :href="route('get-token')" :active="request()->routeIs('get-token')">
+                        {{ __('REST API Token') }}
+                    </x-nav-link>
                 </div>
             </div>
 

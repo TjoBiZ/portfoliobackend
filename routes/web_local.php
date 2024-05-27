@@ -6,6 +6,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Spatie\Permission\Middleware\RoleMiddleware;
+use App\Http\Controllers\TokenController;
 
 // Группа маршрутов для домена portfolio.local
 Route::domain('portfolio.local')->group(function () {
@@ -41,3 +42,5 @@ Route::domain('admin.portfolio.local')->group(function () {
 
     require __DIR__.'/auth.php';
 });
+
+Route::middleware('auth')->get('/get-token', [TokenController::class, 'getTokenForAuthenticatedUser'])->name('get-token');
