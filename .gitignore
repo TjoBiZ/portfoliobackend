@@ -68,3 +68,5 @@ telegram-bot.txt
 
 #Multidomail logic for route for production and development on local
 routes/web.php
+
+public/fonts/fontawesome-free-6.5.2-web/
