@@ -44,4 +44,4 @@ Route::domain('admin.solarneutrino.com')->group(function () {
     require __DIR__.'/auth.php';
 });
 
-Route::middleware('auth')->get('/get-token', [TokenController::class, 'getTokenForAuthenticatedUser']);
+Route::middleware('auth')->get('/get-token', [TokenController::class, 'getTokenForAuthenticatedUser'])->name('get-token');
