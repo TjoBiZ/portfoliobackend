@@ -7,8 +7,8 @@
     "require": {
         "php": "^8.2",
         "aws/aws-sdk-php": "^3.306",
-        "gecche/laravel-multidomain": "^11.0",
-        "laravel/framework": "^11.0",
+        "gecche/laravel-multidomain": "^12.0",
+        "laravel/framework": "^12.0",
         "laravel/sanctum": "^4.0",
         "laravel/tinker": "^2.9",
         "spatie/laravel-permission": "^6.7"
