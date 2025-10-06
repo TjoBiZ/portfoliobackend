@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg clip-rule="evenodd" fill-rule="evenodd" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" version="1.1" viewBox="0 0 160 160" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:#231F20}
+   ]]>
+  </style>
+ </defs>
+ 
+  
+  <polygon class="fil0" points="-2812.2 -218.44 -2521.6 -218.44 -2521.6 -152.81 -2743.4 -152.81 -2743.4 -12.19 -2540.3 -12.19 -2540.3 53.44 -2743.4 53.44 -2743.4 265.94 -2812.2 265.94"/>
+  
+   <path class="fil0" d="m102.36 109.03-44.3-49.03c-2.15-2.15-5.59-2.15-7.31 0l-44.73 49.03-6.02-6.02 44.3-49.03c2.58-2.58 6.02-4.3 9.89-4.3s7.31 1.72 9.89 4.3l44.74 49.03-6.46 6.02z"/>
+   <polygon class="fil0" points="61.5 110.32 73.12 123.23 79.57 117.2 67.96 104.73"/>
+   <path class="fil0" d="m153.98 99.14-44.73-49.03c-2.15-2.15-5.16-2.15-7.32 0l-37.85 41.29c-2.58 3.01-6.02 4.73-9.89 4.73s-7.31-1.72-9.89-4.73l-44.3-49.03 6.02-5.6 44.73 49.04c1.72 2.15 5.16 2.15 7.31 0l37.85-41.72c2.58-2.58 6.02-4.31 9.9-4.31 3.44 0 7.31 1.73 9.89 4.31l44.3 49.03-6.02 6.02z"/>
+  
+ 
+</svg>
