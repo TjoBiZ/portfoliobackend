@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>October CMS & Laravel Product Systems by Roman Primerov | POSMall, CRM, Cross-Platform Apps</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="A PostgreSQL-first October CMS and Laravel product suite by Roman Primerov: POSMall, POSMall Pro, CRM, cashflow, affiliate workflows, tax automation, and cross-platform app architecture." />
+    <meta name="keywords" content="October CMS ecommerce, Laravel ecommerce, POSMall, PostgreSQL ecommerce, POSMall Pro, October CMS CRM, Laravel CRM, cross-platform Laravel app, Roman Primerov" />
+    <meta name="author" content="Roman Primerov" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <link rel="canonical" href="https://solarneutrino.com/october-laravel-products" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="October CMS & Laravel Product Systems by Roman Primerov" />
+    <meta property="og:description" content="POSMall, POSMall Pro, CRM, cashflow, affiliate workflows, tax automation, and cross-platform app architecture on Laravel, October CMS, and PostgreSQL." />
+    <meta property="og:url" content="https://solarneutrino.com/october-laravel-products" />
+    <meta property="og:image" content="https://solarneutrino.com/images/product-systems/posmall-admin-products-menu.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+    <link rel="manifest" href="/images/site.webmanifest">
+    <link rel="stylesheet" href="/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="/css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="/css/animate.css" type="text/css">
+    <link rel="stylesheet" href="/css/font-awesome.css" type="text/css">
+    <link rel="stylesheet" href="/css/pe-icon-7-stroke.css" type="text/css">
+    <link rel="stylesheet" href="/css/main.css" type="text/css">
+    <style>
+      @verbatim
+      :root {
+        --sn-orange: #ff724c;
+        --sn-dark: #222;
+        --sn-muted: #666;
+        --sn-soft: #f7f7f7;
+        --sn-border: #e6e6e6;
+      }
+
+      body.product-landing {
+        background: #f0f0f0 url('/images/Background_FullStack_Web_Developer_Laravel_PHP_JavaScript_AWS_MySQL_Roman_Primerov.svg') center center / cover fixed no-repeat;
+        color: var(--sn-dark);
+      }
+
+      .product-page {
+        min-height: 100vh;
+        padding: 42px 18px;
+      }
+
+      .product-shell {
+        max-width: 1180px;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, .97);
+        border-radius: 18px;
+        box-shadow: 0 18px 60px rgba(0, 0, 0, .16);
+        overflow: hidden;
+      }
+
+      .product-topbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 18px;
+        padding: 20px 28px;
+        border-bottom: 1px solid var(--sn-border);
+        background: #fff;
+      }
+
+      .product-topbar a {
+        color: var(--sn-dark);
+        font-weight: 700;
+      }
+
+      .product-topbar .back-link {
+        color: var(--sn-orange);
+      }
+
+      .product-hero {
+        padding: 58px 40px 34px;
+        background: linear-gradient(135deg, #fff 0%, #fff6f2 100%);
+      }
+
+      .eyebrow {
+        color: var(--sn-orange);
+        text-transform: uppercase;
+        letter-spacing: .14em;
+        font-size: 12px;
+        font-weight: 800;
+        margin-bottom: 14px;
+      }
+
+      .product-hero h1,
+      .product-section h2,
+      .product-card h3 {
+        font-family: Oxygen, Helvetica, sans-serif;
+      }
+
+      .product-hero h1 {
+        max-width: 930px;
+        font-size: clamp(34px, 5vw, 58px);
+        line-height: 1.05;
+        margin: 0 0 20px;
+      }
+
+      .hero-lead {
+        max-width: 900px;
+        font-size: 19px;
+        line-height: 1.7;
+        color: #444;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 26px;
+      }
+
+      .button-like {
+        display: inline-block;
+        border-radius: 999px;
+        padding: 12px 18px;
+        font-weight: 800;
+        border: 2px solid var(--sn-orange);
+        color: var(--sn-orange);
+        background: #fff;
+      }
+
+      .button-like.primary {
+        color: #fff;
+        background: var(--sn-orange);
+      }
+
+      .product-facts {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1px;
+        background: var(--sn-border);
+      }
+
+      .product-fact {
+        background: #fff;
+        padding: 22px;
+      }
+
+      .product-fact strong {
+        display: block;
+        font-size: 24px;
+        color: var(--sn-orange);
+      }
+
+      .product-fact span {
+        color: var(--sn-muted);
+      }
+
+      .product-section {
+        padding: 44px 40px;
+        border-top: 1px solid var(--sn-border);
+      }
+
+      .section-intro {
+        max-width: 860px;
+        color: var(--sn-muted);
+        font-size: 17px;
+        line-height: 1.7;
+        margin-bottom: 24px;
+      }
+
+      .product-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .product-card,
+      .proof-card,
+      .faq-card {
+        border: 1px solid var(--sn-border);
+        border-radius: 14px;
+        background: #fff;
+        padding: 24px;
+      }
+
+      .product-card.public {
+        border-top: 4px solid #38a169;
+      }
+
+      .product-card.private {
+        border-top: 4px solid var(--sn-orange);
+      }
+
+      .product-card h3 {
+        margin-top: 0;
+        font-size: 23px;
+      }
+
+      .badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 12px 0 16px;
+      }
+
+      .badge-soft {
+        border-radius: 999px;
+        background: #f3f3f3;
+        color: #333;
+        padding: 6px 10px;
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .badge-soft.orange {
+        background: #fff0ea;
+        color: #c75231;
+      }
+
+      details.product-details {
+        margin-top: 16px;
+        border-top: 1px solid var(--sn-border);
+        padding-top: 14px;
+      }
+
+      details.product-details > summary {
+        cursor: pointer;
+        color: var(--sn-orange);
+        font-weight: 800;
+        list-style: none;
+      }
+
+      details.product-details > summary::-webkit-details-marker {
+        display: none;
+      }
+
+      details.product-details > summary::before {
+        content: '+';
+        display: inline-grid;
+        place-items: center;
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+        border-radius: 50%;
+        color: #fff;
+        background: var(--sn-orange);
+      }
+
+      details[open].product-details > summary::before {
+        content: '–';
+      }
+
+      .product-details ul,
+      .dependency-tree ul,
+      .proof-card ul {
+        margin: 14px 0 0 20px;
+        padding: 0;
+      }
+
+      .product-details li,
+      .dependency-tree li,
+      .proof-card li {
+        margin-bottom: 8px;
+      }
+
+      .proof-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .metric {
+        font-size: 30px;
+        font-weight: 900;
+        color: var(--sn-orange);
+      }
+
+        .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 18px;
+        font-size: 14px;
+      }
+
+      .comparison-table th,
+      .comparison-table td {
+        border: 1px solid var(--sn-border);
+        padding: 12px;
+        vertical-align: top;
+      }
+
+      .comparison-table th {
+        background: #fff6f2;
+      }
+
+      .comparison-table caption {
+        caption-side: top;
+        padding: 0 0 10px;
+        color: #555;
+        text-align: left;
+        font-weight: 700;
+      }
+
+      .screenshot-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .screenshot-card {
+        margin: 0;
+        border: 1px solid var(--sn-border);
+        border-radius: 14px;
+        background: #fff;
+        overflow: hidden;
+      }
+
+      .screenshot-card a {
+        display: block;
+        color: inherit;
+      }
+
+      .screenshot-card img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16 / 10;
+        height: auto;
+        object-fit: cover;
+        background: #f4f4f4;
+      }
+
+      .screenshot-card figcaption {
+        padding: 18px;
+      }
+
+      .screenshot-card h3 {
+        margin: 0 0 8px;
+        font-size: 19px;
+      }
+
+      .screenshot-card p {
+        margin: 0;
+        color: var(--sn-muted);
+        line-height: 1.55;
+      }
+
+      .dependency-tree {
+        background: #111;
+        color: #fff;
+        border-radius: 16px;
+        padding: 28px;
+      }
+
+      .dependency-tree code {
+        color: #fff;
+        background: rgba(255, 114, 76, .24);
+        padding: 3px 7px;
+        border-radius: 6px;
+      }
+
+      .note-box {
+        background: #fffaf7;
+        border-left: 5px solid var(--sn-orange);
+        padding: 18px;
+        margin-top: 18px;
+        color: #444;
+      }
+
+      .link-list a {
+        display: inline-block;
+        margin: 0 12px 10px 0;
+        color: var(--sn-orange);
+        font-weight: 800;
+      }
+
+      .cta-band {
+        background: #222;
+        color: #fff;
+        padding: 44px 40px;
+      }
+
+      .cta-band h2 {
+        color: #fff;
+        margin-top: 0;
+      }
+
+      .cta-band a {
+        color: #fff;
+        text-decoration: underline;
+      }
+
+      @media (max-width: 900px) {
+        .product-grid,
+        .proof-grid,
+        .screenshot-grid,
+        .product-facts {
+          grid-template-columns: 1fr;
+        }
+
+        .product-hero,
+        .product-section,
+        .cta-band {
+          padding-left: 24px;
+          padding-right: 24px;
+        }
+
+        .product-topbar {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+      @endverbatim
+    </style>
+    <script type="application/ld+json">
+      @verbatim
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "October CMS and Laravel Product Systems by Roman Primerov",
+        "url": "https://solarneutrino.com/october-laravel-products",
+        "description": "A PostgreSQL-first October CMS and Laravel product portfolio covering POSMall, private commerce extensions, CRM, cashflow, affiliate workflows, tax automation, and cross-platform app architecture.",
+        "author": {
+          "@type": "Person",
+          "name": "Roman Primerov",
+          "url": "https://solarneutrino.com/"
+        },
+        "hasPart": [
+          {
+            "@type": "SoftwareApplication",
+            "name": "POSMall",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web",
+            "url": "https://octobercms.com/plugin/kodzero-posmall",
+            "image": "https://solarneutrino.com/images/product-systems/posmall-admin-products-menu.webp",
+            "description": "Public PostgreSQL-first ecommerce plugin for October CMS and Laravel projects."
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "POSMall Pro",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web",
+            "image": "https://solarneutrino.com/images/product-systems/alrty-smart-tech-services.webp",
+            "description": "Private extension layer for advanced commerce, service workflows, automation, and business-specific growth systems."
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "POSMall CRM, Cashflow and Affiliate Suite",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web",
+            "image": "https://solarneutrino.com/images/product-systems/posmall-admin-api-permission-tree.webp",
+            "description": "Private operational layer for contacts, leads, deals, activities, order links, cashflow visibility, attribution, and partner workflows."
+          }
+        ]
+      }
+      @endverbatim
+    </script>
+  </head>
+  <body class="product-landing">
+    <main class="product-page" itemscope itemtype="https://schema.org/CollectionPage">
+      <article class="product-shell">
+        <nav class="product-topbar" aria-label="Portfolio navigation">
+          <a class="back-link" href="/">← Roman Primerov Portfolio</a>
+          <div>
+            <a href="#systems">Systems</a> ·
+            <a href="#screenshots">Screenshots</a> ·
+            <a href="#benchmarks">Benchmarks</a> ·
+            <a href="#proof">Proof</a> ·
+            <a href="#contact">Contact</a>
+          </div>
+        </nav>
+
+        <header class="product-hero">
+          <p class="eyebrow">October CMS · Laravel · PostgreSQL · ecommerce architecture</p>
+          <h1 itemprop="headline">October CMS & Laravel product systems built for teams that outgrow templates.</h1>
+          <p class="hero-lead" itemprop="description">
+            I am Roman Primerov, a full-stack Laravel and October CMS developer building a reusable commerce ecosystem:
+            the public POSMall core, private POSMall Pro extensions, CRM, cashflow, partner workflows, US-oriented tax/location automation,
+            and cross-platform app architecture for iOS, Android, macOS, and Windows.
+          </p>
+          <p class="hero-lead">
+            The positioning is simple: if Wix, Shopify, WordPress plugins, or a generic hosted stack feel too rigid,
+            this is the kind of modular PostgreSQL-first foundation that can keep growing with a serious business.
+          </p>
+          <div class="hero-actions">
+            <a class="button-like primary" href="mailto:j@solarneutrino.com?subject=October%20CMS%20%2F%20Laravel%20product%20demo">Request a private demo</a>
+            <a class="button-like" href="https://octobercms.com/plugin/kodzero-posmall" rel="noopener" target="_blank">View public POSMall plugin</a>
+            <a class="button-like" href="https://wingsofwin.com" rel="noopener" target="_blank">Open public demo site</a>
+          </div>
+        </header>
+
+        <section class="product-facts" aria-label="Portfolio facts">
+          <div class="product-fact">
+            <strong>Public core</strong>
+            <span>POSMall and POSMall Theme are public October CMS assets.</span>
+          </div>
+          <div class="product-fact">
+            <strong>Private suite</strong>
+            <span>Pro, CRM, cashflow, affiliate, tax, and domain modules are private.</span>
+          </div>
+          <div class="product-fact">
+            <strong>PostgreSQL-first</strong>
+            <span>Designed around relational integrity, indexes, JSONB, and large catalogs.</span>
+          </div>
+          <div class="product-fact">
+            <strong>Cross-platform</strong>
+            <span>Laravel/October backend patterns wrapped for app-store channels.</span>
+          </div>
+        </section>
+
+        <section id="systems" class="product-section">
+          <h2>Reusable product systems</h2>
+          <p class="section-intro">
+            Each system below is described at business level for recruiters, founders, agencies, and technical leaders.
+            Public components can be inspected directly. Private components are available for source review or a sanitized demo by request.
+          </p>
+
+          <div class="product-grid">
+            <article class="product-card public" itemscope itemtype="https://schema.org/SoftwareApplication">
+              <h3 itemprop="name">POSMall Core</h3>
+              <p itemprop="description">
+                A public October CMS ecommerce engine for product catalogs, services, virtual goods, checkout, orders,
+                payments, shipping, taxes, discounts, reviews, and API-ready automation on a PostgreSQL-first architecture.
+              </p>
+              <div class="badges">
+                <span class="badge-soft">Public</span>
+                <span class="badge-soft">October CMS</span>
+                <span class="badge-soft orange">PostgreSQL-first</span>
+                <span class="badge-soft">KodZero</span>
+              </div>
+              <div class="link-list">
+                <a href="https://octobercms.com/plugin/kodzero-posmall" rel="noopener" target="_blank">October CMS Marketplace</a>
+                <a href="https://github.com/TjoBiZ/POSMall" rel="noopener" target="_blank">GitHub source</a>
+              </div>
+              <details class="product-details" open>
+                <summary>Open capabilities and dependencies</summary>
+                <ul>
+                  <li><strong>Best fit:</strong> Laravel/October shops that need ownership, custom workflows, and PostgreSQL rather than a locked hosted platform.</li>
+                  <li><strong>Catalog model:</strong> physical products, virtual products, service-like offers, pricing, media, categories, filters, reviews, and checkout surfaces.</li>
+                  <li><strong>Dependencies:</strong> October CMS 4, PHP 8.2+, PostgreSQL, RainLab.User, RainLab.Location, and RainLab.Translate for the public theme path.</li>
+                  <li><strong>Ownership:</strong> created by Roman Primerov / KodZero; public core is separate from the private Pro/business layer.</li>
+                </ul>
+              </details>
+            </article>
+
+            <article class="product-card public" itemscope itemtype="https://schema.org/SoftwareApplication">
+              <h3 itemprop="name">POSMall Theme</h3>
+              <p itemprop="description">
+                A public storefront theme that demonstrates the POSMall catalog, product pages, and ecommerce user experience.
+                It gives companies a visible starting point instead of an abstract backend-only plugin.
+              </p>
+              <div class="badges">
+                <span class="badge-soft">Public</span>
+                <span class="badge-soft">Storefront</span>
+                <span class="badge-soft orange">Demo-ready</span>
+              </div>
+              <div class="link-list">
+                <a href="https://octobercms.com/theme/kodzero-posmalltheme" rel="noopener" target="_blank">October CMS Theme</a>
+                <a href="https://github.com/TjoBiZ/POSMallTheme" rel="noopener" target="_blank">GitHub source</a>
+                <a href="https://wingsofwin.com" rel="noopener" target="_blank">Live demo</a>
+              </div>
+              <details class="product-details">
+                <summary>Open storefront notes</summary>
+                <ul>
+                  <li><strong>Purpose:</strong> turn the POSMall backend into a real public shopping experience.</li>
+                  <li><strong>Business value:</strong> makes the plugin easier to evaluate, benchmark, and extend.</li>
+                  <li><strong>Demo positioning:</strong> the public demo can be used as a baseline before private workflows are added.</li>
+                </ul>
+              </details>
+            </article>
+
+            <article class="product-card private" itemscope itemtype="https://schema.org/SoftwareApplication">
+              <h3 itemprop="name">POSMall Pro</h3>
+              <p itemprop="description">
+                A private extension layer for advanced commerce, service businesses, catalog automation, high-volume indexing,
+                landing pages, regional logic, and business-specific admin workflows.
+              </p>
+              <div class="badges">
+                <span class="badge-soft orange">Private</span>
+                <span class="badge-soft">Depends on POSMall</span>
+                <span class="badge-soft">Services + ecommerce</span>
+              </div>
+              <details class="product-details" open>
+                <summary>Open private extension scope</summary>
+                <ul>
+                  <li><strong>Designed for:</strong> teams that need more than a template shop: services, quote flows, complex locations, internal tools, and custom dashboards.</li>
+                  <li><strong>Examples:</strong> service catalogs, automatically prepared content structures, business-specific price/rule systems, and admin workflows.</li>
+                  <li><strong>Dependency:</strong> POSMall Core is the foundation; Pro extends it rather than replacing it.</li>
+                  <li><strong>Public policy:</strong> details are kept high-level on this page; sanitized screenshots and source review are available privately.</li>
+                </ul>
+              </details>
+            </article>
+
+            <article class="product-card private" itemscope itemtype="https://schema.org/SoftwareApplication">
+              <h3 itemprop="name">POSMall CRM, Cashflow & Affiliate Suite</h3>
+              <p itemprop="description">
+                A private operations layer for contacts, leads, deals, activities, order links, attribution, partner workflows,
+                and cashflow visibility connected to the commerce system.
+              </p>
+              <div class="badges">
+                <span class="badge-soft orange">Private</span>
+                <span class="badge-soft">CRM</span>
+                <span class="badge-soft">Cashflow</span>
+                <span class="badge-soft">Partner program</span>
+              </div>
+              <details class="product-details" open>
+                <summary>Open CRM and growth features</summary>
+                <ul>
+                  <li><strong>CRM:</strong> contacts, leads, deals, activities, and commerce/order relationships.</li>
+                  <li><strong>Cashflow:</strong> operational visibility for business performance rather than a disconnected spreadsheet.</li>
+                  <li><strong>Affiliate/partner:</strong> attribution-aware workflows for referrals and partner growth.</li>
+                  <li><strong>Measured path:</strong> benchmarked with 13,479 contacts, 13,691 deals, 1,177 activities, and 13,567 order links.</li>
+                </ul>
+              </details>
+            </article>
+
+            <article class="product-card private">
+              <h3>US tax, location & catalog automation</h3>
+              <p>
+                A private administrative capability layer for structured regional rules, taxes, states, counties, service areas,
+                catalog preparation, and location-aware ecommerce workflows.
+              </p>
+              <div class="badges">
+                <span class="badge-soft orange">Private</span>
+                <span class="badge-soft">Taxes</span>
+                <span class="badge-soft">Locations</span>
+                <span class="badge-soft">Admin automation</span>
+              </div>
+              <details class="product-details">
+                <summary>Open automation value</summary>
+                <ul>
+                  <li><strong>Business point:</strong> reduce manual setup work for US-oriented service/ecommerce operations.</li>
+                  <li><strong>Admin value:</strong> structured data can be managed in October CMS backend screens instead of hardcoded pages.</li>
+                  <li><strong>Landing value:</strong> companies can see a practical route from content, location, and taxes to a deployable commerce experience.</li>
+                </ul>
+              </details>
+            </article>
+
+            <article class="product-card private">
+              <h3>Cross-platform game and app-store wrapper architecture</h3>
+              <p>
+                A Laravel/October backend pattern connected to web and native wrappers for iOS, Android, macOS, and Windows.
+                The work includes account, sync, entitlement, restore, and app-store readiness concepts without tying the business to one app channel.
+              </p>
+              <div class="badges">
+                <span class="badge-soft orange">Private</span>
+                <span class="badge-soft">iOS</span>
+                <span class="badge-soft">Android</span>
+                <span class="badge-soft">macOS</span>
+                <span class="badge-soft">Windows</span>
+              </div>
+              <details class="product-details">
+                <summary>Open cross-platform notes</summary>
+                <ul>
+                  <li><strong>Business value:</strong> one backend architecture can support web, mobile, desktop, subscriptions, purchases, restores, and cold relaunch scenarios.</li>
+                  <li><strong>Store channels:</strong> designed for Apple, Google Play, and Microsoft Store style purchase/restore flows.</li>
+                  <li><strong>Status wording:</strong> this page describes engineering capability and readiness patterns, not a claim that every app is already published in every store.</li>
+                </ul>
+              </details>
+            </article>
+          </div>
+        </section>
+
+        <section id="screenshots" class="product-section">
+          <h2>Selected pet-project screenshots</h2>
+          <p class="section-intro">
+            These are selected public/demo screenshots from the pet-project ecosystem: POSMall admin screens,
+            Alrty service-commerce storefront, and cross-platform game/app surfaces. They are included to show visible functionality,
+            while private source code, deployment details, internal paths, and real customer data remain unpublished.
+          </p>
+
+          <div class="screenshot-grid">
+            <figure class="screenshot-card" id="screenshot-posmall-products">
+              <a href="/images/product-systems/posmall-admin-products-menu.webp">
+                <picture>
+                  <source srcset="/images/product-systems/posmall-admin-products-menu.webp" type="image/webp">
+                  <img src="/images/product-systems/posmall-admin-products-menu.webp" width="838" height="630" loading="eager" fetchpriority="high" alt="POSMall product administration showing catalog menus, product management, and backend ecommerce controls for store operators.">
+                </picture>
+              </a>
+              <figcaption>
+                <span class="badge-soft orange">POSMall admin</span>
+                <h3>Catalog and product administration</h3>
+                <p>This screen proves POSMall is managed as a real October CMS backend plugin, not a static storefront mockup.</p>
+              </figcaption>
+            </figure>
+
+            <figure class="screenshot-card" id="screenshot-posmall-orders">
+              <a href="/images/product-systems/posmall-admin-orders-menu.webp">
+                <picture>
+                  <source srcset="/images/product-systems/posmall-admin-orders-menu.webp" type="image/webp">
+                  <img src="/images/product-systems/posmall-admin-orders-menu.webp" width="838" height="630" loading="lazy" alt="POSMall order administration showing backend order and commerce workflow menus for ecommerce operations.">
+                </picture>
+              </a>
+              <figcaption>
+                <span class="badge-soft orange">Commerce workflow</span>
+                <h3>Orders and operational menus</h3>
+                <p>The backend surface includes order-oriented operations and the structure needed for day-to-day ecommerce management.</p>
+              </figcaption>
+            </figure>
+
+            <figure class="screenshot-card" id="screenshot-alrty-live">
+              <a href="https://alrty.com/" rel="noopener" target="_blank">
+                <picture>
+                  <source srcset="/images/product-systems/alrty-smart-tech-services.webp" type="image/webp">
+                  <img src="/images/product-systems/alrty-smart-tech-services.webp" width="1440" height="900" loading="lazy" alt="Alrty live service commerce homepage showing smart tech services, search, account actions, cart, and callback controls.">
+                </picture>
+              </a>
+              <figcaption>
+                <span class="badge-soft orange">Alrty.com live example</span>
+                <h3>Service-commerce storefront</h3>
+                <p>Alrty shows the stack applied to smart-tech services, booking intent, account actions, favorites, order tracking, and voice-order style conversion.</p>
+              </figcaption>
+            </figure>
+
+            <figure class="screenshot-card" id="screenshot-posmall-taxes">
+              <a href="/images/product-systems/posmall-admin-settings-taxes.webp">
+                <picture>
+                  <source srcset="/images/product-systems/posmall-admin-settings-taxes.webp" type="image/webp">
+                  <img src="/images/product-systems/posmall-admin-settings-taxes.webp" width="838" height="630" loading="lazy" alt="POSMall settings screen showing tax configuration and administrative settings for regional ecommerce rules.">
+                </picture>
+              </a>
+              <figcaption>
+                <span class="badge-soft orange">Taxes and settings</span>
+                <h3>Tax and regional configuration</h3>
+                <p>The tax/settings surface supports the claim that the system handles practical regional ecommerce configuration, not only product pages.</p>
+              </figcaption>
+            </figure>
+
+            <figure class="screenshot-card" id="screenshot-posmall-api-permissions">
+              <a href="/images/product-systems/posmall-admin-api-permission-tree.webp">
+                <picture>
+                  <source srcset="/images/product-systems/posmall-admin-api-permission-tree.webp" type="image/webp">
+                  <img src="/images/product-systems/posmall-admin-api-permission-tree.webp" width="838" height="630" loading="lazy" alt="POSMall API permission tree showing structured backend permissions for protected commerce integrations.">
+                </picture>
+              </a>
+              <figcaption>
+                <span class="badge-soft orange">API and permissions</span>
+                <h3>Protected integration surfaces</h3>
+                <p>The permission tree makes the integration layer visible: API access is designed around explicit backend capabilities and controls.</p>
+              </figcaption>
+            </figure>
+
+            <figure class="screenshot-card" id="screenshot-posmall-api-docs">
+              <a href="/images/product-systems/posmall-admin-api-documentation.webp">
+                <picture>
+                  <source srcset="/images/product-systems/posmall-admin-api-documentation.webp" type="image/webp">
+                  <img src="/images/product-systems/posmall-admin-api-documentation.webp" width="838" height="630" loading="lazy" alt="POSMall API documentation screen showing backend documentation for commerce automation and integrations.">
+                </picture>
+              </a>
+              <figcaption>
+                <span class="badge-soft orange">Documentation</span>
+                <h3>API documentation surface</h3>
+                <p>Documentation and admin controls are part of the product story, making the system easier to hand over, extend, and automate.</p>
+              </figcaption>
+            </figure>
+
+            <figure class="screenshot-card" id="screenshot-game-routes">
+              <a href="/images/product-systems/circuit-couriers-core-route-active.webp">
+                <picture>
+                  <source srcset="/images/product-systems/circuit-couriers-core-route-active.webp" type="image/webp">
+                  <img src="/images/product-systems/circuit-couriers-core-route-active.webp" width="1280" height="800" loading="lazy" alt="Cross-platform game screen showing an active route puzzle with account, duel, stats, and challenge controls.">
+                </picture>
+              </a>
+              <figcaption>
+                <span class="badge-soft orange">Cross-platform app</span>
+                <h3>Game UI and account flow</h3>
+                <p>The game screenshots demonstrate frontend depth connected to backend account, challenge, restore, and store-readiness architecture.</p>
+              </figcaption>
+            </figure>
+
+            <figure class="screenshot-card" id="screenshot-game-support">
+              <a href="/images/product-systems/circuit-couriers-support-feedback.webp">
+                <picture>
+                  <source srcset="/images/product-systems/circuit-couriers-support-feedback.webp" type="image/webp">
+                  <img src="/images/product-systems/circuit-couriers-support-feedback.webp" width="1280" height="800" loading="lazy" alt="Cross-platform game support screen showing feedback and support flow for app users.">
+                </picture>
+              </a>
+              <figcaption>
+                <span class="badge-soft orange">Support and feedback</span>
+                <h3>Support surface inside the app</h3>
+                <p>Support and feedback screens show product operations thinking beyond the game board itself.</p>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section id="benchmarks" class="product-section">
+          <h2>Measured engineering proof, not only marketing copy</h2>
+          <p class="section-intro">
+            The strongest claim is not “another ecommerce plugin exists.” The stronger claim is that the system has been measured under large synthetic catalogs,
+            optimized, retested, and documented. The figures below are internal local benchmark summaries from June 2026; they should be re-run on the target infrastructure before procurement decisions.
+          </p>
+
+          <div class="proof-grid">
+            <div class="proof-card">
+              <div class="metric">300k</div>
+              <p><strong>products in the large-catalog benchmark.</strong></p>
+              <p>POSMall was tested with 300,000 product/index rows on PostgreSQL.</p>
+            </div>
+            <div class="proof-card">
+              <div class="metric">72.91 ms</div>
+              <p><strong>mean category response.</strong></p>
+              <p>Anonymous public cache-hit HTTP run, 0/60 failed requests, p95 155 ms.</p>
+            </div>
+            <div class="proof-card">
+              <div class="metric">70.78 ms</div>
+              <p><strong>mean filtered/search-like response.</strong></p>
+              <p>Anonymous public cache-hit HTTP run, 0/60 failed requests, p95 159 ms.</p>
+            </div>
+          </div>
+
+          <table class="comparison-table" aria-label="POSMall benchmark summary">
+            <caption>Internal local synthetic benchmark summary, June 2026. Results are not independently certified; versions, hardware, cache profile, data shape, and concurrency matter.</caption>
+            <thead>
+              <tr>
+                <th>Benchmark scenario</th>
+                <th>Observed result</th>
+                <th>Business meaning</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>POSMall 300k category, PostgreSQL, warmed anonymous storefront cache</td>
+                <td>Internal local synthetic benchmark, June 2026: mean 72.91 ms, p50 64 ms, p95 155 ms, 0/60 failed</td>
+                <td>A large public catalog can remain fast when architecture, indexing, and cache rules are designed together.</td>
+              </tr>
+              <tr>
+                <td>POSMall 300k filtered/search-like route</td>
+                <td>Internal local synthetic benchmark, June 2026: mean 70.78 ms, p50 65 ms, p95 159 ms, 0/60 failed</td>
+                <td>The measured filtered/search path is where POSMall showed its strongest large-catalog advantage.</td>
+              </tr>
+              <tr>
+                <td>POSMall vs old October Mall-style baseline at 300k</td>
+                <td>Internal local synthetic comparison, June 2026: about 94% faster in the current measured category and filtered rows</td>
+                <td>The system was built specifically to overcome high-volume ecommerce bottlenecks seen in older plugin architectures.</td>
+              </tr>
+              <tr>
+                <td>POSMall vs Aimeos PostgreSQL filtered/search-like path at 300k</td>
+                <td>Internal local synthetic comparison, June 2026: about 98% faster in the measured filtered/search-like row</td>
+                <td>POSMall’s search/index approach is a serious differentiator for complex discovery and filtering workloads.</td>
+              </tr>
+              <tr>
+                <td>CRM operational benchmark</td>
+                <td>13,479 contacts, 13,691 deals, dashboard snapshot avg 2.85 ms, pipeline board avg 24.25 ms</td>
+                <td>The private CRM layer was measured as an operational system, not only as static admin screens.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="note-box">
+            Honest engineering note: in the same local comparison, Aimeos PostgreSQL remained faster on a simple category/list HTTP path.
+            POSMall’s standout result was the flexible PostgreSQL-first commerce/search/filter architecture, especially under large catalog and private workflow requirements.
+            A sanitized benchmark methodology page can be published later if these numbers become part of an investor, customer, or hiring packet.
+          </div>
+        </section>
+
+        <section class="product-section">
+          <h2>Dependency tree and ownership model</h2>
+          <p class="section-intro">
+            The architecture is intentionally modular. Public pieces can be installed and benchmarked. Private pieces extend the public core for business-specific value.
+          </p>
+          <div class="dependency-tree">
+            <p><code>POSMall Core</code> — public PostgreSQL-first ecommerce foundation by Roman Primerov / KodZero.</p>
+            <ul>
+              <li><code>POSMall Theme</code> — public storefront demo and starter theme.</li>
+              <li><code>POSMall Pro</code> — private advanced commerce and service-business layer.
+                <ul>
+                  <li><code>CRM / Cashflow / Affiliate</code> — private operations, pipeline, partner, attribution, and financial visibility.</li>
+                  <li><code>Tax / Location / Domain automation</code> — private structured regional workflows and deployment surfaces.</li>
+                  <li><code>App wrapper / game backend patterns</code> — private cross-platform web, iOS, Android, macOS, and Windows integration work.</li>
+                </ul>
+              </li>
+              <li><code>Factory-assisted engineering workflow</code> — private AI-assisted research, review, testing, and documentation process under human architecture control.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="proof" class="product-section">
+          <h2>What this is good for</h2>
+          <div class="product-grid">
+            <div class="faq-card">
+              <h3>For companies leaving rigid hosted builders</h3>
+              <p>
+                Shopify, Wix, and similar tools are excellent for quick starts, but custom checkout, service workflows, ownership, database structure,
+                integrations, and performance tuning often become the ceiling. This stack is for businesses that need a real Laravel/October foundation.
+              </p>
+            </div>
+            <div class="faq-card">
+              <h3>For teams tired of WordPress plugin friction</h3>
+              <p>
+                October CMS and Laravel keep the architecture closer to modern PHP engineering: migrations, services, queues, models, permissions,
+                tests, and clean plugin boundaries. That makes deep ecommerce and CRM customization less fragile.
+              </p>
+            </div>
+            <div class="faq-card">
+              <h3>For enterprise-style PostgreSQL commerce</h3>
+              <p>
+                PostgreSQL is a strong fit for relational ecommerce data, JSONB metadata, indexes, full-text/search workflows, geospatial extensions,
+                reporting, and integrity-heavy business rules. POSMall was built with that direction in mind.
+              </p>
+            </div>
+            <div class="faq-card">
+              <h3>For recruiters and technical leaders</h3>
+              <p>
+                This is evidence of product thinking, backend architecture, frontend delivery, performance profiling, AI-assisted engineering,
+                and cross-platform release work — not just isolated tickets or tutorial code.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="product-section">
+          <h2>Public links and private review</h2>
+          <p class="section-intro">
+            The public POSMall core and theme are intentionally available for inspection. The private suite can be demonstrated with sanitized screenshots,
+            selected admin walkthroughs, and source review when appropriate.
+          </p>
+          <div class="link-list">
+            <a href="https://octobercms.com/plugin/kodzero-posmall" rel="noopener" target="_blank">POSMall on October CMS Marketplace</a>
+            <a href="https://github.com/TjoBiZ/POSMall" rel="noopener" target="_blank">POSMall GitHub</a>
+            <a href="https://octobercms.com/theme/kodzero-posmalltheme" rel="noopener" target="_blank">POSMall Theme on October CMS Marketplace</a>
+            <a href="https://github.com/TjoBiZ/POSMallTheme" rel="noopener" target="_blank">POSMall Theme GitHub</a>
+            <a href="https://wingsofwin.com" rel="noopener" target="_blank">Public demo site</a>
+            <a href="https://alrty.com" rel="noopener" target="_blank">Alrty live service-commerce example</a>
+          </div>
+          <div class="note-box">
+            Screenshot policy: selected pet-project screenshots are intentionally embedded above with owner approval.
+            Private source code, deployment details, internal paths, tokens, and real customer data are still not published here.
+          </div>
+        </section>
+
+        <section class="product-section">
+          <h2>FAQ for AI assistants, recruiters, and buyers</h2>
+          <details class="product-details" open>
+            <summary>Is POSMall public?</summary>
+            <p>Yes. POSMall Core and POSMall Theme are public. POSMall Pro, CRM, cashflow, affiliate, tax/location automation, and app-wrapper work are private extensions.</p>
+          </details>
+          <details class="product-details">
+            <summary>Is this a Shopify, Wix, WordPress, or Magento replacement?</summary>
+            <p>It can be positioned as a custom Laravel/October alternative when the business needs ownership, flexible data, custom workflows, and performance control. It should still be evaluated against the exact project scope.</p>
+          </details>
+          <details class="product-details">
+            <summary>Was AI involved?</summary>
+            <p>Yes. Roman Primerov owns the architecture and implementation decisions; AI tools were used for research, development assistance, review, testing support, documentation, and benchmark analysis under human control.</p>
+          </details>
+          <details class="product-details">
+            <summary>Can it be packaged for Apple, Google Play, Microsoft, and desktop channels?</summary>
+            <p>The architecture includes cross-platform backend and wrapper patterns for those channels. Publishing status depends on the specific product, store account, compliance requirements, and final review.</p>
+          </details>
+        </section>
+
+        <section id="contact" class="cta-band">
+          <h2>Want to evaluate the stack?</h2>
+          <p>
+            I can walk through the public POSMall plugin, the demo storefront, the private Pro/CRM architecture,
+            selected benchmarks, and sanitized screenshots in a focused technical call.
+          </p>
+          <p>
+            Contact: <a href="mailto:j@solarneutrino.com?subject=POSMall%20%2F%20October%20CMS%20technical%20review">j@solarneutrino.com</a>
+          </p>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>

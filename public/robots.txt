@@ -1,4 +1,5 @@
 User-agent: *
+Allow: /october-laravel-products
 Disallow: /login
 Disallow: /register
 Disallow: /password

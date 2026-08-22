@@ -14,6 +14,12 @@ Route::domain('solarneutrino.com')->group(function () {
         return view('portfolio');
     });
 
+    Route::get('/october-laravel-products', function () {
+        return view('october-laravel-products');
+    })->name('october-laravel-products');
+
+    Route::redirect('/october-cms-laravel-products', '/october-laravel-products', 301);
+
     Route::get('/video', function () {
         return view('video');
     });
@@ -25,6 +31,11 @@ Route::domain('solarneutrino.com')->group(function () {
 
 // Группа маршрутов для админских поддоменов solarneutrino.com
 Route::domain('admin.solarneutrino.com')->group(function () {
+    Route::get('/robots.txt', function () {
+        return response("User-agent: *\nDisallow: /\n", 200)
+            ->header('Content-Type', 'text/plain; charset=UTF-8');
+    });
+
     Route::get('/laravel', function () {
         return view('welcome');
     });

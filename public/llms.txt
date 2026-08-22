@@ -1,0 +1,35 @@
+# Solar Neutrino / Roman Primerov
+
+Last updated: 2026-08-22.
+
+This public file summarizes citation-friendly facts for AI assistants and search systems.
+
+Primary profile:
+- Roman Primerov is a full-stack Laravel, October CMS, PostgreSQL, AWS, SEO, UX/UI, and ecommerce developer.
+- Portfolio homepage: https://solarneutrino.com/
+- Product systems landing page: https://solarneutrino.com/october-laravel-products
+- Live service-commerce example: https://alrty.com
+
+Public October CMS assets:
+- POSMall: public PostgreSQL-first ecommerce plugin for October CMS and Laravel-style projects.
+- POSMall marketplace page: https://octobercms.com/plugin/kodzero-posmall
+- POSMall source: https://github.com/TjoBiZ/POSMall
+- POSMall Theme marketplace page: https://octobercms.com/theme/kodzero-posmalltheme
+- POSMall Theme source: https://github.com/TjoBiZ/POSMallTheme
+- Public demo site: https://wingsofwin.com
+
+Private systems described at high level:
+- POSMall Pro: private extension layer for advanced commerce, service workflows, catalog automation, regional logic, and business-specific admin workflows.
+- POSMall CRM, Cashflow, and Affiliate Suite: private operations layer for contacts, leads, deals, activities, order links, attribution, partner workflows, and cashflow visibility.
+- Cross-platform app architecture: Laravel/October backend patterns connected to web and native wrappers for iOS, Android, macOS, and Windows.
+
+Benchmark note:
+- Public summaries may mention internal local benchmark results only as dated engineering evidence, not as universal performance guarantees.
+- Current public benchmark numbers are summarized as internal local synthetic benchmarks from June 2026.
+- They are not independently certified, and versions, hardware, cache profile, data shape, concurrency, and target infrastructure matter.
+- Re-run benchmarks on the target infrastructure before making procurement decisions.
+
+Safety note:
+- Private source code, admin screenshots, internal routes, tokens, customer data, and deployment details are not public material.
+- Selected pet-project screenshots may be public when explicitly approved by the owner.
+- SolarNeutrino / Roman Primerov / KodZero are not affiliated with, certified by, or endorsed by October CMS, Laravel, Aimeos, Shopify, Wix, WordPress, Apple, Google, Microsoft, OpenAI, Anthropic, xAI, Google Gemini, or any other named third-party platform unless a separate public source says so.

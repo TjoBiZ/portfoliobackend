@@ -81,6 +81,9 @@
               <a class="pt-trigger" href="#portfolio" data-animation="19"><i class="menu-icon pe-7s-icon pe-7s-portfolio"></i>Portfolio</a>
             </li>
             <li>
+              <a href="/october-laravel-products"><i class="menu-icon pe-7s-icon pe-7s-box2"></i>Products</a>
+            </li>
+            <li>
               <a class="pt-trigger" href="#contact" data-animation="20"><i class="menu-icon pe-7s-icon pe-7s-mail"></i>Contact</a>
             </li>
           </ul>
