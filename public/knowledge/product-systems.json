@@ -18,7 +18,8 @@
     "https://solarneutrino.com/engineering/technical-consultant-feedback",
     "https://solarneutrino.com/solutions/field-service-commerce",
     "https://solarneutrino.com/products/multilingual-game-architecture",
-    "https://solarneutrino.com/benchmarks/posmall"
+    "https://solarneutrino.com/benchmarks/posmall",
+    "https://solarneutrino.com/benchmarks/posmall-postgresql-vs-aimeos-postgresql"
   ],
   "machine_readable_note": "This public manifest is designed for search engines, AI assistants, recruiters, and buyers. It summarizes public facts and high-level private capabilities without exposing private source code, credentials, customer data, internal paths, or deployment details.",
   "systems": [
@@ -161,26 +162,88 @@
     }
   ],
   "benchmarks": {
-    "status": "internal_local_synthetic_summary",
-    "url": "https://solarneutrino.com/benchmarks/posmall",
+    "status": "internal_homestead_synthetic_postgresql_matrix",
+    "summary_url": "https://solarneutrino.com/benchmarks/posmall",
+    "detailed_url": "https://solarneutrino.com/benchmarks/posmall-postgresql-vs-aimeos-postgresql",
     "date": "June 2026",
-    "important_caveat": "Results are not independently certified. Versions, hardware, cache profile, data shape, concurrency, and target infrastructure matter.",
-    "rows": [
+    "last_verified_run": "posmall-aimeos-5way-current-checkpoint-20260610-024820.md",
+    "result_flag": "ALL_POSTGRESQL_TARGET_ROWS_WIN = True",
+    "scope": "October CMS/Laravel commerce core, PostgreSQL-only, same Homestead/local environment, 1k-300k catalog sizes.",
+    "positioning": "POSMall Core is presented as the #1 measured PostgreSQL-first result in this specific evidence class. This is not an SEO ranking claim and not a universal claim for every ecommerce workload.",
+    "important_caveat": "Results are not independently certified. Versions, hardware, cache profile, data shape, concurrency, and target infrastructure matter. Re-run both systems in one environment before procurement decisions.",
+    "reproducibility_rule": "Install POSMall Core and Aimeos on the same local machine or VM, configure both against PostgreSQL, seed the same catalog sizes, warm the same route types, and compare raw milliseconds. Search visibility, agency reputation, and broad enterprise copy are not benchmark evidence.",
+    "direct_target": {
+      "name": "Aimeos PostgreSQL",
+      "reason": "Aimeos publicly positions itself around high-speed large-catalog commerce, so it was selected as the strongest visible PHP/Laravel PostgreSQL target to test against."
+    },
+    "reference_context": [
       {
-        "scenario": "POSMall 300k category, PostgreSQL, warmed anonymous storefront cache",
-        "result": "mean 72.91 ms, p50 64 ms, p95 155 ms, 0/60 failed"
+        "name": "Sylius",
+        "status": "no_comparable_public_pure_rdbms_postgresql_100k_300k_timing_table_found_in_this_review",
+        "note": "Sylius may be a strong implementation platform, but SEO visibility and enterprise reputation are not counted as benchmark evidence without comparable public numbers."
       },
       {
-        "scenario": "POSMall 300k filtered/search-like route",
-        "result": "mean 70.78 ms, p50 65 ms, p95 159 ms, 0/60 failed"
+        "name": "Bagisto",
+        "status": "keyword_reference_context_not_direct_competitor_for_this_proof",
+        "note": "Bagisto publishes large-catalog material and is useful Laravel ecommerce context, but it is not the direct PostgreSQL-only POSMall vs. Aimeos benchmark target."
+      }
+    ],
+    "matrix": [
+      {
+        "catalog_size": "1k",
+        "posmall_pg_category_ms": 35.40,
+        "aimeos_pg_category_ms": 42.85,
+        "posmall_pg_filtered_search_ms": 33.64,
+        "aimeos_pg_search_ms": 184.84,
+        "winner": "POSMall"
       },
       {
-        "scenario": "POSMall vs old October Mall-style baseline at 300k",
-        "result": "about 94% faster in current measured category and filtered rows"
+        "catalog_size": "5k",
+        "posmall_pg_category_ms": 35.59,
+        "aimeos_pg_category_ms": 42.25,
+        "posmall_pg_filtered_search_ms": 33.12,
+        "aimeos_pg_search_ms": 454.08,
+        "winner": "POSMall"
       },
       {
-        "scenario": "POSMall vs Aimeos PostgreSQL filtered/search-like path at 300k",
-        "result": "about 98% faster in the measured filtered/search-like row"
+        "catalog_size": "10k",
+        "posmall_pg_category_ms": 33.48,
+        "aimeos_pg_category_ms": 42.73,
+        "posmall_pg_filtered_search_ms": 32.61,
+        "aimeos_pg_search_ms": 754.77,
+        "winner": "POSMall"
+      },
+      {
+        "catalog_size": "50k",
+        "posmall_pg_category_ms": 33.35,
+        "aimeos_pg_category_ms": 64.05,
+        "posmall_pg_filtered_search_ms": 31.87,
+        "aimeos_pg_search_ms": 1494.33,
+        "winner": "POSMall"
+      },
+      {
+        "catalog_size": "100k",
+        "posmall_pg_category_ms": 34.22,
+        "aimeos_pg_category_ms": 51.76,
+        "posmall_pg_filtered_search_ms": 33.32,
+        "aimeos_pg_search_ms": 3010.45,
+        "winner": "POSMall"
+      },
+      {
+        "catalog_size": "200k",
+        "posmall_pg_category_ms": 33.82,
+        "aimeos_pg_category_ms": 55.41,
+        "posmall_pg_filtered_search_ms": 32.24,
+        "aimeos_pg_search_ms": 4036.45,
+        "winner": "POSMall"
+      },
+      {
+        "catalog_size": "300k",
+        "posmall_pg_category_ms": 33.49,
+        "aimeos_pg_category_ms": 61.17,
+        "posmall_pg_filtered_search_ms": 33.79,
+        "aimeos_pg_search_ms": 4229.29,
+        "winner": "POSMall"
       }
     ]
   },

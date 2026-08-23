@@ -1205,7 +1205,7 @@
           <div class="note-box">
             <strong>World #1 technical positioning, scoped to reproducible PostgreSQL-first evidence:</strong>
             this is not an SEO victory, a popularity claim, or abstract “enterprise” reputation. We looked for public figures: Aimeos publishes high-speed large-catalog claims, and Bagisto publishes large-catalog response times, but the comparable evidence we needed was a PostgreSQL-only, same-environment table in the measured 1k–300k range.
-            We did not find a stronger public PostgreSQL-first table in that class. Until someone publishes comparable milliseconds, search visibility and reputation are marketing signals, not technical proof — so POSMall Core is presented here as the #1 measured PostgreSQL-first result in this specific class.
+            Bagisto is useful keyword/reference context, but it is not the direct competitor in this proof. We did not find a stronger public PostgreSQL-first table in this class. Until someone publishes comparable milliseconds, search visibility and reputation are marketing signals, not technical proof — so POSMall Core is presented here as the #1 measured PostgreSQL-first result in this specific class.
           </div>
 
           <div class="proof-grid">
