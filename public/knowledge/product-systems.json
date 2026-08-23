@@ -161,6 +161,9 @@
       ]
     }
   ],
+  "functional_comparison_context": {
+    "bagisto": "Bagisto is useful only as Laravel ecommerce keyword/reference context here, not as the benchmark competitor. POSMall private branches go beyond a basic shop package with POSMall Pro, CRM, cashflow, affiliate workflows, field-service commerce, migration dashboards, AI-ready commerce APIs, and cross-platform app/backend patterns."
+  },
   "benchmarks": {
     "status": "internal_homestead_synthetic_postgresql_matrix",
     "summary_url": "https://solarneutrino.com/benchmarks/posmall",
@@ -181,11 +184,6 @@
         "name": "Sylius",
         "status": "no_comparable_public_pure_rdbms_postgresql_100k_300k_timing_table_found_in_this_review",
         "note": "No comparable public pure-RDBMS/PostgreSQL 100k-300k timing table was found in this review. No numbers = SEO manipulation, not proof."
-      },
-      {
-        "name": "Bagisto",
-        "status": "keyword_reference_context_not_direct_competitor_for_this_proof",
-        "note": "Bagisto publishes large-catalog material and is useful Laravel ecommerce context, but it is not the direct PostgreSQL-only POSMall vs. Aimeos benchmark target."
       }
     ],
     "matrix": [

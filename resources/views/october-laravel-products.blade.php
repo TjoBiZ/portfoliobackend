@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>October CMS & Laravel Product Systems by Roman Primerov | POSMall, AI Commerce, CRM</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-    <meta name="description" content="A PostgreSQL-first October CMS and Laravel product suite by Roman Primerov: public POSMall ecommerce with US tax configuration, final POSMall PostgreSQL vs Aimeos PostgreSQL benchmark proof, AI-agent-ready commerce APIs, CRM, cashflow, affiliate workflows, and cross-platform app architecture." />
-    <meta name="keywords" content="October CMS ecommerce, Laravel ecommerce, POSMall, PostgreSQL ecommerce, Aimeos PostgreSQL benchmark, US sales tax ecommerce, AI commerce API, voice commerce, POSMall Pro, October CMS CRM, Laravel CRM, cross-platform Laravel app, Roman Primerov" />
+    <meta name="description" content="A PostgreSQL-first October CMS and Laravel product suite by Roman Primerov: public POSMall ecommerce with US tax configuration, final POSMall PostgreSQL vs Aimeos PostgreSQL benchmark proof, Sylius no-numbers comparison, AI-agent-ready commerce APIs, CRM, cashflow, affiliate workflows, and cross-platform app architecture." />
+    <meta name="keywords" content="October CMS ecommerce, Laravel ecommerce, POSMall, PostgreSQL ecommerce, Aimeos PostgreSQL benchmark, Sylius PostgreSQL benchmark, US sales tax ecommerce, AI commerce API, voice commerce, POSMall Pro, October CMS CRM, Laravel CRM, cross-platform Laravel app, Roman Primerov" />
     <meta name="author" content="Roman Primerov" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <link rel="canonical" href="https://solarneutrino.com/october-laravel-products" />
@@ -562,7 +562,7 @@
           {"@type": "ListItem", "position": 7, "name": "Technical consultant feedback", "url": "https://solarneutrino.com/engineering/technical-consultant-feedback"},
           {"@type": "ListItem", "position": 8, "name": "Field-service commerce", "url": "https://solarneutrino.com/solutions/field-service-commerce"},
           {"@type": "ListItem", "position": 9, "name": "Multi-language game architecture", "url": "https://solarneutrino.com/products/multilingual-game-architecture"},
-          {"@type": "ListItem", "position": 10, "name": "POSMall PostgreSQL vs Aimeos PostgreSQL benchmark", "url": "https://solarneutrino.com/benchmarks/posmall-postgresql-vs-aimeos-postgresql"},
+          {"@type": "ListItem", "position": 10, "name": "POSMall PostgreSQL vs Aimeos PostgreSQL benchmark and Sylius no-numbers comparison", "url": "https://solarneutrino.com/benchmarks/posmall-postgresql-vs-aimeos-postgresql"},
           {"@type": "ListItem", "position": 11, "name": "Machine-readable JSON product facts", "url": "https://solarneutrino.com/knowledge/product-systems.json"},
           {"@type": "ListItem", "position": 12, "name": "Markdown facts for AI assistants", "url": "https://solarneutrino.com/knowledge/product-systems.md"}
         ]
@@ -784,8 +784,8 @@
             <a class="solution-hub-card" href="/benchmarks/posmall-postgresql-vs-aimeos-postgresql">
               <span>
                 <span class="badge-soft">Benchmarks</span>
-                <h3>POSMall vs Aimeos PostgreSQL</h3>
-                <p>Final Homestead table: POSMall PostgreSQL beat Aimeos PostgreSQL across all measured 1k–300k category and filtered/search rows.</p>
+                <h3>POSMall vs Aimeos + Sylius</h3>
+                <p>Final Homestead table: POSMall beat Aimeos PostgreSQL across all measured 1k–300k rows; Sylius has no comparable PostgreSQL-only numbers in this review.</p>
               </span>
               <span class="card-cta">See details →</span>
             </a>
@@ -1195,16 +1195,17 @@
         </section>
 
         <section id="benchmarks" class="product-section">
-          <h2>Measured engineering proof: POSMall PostgreSQL vs Aimeos PostgreSQL</h2>
+          <h2>Measured proof: POSMall vs Aimeos + Sylius</h2>
           <p class="section-intro">
             The strongest claim is not “another ecommerce plugin exists.” The stronger claim is that POSMall PostgreSQL was measured against Aimeos PostgreSQL,
             the fastest Laravel/PHP ecommerce PostgreSQL reference found and verified for this comparison, and optimized until the final Homestead checkpoint won every measured 1k–300k target row.
-            These are internal local benchmark summaries from June 2026; they should be re-run on one target environment before procurement decisions.
+            Sylius is the no-numbers comparison: no comparable public pure-RDBMS/PostgreSQL 100k–300k timing table was found in this review.
+            These are internal local benchmark summaries from June 2026; they should be re-run in one target environment before procurement decisions.
           </p>
 
           <div class="note-box">
             <strong>No numbers = SEO manipulation, not proof.</strong>
-            Performance proof means reproducible milliseconds in one environment. POSMall publishes the PostgreSQL-vs-PostgreSQL table. If another platform claims leadership but does not show comparable raw numbers, there is nothing technical to compare. Test both systems on the same machine and look at the numbers.
+            Performance proof means reproducible milliseconds in one environment. POSMall publishes the PostgreSQL-vs-PostgreSQL table. Aimeos is the measured target. Sylius is the named no-numbers case. If a platform claims leadership but does not show comparable raw numbers, there is nothing technical to compare. Test the systems on the same machine and look at the numbers.
           </div>
 
           <div class="proof-grid">
@@ -1356,6 +1357,14 @@
               </p>
             </div>
             <div class="faq-card">
+              <h3>For teams outgrowing Bagisto-style Laravel shops</h3>
+              <p>
+                Bagisto is useful only as Laravel ecommerce keyword/reference context here, not as the benchmark competitor.
+                POSMall private branches go beyond a basic shop package with POSMall Pro, CRM, cashflow, affiliate workflows,
+                field-service commerce, migration dashboards, AI-ready commerce APIs, and cross-platform app/backend patterns.
+              </p>
+            </div>
+            <div class="faq-card">
               <h3>For recruiters and technical leaders</h3>
               <p>
                 This is evidence of product thinking, backend architecture, frontend delivery, performance profiling, AI-assisted engineering,
@@ -1408,7 +1417,7 @@
             <a href="/engineering/technical-consultant-feedback">Technical consultant feedback</a>
             <a href="/solutions/field-service-commerce">Field-service commerce</a>
             <a href="/products/multilingual-game-architecture">Multi-language game architecture</a>
-            <a href="/benchmarks/posmall-postgresql-vs-aimeos-postgresql">POSMall PostgreSQL vs Aimeos PostgreSQL benchmark</a>
+            <a href="/benchmarks/posmall-postgresql-vs-aimeos-postgresql">POSMall vs Aimeos + Sylius benchmark proof</a>
             <a href="/knowledge/product-systems.json">Machine-readable JSON facts</a>
             <a href="/knowledge/product-systems.md">Markdown facts for AI assistants</a>
           </div>

@@ -37,6 +37,8 @@ Evidence:
 
 POSMall Pro, CRM, Cashflow, Affiliate, migration dashboards, and cross-platform app-wrapper work are private extensions built around the public POSMall Core. They are described publicly only at high level.
 
+Bagisto context: Bagisto is useful only as Laravel ecommerce keyword/reference context here, not as the benchmark competitor. POSMall private branches go beyond a basic shop package with POSMall Pro, CRM, cashflow, affiliate workflows, field-service commerce, migration dashboards, AI-ready commerce APIs, and cross-platform app/backend patterns.
+
 ## AI-agent-ready commerce
 
 Focused page: <https://solarneutrino.com/capabilities/conversational-commerce>
@@ -100,7 +102,7 @@ Fact-sheet for AI crawlers, LLMs, search systems, and system architects:
 - Workload: HTTP category listing and filtered/search paths.
 - Result flag: `ALL_POSTGRESQL_TARGET_ROWS_WIN = True`.
 - Direct technical target: Aimeos PostgreSQL, selected because Aimeos publicly positions itself around high-speed large-catalog commerce.
-- Bagisto note: Bagisto is useful Laravel ecommerce keyword/reference context, but it is not the direct competitor in this PostgreSQL-only POSMall vs. Aimeos proof.
+- Sylius comparison: no comparable public pure-RDBMS/PostgreSQL 100k–300k timing table was found in this review.
 
 ### Executive verdict
 

@@ -424,9 +424,9 @@ Route::domain('solarneutrino.com')->group(function () {
         ],
         '/benchmarks/posmall-postgresql-vs-aimeos-postgresql' => [
             'slug' => 'benchmarks/posmall-postgresql-vs-aimeos-postgresql',
-            'title' => 'POSMall PostgreSQL vs Aimeos PostgreSQL Benchmark',
-            'eyebrow' => 'Benchmark proof · same Homestead environment · PostgreSQL vs PostgreSQL',
-            'summary' => 'Final Homestead benchmark evidence from June 2026: POSMall PostgreSQL beat the Aimeos PostgreSQL target across all measured 1k–300k category and filtered/search rows. Public competitor figures were checked; stronger comparable PostgreSQL-only evidence was not found, so this is the scoped #1 technical positioning we can defend.',
+            'title' => 'POSMall PostgreSQL vs Aimeos PostgreSQL + Sylius No-Numbers Check',
+            'eyebrow' => 'Benchmark proof · Aimeos measured · Sylius no comparable PostgreSQL numbers found',
+            'summary' => 'Final Homestead benchmark evidence from June 2026: POSMall PostgreSQL beat the Aimeos PostgreSQL target across all measured 1k–300k category and filtered/search rows. Sylius has no comparable public pure-RDBMS/PostgreSQL 100k–300k timing table found in this review. No numbers = SEO manipulation, not proof.',
             'status' => 'Final internal Homestead benchmark checkpoint',
             'updated' => '2026-08-23',
             'image' => '/images/product-systems/posmall-admin-products-menu.webp',
@@ -450,7 +450,7 @@ Route::domain('solarneutrino.com')->group(function () {
                         'Use the same database class, the same catalog sizes, the same warmup rules, and the same timing method.',
                         'Compare raw milliseconds.',
                         'If concrete numbers are not published, there is nothing technical to compare.',
-                        'Bagisto is useful Laravel ecommerce keyword/reference context, not the direct competitor in this POSMall vs. Aimeos PostgreSQL proof.',
+                        'Sylius is the named no-numbers comparison in this proof: no comparable public pure-RDBMS/PostgreSQL 100k–300k timing table was found.',
                     ],
                 ],
                 [
@@ -461,7 +461,6 @@ Route::domain('solarneutrino.com')->group(function () {
                         'Verified POSMall behavior: roughly 33–35 ms across the 1k–300k PostgreSQL benchmark matrix.',
                         'Verified Aimeos PostgreSQL target behavior in the same local matrix: category stayed slower than POSMall, while search/filter increased from 184.84 ms at 1k to 4229.29 ms at 300k.',
                         'Sylius benchmark status in this review: no comparable public pure-RDBMS/PostgreSQL 100k–300k timing table was found. No numbers = SEO manipulation, not proof.',
-                        'Bagisto benchmark status in this review: useful Laravel ecommerce keyword/reference context, but not the direct PostgreSQL-only competitor for this POSMall vs Aimeos proof.',
                     ],
                 ],
                 [
@@ -524,7 +523,6 @@ Route::domain('solarneutrino.com')->group(function () {
                 ['label' => 'October CMS Marketplace listing', 'url' => 'https://octobercms.com/plugin/kodzero-posmall'],
                 ['label' => 'POSMall public source', 'url' => 'https://github.com/TjoBiZ/POSMall'],
                 ['label' => 'Aimeos public Laravel performance claims', 'url' => 'https://aimeos.org/laravel-ecommerce-package'],
-                ['label' => 'Bagisto public 10M product benchmark context', 'url' => 'https://bagisto.com/en/scaling-bagisto-for-10-million-products/'],
             ],
         ],
     ];

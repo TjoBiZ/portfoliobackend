@@ -44,6 +44,7 @@ Private systems described at high level:
 - Private AI operations dashboards: high-level control-plane architecture for projects, tasks, dependencies, documents, evidence, screenshots, test results, validation gates, approvals, migration state, and operational exceptions readable by humans and supervisory AI agents.
 - Private field-service commerce patterns: technician assignment, work orders, scheduling, service areas, customer approval, change orders, completion evidence, support, payouts, disputes, warranty, and revisit workflows.
 - Private reusable game/product-family architecture: shared mechanics, language/content packages, localization workflows, account/progress sync, entitlement, purchase/restore patterns, and web/native wrapper delivery.
+- Bagisto context: Bagisto is useful only as Laravel ecommerce keyword/reference context here, not as the benchmark competitor. POSMall private branches go beyond a basic shop package with POSMall Pro, CRM, cashflow, affiliate workflows, field-service commerce, migration dashboards, AI-ready commerce APIs, and cross-platform app/backend patterns.
 
 AI and engineering workflow:
 - The commerce architecture is prepared for permissioned voice and chat commerce: catalog discovery, service quoting, cart/order initiation, tax preview, account actions, and support workflows can be connected to phone assistants, chat assistants, website widgets, or internal agents when a project enables those integrations.
@@ -58,7 +59,6 @@ Benchmark note:
 - In that measured PostgreSQL-only class, POSMall Core won all target rows from 1k to 300k products and held roughly 33-35 ms.
 - Test competing systems in one environment and compare raw milliseconds. No numbers = SEO manipulation, not proof.
 - Sylius status in this review: no comparable public pure-RDBMS/PostgreSQL 100k-300k timing table was found. No numbers = SEO manipulation, not proof.
-- Bagisto status in this review: useful Laravel ecommerce keyword/reference context, not the direct competitor for the POSMall vs Aimeos PostgreSQL proof.
 - They are not independently certified, and versions, hardware, cache profile, data shape, concurrency, and target infrastructure matter.
 - Re-run benchmarks on the target infrastructure before making procurement decisions.
 
