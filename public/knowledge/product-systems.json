@@ -8,7 +8,9 @@
     "email": "j@solarneutrino.com"
   },
   "primary_page": "https://solarneutrino.com/october-laravel-products",
+  "products_catalog_page": "https://solarneutrino.com/products",
   "focused_pages": [
+    "https://solarneutrino.com/products",
     "https://solarneutrino.com/products/posmall",
     "https://solarneutrino.com/products/posmall/us-tax-automation",
     "https://solarneutrino.com/capabilities/conversational-commerce",

@@ -4,7 +4,9 @@ Last updated: 2026-08-23.
 
 This public page is a citation-friendly summary for search engines, AI assistants, recruiters, and buyers. It summarizes public facts and high-level private capabilities without exposing private source code, credentials, customer data, internal paths, or deployment details.
 
-Primary page: <https://solarneutrino.com/october-laravel-products>
+Primary product systems page: <https://solarneutrino.com/october-laravel-products>
+
+Portfolio-style products catalog: <https://solarneutrino.com/products>
 
 ## POSMall Core
 

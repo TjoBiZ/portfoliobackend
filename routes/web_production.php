@@ -18,6 +18,10 @@ Route::domain('solarneutrino.com')->group(function () {
         return view('october-laravel-products');
     })->name('october-laravel-products');
 
+    Route::get('/products', function () {
+        return view('products');
+    })->name('products');
+
     Route::redirect('/october-cms-laravel-products', '/october-laravel-products', 301);
 
     $productKnowledgePages = [

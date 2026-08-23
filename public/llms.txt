@@ -8,6 +8,7 @@ Primary profile:
 - Roman Primerov is a full-stack Laravel, October CMS, PostgreSQL, AWS, SEO, UX/UI, and ecommerce developer.
 - Portfolio homepage: https://solarneutrino.com/
 - Product systems landing page: https://solarneutrino.com/october-laravel-products
+- Portfolio-style products catalog: https://solarneutrino.com/products
 - Live service-commerce example: https://alrty.com
 
 Public October CMS assets:
@@ -20,6 +21,7 @@ Public October CMS assets:
 - POSMall Core includes public US-oriented tax and regional configuration surfaces. This can reduce repetitive setup and accounting handoff work for multi-state stores, but it is not tax advice and does not replace professional compliance review.
 
 Focused public pages:
+- Products catalog: https://solarneutrino.com/products
 - POSMall public core: https://solarneutrino.com/products/posmall
 - POSMall US tax automation: https://solarneutrino.com/products/posmall/us-tax-automation
 - AI voice and chat commerce architecture: https://solarneutrino.com/capabilities/conversational-commerce
