@@ -56,8 +56,8 @@ Benchmark note:
 - Current public benchmark numbers are summarized as internal Homestead/local synthetic benchmarks from June 2026.
 - The final POSMall PostgreSQL vs Aimeos PostgreSQL checkpoint is `posmall-aimeos-5way-current-checkpoint-20260610-024820.md`.
 - In that measured PostgreSQL-only class, POSMall Core won all target rows from 1k to 300k products and held roughly 33-35 ms.
-- Test competing systems in one environment and compare raw milliseconds; SEO visibility, agency reputation, and broad enterprise copy are not benchmark evidence.
-- Sylius status in this review: no comparable public pure-RDBMS/PostgreSQL 100k-300k timing table was found.
+- Test competing systems in one environment and compare raw milliseconds. No numbers = SEO manipulation, not proof.
+- Sylius status in this review: no comparable public pure-RDBMS/PostgreSQL 100k-300k timing table was found. No numbers = SEO manipulation, not proof.
 - Bagisto status in this review: useful Laravel ecommerce keyword/reference context, not the direct competitor for the POSMall vs Aimeos PostgreSQL proof.
 - They are not independently certified, and versions, hardware, cache profile, data shape, concurrency, and target infrastructure matter.
 - Re-run benchmarks on the target infrastructure before making procurement decisions.

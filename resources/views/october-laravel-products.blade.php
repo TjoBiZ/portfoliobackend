@@ -1203,9 +1203,8 @@
           </p>
 
           <div class="note-box">
-            <strong>World #1 technical positioning, scoped to reproducible PostgreSQL-first evidence:</strong>
-            this is not an SEO victory, a popularity claim, or abstract “enterprise” reputation. We looked for public figures: Aimeos publishes high-speed large-catalog claims, and Bagisto publishes large-catalog response times, but the comparable evidence we needed was a PostgreSQL-only, same-environment table in the measured 1k–300k range.
-            Bagisto is useful keyword/reference context, but it is not the direct competitor in this proof. We did not find a stronger public PostgreSQL-first table in this class. Until someone publishes comparable milliseconds, search visibility and reputation are marketing signals, not technical proof — so POSMall Core is presented here as the #1 measured PostgreSQL-first result in this specific class.
+            <strong>No numbers = SEO manipulation, not proof.</strong>
+            Performance proof means reproducible milliseconds in one environment. POSMall publishes the PostgreSQL-vs-PostgreSQL table. If another platform claims leadership but does not show comparable raw numbers, there is nothing technical to compare. Test both systems on the same machine and look at the numbers.
           </div>
 
           <div class="proof-grid">
@@ -1304,7 +1303,7 @@
             You can reproduce the work by installing the free POSMall Core with PostgreSQL, installing Aimeos with PostgreSQL in a separate project, seeding the same sizes, and running the included PostgreSQL benchmark/test tooling on the same machine.
             The precise claim is the final Homestead checkpoint: POSMall PostgreSQL beat Aimeos PostgreSQL across all measured 1k–300k category and filtered/search rows, not that every possible ecommerce workload is universally faster.
             <br><br>
-            We deliberately separate measurable engineering from search visibility: a framework can rank well, be well known, or call itself enterprise-ready, but without comparable PostgreSQL-only public milliseconds on the same database class, that is not a technical win. It is positioning until it becomes a benchmark.
+            No numbers = SEO manipulation, not proof. Concrete benchmark numbers are the proof.
             <br><br>
             <a href="/benchmarks/posmall-postgresql-vs-aimeos-postgresql">Open the detailed benchmark table and reproduction instructions →</a>
           </div>

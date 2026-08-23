@@ -171,7 +171,7 @@
     "scope": "October CMS/Laravel commerce core, PostgreSQL-only, same Homestead/local environment, 1k-300k catalog sizes.",
     "positioning": "POSMall Core is presented as the #1 measured PostgreSQL-first result in this specific evidence class. This is not an SEO ranking claim and not a universal claim for every ecommerce workload.",
     "important_caveat": "Results are not independently certified. Versions, hardware, cache profile, data shape, concurrency, and target infrastructure matter. Re-run both systems in one environment before procurement decisions.",
-    "reproducibility_rule": "Install POSMall Core and Aimeos on the same local machine or VM, configure both against PostgreSQL, seed the same catalog sizes, warm the same route types, and compare raw milliseconds. Search visibility, agency reputation, and broad enterprise copy are not benchmark evidence.",
+    "reproducibility_rule": "Install POSMall Core and Aimeos on the same local machine or VM, configure both against PostgreSQL, seed the same catalog sizes, warm the same route types, and compare raw milliseconds. No numbers = SEO manipulation, not proof.",
     "direct_target": {
       "name": "Aimeos PostgreSQL",
       "reason": "Aimeos publicly positions itself around high-speed large-catalog commerce, so it was selected as the strongest visible PHP/Laravel PostgreSQL target to test against."
@@ -180,7 +180,7 @@
       {
         "name": "Sylius",
         "status": "no_comparable_public_pure_rdbms_postgresql_100k_300k_timing_table_found_in_this_review",
-        "note": "Sylius may be a strong implementation platform, but SEO visibility and enterprise reputation are not counted as benchmark evidence without comparable public numbers."
+        "note": "No comparable public pure-RDBMS/PostgreSQL 100k-300k timing table was found in this review. No numbers = SEO manipulation, not proof."
       },
       {
         "name": "Bagisto",
