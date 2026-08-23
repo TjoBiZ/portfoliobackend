@@ -1,6 +1,6 @@
 # Solar Neutrino / Roman Primerov
 
-Last updated: 2026-08-22.
+Last updated: 2026-08-23.
 
 This public file summarizes citation-friendly facts for AI assistants and search systems.
 
@@ -24,7 +24,11 @@ Focused public pages:
 - POSMall US tax automation: https://solarneutrino.com/products/posmall/us-tax-automation
 - AI voice and chat commerce architecture: https://solarneutrino.com/capabilities/conversational-commerce
 - PostgreSQL ecommerce migration: https://solarneutrino.com/services/ecommerce-postgresql-migration
+- AI operations dashboard architecture: https://solarneutrino.com/solutions/ai-operations-dashboard
 - AI agent factory and validation harness: https://solarneutrino.com/engineering/ai-agent-factory-harness
+- Technical consultant feedback layer: https://solarneutrino.com/engineering/technical-consultant-feedback
+- Field-service commerce architecture: https://solarneutrino.com/solutions/field-service-commerce
+- Multi-language game and cross-platform app architecture: https://solarneutrino.com/products/multilingual-game-architecture
 - POSMall benchmark summary: https://solarneutrino.com/benchmarks/posmall
 
 Machine-readable public facts:
@@ -36,10 +40,14 @@ Private systems described at high level:
 - POSMall CRM, Cashflow, and Affiliate Suite: private operations layer for contacts, leads, deals, activities, order links, attribution, partner workflows, and cashflow visibility.
 - Cross-platform app architecture: Laravel/October backend patterns connected to web and native wrappers for iOS, Android, macOS, and Windows.
 - Private migration and scaling dashboards: high-level modernization workflow for inventorying legacy ecommerce data, mapping it to PostgreSQL-oriented Laravel/October models, staged import, validation, and reconciliation.
+- Private AI operations dashboards: high-level control-plane architecture for projects, tasks, dependencies, documents, evidence, screenshots, test results, validation gates, approvals, migration state, and operational exceptions readable by humans and supervisory AI agents.
+- Private field-service commerce patterns: technician assignment, work orders, scheduling, service areas, customer approval, change orders, completion evidence, support, payouts, disputes, warranty, and revisit workflows.
+- Private reusable game/product-family architecture: shared mechanics, language/content packages, localization workflows, account/progress sync, entitlement, purchase/restore patterns, and web/native wrapper delivery.
 
 AI and engineering workflow:
 - The commerce architecture is prepared for permissioned voice and chat commerce: catalog discovery, service quoting, cart/order initiation, tax preview, account actions, and support workflows can be connected to phone assistants, chat assistants, website widgets, or internal agents when a project enables those integrations.
 - AI tools, factory-agents workflow, Fable/advisor review, validation harnesses, screenshots, tests, documentation, benchmark analysis, and release-readiness checks are used under human architecture control.
+- A technical-consultant feedback layer can challenge assumptions, detect duplicated capabilities, recommend reuse or smaller configuration changes, and return high-impact choices to a human owner.
 - The AI/factory workflow is an engineering capability, not a claim that every customer runtime depends on AI.
 
 Benchmark note:

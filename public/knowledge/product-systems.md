@@ -1,6 +1,6 @@
 # Solar Neutrino Product Systems
 
-Last updated: 2026-08-22.
+Last updated: 2026-08-23.
 
 This public page is a citation-friendly summary for search engines, AI assistants, recruiters, and buyers. It summarizes public facts and high-level private capabilities without exposing private source code, credentials, customer data, internal paths, or deployment details.
 
@@ -51,11 +51,35 @@ Focused page: <https://solarneutrino.com/services/ecommerce-postgresql-migration
 
 Private dashboard and migration tooling can help inventory older ecommerce systems, map legacy data to PostgreSQL-oriented Laravel/October models, run staged imports, validate results, reconcile records, and move the business toward a modern architecture.
 
+## AI operations dashboard
+
+Focused page: <https://solarneutrino.com/solutions/ai-operations-dashboard>
+
+The private dashboard architecture is designed as an operations control plane readable by human operators and supervisory AI agents. It can represent projects, tasks, owners, priorities, blockers, evidence, documents, screenshots, validation results, migration state, approvals, audit trail, release gates, and operational exceptions.
+
 ## AI agent factory and validation harness
 
 Focused page: <https://solarneutrino.com/engineering/ai-agent-factory-harness>
 
 The engineering workflow uses AI-assisted research, Fable/advisor review, validation harnesses, screenshots, tests, documentation, benchmark analysis, and release-readiness checks under human architecture control.
+
+## Technical consultant feedback
+
+Focused page: <https://solarneutrino.com/engineering/technical-consultant-feedback>
+
+The technical-consultant layer can challenge assumptions, detect duplicated capabilities, propose reuse or smaller configuration changes, identify conflicts with the current architecture, and return high-impact decisions to a human owner.
+
+## Field-service commerce
+
+Focused page: <https://solarneutrino.com/solutions/field-service-commerce>
+
+The service-commerce architecture accounts for technician assignment, work orders, scheduling, service areas, customer approval, change orders, completion evidence, quality control, support, payouts, disputes, warranty, and revisits. This is useful for businesses where a service order continues after checkout.
+
+## Multi-language game and cross-platform app architecture
+
+Focused page: <https://solarneutrino.com/products/multilingual-game-architecture>
+
+The private product-family architecture is designed around shared mechanics, reusable screen templates, language/content packages, localization workflows, account and progress sync, entitlement, purchase/restore patterns, backend services, and web/native wrapper delivery. It does not claim that every language edition and every store channel is fully released.
 
 ## Benchmarks
 

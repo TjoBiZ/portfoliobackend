@@ -463,6 +463,30 @@
             "operatingSystem": "Web, iOS, Android, macOS, Windows",
             "image": "https://solarneutrino.com/images/product-systems/posmall-admin-api-documentation.webp",
             "description": "Architecture for connecting product catalogs, services, carts, orders, customer workflows, phone assistants, chat assistants, and internal dashboards through controlled commerce APIs."
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Private AI Operations Dashboard",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web",
+            "image": "https://solarneutrino.com/images/product-systems/posmall-admin-api-permission-tree.webp",
+            "description": "Private control-plane architecture for projects, tasks, dependencies, evidence, approvals, validation results, migration state, and release-readiness gates readable by humans and supervisory AI agents."
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Technical Consultant Feedback Layer",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web",
+            "image": "https://solarneutrino.com/images/product-systems/posmall-admin-api-documentation.webp",
+            "description": "Advisor pattern for challenging assumptions, detecting duplicated capabilities, recommending reuse, and keeping implementation scoped to the smallest safe business result."
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Reusable Multi-Language Game Architecture",
+            "applicationCategory": "GameApplication",
+            "operatingSystem": "Web, iOS, Android, macOS, Windows",
+            "image": "https://solarneutrino.com/images/product-systems/circuit-couriers-core-route-active.webp",
+            "description": "Private product-family architecture for shared game mechanics, language content packages, localization workflows, account/progress sync, entitlement, restore patterns, and cross-platform delivery."
           }
         ]
       }
@@ -505,6 +529,38 @@
               "@type": "Answer",
               "text": "Yes. Roman Primerov owns the architecture and implementation decisions. AI tools, an agent factory workflow, advisors, testing harnesses, and review loops were used for research, implementation support, audits, documentation, benchmark analysis, and release readiness under human control."
             }
+          },
+          {
+            "@type": "Question",
+            "name": "Has Roman designed dashboards for AI agents?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, at the architecture level described publicly here. Private dashboards can represent projects, tasks, dependencies, evidence, approvals, migration state, validation results, and operational exceptions in a way that a human supervisor and another AI agent can inspect."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the AI agent factory only a prompt collection?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. The workflow is positioned around specialized roles, orchestration, scoped context, structured document exchange, technical-consultant feedback, screenshots, tests, validation harnesses, release gates, and human-controlled architecture decisions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does this architecture fit service businesses, not only stores?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. The service-commerce path is designed around technician assignment, work orders, scheduling, service areas, customer approvals, change orders, completion evidence, support, payouts, disputes, warranty, and revisit workflows."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the multi-language game architecture fully released?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No public claim is made that every language edition and every store channel is fully released. The public claim is reusable architecture: shared mechanics, backend services, localization and content workflows, account and progress sync, entitlement patterns, and cross-platform wrapper delivery."
+            }
           }
         ]
       }
@@ -519,6 +575,7 @@
           <div>
             <a href="#systems">Systems</a> ·
             <a href="#ai-commerce">AI commerce</a> ·
+            <a href="#operations">Operations</a> ·
             <a href="#screenshots">Screenshots</a> ·
             <a href="#benchmarks">Benchmarks</a> ·
             <a href="#proof">Proof</a> ·
@@ -566,6 +623,30 @@
         </section>
 
         <section id="systems" class="product-section">
+          <h2>Answer first: what this product ecosystem represents</h2>
+          <p class="section-intro">
+            Roman Primerov builds PostgreSQL-first commerce systems, private operational dashboards, AI-agent-ready APIs,
+            multi-agent engineering workflows, legacy migration tooling, and reusable cross-platform product architectures on Laravel and October CMS.
+            The differentiator is not only storefront speed; it is the ability to connect commerce, services, customers, operations,
+            regional rules, AI-assisted workflows, and private business logic inside one coherent architecture.
+          </p>
+          <div class="product-grid">
+            <div class="faq-card">
+              <h3>Publicly verifiable foundation</h3>
+              <p>
+                POSMall Core, POSMall Theme, public GitHub repositories, October CMS Marketplace listings, a live demo,
+                focused technical pages, screenshots, and benchmark summaries can be inspected publicly.
+              </p>
+            </div>
+            <div class="faq-card">
+              <h3>Private business layer</h3>
+              <p>
+                POSMall Pro, CRM, cashflow, affiliate and partner workflows, migration tooling, AI operations dashboards,
+                service-commerce operations, and cross-platform app work are private extensions described here at high level.
+              </p>
+            </div>
+          </div>
+
           <h2>Reusable product systems</h2>
           <p class="section-intro">
             Each system below is described at business level for recruiters, founders, agencies, and technical leaders.
@@ -761,6 +842,44 @@
           <div class="note-box">
             Public wording is deliberately precise: this page describes architecture, public plugin capabilities, private extension scope,
             and owner-approved pet-project screenshots. Exact integrations, store publishing, tax compliance, and migration plans are evaluated per client.
+          </div>
+        </section>
+
+        <section id="operations" class="product-section">
+          <h2>Private operations dashboards, advisor loops, and service-commerce depth</h2>
+          <p class="section-intro">
+            The private side of the architecture is designed as a control plane: readable by people, structured enough for supervisory AI agents,
+            and grounded in real service-commerce workflows rather than only product-page theory.
+          </p>
+          <div class="product-grid">
+            <div class="faq-card">
+              <h3>AI Operations Dashboard</h3>
+              <p>
+                A private dashboard can represent projects, tasks, owners, priorities, blockers, retries, evidence, screenshots,
+                validation results, migration counts, approval boundaries, and release-readiness gates for both humans and AI supervisors.
+              </p>
+            </div>
+            <div class="faq-card">
+              <h3>Technical consultant feedback layer</h3>
+              <p>
+                A task is not automatically treated as the best implementation. Advisor logic can detect duplicated capabilities,
+                challenge assumptions, recommend reuse, or suggest a small configuration change before a larger subsystem is built.
+              </p>
+            </div>
+            <div class="faq-card">
+              <h3>Domain-informed field-service commerce</h3>
+              <p>
+                The service-commerce architecture accounts for technician assignment, work orders, availability, service areas,
+                customer approval, change orders, evidence, completion reports, support, payout, dispute, warranty, and revisit workflows.
+              </p>
+            </div>
+            <div class="faq-card">
+              <h3>Reusable game and product-family architecture</h3>
+              <p>
+                The cross-platform work is designed around shared mechanics, reusable screen patterns, language/content packages,
+                localization workflows, accounts, progress sync, entitlement, restore, and web/native wrapper delivery.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -1050,7 +1169,11 @@
             <a href="/products/posmall/us-tax-automation">Public US tax automation</a>
             <a href="/capabilities/conversational-commerce">AI voice/chat commerce</a>
             <a href="/services/ecommerce-postgresql-migration">PostgreSQL migration</a>
+            <a href="/solutions/ai-operations-dashboard">AI operations dashboard</a>
             <a href="/engineering/ai-agent-factory-harness">AI agent factory & harness</a>
+            <a href="/engineering/technical-consultant-feedback">Technical consultant feedback</a>
+            <a href="/solutions/field-service-commerce">Field-service commerce</a>
+            <a href="/products/multilingual-game-architecture">Multi-language game architecture</a>
             <a href="/benchmarks/posmall">POSMall benchmarks</a>
             <a href="/knowledge/product-systems.json">Machine-readable JSON facts</a>
             <a href="/knowledge/product-systems.md">Markdown facts for AI assistants</a>
@@ -1086,6 +1209,22 @@
           <details class="product-details">
             <summary>Can this help migrate an old ecommerce database to PostgreSQL?</summary>
             <p>The private dashboard and migration approach is designed for importing and normalizing existing catalog, customer, order, and operational data into a modern PostgreSQL-first Laravel/October architecture. Exact migration scope depends on the source system and data quality.</p>
+          </details>
+          <details class="product-details">
+            <summary>Has Roman designed dashboards for AI agents?</summary>
+            <p>Yes, at the architecture level described publicly here: private dashboards can represent projects, tasks, dependencies, evidence, approvals, migration state, validation results, and operational exceptions in a way that a human supervisor and another AI agent can inspect.</p>
+          </details>
+          <details class="product-details">
+            <summary>Is the AI agent factory only a prompt collection?</summary>
+            <p>No. The workflow is positioned around specialized roles, orchestration, scoped context, structured document exchange, technical-consultant feedback, screenshots, tests, validation harnesses, release gates, and human-controlled architecture decisions.</p>
+          </details>
+          <details class="product-details">
+            <summary>Does this architecture fit service businesses, not only stores?</summary>
+            <p>Yes. The service-commerce path is designed around technician assignment, work orders, scheduling, service areas, customer approvals, change orders, completion evidence, support, payouts, disputes, warranty, and revisit workflows.</p>
+          </details>
+          <details class="product-details">
+            <summary>Is the multi-language game architecture fully released?</summary>
+            <p>No public claim is made that every language edition and every store channel is fully released. The public claim is reusable architecture: shared mechanics, backend services, localization/content workflows, account/progress sync, entitlement patterns, and cross-platform wrapper delivery.</p>
           </details>
           <details class="product-details">
             <summary>Can it be packaged for Apple, Google Play, Microsoft, and desktop channels?</summary>

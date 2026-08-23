@@ -12,7 +12,11 @@ Allow: /products/posmall
 Allow: /products/posmall/us-tax-automation
 Allow: /capabilities/conversational-commerce
 Allow: /services/ecommerce-postgresql-migration
+Allow: /solutions/ai-operations-dashboard
 Allow: /engineering/ai-agent-factory-harness
+Allow: /engineering/technical-consultant-feedback
+Allow: /solutions/field-service-commerce
+Allow: /products/multilingual-game-architecture
 Allow: /benchmarks/posmall
 Allow: /llms.txt
 Allow: /knowledge/product-systems.json
@@ -33,7 +37,11 @@ Allow: /products/posmall
 Allow: /products/posmall/us-tax-automation
 Allow: /capabilities/conversational-commerce
 Allow: /services/ecommerce-postgresql-migration
+Allow: /solutions/ai-operations-dashboard
 Allow: /engineering/ai-agent-factory-harness
+Allow: /engineering/technical-consultant-feedback
+Allow: /solutions/field-service-commerce
+Allow: /products/multilingual-game-architecture
 Allow: /benchmarks/posmall
 Allow: /llms.txt
 Allow: /knowledge/product-systems.json

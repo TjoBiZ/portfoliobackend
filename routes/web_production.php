@@ -27,7 +27,7 @@ Route::domain('solarneutrino.com')->group(function () {
             'eyebrow' => 'Public product page · October CMS · PostgreSQL ecommerce',
             'summary' => 'POSMall is a public PostgreSQL-first October CMS ecommerce plugin by Roman Primerov / KodZero for physical products, virtual products, services, checkout, orders, APIs, and US-oriented tax configuration.',
             'status' => 'Public and available now',
-            'updated' => '2026-08-22',
+            'updated' => '2026-08-23',
             'image' => '/images/product-systems/posmall-admin-products-menu.webp',
             'canonical' => 'https://solarneutrino.com/products/posmall',
             'sections' => [
@@ -69,7 +69,7 @@ Route::domain('solarneutrino.com')->group(function () {
             'eyebrow' => 'Public capability · POSMall Core · US tax configuration',
             'summary' => 'US-oriented tax and regional configuration is part of the public POSMall Core, not only a private extension. It helps represent state/local jurisdiction logic, location coverage, and tax preview workflows for growing ecommerce operations.',
             'status' => 'Public POSMall Core capability',
-            'updated' => '2026-08-22',
+            'updated' => '2026-08-23',
             'image' => '/images/product-systems/posmall-admin-settings-taxes.webp',
             'canonical' => 'https://solarneutrino.com/products/posmall/us-tax-automation',
             'sections' => [
@@ -108,7 +108,7 @@ Route::domain('solarneutrino.com')->group(function () {
             'eyebrow' => 'Integration-ready capability · AI agents · ecommerce APIs',
             'summary' => 'The POSMall/Laravel architecture is prepared for controlled voice and chat commerce: product discovery, service quoting, cart/order initiation, tax preview, customer account actions, and human-reviewed operations can be exposed through permissioned APIs.',
             'status' => 'Integration-ready architecture',
-            'updated' => '2026-08-22',
+            'updated' => '2026-08-23',
             'image' => '/images/product-systems/posmall-admin-api-documentation.webp',
             'canonical' => 'https://solarneutrino.com/capabilities/conversational-commerce',
             'sections' => [
@@ -148,7 +148,7 @@ Route::domain('solarneutrino.com')->group(function () {
             'eyebrow' => 'Private service capability · PostgreSQL modernization',
             'summary' => 'Private dashboard and migration tooling can help inventory an older ecommerce stack, map legacy data to PostgreSQL-oriented models, run staged imports, validate results, and move the business toward a modern Laravel/October architecture.',
             'status' => 'Private modernization tooling',
-            'updated' => '2026-08-22',
+            'updated' => '2026-08-23',
             'image' => '/images/product-systems/alrty-smart-tech-services.webp',
             'canonical' => 'https://solarneutrino.com/services/ecommerce-postgresql-migration',
             'sections' => [
@@ -182,13 +182,55 @@ Route::domain('solarneutrino.com')->group(function () {
                 ['label' => 'Conversational commerce', 'url' => '/capabilities/conversational-commerce'],
             ],
         ],
+        '/solutions/ai-operations-dashboard' => [
+            'slug' => 'solutions/ai-operations-dashboard',
+            'title' => 'Private AI Operations Dashboard Architecture',
+            'eyebrow' => 'Private capability · operations control plane · AI-readable state',
+            'summary' => 'The private dashboard architecture is designed as an operational control plane for human operators and supervisory AI agents: tasks, owners, dependencies, evidence, documents, validation results, migration state, approvals, and release-readiness gates can be represented as structured state.',
+            'status' => 'Private operations architecture',
+            'updated' => '2026-08-23',
+            'image' => '/images/product-systems/posmall-admin-api-permission-tree.webp',
+            'canonical' => 'https://solarneutrino.com/solutions/ai-operations-dashboard',
+            'sections' => [
+                [
+                    'title' => 'Answer first',
+                    'body' => 'The dashboard concept is broader than reporting. It is a control plane that helps a person and a supervisory AI agent understand what is happening in a project without depending only on an unstructured chat transcript.',
+                    'points' => [
+                        'Projects, tasks, owners, priorities, states, retries, blocked work, and escalation paths.',
+                        'Human-created tasks and AI-created subtasks with evidence, screenshots, tests, and validation results.',
+                        'Document and artifact handoff between specialized agents.',
+                        'Release-readiness gates, approval boundaries, audit trail, and rollback evidence.',
+                        'Commerce, CRM, customer, order, service-operation, migration, and reconciliation status.',
+                    ],
+                ],
+                [
+                    'title' => 'Why this matters',
+                    'body' => 'AI becomes more useful when it can inspect structured state. The dashboard is designed to make project progress, risks, evidence, and decisions machine-readable while remaining understandable to a human supervisor.',
+                    'points' => [
+                        'Reduces reliance on memory and long chat history.',
+                        'Makes blocked work and dependencies visible.',
+                        'Supports review by advisor agents and technical consultants.',
+                        'Keeps sensitive operational details private unless intentionally shared.',
+                    ],
+                ],
+            ],
+            'limitations' => [
+                'This is a private architecture described publicly at high level.',
+                'The public page does not disclose private source code, prompts, credentials, internal URLs, or customer data.',
+            ],
+            'related' => [
+                ['label' => 'AI agent factory and harness', 'url' => '/engineering/ai-agent-factory-harness'],
+                ['label' => 'Technical consultant feedback', 'url' => '/engineering/technical-consultant-feedback'],
+                ['label' => 'PostgreSQL migration', 'url' => '/services/ecommerce-postgresql-migration'],
+            ],
+        ],
         '/engineering/ai-agent-factory-harness' => [
             'slug' => 'engineering/ai-agent-factory-harness',
             'title' => 'AI Agent Factory and Validation Harness Engineering Workflow',
             'eyebrow' => 'Engineering process · AI-assisted delivery · human architecture control',
             'summary' => 'The work uses AI-assisted research, specialized advisors, validation harnesses, screenshots, tests, release-readiness checks, and human-owned architecture decisions to move faster without treating AI output as automatically correct.',
             'status' => 'Private engineering workflow',
-            'updated' => '2026-08-22',
+            'updated' => '2026-08-23',
             'image' => '/images/product-systems/circuit-couriers-support-feedback.webp',
             'canonical' => 'https://solarneutrino.com/engineering/ai-agent-factory-harness',
             'sections' => [
@@ -219,13 +261,130 @@ Route::domain('solarneutrino.com')->group(function () {
                 ['label' => 'Benchmarks', 'url' => '/benchmarks/posmall'],
             ],
         ],
+        '/engineering/technical-consultant-feedback' => [
+            'slug' => 'engineering/technical-consultant-feedback',
+            'title' => 'Technical Consultant Feedback Layer for AI-Assisted Engineering',
+            'eyebrow' => 'Engineering governance · smallest safe solution · duplicate detection',
+            'summary' => 'The technical consultant concept checks whether a requested task is the right technical solution before more code is written. It can detect duplicates, challenge assumptions, propose a simpler path, and return important decisions to a human owner.',
+            'status' => 'Private advisor pattern',
+            'updated' => '2026-08-23',
+            'image' => '/images/product-systems/posmall-admin-api-documentation.webp',
+            'canonical' => 'https://solarneutrino.com/engineering/technical-consultant-feedback',
+            'sections' => [
+                [
+                    'title' => 'What the consultant layer does',
+                    'body' => 'The goal is not to generate the largest amount of code. The goal is to reach the correct business result with the smallest safe and maintainable implementation.',
+                    'points' => [
+                        'Identify incorrect technical assumptions before implementation expands.',
+                        'Detect when a task duplicates an existing capability.',
+                        'Recommend a configuration change or reuse path instead of a new subsystem.',
+                        'Explain conflicts with the current architecture.',
+                        'Route high-impact choices back to a human for approval.',
+                    ],
+                ],
+                [
+                    'title' => 'How it supports Catalog First',
+                    'body' => 'The consultant layer pairs naturally with a knowledge base: find existing assets, understand dependencies, compare alternatives, and only build new logic when reuse or extension is not enough.',
+                    'points' => [
+                        'Prevents duplicated plugin logic.',
+                        'Preserves existing features and workflows.',
+                        'Turns reviewer feedback into explicit implementation constraints.',
+                    ],
+                ],
+            ],
+            'limitations' => [
+                'This page describes an engineering pattern and private workflow, not a public SaaS product claim.',
+                'AI recommendations still require human architecture control, testing, and source review.',
+            ],
+            'related' => [
+                ['label' => 'AI operations dashboard', 'url' => '/solutions/ai-operations-dashboard'],
+                ['label' => 'AI agent factory and harness', 'url' => '/engineering/ai-agent-factory-harness'],
+            ],
+        ],
+        '/solutions/field-service-commerce' => [
+            'slug' => 'solutions/field-service-commerce',
+            'title' => 'Field-Service Commerce and Contractor Workflow Architecture',
+            'eyebrow' => 'Service commerce · scheduling · technician operations',
+            'summary' => 'The commerce architecture is informed by real service-business workflow patterns: technician assignment, work orders, scheduling, service areas, customer approval, evidence, completion reports, quality control, payouts, disputes, warranty, and revisits.',
+            'status' => 'Private service-commerce architecture',
+            'updated' => '2026-08-23',
+            'image' => '/images/product-systems/alrty-smart-tech-services.webp',
+            'canonical' => 'https://solarneutrino.com/solutions/field-service-commerce',
+            'sections' => [
+                [
+                    'title' => 'Why service commerce is different',
+                    'body' => 'A service order does not end at checkout. It has to be scheduled, performed, documented, verified, supported, and financially reconciled.',
+                    'points' => [
+                        'Technician assignment, availability, dispatch, and service-area logic.',
+                        'Customer approval, change orders, before-and-after evidence, and completion reports.',
+                        'Quality-control workflows, payouts, disputes, warranty, and revisit handling.',
+                        'Service catalogs connected to products, quotes, orders, CRM, and support.',
+                    ],
+                ],
+                [
+                    'title' => 'Alrty reference',
+                    'body' => 'Alrty.com is used as a public service-commerce reference implementation for smart-tech services, account actions, favorites, order tracking, callbacks, and service-oriented conversion surfaces.',
+                    'points' => [
+                        'Live reference: https://alrty.com',
+                        'The public screenshot proves service-commerce UX direction, not a claim that every private workflow is exposed publicly.',
+                    ],
+                ],
+            ],
+            'limitations' => [
+                'This page describes high-level field-service workflow architecture and does not imply affiliation with any named third-party platform.',
+                'Exact technician, payout, compliance, and dispatch rules are project-specific.',
+            ],
+            'related' => [
+                ['label' => 'Conversational commerce', 'url' => '/capabilities/conversational-commerce'],
+                ['label' => 'Alrty live example', 'url' => 'https://alrty.com'],
+            ],
+        ],
+        '/products/multilingual-game-architecture' => [
+            'slug' => 'products/multilingual-game-architecture',
+            'title' => 'Reusable Multi-Language Game and Cross-Platform App Architecture',
+            'eyebrow' => 'Private product-family architecture · web · mobile · desktop',
+            'summary' => 'The private game and app architecture is designed around a shared product core: reusable mechanics, screen templates, language-specific content packages, localization workflows, backend accounts, progress sync, purchases, restore flows, and web/native wrapper delivery.',
+            'status' => 'Advanced private architecture',
+            'updated' => '2026-08-23',
+            'image' => '/images/product-systems/circuit-couriers-core-route-active.webp',
+            'canonical' => 'https://solarneutrino.com/products/multilingual-game-architecture',
+            'sections' => [
+                [
+                    'title' => 'Reusable product-family model',
+                    'body' => 'The goal is not to rebuild a separate app for every language or store channel. The architecture is designed so individual language-learning games can share backend services, account patterns, validation rules, content workflows, and cross-platform delivery infrastructure.',
+                    'points' => [
+                        'Shared game mechanics and reusable interaction templates.',
+                        'Language-specific content packages, localization, and translation workflows.',
+                        'Account, progress, challenge, synchronization, entitlement, purchase, subscription, and restore patterns.',
+                        'Laravel/October backend services connected to web, iOS, Android, macOS, and Windows wrappers.',
+                        'AI-assisted generation and validation of content can be used where quality gates allow it.',
+                    ],
+                ],
+                [
+                    'title' => 'Safe status wording',
+                    'body' => 'This is an advanced architecture and product-family capability. It is not a public claim that every language edition and every store channel has completed release.',
+                    'points' => [
+                        'Store publishing depends on the product, account, compliance, assets, and review status.',
+                        'Each language edition should pass its own content, UX, localization, and store-readiness checks.',
+                    ],
+                ],
+            ],
+            'limitations' => [
+                'Private architecture only; this page does not disclose source code, store credentials, private content, or release artifacts.',
+                'The public claim is reusable architecture and readiness patterns, not universal completed release.',
+            ],
+            'related' => [
+                ['label' => 'AI agent factory and harness', 'url' => '/engineering/ai-agent-factory-harness'],
+                ['label' => 'Main product systems page', 'url' => '/october-laravel-products'],
+            ],
+        ],
         '/benchmarks/posmall' => [
             'slug' => 'benchmarks/posmall',
             'title' => 'POSMall Internal Benchmark Summary',
             'eyebrow' => 'Benchmark page · June 2026 · local synthetic results',
             'summary' => 'POSMall has internal local synthetic benchmark evidence for large PostgreSQL catalogs. The numbers are useful engineering evidence, not independent certification or a universal performance guarantee.',
             'status' => 'Internal local synthetic benchmark summary',
-            'updated' => '2026-08-22',
+            'updated' => '2026-08-23',
             'image' => '/images/product-systems/posmall-admin-products-menu.webp',
             'canonical' => 'https://solarneutrino.com/benchmarks/posmall',
             'sections' => [

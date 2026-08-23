@@ -1,13 +1,25 @@
 {
   "name": "Solar Neutrino product systems knowledge manifest",
-  "version": "2026-08-22",
-  "updated_at": "2026-08-22",
+  "version": "2026-08-23",
+  "updated_at": "2026-08-23",
   "owner": {
     "name": "Roman Primerov",
     "site": "https://solarneutrino.com/",
     "email": "j@solarneutrino.com"
   },
   "primary_page": "https://solarneutrino.com/october-laravel-products",
+  "focused_pages": [
+    "https://solarneutrino.com/products/posmall",
+    "https://solarneutrino.com/products/posmall/us-tax-automation",
+    "https://solarneutrino.com/capabilities/conversational-commerce",
+    "https://solarneutrino.com/services/ecommerce-postgresql-migration",
+    "https://solarneutrino.com/solutions/ai-operations-dashboard",
+    "https://solarneutrino.com/engineering/ai-agent-factory-harness",
+    "https://solarneutrino.com/engineering/technical-consultant-feedback",
+    "https://solarneutrino.com/solutions/field-service-commerce",
+    "https://solarneutrino.com/products/multilingual-game-architecture",
+    "https://solarneutrino.com/benchmarks/posmall"
+  ],
   "machine_readable_note": "This public manifest is designed for search engines, AI assistants, recruiters, and buyers. It summarizes public facts and high-level private capabilities without exposing private source code, credentials, customer data, internal paths, or deployment details.",
   "systems": [
     {
@@ -100,12 +112,52 @@
       "summary": "Private dashboard approach for inventorying legacy data, mapping it to PostgreSQL-oriented Laravel/October models, staged import, validation, reconciliation, and modernization planning."
     },
     {
+      "name": "Private AI Operations Dashboard",
+      "status": "private_operations_architecture",
+      "type": "Human and AI-readable operations control plane",
+      "developer": "Roman Primerov / KodZero",
+      "public_summary_url": "https://solarneutrino.com/solutions/ai-operations-dashboard",
+      "summary": "Private dashboard architecture for representing projects, tasks, owners, priorities, blockers, retries, evidence, screenshots, validation results, migration state, approvals, audit trails, and release-readiness gates for human operators and supervisory AI agents.",
+      "claims_and_limits": [
+        "Described publicly at high level only.",
+        "Private source code, prompts, credentials, internal URLs, and customer data are not published."
+      ]
+    },
+    {
       "name": "AI agent factory and validation harness workflow",
       "status": "private_engineering_workflow",
       "type": "AI-assisted engineering workflow",
       "developer": "Roman Primerov / KodZero",
       "public_summary_url": "https://solarneutrino.com/engineering/ai-agent-factory-harness",
       "summary": "AI-assisted research, advisor review, validation harnesses, screenshots, tests, documentation, benchmark analysis, and release-readiness checks under human architecture control."
+    },
+    {
+      "name": "Technical consultant feedback layer",
+      "status": "private_advisor_pattern",
+      "type": "Engineering governance workflow",
+      "developer": "Roman Primerov / KodZero",
+      "public_summary_url": "https://solarneutrino.com/engineering/technical-consultant-feedback",
+      "summary": "Advisor pattern for detecting duplicated capabilities, challenging assumptions, proposing smaller implementation paths, recommending reuse, and returning high-impact choices to a human owner before code expands."
+    },
+    {
+      "name": "Field-service commerce architecture",
+      "status": "private_service_commerce_architecture",
+      "type": "Service operations and contractor workflow",
+      "developer": "Roman Primerov / KodZero",
+      "public_summary_url": "https://solarneutrino.com/solutions/field-service-commerce",
+      "summary": "Architecture for service businesses where checkout is only the beginning: technician assignment, work orders, scheduling, service areas, customer approval, change orders, evidence, completion reports, quality control, payouts, disputes, warranty, and revisits."
+    },
+    {
+      "name": "Reusable multi-language game architecture",
+      "status": "advanced_private_architecture",
+      "type": "Cross-platform product-family architecture",
+      "developer": "Roman Primerov / KodZero",
+      "public_summary_url": "https://solarneutrino.com/products/multilingual-game-architecture",
+      "summary": "Shared game mechanics, reusable screen templates, language/content packages, localization workflows, account/progress sync, entitlement, purchase/restore patterns, backend services, and web/native wrapper delivery for a product-family architecture.",
+      "claims_and_limits": [
+        "Describes reusable architecture and readiness patterns.",
+        "Does not claim that every language edition and every store channel has completed public release."
+      ]
     }
   ],
   "benchmarks": {
