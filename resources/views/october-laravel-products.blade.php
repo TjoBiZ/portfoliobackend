@@ -370,6 +370,58 @@
         font-weight: 800;
       }
 
+      .solution-hub-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 22px;
+      }
+
+      .solution-hub-card {
+        display: flex;
+        min-height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 14px;
+        border: 1px solid var(--sn-border);
+        border-radius: 16px;
+        background: #fff;
+        padding: 20px;
+        color: var(--sn-dark);
+        cursor: pointer;
+        box-shadow: 0 8px 22px rgba(0, 0, 0, .04);
+        transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+      }
+
+      .solution-hub-card:hover,
+      .solution-hub-card:focus {
+        color: var(--sn-dark);
+        border-color: rgba(255, 114, 76, .58);
+        box-shadow: 0 16px 34px rgba(255, 114, 76, .16);
+        text-decoration: none;
+        transform: translateY(-3px);
+      }
+
+      .solution-hub-card h3 {
+        margin: 0 0 8px;
+        font-size: 18px;
+      }
+
+      .solution-hub-card p {
+        margin: 0;
+        color: var(--sn-muted);
+        line-height: 1.55;
+      }
+
+      .solution-hub-card .card-cta {
+        align-self: flex-start;
+        border-radius: 999px;
+        background: #fff0ea;
+        color: #c75231;
+        font-weight: 900;
+        padding: 8px 12px;
+      }
+
       .cta-band {
         background: #222;
         color: #fff;
@@ -390,6 +442,7 @@
         .product-grid,
         .proof-grid,
         .screenshot-grid,
+        .solution-hub-grid,
         .product-facts {
           grid-template-columns: 1fr;
         }
@@ -496,6 +549,30 @@
       @verbatim
       {
         "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Focused October CMS and Laravel product pages",
+        "description": "Focused pages explaining Roman Primerov's public POSMall core, US tax automation, AI phone and chat commerce APIs, PostgreSQL migration, AI operations dashboards, agent-factory harness workflows, service-commerce systems, cross-platform game architecture, and benchmark evidence.",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "POSMall public core", "url": "https://solarneutrino.com/products/posmall"},
+          {"@type": "ListItem", "position": 2, "name": "Public US tax automation", "url": "https://solarneutrino.com/products/posmall/us-tax-automation"},
+          {"@type": "ListItem", "position": 3, "name": "AI phone and chat commerce", "url": "https://solarneutrino.com/capabilities/conversational-commerce"},
+          {"@type": "ListItem", "position": 4, "name": "PostgreSQL ecommerce migration", "url": "https://solarneutrino.com/services/ecommerce-postgresql-migration"},
+          {"@type": "ListItem", "position": 5, "name": "AI operations dashboard", "url": "https://solarneutrino.com/solutions/ai-operations-dashboard"},
+          {"@type": "ListItem", "position": 6, "name": "AI agent factory and harness", "url": "https://solarneutrino.com/engineering/ai-agent-factory-harness"},
+          {"@type": "ListItem", "position": 7, "name": "Technical consultant feedback", "url": "https://solarneutrino.com/engineering/technical-consultant-feedback"},
+          {"@type": "ListItem", "position": 8, "name": "Field-service commerce", "url": "https://solarneutrino.com/solutions/field-service-commerce"},
+          {"@type": "ListItem", "position": 9, "name": "Multi-language game architecture", "url": "https://solarneutrino.com/products/multilingual-game-architecture"},
+          {"@type": "ListItem", "position": 10, "name": "POSMall benchmarks", "url": "https://solarneutrino.com/benchmarks/posmall"},
+          {"@type": "ListItem", "position": 11, "name": "Machine-readable JSON product facts", "url": "https://solarneutrino.com/knowledge/product-systems.json"},
+          {"@type": "ListItem", "position": 12, "name": "Markdown facts for AI assistants", "url": "https://solarneutrino.com/knowledge/product-systems.md"}
+        ]
+      }
+      @endverbatim
+    </script>
+    <script type="application/ld+json">
+      @verbatim
+      {
+        "@context": "https://schema.org",
         "@type": "FAQPage",
         "mainEntity": [
           {
@@ -519,7 +596,7 @@
             "name": "Can the commerce stack work with AI voice and chat assistants?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "The architecture is designed for AI-agent-ready commerce APIs: catalog discovery, service quoting, cart/order workflows, customer account actions, and controlled admin operations can be exposed to phone assistants, chat assistants, and other channels when a project enables those integrations."
+              "text": "The architecture is designed for AI-agent-ready commerce APIs: catalog discovery, service quoting, cart/order workflows, customer account actions, returns, support notes, and controlled admin operations can be exposed to phone-call assistants, chat assistants, website widgets, and internal support tools when a project enables those integrations."
             }
           },
           {
@@ -574,6 +651,7 @@
           <a class="back-link" href="/">← Roman Primerov Portfolio</a>
           <div>
             <a href="#systems">Systems</a> ·
+            <a href="#focused-pages">Pages</a> ·
             <a href="#ai-commerce">AI commerce</a> ·
             <a href="#operations">Operations</a> ·
             <a href="#screenshots">Screenshots</a> ·
@@ -614,11 +692,119 @@
           </div>
           <div class="product-fact">
             <strong>AI-ready APIs</strong>
-            <span>Prepared for voice, chat, agent, and dashboard-driven commerce workflows.</span>
+            <span>Prepared for AI phone calls, website chat, order support, returns, and dashboard-driven commerce workflows.</span>
           </div>
           <div class="product-fact">
             <strong>Cross-platform</strong>
             <span>Laravel/October backend patterns wrapped for app-store channels.</span>
+          </div>
+        </section>
+
+        <section id="focused-pages" class="product-section">
+          <h2>Focused pages: what I can build, prove, and adapt</h2>
+          <p class="section-intro">
+            The main page gives the full picture. These smaller pages break the work into focused entry points:
+            public POSMall proof, tax automation, AI phone commerce, PostgreSQL migration, operations dashboards,
+            advisor workflows, service-commerce depth, cross-platform product architecture, and benchmark evidence.
+            They are intentionally linked as clear cards so people, search engines, and AI assistants can follow the exact topic they need.
+          </p>
+          <div class="solution-hub-grid" aria-label="Focused October CMS and Laravel product pages">
+            <a class="solution-hub-card" href="/products/posmall">
+              <span>
+                <span class="badge-soft">Public</span>
+                <h3>POSMall public core</h3>
+                <p>October CMS ecommerce core for catalogs, checkout, orders, APIs, PostgreSQL-first data, and extensible business workflows.</p>
+              </span>
+              <span class="card-cta">See details →</span>
+            </a>
+            <a class="solution-hub-card" href="/products/posmall/us-tax-automation">
+              <span>
+                <span class="badge-soft">Public advantage</span>
+                <h3>US tax automation</h3>
+                <p>Public POSMall Core capability for states, counties, local tax regions, and structured ecommerce tax setup that can reduce repetitive accounting/admin work.</p>
+              </span>
+              <span class="card-cta">See details →</span>
+            </a>
+            <a class="solution-hub-card" href="/capabilities/conversational-commerce">
+              <span>
+                <span class="badge-soft orange">AI commerce</span>
+                <h3>AI phone and chat selling</h3>
+                <p>APIs prepared so a phone-call robot or chat assistant can understand customer context, search products/services, build carts, place orders, handle support, and start returns.</p>
+              </span>
+              <span class="card-cta">See details →</span>
+            </a>
+            <a class="solution-hub-card" href="/services/ecommerce-postgresql-migration">
+              <span>
+                <span class="badge-soft orange">Migration</span>
+                <h3>PostgreSQL migration path</h3>
+                <p>Private dashboard approach for importing old catalog, customer, order, and operational data into a modern Laravel/October PostgreSQL architecture.</p>
+              </span>
+              <span class="card-cta">See details →</span>
+            </a>
+            <a class="solution-hub-card" href="/solutions/ai-operations-dashboard">
+              <span>
+                <span class="badge-soft orange">Operations</span>
+                <h3>AI operations dashboard</h3>
+                <p>Private control-plane thinking for projects, tasks, blockers, evidence, screenshots, approvals, validation gates, and human-supervised AI workflows.</p>
+              </span>
+              <span class="card-cta">See details →</span>
+            </a>
+            <a class="solution-hub-card" href="/engineering/ai-agent-factory-harness">
+              <span>
+                <span class="badge-soft orange">Factory agents</span>
+                <h3>Agent factory & harness</h3>
+                <p>AI-assisted engineering workflow with advisor review, Fable-style critique, tests, screenshots, release gates, and traceable architecture decisions.</p>
+              </span>
+              <span class="card-cta">See details →</span>
+            </a>
+            <a class="solution-hub-card" href="/engineering/technical-consultant-feedback">
+              <span>
+                <span class="badge-soft orange">Advisory</span>
+                <h3>Technical consultant feedback</h3>
+                <p>A review layer that challenges assumptions, detects duplicate work, recommends reuse, and keeps implementation scoped to the smallest safe business result.</p>
+              </span>
+              <span class="card-cta">See details →</span>
+            </a>
+            <a class="solution-hub-card" href="/solutions/field-service-commerce">
+              <span>
+                <span class="badge-soft orange">Services</span>
+                <h3>Field-service commerce</h3>
+                <p>Service-business workflows for technicians, service areas, work orders, approvals, completion evidence, support, payouts, warranties, and revisits.</p>
+              </span>
+              <span class="card-cta">See details →</span>
+            </a>
+            <a class="solution-hub-card" href="/products/multilingual-game-architecture">
+              <span>
+                <span class="badge-soft orange">Cross-platform</span>
+                <h3>Game and app architecture</h3>
+                <p>Reusable backend and wrapper patterns for shared mechanics, localization, account sync, entitlements, restore flows, and iOS/Android/macOS/Windows delivery.</p>
+              </span>
+              <span class="card-cta">See details →</span>
+            </a>
+            <a class="solution-hub-card" href="/benchmarks/posmall">
+              <span>
+                <span class="badge-soft">Benchmarks</span>
+                <h3>POSMall speed proof</h3>
+                <p>Measured large-catalog benchmark notes for the public POSMall architecture, including the 300k product PostgreSQL test context.</p>
+              </span>
+              <span class="card-cta">See details →</span>
+            </a>
+            <a class="solution-hub-card" href="/knowledge/product-systems.json">
+              <span>
+                <span class="badge-soft">AI-readable</span>
+                <h3>Machine-readable JSON facts</h3>
+                <p>Compact structured facts for AI assistants, crawlers, and retrieval systems that need the product ecosystem without reading the whole page.</p>
+              </span>
+              <span class="card-cta">Open JSON →</span>
+            </a>
+            <a class="solution-hub-card" href="/knowledge/product-systems.md">
+              <span>
+                <span class="badge-soft">AI-readable</span>
+                <h3>Markdown facts for assistants</h3>
+                <p>A citation-friendly Markdown summary for ChatGPT, Claude, Gemini, Grok, recruiters, and technical reviewers.</p>
+              </span>
+              <span class="card-cta">Open Markdown →</span>
+            </a>
           </div>
         </section>
 
@@ -813,8 +999,10 @@
             <div class="faq-card">
               <h3>Voice and chat commerce APIs</h3>
               <p>
-                Product catalogs, services, quote flows, carts, orders, account actions, and documentation surfaces are structured so a project can connect
-                phone assistants, chat assistants, website widgets, or internal support agents without rebuilding the ecommerce core.
+                Product catalogs, services, quote flows, carts, orders, account actions, returns, support notes, and documentation surfaces are structured so a project can connect
+                phone-call assistants, chat assistants, website widgets, or internal support agents without rebuilding the ecommerce core. In plain language:
+                the same API layer can let an AI agent answer a customer call, keep the customer and order context, help choose products or services,
+                create an order, start a return, or hand the case to a human operator with the business state preserved.
               </p>
             </div>
             <div class="faq-card">
@@ -1133,7 +1321,8 @@
               <h3>For service companies that want AI-assisted selling</h3>
               <p>
                 The stack is designed so a business can move from a static service page to guided product/service discovery,
-                callback workflows, voice-assisted quoting, chat-assisted cart creation, and human-reviewed order operations.
+                callback workflows, AI phone-call quoting, chat-assisted cart creation, order placement, return/support workflows,
+                and human-reviewed operations from the same commerce API foundation.
               </p>
             </div>
             <div class="faq-card">
@@ -1204,7 +1393,7 @@
           </details>
           <details class="product-details">
             <summary>Can an AI assistant sell products or services through this architecture?</summary>
-            <p>The architecture is prepared for that direction: catalog discovery, service quoting, carts, orders, account actions, and controlled admin workflows can be connected to phone assistants, chat assistants, website widgets, and internal support tools when the project enables those integrations.</p>
+            <p>The architecture is prepared for that direction: catalog discovery, service quoting, carts, orders, customer/account context, returns, support notes, and controlled admin workflows can be connected to phone-call assistants, chat assistants, website widgets, and internal support tools when the project enables those integrations. The business goal is simple: an AI agent should be able to answer a call or chat, understand the customer’s order context, sell products or services, start a return, and hand the case to a human with the state preserved.</p>
           </details>
           <details class="product-details">
             <summary>Can this help migrate an old ecommerce database to PostgreSQL?</summary>
