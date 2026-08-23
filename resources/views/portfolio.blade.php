@@ -40,6 +40,96 @@
       <script>
           var GoogleRecaptchaV3SiteKey = "{{ env('GOOGLE_RECAPTCHAR_V3_FRONTEND') }}";
       </script>
+      <style>
+          .products-tab-intro {
+              max-width: 900px;
+              margin-bottom: 28px;
+              font-size: 16px;
+              line-height: 1.75;
+          }
+
+          .products-tab-actions {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 12px;
+              margin: 22px 0 30px;
+          }
+
+          .products-tab-grid {
+              display: grid;
+              grid-template-columns: repeat(3, minmax(0, 1fr));
+              gap: 20px;
+              margin-top: 18px;
+          }
+
+          .products-tab-card {
+              display: block;
+              min-height: 100%;
+              background: #fff;
+              border: 1px solid #eee;
+              box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+              color: #333;
+              text-decoration: none;
+              transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+          }
+
+          .products-tab-card:hover,
+          .products-tab-card:focus {
+              color: #333;
+              text-decoration: none;
+              transform: translateY(-4px);
+              border-color: #ff724c;
+              box-shadow: 0 16px 34px rgba(255, 114, 76, 0.16);
+          }
+
+          .products-tab-card img {
+              display: block;
+              width: 100%;
+              height: 145px;
+              object-fit: cover;
+              border-bottom: 1px solid #f0f0f0;
+          }
+
+          .products-tab-card-body {
+              display: block;
+              padding: 18px;
+          }
+
+          .products-tab-card-label {
+              display: inline-block;
+              margin-bottom: 10px;
+              color: #ff724c;
+              font-size: 11px;
+              font-weight: 700;
+              letter-spacing: .08em;
+              text-transform: uppercase;
+          }
+
+          .products-tab-card h4 {
+              margin: 0 0 10px;
+              font-size: 18px;
+              line-height: 1.35;
+          }
+
+          .products-tab-card p {
+              margin: 0;
+              color: #666;
+              font-size: 14px;
+              line-height: 1.65;
+          }
+
+          @media (max-width: 991px) {
+              .products-tab-grid {
+                  grid-template-columns: repeat(2, minmax(0, 1fr));
+              }
+          }
+
+          @media (max-width: 640px) {
+              .products-tab-grid {
+                  grid-template-columns: 1fr;
+              }
+          }
+      </style>
       <script src="https://www.google.com/recaptcha/api.js?render={{ env('GOOGLE_RECAPTCHAR_V3_FRONTEND') }}"></script>
   </head>
 
@@ -81,7 +171,7 @@
               <a class="pt-trigger" href="#portfolio" data-animation="19"><i class="menu-icon pe-7s-icon pe-7s-portfolio"></i>Portfolio</a>
             </li>
             <li>
-              <a href="/products"><i class="menu-icon pe-7s-icon pe-7s-box2"></i>Products</a>
+              <a class="pt-trigger" href="#products" data-animation="19"><i class="menu-icon pe-7s-icon pe-7s-box2"></i>Products</a>
             </li>
             <li>
               <a class="pt-trigger" href="#contact" data-animation="20"><i class="menu-icon pe-7s-icon pe-7s-mail"></i>Contact</a>
@@ -940,8 +1030,90 @@ Achievements:
             </section>
             <!-- /Portfolio Subpage -->
 
+            <!-- Products Subpage -->
+            <section class="pt-page pt-page-5" data-id="products">
+              <div class="border-block-top-110"></div>
+              <div class="section-inner">
+                <div class="section-title-block">
+                  <div class="section-title-wrapper">
+                    <h2 class="section-title">Products</h2>
+                    <h5 class="section-description">POSMall, AI commerce, PostgreSQL, AWS, Laravel</h5>
+                  </div>
+                </div>
+
+                <p class="products-tab-intro">
+                  A compact product view for the Laravel / October CMS work: public POSMall core, private commerce extensions,
+                  AI-ready APIs for chat and phone-call agents, PostgreSQL migration workflows, benchmark proof, and cloud delivery experience.
+                  Open the full catalog to see all 12 product cards, screenshots, filters, and deep links.
+                </p>
+
+                <div class="products-tab-actions">
+                  <a class="button" href="/products">Open Full Products Catalog</a>
+                  <a class="button" href="/benchmarks/posmall-postgresql-vs-aimeos-postgresql">Benchmark Proof</a>
+                  <a class="button" href="/october-laravel-products">October / Laravel Overview</a>
+                </div>
+
+                <div class="products-tab-grid">
+                  <a class="products-tab-card" href="/products/posmall">
+                    <img src="images/product-systems/posmall-admin-products-menu.webp" alt="POSMall admin products screen">
+                    <span class="products-tab-card-body">
+                      <span class="products-tab-card-label">Public core</span>
+                      <h4>POSMall Core</h4>
+                      <p>Open October CMS / Laravel ecommerce core for physical goods, services, virtual products, checkout, orders, APIs, and PostgreSQL-first catalog structure.</p>
+                    </span>
+                  </a>
+
+                  <a class="products-tab-card" href="/products/posmall/us-tax-automation">
+                    <img src="images/product-systems/posmall-admin-settings-taxes.webp" alt="US tax automation settings in POSMall">
+                    <span class="products-tab-card-body">
+                      <span class="products-tab-card-label">Public capability</span>
+                      <h4>US Tax Automation</h4>
+                      <p>Structured state, county, city, and local-region tax configuration for US-oriented stores, available in the public POSMall core.</p>
+                    </span>
+                  </a>
+
+                  <a class="products-tab-card" href="/october-laravel-products#systems">
+                    <img src="images/product-systems/posmall-admin-orders-menu.webp" alt="POSMall Pro orders and commercial operations screen">
+                    <span class="products-tab-card-body">
+                      <span class="products-tab-card-label">Private extension</span>
+                      <h4>POSMall Pro / CRM / Cashflow</h4>
+                      <p>Private extensions around leads, deals, order links, attribution, affiliate workflows, and commercial operations beyond basic shop packages.</p>
+                    </span>
+                  </a>
+
+                  <a class="products-tab-card" href="/capabilities/conversational-commerce">
+                    <img src="images/product-systems/posmall-admin-api-documentation.webp" alt="POSMall API documentation for AI commerce agents">
+                    <span class="products-tab-card-body">
+                      <span class="products-tab-card-label">AI-ready API</span>
+                      <h4>Voice & Chat Commerce APIs</h4>
+                      <p>API surface prepared for assistants that can handle phone calls, chats, catalog discovery, carts, orders, returns, and handoff workflows.</p>
+                    </span>
+                  </a>
+
+                  <a class="products-tab-card" href="/services/ecommerce-postgresql-migration">
+                    <img src="images/product-systems/alrty-smart-tech-services.webp" alt="PostgreSQL migration and modernization landing page">
+                    <span class="products-tab-card-body">
+                      <span class="products-tab-card-label">Modernization</span>
+                      <h4>PostgreSQL Migration Dashboard</h4>
+                      <p>Workflow for moving older ecommerce data toward PostgreSQL-oriented Laravel / October models with import, validation, and reconciliation.</p>
+                    </span>
+                  </a>
+
+                  <a class="products-tab-card" href="/benchmarks/posmall-postgresql-vs-aimeos-postgresql">
+                    <img src="images/product-systems/posmall-admin-products-menu.webp" alt="POSMall benchmark proof and product catalog evidence">
+                    <span class="products-tab-card-body">
+                      <span class="products-tab-card-label">Measured proof</span>
+                      <h4>POSMall vs Aimeos PostgreSQL</h4>
+                      <p>Homestead PostgreSQL benchmark proof: POSMall holds roughly 33–35 ms through 300k SKUs. No numbers = SEO manipulation, not proof.</p>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </section>
+            <!-- /Products Subpage -->
+
             <!-- Contact Subpage -->
-            <section class="pt-page pt-page-5" data-id="contact">
+            <section class="pt-page pt-page-6" data-id="contact">
               <div class="border-block-top-110"></div>
               <div class="section-inner">
                 <div class="section-title-block">
