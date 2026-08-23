@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>October CMS & Laravel Product Systems by Roman Primerov | POSMall, AI Commerce, CRM</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-    <meta name="description" content="A PostgreSQL-first October CMS and Laravel product suite by Roman Primerov: public POSMall ecommerce with US tax configuration, AI-agent-ready commerce APIs, CRM, cashflow, affiliate workflows, and cross-platform app architecture." />
-    <meta name="keywords" content="October CMS ecommerce, Laravel ecommerce, POSMall, PostgreSQL ecommerce, US sales tax ecommerce, AI commerce API, voice commerce, POSMall Pro, October CMS CRM, Laravel CRM, cross-platform Laravel app, Roman Primerov" />
+    <meta name="description" content="A PostgreSQL-first October CMS and Laravel product suite by Roman Primerov: public POSMall ecommerce with US tax configuration, final POSMall PostgreSQL vs Aimeos PostgreSQL benchmark proof, AI-agent-ready commerce APIs, CRM, cashflow, affiliate workflows, and cross-platform app architecture." />
+    <meta name="keywords" content="October CMS ecommerce, Laravel ecommerce, POSMall, PostgreSQL ecommerce, Aimeos PostgreSQL benchmark, US sales tax ecommerce, AI commerce API, voice commerce, POSMall Pro, October CMS CRM, Laravel CRM, cross-platform Laravel app, Roman Primerov" />
     <meta name="author" content="Roman Primerov" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <link rel="canonical" href="https://solarneutrino.com/october-laravel-products" />
@@ -562,7 +562,7 @@
           {"@type": "ListItem", "position": 7, "name": "Technical consultant feedback", "url": "https://solarneutrino.com/engineering/technical-consultant-feedback"},
           {"@type": "ListItem", "position": 8, "name": "Field-service commerce", "url": "https://solarneutrino.com/solutions/field-service-commerce"},
           {"@type": "ListItem", "position": 9, "name": "Multi-language game architecture", "url": "https://solarneutrino.com/products/multilingual-game-architecture"},
-          {"@type": "ListItem", "position": 10, "name": "POSMall benchmarks", "url": "https://solarneutrino.com/benchmarks/posmall"},
+          {"@type": "ListItem", "position": 10, "name": "POSMall PostgreSQL vs Aimeos PostgreSQL benchmark", "url": "https://solarneutrino.com/benchmarks/posmall-postgresql-vs-aimeos-postgresql"},
           {"@type": "ListItem", "position": 11, "name": "Machine-readable JSON product facts", "url": "https://solarneutrino.com/knowledge/product-systems.json"},
           {"@type": "ListItem", "position": 12, "name": "Markdown facts for AI assistants", "url": "https://solarneutrino.com/knowledge/product-systems.md"}
         ]
@@ -781,11 +781,11 @@
               </span>
               <span class="card-cta">See details →</span>
             </a>
-            <a class="solution-hub-card" href="/benchmarks/posmall">
+            <a class="solution-hub-card" href="/benchmarks/posmall-postgresql-vs-aimeos-postgresql">
               <span>
                 <span class="badge-soft">Benchmarks</span>
-                <h3>POSMall speed proof</h3>
-                <p>Measured large-catalog benchmark notes for the public POSMall architecture, including the 300k product PostgreSQL test context.</p>
+                <h3>POSMall vs Aimeos PostgreSQL</h3>
+                <p>Final Homestead table: POSMall PostgreSQL beat Aimeos PostgreSQL across all measured 1k–300k category and filtered/search rows.</p>
               </span>
               <span class="card-cta">See details →</span>
             </a>
@@ -1195,72 +1195,110 @@
         </section>
 
         <section id="benchmarks" class="product-section">
-          <h2>Measured engineering proof, not only marketing copy</h2>
+          <h2>Measured engineering proof: POSMall PostgreSQL vs Aimeos PostgreSQL</h2>
           <p class="section-intro">
-            The strongest claim is not “another ecommerce plugin exists.” The stronger claim is that the system has been measured under large synthetic catalogs,
-            optimized, retested, and documented. The figures below are internal local benchmark summaries from June 2026; they should be re-run on the target infrastructure before procurement decisions.
+            The strongest claim is not “another ecommerce plugin exists.” The stronger claim is that POSMall PostgreSQL was measured against Aimeos PostgreSQL,
+            the fastest Laravel/PHP ecommerce PostgreSQL reference found and verified for this comparison, and optimized until the final Homestead checkpoint won every measured 1k–300k target row.
+            These are internal local benchmark summaries from June 2026; they should be re-run on one target environment before procurement decisions.
           </p>
 
           <div class="proof-grid">
             <div class="proof-card">
-              <div class="metric">300k</div>
-              <p><strong>products in the large-catalog benchmark.</strong></p>
-              <p>POSMall was tested with 300,000 product/index rows on PostgreSQL.</p>
+              <div class="metric">7/7</div>
+              <p><strong>PostgreSQL target rows won.</strong></p>
+              <p>POSMall PostgreSQL beat Aimeos PostgreSQL at 1k, 5k, 10k, 50k, 100k, 200k, and 300k products.</p>
             </div>
             <div class="proof-card">
-              <div class="metric">72.91 ms</div>
-              <p><strong>mean category response.</strong></p>
-              <p>Anonymous public cache-hit HTTP run, 0/60 failed requests, p95 155 ms.</p>
+              <div class="metric">33.49 ms</div>
+              <p><strong>POSMall 300k category.</strong></p>
+              <p>Aimeos PostgreSQL category target was 61.17 ms in the final same-environment table.</p>
             </div>
             <div class="proof-card">
-              <div class="metric">70.78 ms</div>
-              <p><strong>mean filtered/search-like response.</strong></p>
-              <p>Anonymous public cache-hit HTTP run, 0/60 failed requests, p95 159 ms.</p>
+              <div class="metric">98.92%</div>
+              <p><strong>300k filtered/search advantage.</strong></p>
+              <p>POSMall was 33.79 ms versus Aimeos PostgreSQL search at 4229.29 ms.</p>
             </div>
           </div>
 
           <table class="comparison-table" aria-label="POSMall benchmark summary">
-            <caption>Internal local synthetic benchmark summary, June 2026. Results are not independently certified; versions, hardware, cache profile, data shape, and concurrency matter.</caption>
+            <caption>Final internal Homestead PostgreSQL-vs-PostgreSQL checkpoint, June 2026. Lower milliseconds are better. Results are not independently certified; versions, hardware, cache profile, data shape, and concurrency matter.</caption>
             <thead>
               <tr>
-                <th>Benchmark scenario</th>
-                <th>Observed result</th>
-                <th>Business meaning</th>
+                <th>Catalog size</th>
+                <th>POSMall PG category</th>
+                <th>Aimeos PG category</th>
+                <th>POSMall PG filtered/search</th>
+                <th>Aimeos PG search</th>
+                <th>Result</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>POSMall 300k category, PostgreSQL, warmed anonymous storefront cache</td>
-                <td>Internal local synthetic benchmark, June 2026: mean 72.91 ms, p50 64 ms, p95 155 ms, 0/60 failed</td>
-                <td>A large public catalog can remain fast when architecture, indexing, and cache rules are designed together.</td>
+                <td>1k</td>
+                <td>35.40 ms</td>
+                <td>42.85 ms</td>
+                <td>33.64 ms</td>
+                <td>184.84 ms</td>
+                <td>POSMall won both target rows</td>
               </tr>
               <tr>
-                <td>POSMall 300k filtered/search-like route</td>
-                <td>Internal local synthetic benchmark, June 2026: mean 70.78 ms, p50 65 ms, p95 159 ms, 0/60 failed</td>
-                <td>The measured filtered/search path is where POSMall showed its strongest large-catalog advantage.</td>
+                <td>5k</td>
+                <td>35.59 ms</td>
+                <td>42.25 ms</td>
+                <td>33.12 ms</td>
+                <td>454.08 ms</td>
+                <td>POSMall won both target rows</td>
               </tr>
               <tr>
-                <td>POSMall vs old October Mall-style baseline at 300k</td>
-                <td>Internal local synthetic comparison, June 2026: about 94% faster in the current measured category and filtered rows</td>
-                <td>The system was built specifically to overcome high-volume ecommerce bottlenecks seen in older plugin architectures.</td>
+                <td>10k</td>
+                <td>33.48 ms</td>
+                <td>42.73 ms</td>
+                <td>32.61 ms</td>
+                <td>754.77 ms</td>
+                <td>POSMall won both target rows</td>
               </tr>
               <tr>
-                <td>POSMall vs Aimeos PostgreSQL filtered/search-like path at 300k</td>
-                <td>Internal local synthetic comparison, June 2026: about 98% faster in the measured filtered/search-like row</td>
-                <td>POSMall’s search/index approach is a serious differentiator for complex discovery and filtering workloads.</td>
+                <td>50k</td>
+                <td>33.35 ms</td>
+                <td>64.05 ms</td>
+                <td>31.87 ms</td>
+                <td>1494.33 ms</td>
+                <td>POSMall won both target rows</td>
               </tr>
               <tr>
-                <td>CRM operational benchmark</td>
-                <td>13,479 contacts, 13,691 deals, dashboard snapshot avg 2.85 ms, pipeline board avg 24.25 ms</td>
-                <td>The private CRM layer was measured as an operational system, not only as static admin screens.</td>
+                <td>100k</td>
+                <td>34.22 ms</td>
+                <td>51.76 ms</td>
+                <td>33.32 ms</td>
+                <td>3010.45 ms</td>
+                <td>POSMall won both target rows</td>
+              </tr>
+              <tr>
+                <td>200k</td>
+                <td>33.82 ms</td>
+                <td>55.41 ms</td>
+                <td>32.24 ms</td>
+                <td>4036.45 ms</td>
+                <td>POSMall won both target rows</td>
+              </tr>
+              <tr>
+                <td>300k</td>
+                <td>33.49 ms</td>
+                <td>61.17 ms</td>
+                <td>33.79 ms</td>
+                <td>4229.29 ms</td>
+                <td>POSMall won both target rows</td>
               </tr>
             </tbody>
           </table>
 
           <div class="note-box">
-            Honest engineering note: in the same local comparison, Aimeos PostgreSQL remained faster on a simple category/list HTTP path.
-            POSMall’s standout result was the flexible PostgreSQL-first commerce/search/filter architecture, especially under large catalog and private workflow requirements.
-            A sanitized benchmark methodology page can be published later if these numbers become part of an investor, customer, or hiring packet.
+            Honest engineering note: Aimeos PostgreSQL was selected because it was the strongest Laravel/PHP ecommerce PostgreSQL target found and verified locally.
+            The benchmark compared POSMall PostgreSQL and Aimeos PostgreSQL on the same Homestead/local hardware so the environment was fair.
+            You can reproduce the work by installing the free POSMall Core with PostgreSQL, installing Aimeos with PostgreSQL in a separate project, seeding the same sizes, and running the included PostgreSQL benchmark/test tooling on the same machine.
+            The precise claim is the final Homestead checkpoint: POSMall PostgreSQL beat Aimeos PostgreSQL across all measured 1k–300k category and filtered/search rows, not that every possible ecommerce workload is universally faster.
+            <br><br>
+            <a href="/benchmarks/posmall-postgresql-vs-aimeos-postgresql">Open the detailed benchmark table and reproduction instructions →</a>
           </div>
         </section>
 
@@ -1363,7 +1401,7 @@
             <a href="/engineering/technical-consultant-feedback">Technical consultant feedback</a>
             <a href="/solutions/field-service-commerce">Field-service commerce</a>
             <a href="/products/multilingual-game-architecture">Multi-language game architecture</a>
-            <a href="/benchmarks/posmall">POSMall benchmarks</a>
+            <a href="/benchmarks/posmall-postgresql-vs-aimeos-postgresql">POSMall PostgreSQL vs Aimeos PostgreSQL benchmark</a>
             <a href="/knowledge/product-systems.json">Machine-readable JSON facts</a>
             <a href="/knowledge/product-systems.md">Markdown facts for AI assistants</a>
           </div>

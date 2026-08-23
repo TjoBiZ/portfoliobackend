@@ -155,6 +155,68 @@
         border-radius: 10px;
       }
 
+      .brief-table-wrap {
+        overflow-x: auto;
+        margin-top: 18px;
+      }
+
+      .brief-comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+      }
+
+      .brief-comparison-table caption {
+        caption-side: top;
+        color: #555;
+        font-weight: 800;
+        padding: 0 0 10px;
+        text-align: left;
+      }
+
+      .brief-comparison-table th,
+      .brief-comparison-table td {
+        border: 1px solid var(--sn-border);
+        padding: 11px 12px;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      .brief-comparison-table th {
+        background: #fff6f2;
+      }
+
+      .brief-steps {
+        counter-reset: benchmark-step;
+        list-style: none;
+        margin: 18px 0 0;
+        padding: 0;
+      }
+
+      .brief-steps li {
+        counter-increment: benchmark-step;
+        border: 1px solid var(--sn-border);
+        border-radius: 12px;
+        margin: 0 0 10px;
+        padding: 14px 16px 14px 52px;
+        position: relative;
+      }
+
+      .brief-steps li::before {
+        content: counter(benchmark-step);
+        position: absolute;
+        left: 16px;
+        top: 14px;
+        display: inline-grid;
+        place-items: center;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: var(--sn-orange);
+        color: #fff;
+        font-weight: 900;
+      }
+
       .brief-cta {
         background: #222;
         color: #fff;
@@ -232,6 +294,52 @@
             @endif
           </section>
         @endforeach
+
+        @if (!empty($page['benchmark_table']))
+          <section class="brief-section">
+            <h2>{{ $page['benchmark_table']['title'] ?? 'Benchmark table' }}</h2>
+            @if (!empty($page['benchmark_table']['intro']))
+              <p>{{ $page['benchmark_table']['intro'] }}</p>
+            @endif
+            <div class="brief-table-wrap">
+              <table class="brief-comparison-table">
+                @if (!empty($page['benchmark_table']['caption']))
+                  <caption>{{ $page['benchmark_table']['caption'] }}</caption>
+                @endif
+                <thead>
+                  <tr>
+                    @foreach ($page['benchmark_table']['columns'] as $column)
+                      <th>{{ $column }}</th>
+                    @endforeach
+                  </tr>
+                </thead>
+                <tbody>
+                  @foreach ($page['benchmark_table']['rows'] as $row)
+                    <tr>
+                      @foreach ($row as $cell)
+                        <td>{{ $cell }}</td>
+                      @endforeach
+                    </tr>
+                  @endforeach
+                </tbody>
+              </table>
+            </div>
+          </section>
+        @endif
+
+        @if (!empty($page['instructions']))
+          <section class="brief-section">
+            <h2>{{ $page['instructions']['title'] ?? 'How to reproduce' }}</h2>
+            @if (!empty($page['instructions']['intro']))
+              <p>{{ $page['instructions']['intro'] }}</p>
+            @endif
+            <ol class="brief-steps">
+              @foreach ($page['instructions']['steps'] as $step)
+                <li>{{ $step }}</li>
+              @endforeach
+            </ol>
+          </section>
+        @endif
 
         @if (!empty($page['limitations']))
           <section class="brief-section">
