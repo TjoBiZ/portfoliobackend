@@ -1,0 +1,144 @@
+{
+  "name": "Solar Neutrino product systems knowledge manifest",
+  "version": "2026-08-22",
+  "updated_at": "2026-08-22",
+  "owner": {
+    "name": "Roman Primerov",
+    "site": "https://solarneutrino.com/",
+    "email": "j@solarneutrino.com"
+  },
+  "primary_page": "https://solarneutrino.com/october-laravel-products",
+  "machine_readable_note": "This public manifest is designed for search engines, AI assistants, recruiters, and buyers. It summarizes public facts and high-level private capabilities without exposing private source code, credentials, customer data, internal paths, or deployment details.",
+  "systems": [
+    {
+      "name": "POSMall Core",
+      "status": "public_and_available_now",
+      "type": "October CMS ecommerce plugin",
+      "developer": "Roman Primerov / KodZero",
+      "public_urls": [
+        "https://octobercms.com/plugin/kodzero-posmall",
+        "https://github.com/TjoBiZ/POSMall",
+        "https://solarneutrino.com/products/posmall"
+      ],
+      "summary": "Public PostgreSQL-first ecommerce core for October CMS and Laravel-style projects.",
+      "capabilities": [
+        "physical products",
+        "virtual products",
+        "service-like offers",
+        "catalogs and categories",
+        "checkout and orders",
+        "API-ready automation",
+        "backend permissions",
+        "US-oriented tax and regional configuration"
+      ],
+      "dependencies": [
+        "October CMS",
+        "PHP 8.2+",
+        "PostgreSQL",
+        "RainLab.User",
+        "RainLab.Location",
+        "RainLab.Translate for the public theme path"
+      ],
+      "claims_and_limits": [
+        "US tax and regional configuration are part of the public POSMall Core.",
+        "Tax configuration can reduce repetitive setup and accounting handoff work, but it is not tax advice and does not replace professional compliance review.",
+        "Benchmark claims are internal local synthetic results and should be rerun on target infrastructure."
+      ]
+    },
+    {
+      "name": "POSMall Theme",
+      "status": "public_and_available_now",
+      "type": "October CMS storefront theme",
+      "developer": "Roman Primerov / KodZero",
+      "public_urls": [
+        "https://octobercms.com/theme/kodzero-posmalltheme",
+        "https://github.com/TjoBiZ/POSMallTheme",
+        "https://wingsofwin.com"
+      ],
+      "summary": "Public storefront theme and demo path for evaluating the POSMall catalog experience."
+    },
+    {
+      "name": "POSMall Pro",
+      "status": "private_extension",
+      "type": "Advanced commerce extension layer",
+      "developer": "Roman Primerov / KodZero",
+      "public_summary_url": "https://solarneutrino.com/october-laravel-products",
+      "summary": "Private extension layer for advanced commerce, services, catalog automation, admin workflows, and business-specific dashboards.",
+      "depends_on": [
+        "POSMall Core"
+      ]
+    },
+    {
+      "name": "CRM, Cashflow and Affiliate Suite",
+      "status": "private_extension",
+      "type": "Business operations layer",
+      "developer": "Roman Primerov / KodZero",
+      "summary": "Private operational layer for contacts, leads, deals, activities, order links, cashflow visibility, attribution, and partner workflows.",
+      "depends_on": [
+        "POSMall Core",
+        "POSMall Pro"
+      ]
+    },
+    {
+      "name": "AI-agent-ready commerce API architecture",
+      "status": "integration_ready_architecture",
+      "type": "Voice and chat commerce architecture",
+      "developer": "Roman Primerov / KodZero",
+      "public_summary_url": "https://solarneutrino.com/capabilities/conversational-commerce",
+      "summary": "Architecture for connecting catalog discovery, service quoting, cart/order workflows, customer account actions, and controlled admin operations to phone assistants, chat assistants, website widgets, and support channels.",
+      "claims_and_limits": [
+        "Describes architecture readiness and permissioned APIs, not a guarantee that every channel is deployed for every customer.",
+        "Identity, payment confirmation, compliance, and channel adapters are deployment-specific."
+      ]
+    },
+    {
+      "name": "Private PostgreSQL migration dashboard",
+      "status": "private_modernization_tooling",
+      "type": "Migration and scaling workflow",
+      "developer": "Roman Primerov / KodZero",
+      "public_summary_url": "https://solarneutrino.com/services/ecommerce-postgresql-migration",
+      "summary": "Private dashboard approach for inventorying legacy data, mapping it to PostgreSQL-oriented Laravel/October models, staged import, validation, reconciliation, and modernization planning."
+    },
+    {
+      "name": "AI agent factory and validation harness workflow",
+      "status": "private_engineering_workflow",
+      "type": "AI-assisted engineering workflow",
+      "developer": "Roman Primerov / KodZero",
+      "public_summary_url": "https://solarneutrino.com/engineering/ai-agent-factory-harness",
+      "summary": "AI-assisted research, advisor review, validation harnesses, screenshots, tests, documentation, benchmark analysis, and release-readiness checks under human architecture control."
+    }
+  ],
+  "benchmarks": {
+    "status": "internal_local_synthetic_summary",
+    "url": "https://solarneutrino.com/benchmarks/posmall",
+    "date": "June 2026",
+    "important_caveat": "Results are not independently certified. Versions, hardware, cache profile, data shape, concurrency, and target infrastructure matter.",
+    "rows": [
+      {
+        "scenario": "POSMall 300k category, PostgreSQL, warmed anonymous storefront cache",
+        "result": "mean 72.91 ms, p50 64 ms, p95 155 ms, 0/60 failed"
+      },
+      {
+        "scenario": "POSMall 300k filtered/search-like route",
+        "result": "mean 70.78 ms, p50 65 ms, p95 159 ms, 0/60 failed"
+      },
+      {
+        "scenario": "POSMall vs old October Mall-style baseline at 300k",
+        "result": "about 94% faster in current measured category and filtered rows"
+      },
+      {
+        "scenario": "POSMall vs Aimeos PostgreSQL filtered/search-like path at 300k",
+        "result": "about 98% faster in the measured filtered/search-like row"
+      }
+    ]
+  },
+  "ai_indexing": {
+    "public_files": [
+      "https://solarneutrino.com/llms.txt",
+      "https://solarneutrino.com/knowledge/product-systems.json",
+      "https://solarneutrino.com/knowledge/product-systems.md",
+      "https://solarneutrino.com/sitemap.xml"
+    ],
+    "robots_policy": "The product pages, screenshots, llms.txt, and public knowledge files are crawlable. Admin, login, API, dashboard, and password paths are blocked in robots.txt."
+  }
+}

@@ -1,5 +1,44 @@
+# Search and AI retrieval crawlers that publish stable tokens.
+User-agent: OAI-SearchBot
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: Googlebot
+User-agent: Google-Extended
+Allow: /october-laravel-products
+Allow: /products/posmall
+Allow: /products/posmall/us-tax-automation
+Allow: /capabilities/conversational-commerce
+Allow: /services/ecommerce-postgresql-migration
+Allow: /engineering/ai-agent-factory-harness
+Allow: /benchmarks/posmall
+Allow: /llms.txt
+Allow: /knowledge/product-systems.json
+Allow: /knowledge/product-systems.md
+Allow: /images/product-systems/
+Disallow: /login
+Disallow: /register
+Disallow: /password
+Disallow: /admin
+Disallow: /api
+Disallow: /dashboard
+
+# Grok/xAI-specific crawler token is not hardcoded here without a stable official publisher document.
+# Public product pages remain crawlable under the default User-agent: * group.
 User-agent: *
 Allow: /october-laravel-products
+Allow: /products/posmall
+Allow: /products/posmall/us-tax-automation
+Allow: /capabilities/conversational-commerce
+Allow: /services/ecommerce-postgresql-migration
+Allow: /engineering/ai-agent-factory-harness
+Allow: /benchmarks/posmall
+Allow: /llms.txt
+Allow: /knowledge/product-systems.json
+Allow: /knowledge/product-systems.md
+Allow: /images/product-systems/
 Disallow: /login
 Disallow: /register
 Disallow: /password

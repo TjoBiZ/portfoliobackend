@@ -17,11 +17,30 @@ Public October CMS assets:
 - POSMall Theme marketplace page: https://octobercms.com/theme/kodzero-posmalltheme
 - POSMall Theme source: https://github.com/TjoBiZ/POSMallTheme
 - Public demo site: https://wingsofwin.com
+- POSMall Core includes public US-oriented tax and regional configuration surfaces. This can reduce repetitive setup and accounting handoff work for multi-state stores, but it is not tax advice and does not replace professional compliance review.
+
+Focused public pages:
+- POSMall public core: https://solarneutrino.com/products/posmall
+- POSMall US tax automation: https://solarneutrino.com/products/posmall/us-tax-automation
+- AI voice and chat commerce architecture: https://solarneutrino.com/capabilities/conversational-commerce
+- PostgreSQL ecommerce migration: https://solarneutrino.com/services/ecommerce-postgresql-migration
+- AI agent factory and validation harness: https://solarneutrino.com/engineering/ai-agent-factory-harness
+- POSMall benchmark summary: https://solarneutrino.com/benchmarks/posmall
+
+Machine-readable public facts:
+- JSON manifest: https://solarneutrino.com/knowledge/product-systems.json
+- Markdown facts: https://solarneutrino.com/knowledge/product-systems.md
 
 Private systems described at high level:
 - POSMall Pro: private extension layer for advanced commerce, service workflows, catalog automation, regional logic, and business-specific admin workflows.
 - POSMall CRM, Cashflow, and Affiliate Suite: private operations layer for contacts, leads, deals, activities, order links, attribution, partner workflows, and cashflow visibility.
 - Cross-platform app architecture: Laravel/October backend patterns connected to web and native wrappers for iOS, Android, macOS, and Windows.
+- Private migration and scaling dashboards: high-level modernization workflow for inventorying legacy ecommerce data, mapping it to PostgreSQL-oriented Laravel/October models, staged import, validation, and reconciliation.
+
+AI and engineering workflow:
+- The commerce architecture is prepared for permissioned voice and chat commerce: catalog discovery, service quoting, cart/order initiation, tax preview, account actions, and support workflows can be connected to phone assistants, chat assistants, website widgets, or internal agents when a project enables those integrations.
+- AI tools, factory-agents workflow, Fable/advisor review, validation harnesses, screenshots, tests, documentation, benchmark analysis, and release-readiness checks are used under human architecture control.
+- The AI/factory workflow is an engineering capability, not a claim that every customer runtime depends on AI.
 
 Benchmark note:
 - Public summaries may mention internal local benchmark results only as dated engineering evidence, not as universal performance guarantees.
