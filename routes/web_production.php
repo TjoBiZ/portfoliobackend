@@ -426,7 +426,7 @@ Route::domain('solarneutrino.com')->group(function () {
             'slug' => 'benchmarks/posmall-postgresql-vs-aimeos-postgresql',
             'title' => 'POSMall PostgreSQL vs Aimeos PostgreSQL Benchmark',
             'eyebrow' => 'Benchmark proof · same Homestead environment · PostgreSQL vs PostgreSQL',
-            'summary' => 'Final Homestead benchmark evidence from June 2026: POSMall PostgreSQL beat the Aimeos PostgreSQL target across all measured 1k–300k category and filtered/search rows. Aimeos PostgreSQL was chosen because it was the fastest Laravel/PHP ecommerce reference found and verified for this comparison.',
+            'summary' => 'Final Homestead benchmark evidence from June 2026: POSMall PostgreSQL beat the Aimeos PostgreSQL target across all measured 1k–300k category and filtered/search rows. Public competitor figures were checked; stronger comparable PostgreSQL-only evidence was not found, so this is the scoped #1 technical positioning we can defend.',
             'status' => 'Final internal Homestead benchmark checkpoint',
             'updated' => '2026-08-23',
             'image' => '/images/product-systems/posmall-admin-products-menu.webp',
@@ -440,6 +440,18 @@ Route::domain('solarneutrino.com')->group(function () {
                         'The final target comparison was PostgreSQL against PostgreSQL, on one local Homestead benchmark environment.',
                         'Both systems were measured with synthetic large-catalog rows from 1k to 300k products.',
                         'The final report stopped after POSMall PostgreSQL won every measured PostgreSQL target row in the table.',
+                    ],
+                ],
+                [
+                    'title' => 'World #1 positioning: measured milliseconds, not SEO reputation',
+                    'body' => 'The claim is intentionally technical and scoped. POSMall Core is presented as the leading PostgreSQL-first October CMS/Laravel commerce core in the measured 1k–300k catalog benchmark class because the final table contains reproducible row-by-row numbers. We looked for public competitor figures. Some public numbers exist, but stronger comparable PostgreSQL-only numbers in this same measured class were not found. Search rankings, brand reputation, broad enterprise copy, and unpublished performance claims are not counted as technical victories.',
+                    'points' => [
+                        'Aimeos was selected because it publicly positions itself around high-speed large-catalog commerce, including 20 ms / billion-item messaging and a #gigacommerce path that uses ElasticSearch.',
+                        'Bagisto publishes 10 million product response times, but its published explanation relies on standard indexing, dedicated search, queues, and memory-based caching, so it is useful context rather than a PostgreSQL-only same-environment comparison.',
+                        'Sylius and similar enterprise-oriented frameworks may be strong implementation platforms, but no comparable public PostgreSQL-only 100k–300k timing table was found in this review.',
+                        'Frameworks without comparable public PostgreSQL-only timing tables are not placed into the winner table merely because they are known, popular, SEO-visible, or enterprise-oriented.',
+                        'If another project publishes comparable raw numbers for the same database class and catalog sizes, the correct response is to rerun the benchmark and update the evidence.',
+                        'Until then, SEO visibility without comparable milliseconds is positioning, not benchmark proof, and POSMall’s #1 wording is tied to the strongest reproducible PostgreSQL benchmark evidence available in this measured class.',
                     ],
                 ],
                 [
@@ -492,6 +504,7 @@ Route::domain('solarneutrino.com')->group(function () {
             'limitations' => [
                 'These are internal Homestead synthetic benchmark numbers from June 2026, not an independently certified industry benchmark.',
                 'The claim is deliberately narrow: POSMall PostgreSQL beat Aimeos PostgreSQL across the final measured category and filtered/search rows from 1k to 300k products.',
+                'World #1 wording is scoped to the measured PostgreSQL-first benchmark class and the comparable public evidence found, not to every ecommerce workload, every hosting setup, every SEO ranking, or every possible feature category.',
                 'Different hardware, concurrency, PHP/FPM settings, HTTP server, cache profile, data shape, theme markup, media handling, or business rules can change results.',
                 'Aimeos was used only as a public reference target and capability benchmark; POSMall remained an independent PostgreSQL-first October CMS/Laravel implementation.',
             ],
@@ -500,6 +513,8 @@ Route::domain('solarneutrino.com')->group(function () {
                 ['label' => 'POSMall public core', 'url' => '/products/posmall'],
                 ['label' => 'October CMS Marketplace listing', 'url' => 'https://octobercms.com/plugin/kodzero-posmall'],
                 ['label' => 'POSMall public source', 'url' => 'https://github.com/TjoBiZ/POSMall'],
+                ['label' => 'Aimeos public Laravel performance claims', 'url' => 'https://aimeos.org/laravel-ecommerce-package'],
+                ['label' => 'Bagisto public 10M product benchmark context', 'url' => 'https://bagisto.com/en/scaling-bagisto-for-10-million-products/'],
             ],
         ],
     ];

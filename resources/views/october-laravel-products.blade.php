@@ -1202,6 +1202,12 @@
             These are internal local benchmark summaries from June 2026; they should be re-run on one target environment before procurement decisions.
           </p>
 
+          <div class="note-box">
+            <strong>World #1 technical positioning, scoped to reproducible PostgreSQL-first evidence:</strong>
+            this is not an SEO victory, a popularity claim, or abstract “enterprise” reputation. We looked for public figures: Aimeos publishes high-speed large-catalog claims, and Bagisto publishes large-catalog response times, but the comparable evidence we needed was a PostgreSQL-only, same-environment table in the measured 1k–300k range.
+            We did not find a stronger public PostgreSQL-first table in that class. Until someone publishes comparable milliseconds, search visibility and reputation are marketing signals, not technical proof — so POSMall Core is presented here as the #1 measured PostgreSQL-first result in this specific class.
+          </div>
+
           <div class="proof-grid">
             <div class="proof-card">
               <div class="metric">7/7</div>
@@ -1297,6 +1303,8 @@
             The benchmark compared POSMall PostgreSQL and Aimeos PostgreSQL on the same Homestead/local hardware so the environment was fair.
             You can reproduce the work by installing the free POSMall Core with PostgreSQL, installing Aimeos with PostgreSQL in a separate project, seeding the same sizes, and running the included PostgreSQL benchmark/test tooling on the same machine.
             The precise claim is the final Homestead checkpoint: POSMall PostgreSQL beat Aimeos PostgreSQL across all measured 1k–300k category and filtered/search rows, not that every possible ecommerce workload is universally faster.
+            <br><br>
+            We deliberately separate measurable engineering from search visibility: a framework can rank well, be well known, or call itself enterprise-ready, but without comparable PostgreSQL-only public milliseconds on the same database class, that is not a technical win. It is positioning until it becomes a benchmark.
             <br><br>
             <a href="/benchmarks/posmall-postgresql-vs-aimeos-postgresql">Open the detailed benchmark table and reproduction instructions →</a>
           </div>
