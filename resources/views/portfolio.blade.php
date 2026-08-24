@@ -1201,7 +1201,7 @@ Achievements:
               <div class="border-block-top-110"></div>
               <div class="section-inner products-page-shell">
                 @php
-                  $products = [
+                                    $products = [
                       [
                           'title' => 'POSMall Core & US Tax Engine',
                           'eyebrow' => 'Public commerce',
@@ -1221,7 +1221,7 @@ Achievements:
                           'tags' => ['POSMall Pro', 'CRM', 'Cashflow'],
                       ],
                       [
-                          'title' => 'AI Voice & Chat Commerce APIs',
+                          'title' => 'AI Voice & Phone Commerce APIs',
                           'eyebrow' => 'AI-ready API',
                           'description' => 'Permissioned Laravel/October API surface for phone-call assistants, chat agents, website widgets, catalog discovery, quotes, carts, orders, returns, account actions, and human handoff.',
                           'image' => '/images/product-systems/posmall-admin-api-documentation.webp',
@@ -1231,7 +1231,7 @@ Achievements:
                       ],
                       [
                           'title' => 'Microsoft Store Windows Wrapper',
-                          'eyebrow' => 'Microsoft lane',
+                          'eyebrow' => 'Microsoft Store / Windows',
                           'description' => 'Windows app-wrapper architecture connected to a Laravel/October CMS backend: Microsoft Store purchase/restore, paid-feature entitlement checks, account binding, and store-aware release readiness.',
                           'image' => '/images/product-systems/circuit-couriers-core-route-active.webp',
                           'url' => '/products/multilingual-game-architecture#windows-microsoft-store',
@@ -1239,36 +1239,27 @@ Achievements:
                           'tags' => ['Windows', 'Microsoft Store', 'Entitlements'],
                       ],
                       [
-                          'title' => 'App Store iOS Wrapper',
-                          'eyebrow' => 'Apple iOS lane',
-                          'description' => 'iPhone/iPad wrapper path for App Store purchases, restore flows, cold relaunch access, paid-feature unlocking, account authority, and Laravel/October backend validation.',
-                          'image' => '/images/product-systems/circuit-couriers-marble-maze-active.webp',
-                          'url' => '/products/multilingual-game-architecture#ios-app-store',
-                          'groups' => ['all', 'wrappers', 'appstore', 'subscriptions', 'devices'],
-                          'tags' => ['iOS', 'App Store', 'Restore'],
-                      ],
-                      [
-                          'title' => 'Mac App Store macOS Wrapper',
-                          'eyebrow' => 'Apple macOS lane',
-                          'description' => 'macOS wrapper pattern for Mac App Store distribution with purchase/restore parity, subscription-aware access, shared account authority, and backend-managed feature gates.',
+                          'title' => 'Apple / App Store iOS / macOS Wrapper',
+                          'eyebrow' => 'Apple / App Store',
+                          'description' => 'Apple App Store wrapper path for iPhone, iPad, and macOS: purchase and restore flows, cold relaunch access, paid-feature unlocking, shared account authority, and Laravel/October backend validation.',
                           'image' => '/images/portfolio/6.jpg',
-                          'url' => '/products/multilingual-game-architecture#macos-app-store',
+                          'url' => '/products/multilingual-game-architecture#apple-app-store-ios-macos',
                           'groups' => ['all', 'wrappers', 'appstore', 'subscriptions', 'devices'],
-                          'tags' => ['macOS', 'Mac App Store', 'Subscriptions'],
+                          'tags' => ['Apple', 'App Store', 'iOS / macOS'],
                       ],
                       [
                           'title' => 'Android / Google Play Wrapper',
-                          'eyebrow' => 'Android lane',
-                          'description' => 'Android wrapper architecture for Google Play purchase/restore, subscription recognition, device access, backend validation, and cross-platform parity with Apple and Microsoft lanes.',
+                          'eyebrow' => 'Android / Google Play',
+                          'description' => 'Android app-wrapper architecture with Google Play Billing: purchase-token validation, subscription state, restore flows, cancellation/refund awareness, device access, backend authority, and parity with Apple and Microsoft lanes.',
                           'image' => '/images/product-systems/circuit-couriers-marble-maze-active.webp',
                           'url' => '/products/multilingual-game-architecture#android-google-play',
                           'groups' => ['all', 'wrappers', 'android', 'subscriptions', 'devices'],
-                          'tags' => ['Android', 'Google Play', 'Parity'],
+                          'tags' => ['Android', 'Google Play', 'Billing Tokens'],
                       ],
                       [
                           'title' => 'Unified Store Subscriptions & 10 Devices',
                           'eyebrow' => 'Account authority',
-                          'description' => 'Shared account entitlement logic where a person buys through Apple, Google, or Microsoft stores and the Laravel/October backend manages paid access across up to 10 devices on one account.',
+                          'description' => 'Shared account entitlement logic where a person buys through Apple App Store, Google Play, or Microsoft Store and the Laravel/October backend manages paid access across up to 10 devices on one account.',
                           'image' => '/images/product-systems/posmall-admin-api-permission-tree.webp',
                           'url' => '/products/multilingual-game-architecture#subscriptions-ten-devices',
                           'groups' => ['all', 'subscriptions', 'devices', 'microsoft', 'appstore', 'android'],
@@ -1293,13 +1284,13 @@ Achievements:
                           'tags' => ['Geo DB', 'Localization', 'Service Areas'],
                       ],
                       [
-                          'title' => 'TV Mounting FinTech Calculator',
-                          'eyebrow' => 'Service calculator',
-                          'description' => 'Complex TV Mounting-style calculator for service commerce: equipment, wall type, options, service region, scheduling, payment flow, tax preview, and order-ready pricing logic.',
+                          'title' => 'FinTech-Level Service Pricing Engine',
+                          'eyebrow' => 'Calculator logic',
+                          'description' => 'Complex quote and pricing logic for service commerce: equipment, options, region rules, scheduling, payment flow, tax preview, and order-ready pricing. TV mounting on Alrty is a public example vertical, not the product name.',
                           'image' => '/images/product-systems/posmall-admin-settings-taxes.webp',
-                          'url' => '/solutions/field-service-commerce#tv-mounting-calculator',
+                          'url' => 'https://alrty.com/tv-mounting',
                           'groups' => ['all', 'calculators', 'commerce', 'postgresql'],
-                          'tags' => ['TV Mounting', 'Payments', 'Tax Logic'],
+                          'tags' => ['Pricing Engine', 'Payments', 'Tax Logic'],
                       ],
                       [
                           'title' => 'Partner Program Analytics & Charts',
@@ -1309,6 +1300,15 @@ Achievements:
                           'url' => '/october-laravel-products#systems',
                           'groups' => ['all', 'partners', 'operations', 'commerce'],
                           'tags' => ['Affiliate', 'Charts', 'Revenue'],
+                      ],
+                      [
+                          'title' => 'POSMall PostgreSQL Benchmark Harness',
+                          'eyebrow' => 'Measured proof',
+                          'description' => 'Reproducible Homestead / PostgreSQL benchmark and validation evidence for POSMall performance work: test in one environment, compare raw milliseconds, and treat claims without numbers as SEO manipulation.',
+                          'image' => '/images/product-systems/posmall-admin-products-menu.webp',
+                          'url' => '/benchmarks/posmall-postgresql-vs-aimeos-postgresql',
+                          'groups' => ['all', 'commerce', 'postgresql', 'benchmarks'],
+                          'tags' => ['Benchmarks', 'Homestead', 'Milliseconds'],
                       ],
                   ];
                 @endphp
@@ -1321,7 +1321,7 @@ Achievements:
                       </div>
                     </div>
                     <p>
-                      A compact product catalog in the same visual language as the portfolio: twelve balanced cards for POSMall commerce, Microsoft Store, App Store iOS/macOS, Android wrappers, store payments, subscriptions, ten-device account access, device cabinet, geo databases, TV Mounting calculators, tax logic, and affiliate analytics.
+                      A compact product catalog in the same visual language as the portfolio: twelve balanced cards for POSMall commerce, Microsoft Store, App Store iOS/macOS, Apple App Store iOS/macOS and Android / Google Play wrappers, store payments, subscriptions, ten-device account access, device cabinet, geo databases, fintech-level service pricing logic, tax logic, and affiliate analytics.
                     </p>
                   </div>
                   <div class="products-hero-metrics">
@@ -1337,8 +1337,8 @@ Achievements:
                   <li><button type="button" data-filter="commerce">Commerce</button></li>
                   <li><button type="button" data-filter="wrappers">Store Wrappers</button></li>
                   <li><button type="button" data-filter="microsoft">Microsoft</button></li>
-                  <li><button type="button" data-filter="appstore">App Store</button></li>
-                  <li><button type="button" data-filter="android">Android</button></li>
+                  <li><button type="button" data-filter="appstore">Apple / App Store</button></li>
+                  <li><button type="button" data-filter="android">Android / Google Play</button></li>
                   <li><button type="button" data-filter="subscriptions">Subscriptions</button></li>
                   <li><button type="button" data-filter="devices">Devices</button></li>
                   <li><button type="button" data-filter="geo">Geo DB</button></li>

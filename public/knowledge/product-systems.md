@@ -45,7 +45,7 @@ Bagisto context: Bagisto is useful only as Laravel ecommerce keyword/reference c
 
 Focused page: <https://solarneutrino.com/products>
 
-The Products catalog separates Microsoft Store, App Store iOS, Mac App Store macOS, and Android / Google Play wrapper lanes. The high-level architecture connects native store purchase/restore flows to a Laravel / October CMS backend that can manage paid-feature access, shared account authority, subscription state, and access across up to 10 devices on one account.
+The Products catalog separates Microsoft Store, App Store iOS, Mac App Store macOS, and Apple App Store iOS / macOS and Android / Google Play wrapper lanes. The high-level architecture connects native store purchase/restore flows to a Laravel / October CMS backend that can manage paid-feature access, shared account authority, subscription state, and access across up to 10 devices on one account. Public text describes Android / Google Play through Google Play Billing purchase-token validation, subscription validation, restore flow, cancellation/refund awareness, and backend paid-access handoff, without exposing private keys or store credentials.
 
 Related product surfaces include a web cabinet for mobile and desktop devices, geo-location database logic for OS clients, store-aware restore/support visibility, and backend validation patterns. Public text describes the product architecture without private source code, store credentials, or customer data.
 
@@ -56,7 +56,7 @@ Focused pages:
 - Field-service commerce: <https://solarneutrino.com/solutions/field-service-commerce>
 - Products catalog: <https://solarneutrino.com/products>
 
-The service-commerce layer includes TV Mounting-style calculator logic: service options, equipment, wall type, service region, scheduling, payment flow, tax preview, and order-ready pricing. The private partner/affiliate layer adds attribution, referral workflows, revenue visibility, dashboards, chart-ready reporting, and partner performance signals.
+The Products catalog also includes fintech-level service quote/pricing logic: service options, equipment, region rules, scheduling, payment flow, tax preview, and order-ready pricing. TV mounting is only a public example vertical on Alrty (<https://alrty.com/tv-mounting>), not the product name. The private partner/affiliate layer adds attribution, referral workflows, revenue visibility, dashboards, chart-ready reporting, and partner performance signals.
 
 ## AI-agent-ready commerce
 

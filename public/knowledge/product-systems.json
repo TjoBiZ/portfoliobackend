@@ -97,15 +97,15 @@
     {
       "name": "Native store wrappers and subscription access",
       "status": "private_cross_platform_architecture",
-      "type": "Microsoft Store, App Store iOS/macOS, and Android wrapper architecture",
+      "type": "Microsoft Store, App Store iOS / macOS, and Apple App Store iOS / macOS and Android / Google Play wrapper architecture",
       "developer": "Roman Primerov / KodZero",
       "public_summary_url": "https://solarneutrino.com/products",
-      "summary": "Product architecture for Microsoft Store Windows, App Store iOS, Mac App Store macOS, and Android / Google Play wrappers connected to a Laravel / October CMS backend.",
+      "summary": "Product architecture for Microsoft Store Windows, App Store iOS, Mac App Store macOS, and Apple App Store iOS / macOS and Android / Google Play wrapper lanes connected to a Laravel / October CMS backend.",
       "capabilities": [
         "Microsoft Store purchase and restore flows",
-        "App Store iOS purchase and restore flows",
+        "Apple App Store iOS / macOS purchase and restore flows",
         "Mac App Store macOS purchase and restore flows",
-        "Android / Google Play purchase and restore flows",
+        "Android / Google Play Billing purchase-token validation, subscription validation, cancellation/refund awareness, and restore flows",
         "shared account subscription authority",
         "paid-feature access across up to 10 devices on one account",
         "web cabinet for mobile and desktop devices",
@@ -114,7 +114,7 @@
         "cross-platform entitlement and support visibility"
       ],
       "claims_and_limits": [
-        "Publicly described at product-architecture level without private source code or store credentials.",
+        "Publicly described at product-architecture level without private source code, private keys, or store credentials.",
         "Store certification, production release, and compliance checks are channel-specific."
       ],
       "depends_on": [
