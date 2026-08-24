@@ -171,7 +171,7 @@
               <a class="pt-trigger" href="#portfolio" data-animation="19"><i class="menu-icon pe-7s-icon pe-7s-portfolio"></i>Portfolio</a>
             </li>
             <li>
-              <a class="pt-trigger" href="#products" data-animation="19"><i class="menu-icon pe-7s-icon pe-7s-box2"></i>Products</a>
+              <a href="/products"><i class="menu-icon pe-7s-icon pe-7s-box2"></i>Products</a>
             </li>
             <li>
               <a class="pt-trigger" href="#contact" data-animation="20"><i class="menu-icon pe-7s-icon pe-7s-mail"></i>Contact</a>
@@ -1036,48 +1036,41 @@ Achievements:
               <div class="section-inner">
                 <div class="section-title-block">
                   <div class="section-title-wrapper">
-                    <h2 class="section-title">Products</h2>
-                    <h5 class="section-description">POSMall, AI commerce, PostgreSQL, AWS, Laravel</h5>
+                    <h2 class="section-title">Products Preview</h2>
+                    <h5 class="section-description">Open the full catalog at /products</h5>
                   </div>
                 </div>
 
                 <p class="products-tab-intro">
-                  A compact product view for the Laravel / October CMS work: public POSMall core, private commerce extensions,
-                  AI-ready APIs for chat and phone-call agents, PostgreSQL migration workflows, benchmark proof, and cloud delivery experience.
-                  Open the full catalog to see all 12 product cards, screenshots, filters, and deep links.
+                  This is the short homepage preview. The full Products page combines the strongest parts of the work:
+                  POSMall Core with public US tax automation, POSMall Pro / CRM / Cashflow, AI-ready APIs for phone-call
+                  and chat agents, native Microsoft / Apple / Android store wrappers, shared subscriptions for up to
+                  10 devices, PostgreSQL-first data design, TV Mounting-style calculators, and partner analytics.
                 </p>
 
                 <div class="products-tab-actions">
                   <a class="button" href="/products">Open Full Products Catalog</a>
+                  <a class="button" href="/products?filter=wrappers">Store Wrappers</a>
+                  <a class="button" href="/products?filter=subscriptions">Subscriptions & Devices</a>
                   <a class="button" href="/benchmarks/posmall-postgresql-vs-aimeos-postgresql">Benchmark Proof</a>
-                  <a class="button" href="/october-laravel-products">October / Laravel Overview</a>
                 </div>
 
                 <div class="products-tab-grid">
-                  <a class="products-tab-card" href="/products/posmall">
+                  <a class="products-tab-card" href="/products?filter=commerce">
                     <img src="images/product-systems/posmall-admin-products-menu.webp" alt="POSMall admin products screen">
                     <span class="products-tab-card-body">
-                      <span class="products-tab-card-label">Public core</span>
-                      <h4>POSMall Core</h4>
-                      <p>Open October CMS / Laravel ecommerce core for physical goods, services, virtual products, checkout, orders, APIs, and PostgreSQL-first catalog structure.</p>
-                    </span>
-                  </a>
-
-                  <a class="products-tab-card" href="/products/posmall/us-tax-automation">
-                    <img src="images/product-systems/posmall-admin-settings-taxes.webp" alt="US tax automation settings in POSMall">
-                    <span class="products-tab-card-body">
-                      <span class="products-tab-card-label">Public capability</span>
-                      <h4>US Tax Automation</h4>
-                      <p>Structured state, county, city, and local-region tax configuration for US-oriented stores, available in the public POSMall core.</p>
+                      <span class="products-tab-card-label">Public commerce core</span>
+                      <h4>POSMall Core + US Taxes</h4>
+                      <p>Open October CMS / Laravel ecommerce core for physical goods, virtual products, services, checkout, orders, APIs, PostgreSQL catalogs, and detailed US state/county/local tax rules.</p>
                     </span>
                   </a>
 
                   <a class="products-tab-card" href="/october-laravel-products#systems">
                     <img src="images/product-systems/posmall-admin-orders-menu.webp" alt="POSMall Pro orders and commercial operations screen">
                     <span class="products-tab-card-body">
-                      <span class="products-tab-card-label">Private extension</span>
+                      <span class="products-tab-card-label">Private business suite</span>
                       <h4>POSMall Pro / CRM / Cashflow</h4>
-                      <p>Private extensions around leads, deals, order links, attribution, affiliate workflows, and commercial operations beyond basic shop packages.</p>
+                      <p>Private extensions around leads, deals, service commerce, order links, attribution, cashflow visibility, affiliate workflows, and commercial operations beyond basic shop packages.</p>
                     </span>
                   </a>
 
@@ -1090,12 +1083,21 @@ Achievements:
                     </span>
                   </a>
 
-                  <a class="products-tab-card" href="/services/ecommerce-postgresql-migration">
-                    <img src="images/product-systems/alrty-smart-tech-services.webp" alt="PostgreSQL migration and modernization landing page">
+                  <a class="products-tab-card" href="/products?filter=wrappers">
+                    <img src="images/product-systems/circuit-couriers-core-route-active.webp" alt="Native store wrapper architecture for Microsoft, Apple, and Android lanes">
                     <span class="products-tab-card-body">
-                      <span class="products-tab-card-label">Modernization</span>
-                      <h4>PostgreSQL Migration Dashboard</h4>
-                      <p>Workflow for moving older ecommerce data toward PostgreSQL-oriented Laravel / October models with import, validation, and reconciliation.</p>
+                      <span class="products-tab-card-label">Microsoft / Apple / Android</span>
+                      <h4>Native Store Wrappers</h4>
+                      <p>Windows, iOS, macOS, and Android wrapper architecture: store purchase, restore, subscription recognition, paid-feature access, and Laravel / October CMS backend validation.</p>
+                    </span>
+                  </a>
+
+                  <a class="products-tab-card" href="/products?filter=subscriptions">
+                    <img src="images/product-systems/circuit-couriers-support-feedback.webp" alt="Shared account dashboard for subscriptions, devices, and support visibility">
+                    <span class="products-tab-card-body">
+                      <span class="products-tab-card-label">Account authority</span>
+                      <h4>Subscriptions + 10 Devices</h4>
+                      <p>Shared account entitlement logic where a person buys through Apple, Google, or Microsoft stores and the backend manages paid access across up to 10 devices.</p>
                     </span>
                   </a>
 
