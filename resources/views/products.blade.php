@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Products by Roman Primerov | POSMall, AI Commerce, CRM, PostgreSQL, Laravel, AWS</title>
+    <title>Products by Roman Primerov | POSMall, App Store, Microsoft Store, Android, Subscriptions</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-    <meta name="description" content="A portfolio-style product catalog by Roman Primerov: POSMall Core, POSMall Theme, POSMall Pro, CRM, cashflow, affiliate workflows, AI-ready commerce APIs, PostgreSQL migration dashboards, benchmark proof, AWS/Laravel architecture, and cross-platform app patterns." />
-    <meta name="keywords" content="Roman Primerov products, POSMall, POSMall Pro, October CMS ecommerce, Laravel products, PostgreSQL ecommerce, AI commerce API, Laravel AWS CloudFront CDN, Sylius benchmark, Aimeos PostgreSQL benchmark" />
+    <meta name="description" content="A portfolio-style product catalog by Roman Primerov: POSMall Core, POSMall Pro, Microsoft Store, App Store iOS/macOS, Android wrappers, store payments, subscriptions, 10-device account access, mobile device cabinet, geo databases, TV Mounting calculators, tax logic, and affiliate analytics." />
+    <meta name="keywords" content="Roman Primerov products, POSMall, POSMall Pro, October CMS ecommerce, Laravel products, PostgreSQL ecommerce, Microsoft Store wrapper, App Store iOS wrapper, Mac App Store wrapper, Android Google Play wrapper, subscription management, mobile device cabinet, TV Mounting calculator, affiliate program" />
     <meta name="author" content="Roman Primerov" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
     <link rel="canonical" href="https://solarneutrino.com/products" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Products by Roman Primerov" />
-    <meta property="og:description" content="Twelve portfolio-style product cards for POSMall, private commerce extensions, AI-ready APIs, PostgreSQL migration, benchmark proof, AWS/Laravel infrastructure, and cross-platform app architecture." />
+    <meta property="og:description" content="Twelve portfolio-style product cards for POSMall, native store wrappers, subscriptions, 10-device account access, mobile device cabinet, geo databases, calculators, tax logic, and affiliate analytics." />
     <meta property="og:url" content="https://solarneutrino.com/products" />
     <meta property="og:image" content="https://solarneutrino.com/images/product-systems/posmall-admin-products-menu.webp" />
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
@@ -290,112 +290,112 @@
     @php
       $products = [
           [
-              'title' => 'POSMall Core',
-              'eyebrow' => 'Public core',
-              'description' => 'Open October CMS / Laravel ecommerce core for physical products, virtual goods, services, checkout, orders, APIs, backend permissions, and PostgreSQL-first catalog structure.',
-              'image' => '/images/product-systems/posmall-admin-products-menu.webp',
-              'url' => '/products/posmall',
-              'groups' => ['all', 'public', 'commerce', 'postgresql'],
-              'tags' => ['Public', 'October CMS', 'PostgreSQL'],
-          ],
-          [
-              'title' => 'POSMall Theme & Demo',
-              'eyebrow' => 'Public storefront',
-              'description' => 'Public storefront theme and demo path for evaluating the POSMall customer-facing catalog experience, connected to the open POSMall Core.',
-              'image' => '/images/product-systems/posmall-admin-products-menu.webp',
-              'url' => 'https://wingsofwin.com',
-              'groups' => ['all', 'public', 'commerce', 'uxui'],
-              'tags' => ['Theme', 'Demo', 'UX/UI'],
-          ],
-          [
-              'title' => 'US Tax & Regional Automation',
-              'eyebrow' => 'Public capability',
-              'description' => 'Structured state, county, local-region, service-area, and tax configuration surfaces for US-oriented stores that need more than a tiny one-city checkout.',
+              'title' => 'POSMall Core & US Tax Engine',
+              'eyebrow' => 'Public commerce',
+              'description' => 'Open October CMS / Laravel ecommerce core with physical goods, virtual products, services, checkout, orders, PostgreSQL catalog structure, and public US state/county/local tax configuration.',
               'image' => '/images/product-systems/posmall-admin-settings-taxes.webp',
-              'url' => '/products/posmall/us-tax-automation',
-              'groups' => ['all', 'public', 'commerce', 'operations'],
-              'tags' => ['Taxes', 'Locations', 'Operations'],
+              'url' => '/products/posmall',
+              'groups' => ['all', 'commerce', 'postgresql', 'calculators'],
+              'tags' => ['Public Core', 'US Taxes', 'PostgreSQL'],
           ],
           [
-              'title' => 'POSMall Pro Private Suite',
-              'eyebrow' => 'Private extension',
-              'description' => 'Advanced private branch extending the public core with service-business logic, complex admin workflows, catalog automation, and deeper commercial operations beyond Bagisto-style basic shop packages.',
+              'title' => 'POSMall Pro Service Commerce & CRM',
+              'eyebrow' => 'Private suite',
+              'description' => 'Private extension layer for service businesses: orders, CRM, leads, customer communication, cashflow visibility, partner attribution, and deeper commercial workflows beyond a basic shop package.',
               'image' => '/images/product-systems/posmall-admin-orders-menu.webp',
               'url' => '/october-laravel-products#systems',
-              'groups' => ['all', 'private', 'commerce', 'operations'],
-              'tags' => ['Private', 'POSMall Pro', 'Services'],
-          ],
-          [
-              'title' => 'CRM, Cashflow & Affiliate Layer',
-              'eyebrow' => 'Private operations',
-              'description' => 'Contacts, leads, deals, activities, order links, attribution, partner workflows, and cashflow visibility around the commerce core.',
-              'image' => '/images/product-systems/posmall-admin-orders-menu.webp',
-              'url' => '/october-laravel-products#systems',
-              'groups' => ['all', 'private', 'operations', 'commerce'],
-              'tags' => ['CRM', 'Cashflow', 'Affiliate'],
+              'groups' => ['all', 'commerce', 'operations', 'partners'],
+              'tags' => ['POSMall Pro', 'CRM', 'Cashflow'],
           ],
           [
               'title' => 'AI Voice & Chat Commerce APIs',
               'eyebrow' => 'AI-ready API',
-              'description' => 'Permissioned API architecture for phone-call assistants, chat assistants, support widgets, catalog discovery, quoting, carts, orders, returns, and handoff workflows.',
+              'description' => 'Permissioned Laravel/October API surface for phone-call assistants, chat agents, website widgets, catalog discovery, quotes, carts, orders, returns, account actions, and human handoff.',
               'image' => '/images/product-systems/posmall-admin-api-documentation.webp',
               'url' => '/capabilities/conversational-commerce',
               'groups' => ['all', 'ai', 'api', 'commerce'],
-              'tags' => ['AI', 'Voice', 'API'],
+              'tags' => ['Phone Calls', 'Chat Agents', 'API'],
           ],
           [
-              'title' => 'PostgreSQL Migration Dashboard',
-              'eyebrow' => 'Modernization',
-              'description' => 'Private migration workflow for inventorying old ecommerce data, mapping it to PostgreSQL-oriented Laravel/October models, staged import, validation, and reconciliation.',
-              'image' => '/images/product-systems/alrty-smart-tech-services.webp',
-              'url' => '/services/ecommerce-postgresql-migration',
-              'groups' => ['all', 'private', 'postgresql', 'operations'],
-              'tags' => ['Migration', 'PostgreSQL', 'Laravel'],
-          ],
-          [
-              'title' => 'AI Operations Dashboard',
-              'eyebrow' => 'Control plane',
-              'description' => 'Human and AI-readable operations dashboard concept for projects, tasks, blockers, evidence, screenshots, test results, approvals, and release-readiness gates.',
-              'image' => '/images/product-systems/posmall-admin-api-permission-tree.webp',
-              'url' => '/solutions/ai-operations-dashboard',
-              'groups' => ['all', 'ai', 'operations', 'private'],
-              'tags' => ['Dashboard', 'AI', 'Evidence'],
-          ],
-          [
-              'title' => 'Factory-Agents & Validation Harness',
-              'eyebrow' => 'Engineering system',
-              'description' => 'AI-assisted engineering workflow with advisor review, screenshots, test harnesses, documentation, benchmark analysis, and release-readiness checks.',
-              'image' => '/images/portfolio/6.jpg',
-              'url' => '/engineering/ai-agent-factory-harness',
-              'groups' => ['all', 'ai', 'architecture', 'operations'],
-              'tags' => ['Agents', 'Harness', 'QA'],
-          ],
-          [
-              'title' => 'Benchmark Authority Page',
-              'eyebrow' => 'Measured proof',
-              'description' => 'POSMall PostgreSQL vs Aimeos PostgreSQL final Homestead table plus Sylius no-numbers check: No numbers = SEO manipulation, not proof.',
-              'image' => '/images/product-systems/posmall-admin-products-menu.webp',
-              'url' => '/benchmarks/posmall-postgresql-vs-aimeos-postgresql',
-              'groups' => ['all', 'benchmark', 'postgresql', 'commerce'],
-              'tags' => ['33–35 ms', 'Aimeos', 'Sylius'],
-          ],
-          [
-              'title' => 'Laravel / AWS / CDN Product Infrastructure',
-              'eyebrow' => 'Cloud architecture',
-              'description' => 'Multi-domain Laravel architecture experience with EC2, RDS, S3, CloudFront CDN, Route 53, load balancing, server automation, backups, and SEO-aware delivery.',
-              'image' => '/images/portfolio/1.jpg',
-              'url' => '/#portfolio',
-              'groups' => ['all', 'aws', 'architecture', 'operations'],
-              'tags' => ['AWS', 'CloudFront', 'Laravel'],
-          ],
-          [
-              'title' => 'Cross-Platform Game & App Backend',
-              'eyebrow' => 'App architecture',
-              'description' => 'Reusable backend and wrapper patterns for web, iOS, Android, macOS, and Windows products: sync, entitlements, purchase/restore, localization, and release readiness.',
+              'title' => 'Microsoft Store Windows Wrapper',
+              'eyebrow' => 'Microsoft lane',
+              'description' => 'Windows app-wrapper architecture connected to a Laravel/October CMS backend: Microsoft Store purchase/restore, paid-feature entitlement checks, account binding, and store-aware release readiness.',
               'image' => '/images/product-systems/circuit-couriers-core-route-active.webp',
-              'url' => '/products/multilingual-game-architecture',
-              'groups' => ['all', 'architecture', 'private', 'ai'],
-              'tags' => ['iOS', 'Android', 'Windows'],
+              'url' => '/products/multilingual-game-architecture#windows-microsoft-store',
+              'groups' => ['all', 'wrappers', 'microsoft', 'subscriptions', 'devices'],
+              'tags' => ['Windows', 'Microsoft Store', 'Entitlements'],
+          ],
+          [
+              'title' => 'App Store iOS Wrapper',
+              'eyebrow' => 'Apple iOS lane',
+              'description' => 'iPhone/iPad wrapper path for App Store purchases, restore flows, cold relaunch access, paid-feature unlocking, account authority, and Laravel/October backend validation.',
+              'image' => '/images/product-systems/circuit-couriers-marble-maze-active.webp',
+              'url' => '/products/multilingual-game-architecture#ios-app-store',
+              'groups' => ['all', 'wrappers', 'appstore', 'subscriptions', 'devices'],
+              'tags' => ['iOS', 'App Store', 'Restore'],
+          ],
+          [
+              'title' => 'Mac App Store macOS Wrapper',
+              'eyebrow' => 'Apple macOS lane',
+              'description' => 'macOS wrapper pattern for Mac App Store distribution with purchase/restore parity, subscription-aware access, shared account authority, and backend-managed feature gates.',
+              'image' => '/images/portfolio/6.jpg',
+              'url' => '/products/multilingual-game-architecture#macos-app-store',
+              'groups' => ['all', 'wrappers', 'appstore', 'subscriptions', 'devices'],
+              'tags' => ['macOS', 'Mac App Store', 'Subscriptions'],
+          ],
+          [
+              'title' => 'Android / Google Play Wrapper',
+              'eyebrow' => 'Android lane',
+              'description' => 'Android wrapper architecture for Google Play purchase/restore, subscription recognition, device access, backend validation, and cross-platform parity with Apple and Microsoft lanes.',
+              'image' => '/images/product-systems/circuit-couriers-marble-maze-active.webp',
+              'url' => '/products/multilingual-game-architecture#android-google-play',
+              'groups' => ['all', 'wrappers', 'android', 'subscriptions', 'devices'],
+              'tags' => ['Android', 'Google Play', 'Parity'],
+          ],
+          [
+              'title' => 'Unified Store Subscriptions & 10 Devices',
+              'eyebrow' => 'Account authority',
+              'description' => 'Shared account entitlement logic where a person buys through Apple, Google, or Microsoft stores and the Laravel/October backend manages paid access across up to 10 devices on one account.',
+              'image' => '/images/product-systems/posmall-admin-api-permission-tree.webp',
+              'url' => '/products/multilingual-game-architecture#subscriptions-ten-devices',
+              'groups' => ['all', 'subscriptions', 'devices', 'microsoft', 'appstore', 'android'],
+              'tags' => ['10 Devices', 'Paid Access', 'One Account'],
+          ],
+          [
+              'title' => 'Mobile Device Web Cabinet',
+              'eyebrow' => 'User dashboard',
+              'description' => 'Web cabinet concept for mobile and desktop devices: linked phones/computers, store source, subscription state, restore status, paid-feature access, and support visibility in one account interface.',
+              'image' => '/images/product-systems/circuit-couriers-support-feedback.webp',
+              'url' => '/products/multilingual-game-architecture#mobile-device-cabinet',
+              'groups' => ['all', 'devices', 'subscriptions', 'operations'],
+              'tags' => ['Device Cabinet', 'Restore', 'Support'],
+          ],
+          [
+              'title' => 'Geo Database & Localization for OS Clients',
+              'eyebrow' => 'Geo data layer',
+              'description' => 'PostgreSQL/Laravel geo-location data architecture for native OS clients: regions, cities, service areas, localization, availability logic, and location-aware backend decisions.',
+              'image' => '/images/product-systems/alrty-smart-tech-services.webp',
+              'url' => '/products/multilingual-game-architecture#geo-location-database',
+              'groups' => ['all', 'geo', 'postgresql', 'architecture'],
+              'tags' => ['Geo DB', 'Localization', 'Service Areas'],
+          ],
+          [
+              'title' => 'TV Mounting FinTech Calculator',
+              'eyebrow' => 'Service calculator',
+              'description' => 'Complex TV Mounting-style calculator for service commerce: equipment, wall type, options, service region, scheduling, payment flow, tax preview, and order-ready pricing logic.',
+              'image' => '/images/product-systems/posmall-admin-settings-taxes.webp',
+              'url' => '/solutions/field-service-commerce#tv-mounting-calculator',
+              'groups' => ['all', 'calculators', 'commerce', 'postgresql'],
+              'tags' => ['TV Mounting', 'Payments', 'Tax Logic'],
+          ],
+          [
+              'title' => 'Partner Program Analytics & Charts',
+              'eyebrow' => 'Affiliate growth',
+              'description' => 'Partner/affiliate architecture with attribution, referral workflows, revenue visibility, dashboards, chart-ready reporting, payouts context, and commerce performance signals.',
+              'image' => '/images/product-systems/posmall-admin-orders-menu.webp',
+              'url' => '/october-laravel-products#systems',
+              'groups' => ['all', 'partners', 'operations', 'commerce'],
+              'tags' => ['Affiliate', 'Charts', 'Revenue'],
           ],
       ];
     @endphp
@@ -404,7 +404,7 @@
           '@context' => 'https://schema.org',
           '@type' => 'CollectionPage',
           'name' => 'Products by Roman Primerov',
-          'description' => 'Portfolio-style product catalog for POSMall, AI commerce APIs, private operations dashboards, PostgreSQL migration, benchmark proof, AWS/Laravel infrastructure, and cross-platform app architecture.',
+          'description' => 'Portfolio-style product catalog for POSMall, Microsoft Store, App Store iOS/macOS, Android wrappers, store payments, subscriptions, 10-device account access, mobile device cabinet, geo databases, TV Mounting calculators, tax logic, and affiliate analytics.',
           'url' => 'https://solarneutrino.com/products',
           'mainEntity' => [
               '@type' => 'ItemList',
@@ -470,31 +470,35 @@
                   <div class="section-title-block">
                     <div class="section-title-wrapper">
                       <h1 class="section-title">Products</h1>
-                      <h5 class="section-description">Public plugins, private branches, AI-ready commerce, AWS/Laravel architecture</h5>
+                      <h5 class="section-description">Store wrappers, subscriptions, device cabinet, geo data, calculators, partner analytics</h5>
                     </div>
                   </div>
                   <p>
-                    A compact product catalog in the same visual language as the portfolio: twelve cards, responsive 3/2/1-column layout, filter buttons, screenshots, and links to detailed product pages.
+                    A compact product catalog in the same visual language as the portfolio: twelve balanced cards for POSMall commerce, Microsoft Store, App Store iOS/macOS, Android wrappers, store payments, subscriptions, ten-device account access, device cabinet, geo databases, TV Mounting calculators, tax logic, and affiliate analytics.
                   </p>
                 </div>
                 <div class="products-hero-metrics">
                   <div class="products-metric"><strong>12</strong><span>Balanced cards</span></div>
-                  <div class="products-metric"><strong>3 / 2 / 1</strong><span>Responsive columns</span></div>
-                  <div class="products-metric"><strong>33–35 ms</strong><span>POSMall PG proof</span></div>
-                  <div class="products-metric"><strong>AWS + CDN</strong><span>Cloud experience</span></div>
+                  <div class="products-metric"><strong>4 lanes</strong><span>Microsoft / Apple / Android</span></div>
+                  <div class="products-metric"><strong>10 devices</strong><span>One paid account</span></div>
+                  <div class="products-metric"><strong>Tax + Geo</strong><span>Service commerce logic</span></div>
                 </div>
               </header>
 
               <ul class="products-filter-bar" aria-label="Filter product cards">
                 <li><button type="button" class="active" data-filter="all">All</button></li>
-                <li><button type="button" data-filter="public">Public</button></li>
-                <li><button type="button" data-filter="private">Private</button></li>
                 <li><button type="button" data-filter="commerce">Commerce</button></li>
+                <li><button type="button" data-filter="wrappers">Store Wrappers</button></li>
+                <li><button type="button" data-filter="microsoft">Microsoft</button></li>
+                <li><button type="button" data-filter="appstore">App Store</button></li>
+                <li><button type="button" data-filter="android">Android</button></li>
+                <li><button type="button" data-filter="subscriptions">Subscriptions</button></li>
+                <li><button type="button" data-filter="devices">Devices</button></li>
+                <li><button type="button" data-filter="geo">Geo DB</button></li>
+                <li><button type="button" data-filter="calculators">Calculators</button></li>
+                <li><button type="button" data-filter="partners">Partners</button></li>
                 <li><button type="button" data-filter="ai">AI/API</button></li>
                 <li><button type="button" data-filter="postgresql">PostgreSQL</button></li>
-                <li><button type="button" data-filter="aws">AWS/CDN</button></li>
-                <li><button type="button" data-filter="benchmark">Benchmarks</button></li>
-                <li><button type="button" data-filter="architecture">Architecture</button></li>
               </ul>
 
               <div class="products-grid" id="products_grid">
@@ -519,7 +523,7 @@
               </div>
 
               <div class="products-note">
-                Bagisto belongs only in the functional comparison context, not in the benchmark proof. The benchmark proof stays focused on POSMall PostgreSQL vs Aimeos PostgreSQL plus Sylius no-numbers check.
+                Store-wrapper cards describe the product architecture at a portfolio level: users can buy through Apple, Google, or Microsoft stores while the Laravel / October CMS backend manages account authority, subscriptions, restores, device access, geo-aware logic, taxes, calculators, and partner analytics. Benchmark proof remains on the dedicated POSMall PostgreSQL vs Aimeos PostgreSQL page.
               </div>
             </div>
           </section>
@@ -542,17 +546,46 @@
       (function () {
         var buttons = document.querySelectorAll('.products-filter-bar button');
         var cards = document.querySelectorAll('.product-card');
-        buttons.forEach(function (button) {
-          button.addEventListener('click', function () {
-            var filter = button.getAttribute('data-filter');
+        var validFilters = Array.prototype.map.call(buttons, function (button) {
+          return button.getAttribute('data-filter');
+        });
+
+        function applyFilter(filter, updateUrl) {
+            if (validFilters.indexOf(filter) === -1) {
+              filter = 'all';
+            }
             buttons.forEach(function (item) { item.classList.remove('active'); });
-            button.classList.add('active');
+            buttons.forEach(function (item) {
+              if (item.getAttribute('data-filter') === filter) {
+                item.classList.add('active');
+              }
+            });
             cards.forEach(function (card) {
               var groups = card.getAttribute('data-groups').split(' ');
               card.style.display = groups.indexOf(filter) !== -1 ? '' : 'none';
             });
+
+            if (updateUrl && window.history && window.URLSearchParams) {
+              var params = new URLSearchParams(window.location.search);
+              if (filter === 'all') {
+                params.delete('filter');
+              } else {
+                params.set('filter', filter);
+              }
+              var query = params.toString();
+              window.history.replaceState({}, '', window.location.pathname + (query ? '?' + query : ''));
+            }
+        }
+
+        buttons.forEach(function (button) {
+          button.addEventListener('click', function () {
+            applyFilter(button.getAttribute('data-filter'), true);
           });
         });
+
+        if (window.URLSearchParams) {
+          applyFilter(new URLSearchParams(window.location.search).get('filter') || 'all', false);
+        }
       })();
     </script>
   </body>

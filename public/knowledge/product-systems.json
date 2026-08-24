@@ -95,6 +95,35 @@
       ]
     },
     {
+      "name": "Native store wrappers and subscription access",
+      "status": "private_cross_platform_architecture",
+      "type": "Microsoft Store, App Store iOS/macOS, and Android wrapper architecture",
+      "developer": "Roman Primerov / KodZero",
+      "public_summary_url": "https://solarneutrino.com/products",
+      "summary": "Product architecture for Microsoft Store Windows, App Store iOS, Mac App Store macOS, and Android / Google Play wrappers connected to a Laravel / October CMS backend.",
+      "capabilities": [
+        "Microsoft Store purchase and restore flows",
+        "App Store iOS purchase and restore flows",
+        "Mac App Store macOS purchase and restore flows",
+        "Android / Google Play purchase and restore flows",
+        "shared account subscription authority",
+        "paid-feature access across up to 10 devices on one account",
+        "web cabinet for mobile and desktop devices",
+        "geo-location database logic for OS clients",
+        "Laravel / October CMS backend validation",
+        "cross-platform entitlement and support visibility"
+      ],
+      "claims_and_limits": [
+        "Publicly described at product-architecture level without private source code or store credentials.",
+        "Store certification, production release, and compliance checks are channel-specific."
+      ],
+      "depends_on": [
+        "Laravel / October CMS backend",
+        "POSMall account and commerce patterns",
+        "platform store APIs for the deployed channel"
+      ]
+    },
+    {
       "name": "AI-agent-ready commerce API architecture",
       "status": "integration_ready_architecture",
       "type": "Voice and chat commerce architecture",

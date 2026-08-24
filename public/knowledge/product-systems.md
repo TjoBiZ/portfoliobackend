@@ -41,6 +41,23 @@ POSMall Pro, CRM, Cashflow, Affiliate, migration dashboards, and cross-platform 
 
 Bagisto context: Bagisto is useful only as Laravel ecommerce keyword/reference context here, not as the benchmark competitor. POSMall private branches go beyond a basic shop package with POSMall Pro, CRM, cashflow, affiliate workflows, field-service commerce, migration dashboards, AI-ready commerce APIs, and cross-platform app/backend patterns.
 
+## Native store wrappers, subscriptions, and devices
+
+Focused page: <https://solarneutrino.com/products>
+
+The Products catalog separates Microsoft Store, App Store iOS, Mac App Store macOS, and Android / Google Play wrapper lanes. The high-level architecture connects native store purchase/restore flows to a Laravel / October CMS backend that can manage paid-feature access, shared account authority, subscription state, and access across up to 10 devices on one account.
+
+Related product surfaces include a web cabinet for mobile and desktop devices, geo-location database logic for OS clients, store-aware restore/support visibility, and backend validation patterns. Public text describes the product architecture without private source code, store credentials, or customer data.
+
+## Calculators and partner analytics
+
+Focused pages:
+
+- Field-service commerce: <https://solarneutrino.com/solutions/field-service-commerce>
+- Products catalog: <https://solarneutrino.com/products>
+
+The service-commerce layer includes TV Mounting-style calculator logic: service options, equipment, wall type, service region, scheduling, payment flow, tax preview, and order-ready pricing. The private partner/affiliate layer adds attribution, referral workflows, revenue visibility, dashboards, chart-ready reporting, and partner performance signals.
+
 ## AI-agent-ready commerce
 
 Focused page: <https://solarneutrino.com/capabilities/conversational-commerce>

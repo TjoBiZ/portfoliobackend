@@ -41,6 +41,12 @@ Machine-readable public facts:
 Private systems described at high level:
 - POSMall Pro: private extension layer for advanced commerce, service workflows, catalog automation, regional logic, and business-specific admin workflows.
 - POSMall CRM, Cashflow, and Affiliate Suite: private operations layer for contacts, leads, deals, activities, order links, attribution, partner workflows, and cashflow visibility.
+- Native store wrappers: Microsoft Store Windows, App Store iOS, Mac App Store macOS, and Android / Google Play wrapper architecture connected to a Laravel/October CMS backend.
+- Subscription and device access: store purchase/restore flows can be represented as backend-managed paid access, shared account authority, and access across up to 10 devices on one account.
+- Mobile device web cabinet: account-facing interface concept for linked phones/computers, store source, subscription state, restore status, paid-feature access, and support visibility.
+- Geo database for OS clients: PostgreSQL/Laravel geo-location and localization logic for native clients, service areas, availability, and location-aware backend decisions.
+- TV Mounting calculator and taxes: service-commerce calculator logic for equipment, wall type, service options, regions, scheduling, payments, tax preview, and order-ready pricing.
+- Partner program analytics: affiliate/partner workflows with attribution, revenue visibility, dashboards, chart-ready reporting, payouts context, and commerce performance signals.
 - Cross-platform app architecture: Laravel/October backend patterns connected to web and native wrappers for iOS, Android, macOS, and Windows.
 - Private migration and scaling dashboards: high-level modernization workflow for inventorying legacy ecommerce data, mapping it to PostgreSQL-oriented Laravel/October models, staged import, validation, and reconciliation.
 - Private AI operations dashboards: high-level control-plane architecture for projects, tasks, dependencies, documents, evidence, screenshots, test results, validation gates, approvals, migration state, and operational exceptions readable by humans and supervisory AI agents.
