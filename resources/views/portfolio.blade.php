@@ -41,94 +41,260 @@
           var GoogleRecaptchaV3SiteKey = "{{ env('GOOGLE_RECAPTCHAR_V3_FRONTEND') }}";
       </script>
       <style>
-          .products-tab-intro {
-              max-width: 900px;
-              margin-bottom: 28px;
-              font-size: 16px;
-              line-height: 1.75;
-          }
+      .products-page-shell {
+        max-width: 1320px;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, .97);
+        border-radius: 2px;
+        box-shadow: 0 18px 55px rgba(0, 0, 0, .12);
+        min-height: calc(100vh - 90px);
+        padding: 42px;
+        position: relative;
+      }
 
-          .products-tab-actions {
-              display: flex;
-              flex-wrap: wrap;
-              gap: 12px;
-              margin: 22px 0 30px;
-          }
+      .products-page-shell:before {
+        content: 'Products';
+        position: absolute;
+        right: 28px;
+        top: 10px;
+        font-size: clamp(72px, 12vw, 180px);
+        color: rgba(255, 114, 76, .05);
+        font-weight: 900;
+        line-height: .9;
+        pointer-events: none;
+      }
 
-          .products-tab-grid {
-              display: grid;
-              grid-template-columns: repeat(3, minmax(0, 1fr));
-              gap: 20px;
-              margin-top: 18px;
-          }
+      .products-hero {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: minmax(0, 1.3fr) minmax(280px, .7fr);
+        gap: 28px;
+        align-items: end;
+        margin-bottom: 28px;
+      }
 
-          .products-tab-card {
-              display: block;
-              min-height: 100%;
-              background: #fff;
-              border: 1px solid #eee;
-              box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
-              color: #333;
-              text-decoration: none;
-              transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
-          }
+      .products-hero h1 {
+        margin: 0 0 12px;
+        font-family: Oxygen, Helvetica, sans-serif;
+        font-size: clamp(34px, 5vw, 58px);
+        line-height: 1.08;
+      }
 
-          .products-tab-card:hover,
-          .products-tab-card:focus {
-              color: #333;
-              text-decoration: none;
-              transform: translateY(-4px);
-              border-color: #ff724c;
-              box-shadow: 0 16px 34px rgba(255, 114, 76, 0.16);
-          }
+      .products-hero p {
+        color: #555;
+        font-size: 17px;
+        line-height: 1.7;
+        margin: 0;
+      }
 
-          .products-tab-card img {
-              display: block;
-              width: 100%;
-              height: 145px;
-              object-fit: cover;
-              border-bottom: 1px solid #f0f0f0;
-          }
+      .products-hero-metrics {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+      }
 
-          .products-tab-card-body {
-              display: block;
-              padding: 18px;
-          }
+      .products-metric {
+        border: 1px solid #eee;
+        border-left: 4px solid #ff724c;
+        padding: 14px 16px;
+        background: #fff;
+      }
 
-          .products-tab-card-label {
-              display: inline-block;
-              margin-bottom: 10px;
-              color: #ff724c;
-              font-size: 11px;
-              font-weight: 700;
-              letter-spacing: .08em;
-              text-transform: uppercase;
-          }
+      .products-metric strong {
+        display: block;
+        font-size: 22px;
+        line-height: 1.1;
+        color: #222;
+      }
 
-          .products-tab-card h4 {
-              margin: 0 0 10px;
-              font-size: 18px;
-              line-height: 1.35;
-          }
+      .products-metric span {
+        color: #777;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: .08em;
+      }
 
-          .products-tab-card p {
-              margin: 0;
-              color: #666;
-              font-size: 14px;
-              line-height: 1.65;
-          }
+      .products-filter-bar {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 0 0 24px;
+        padding: 0;
+        list-style: none;
+      }
 
-          @media (max-width: 991px) {
-              .products-tab-grid {
-                  grid-template-columns: repeat(2, minmax(0, 1fr));
-              }
-          }
+      .products-filter-bar button {
+        border: 2px solid #ff724c;
+        background: #fff;
+        color: #333;
+        border-radius: 999px;
+        padding: 8px 14px;
+        font-weight: 700;
+        transition: all .18s ease;
+      }
 
-          @media (max-width: 640px) {
-              .products-tab-grid {
-                  grid-template-columns: 1fr;
-              }
-          }
+      .products-filter-bar button:hover,
+      .products-filter-bar button.active {
+        background: #ff724c;
+        color: #fff;
+      }
+
+      .products-grid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .product-card {
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
+        background: #fff;
+        border: 1px solid #e9e9e9;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+        color: #333;
+        text-decoration: none;
+        overflow: hidden;
+        transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+      }
+
+      .product-card:hover,
+      .product-card:focus {
+        transform: translateY(-4px);
+        border-color: #ff724c;
+        box-shadow: 0 18px 42px rgba(0, 0, 0, .14);
+        color: #333;
+        text-decoration: none;
+      }
+
+      .product-shot {
+        position: relative;
+        aspect-ratio: 16 / 10;
+        background: #f6f6f6;
+        overflow: hidden;
+      }
+
+      .product-shot img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform .25s ease;
+      }
+
+      .product-card:hover .product-shot img {
+        transform: scale(1.04);
+      }
+
+      .product-shot span {
+        position: absolute;
+        left: 12px;
+        top: 12px;
+        display: inline-block;
+        background: rgba(255, 255, 255, .94);
+        color: #ff724c;
+        padding: 6px 10px;
+        font-size: 11px;
+        line-height: 1;
+        border-radius: 999px;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: .08em;
+      }
+
+      .product-card-body {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 18px;
+        min-height: 245px;
+      }
+
+      .product-card h2 {
+        font-size: 18px;
+        line-height: 1.25;
+        margin: 0;
+      }
+
+      .product-card p {
+        color: #666;
+        font-size: 14px;
+        line-height: 1.6;
+        margin: 0;
+      }
+
+      .product-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: auto;
+      }
+
+      .product-tags span {
+        border: 1px solid #eee;
+        background: #fafafa;
+        border-radius: 999px;
+        color: #666;
+        font-size: 11px;
+        padding: 5px 8px;
+        font-weight: 700;
+      }
+
+      .product-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        color: #ff724c;
+        font-weight: 900;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: .08em;
+      }
+
+      .products-note {
+        position: relative;
+        z-index: 1;
+        margin-top: 26px;
+        padding: 16px 18px;
+        border-left: 4px solid #ff724c;
+        background: #fff7f3;
+        color: #555;
+        line-height: 1.7;
+      }
+
+      @media (max-width: 1180px) {
+        .products-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 760px) {
+        .products-page-shell {
+          padding: 28px 18px;
+        }
+
+        .products-hero {
+          grid-template-columns: 1fr;
+        }
+
+        .products-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .products-page-shell {
+          box-shadow: 0 18px 55px rgba(0, 0, 0, .08);
+          min-height: auto;
+      }
+
+      .products-page-shell .section-title-block {
+          margin-bottom: 12px;
+      }
       </style>
       <script src="https://www.google.com/recaptcha/api.js?render={{ env('GOOGLE_RECAPTCHAR_V3_FRONTEND') }}"></script>
   </head>
@@ -171,7 +337,7 @@
               <a class="pt-trigger" href="#portfolio" data-animation="19"><i class="menu-icon pe-7s-icon pe-7s-portfolio"></i>Portfolio</a>
             </li>
             <li>
-              <a href="/products"><i class="menu-icon pe-7s-icon pe-7s-box2"></i>Products</a>
+              <a class="pt-trigger" href="#products" data-animation="19"><i class="menu-icon pe-7s-icon pe-7s-box2"></i>Products</a>
             </li>
             <li>
               <a class="pt-trigger" href="#contact" data-animation="20"><i class="menu-icon pe-7s-icon pe-7s-mail"></i>Contact</a>
@@ -1033,82 +1199,178 @@ Achievements:
             <!-- Products Subpage -->
             <section class="pt-page pt-page-5" data-id="products">
               <div class="border-block-top-110"></div>
-              <div class="section-inner">
-                <div class="section-title-block">
-                  <div class="section-title-wrapper">
-                    <h2 class="section-title">Products Preview</h2>
-                    <h5 class="section-description">Open the full catalog at /products</h5>
+              <div class="section-inner products-page-shell">
+                @php
+                  $products = [
+                      [
+                          'title' => 'POSMall Core & US Tax Engine',
+                          'eyebrow' => 'Public commerce',
+                          'description' => 'Open October CMS / Laravel ecommerce core with physical goods, virtual products, services, checkout, orders, PostgreSQL catalog structure, and public US state/county/local tax configuration.',
+                          'image' => '/images/product-systems/posmall-admin-settings-taxes.webp',
+                          'url' => '/products/posmall',
+                          'groups' => ['all', 'commerce', 'postgresql', 'calculators'],
+                          'tags' => ['Public Core', 'US Taxes', 'PostgreSQL'],
+                      ],
+                      [
+                          'title' => 'POSMall Pro Service Commerce & CRM',
+                          'eyebrow' => 'Private suite',
+                          'description' => 'Private extension layer for service businesses: orders, CRM, leads, customer communication, cashflow visibility, partner attribution, and deeper commercial workflows beyond a basic shop package.',
+                          'image' => '/images/product-systems/posmall-admin-orders-menu.webp',
+                          'url' => '/october-laravel-products#systems',
+                          'groups' => ['all', 'commerce', 'operations', 'partners'],
+                          'tags' => ['POSMall Pro', 'CRM', 'Cashflow'],
+                      ],
+                      [
+                          'title' => 'AI Voice & Chat Commerce APIs',
+                          'eyebrow' => 'AI-ready API',
+                          'description' => 'Permissioned Laravel/October API surface for phone-call assistants, chat agents, website widgets, catalog discovery, quotes, carts, orders, returns, account actions, and human handoff.',
+                          'image' => '/images/product-systems/posmall-admin-api-documentation.webp',
+                          'url' => '/capabilities/conversational-commerce',
+                          'groups' => ['all', 'ai', 'api', 'commerce'],
+                          'tags' => ['Phone Calls', 'Chat Agents', 'API'],
+                      ],
+                      [
+                          'title' => 'Microsoft Store Windows Wrapper',
+                          'eyebrow' => 'Microsoft lane',
+                          'description' => 'Windows app-wrapper architecture connected to a Laravel/October CMS backend: Microsoft Store purchase/restore, paid-feature entitlement checks, account binding, and store-aware release readiness.',
+                          'image' => '/images/product-systems/circuit-couriers-core-route-active.webp',
+                          'url' => '/products/multilingual-game-architecture#windows-microsoft-store',
+                          'groups' => ['all', 'wrappers', 'microsoft', 'subscriptions', 'devices'],
+                          'tags' => ['Windows', 'Microsoft Store', 'Entitlements'],
+                      ],
+                      [
+                          'title' => 'App Store iOS Wrapper',
+                          'eyebrow' => 'Apple iOS lane',
+                          'description' => 'iPhone/iPad wrapper path for App Store purchases, restore flows, cold relaunch access, paid-feature unlocking, account authority, and Laravel/October backend validation.',
+                          'image' => '/images/product-systems/circuit-couriers-marble-maze-active.webp',
+                          'url' => '/products/multilingual-game-architecture#ios-app-store',
+                          'groups' => ['all', 'wrappers', 'appstore', 'subscriptions', 'devices'],
+                          'tags' => ['iOS', 'App Store', 'Restore'],
+                      ],
+                      [
+                          'title' => 'Mac App Store macOS Wrapper',
+                          'eyebrow' => 'Apple macOS lane',
+                          'description' => 'macOS wrapper pattern for Mac App Store distribution with purchase/restore parity, subscription-aware access, shared account authority, and backend-managed feature gates.',
+                          'image' => '/images/portfolio/6.jpg',
+                          'url' => '/products/multilingual-game-architecture#macos-app-store',
+                          'groups' => ['all', 'wrappers', 'appstore', 'subscriptions', 'devices'],
+                          'tags' => ['macOS', 'Mac App Store', 'Subscriptions'],
+                      ],
+                      [
+                          'title' => 'Android / Google Play Wrapper',
+                          'eyebrow' => 'Android lane',
+                          'description' => 'Android wrapper architecture for Google Play purchase/restore, subscription recognition, device access, backend validation, and cross-platform parity with Apple and Microsoft lanes.',
+                          'image' => '/images/product-systems/circuit-couriers-marble-maze-active.webp',
+                          'url' => '/products/multilingual-game-architecture#android-google-play',
+                          'groups' => ['all', 'wrappers', 'android', 'subscriptions', 'devices'],
+                          'tags' => ['Android', 'Google Play', 'Parity'],
+                      ],
+                      [
+                          'title' => 'Unified Store Subscriptions & 10 Devices',
+                          'eyebrow' => 'Account authority',
+                          'description' => 'Shared account entitlement logic where a person buys through Apple, Google, or Microsoft stores and the Laravel/October backend manages paid access across up to 10 devices on one account.',
+                          'image' => '/images/product-systems/posmall-admin-api-permission-tree.webp',
+                          'url' => '/products/multilingual-game-architecture#subscriptions-ten-devices',
+                          'groups' => ['all', 'subscriptions', 'devices', 'microsoft', 'appstore', 'android'],
+                          'tags' => ['10 Devices', 'Paid Access', 'One Account'],
+                      ],
+                      [
+                          'title' => 'Mobile Device Web Cabinet',
+                          'eyebrow' => 'User dashboard',
+                          'description' => 'Web cabinet concept for mobile and desktop devices: linked phones/computers, store source, subscription state, restore status, paid-feature access, and support visibility in one account interface.',
+                          'image' => '/images/product-systems/circuit-couriers-support-feedback.webp',
+                          'url' => '/products/multilingual-game-architecture#mobile-device-cabinet',
+                          'groups' => ['all', 'devices', 'subscriptions', 'operations'],
+                          'tags' => ['Device Cabinet', 'Restore', 'Support'],
+                      ],
+                      [
+                          'title' => 'Geo Database & Localization for OS Clients',
+                          'eyebrow' => 'Geo data layer',
+                          'description' => 'PostgreSQL/Laravel geo-location data architecture for native OS clients: regions, cities, service areas, localization, availability logic, and location-aware backend decisions.',
+                          'image' => '/images/product-systems/alrty-smart-tech-services.webp',
+                          'url' => '/products/multilingual-game-architecture#geo-location-database',
+                          'groups' => ['all', 'geo', 'postgresql', 'architecture'],
+                          'tags' => ['Geo DB', 'Localization', 'Service Areas'],
+                      ],
+                      [
+                          'title' => 'TV Mounting FinTech Calculator',
+                          'eyebrow' => 'Service calculator',
+                          'description' => 'Complex TV Mounting-style calculator for service commerce: equipment, wall type, options, service region, scheduling, payment flow, tax preview, and order-ready pricing logic.',
+                          'image' => '/images/product-systems/posmall-admin-settings-taxes.webp',
+                          'url' => '/solutions/field-service-commerce#tv-mounting-calculator',
+                          'groups' => ['all', 'calculators', 'commerce', 'postgresql'],
+                          'tags' => ['TV Mounting', 'Payments', 'Tax Logic'],
+                      ],
+                      [
+                          'title' => 'Partner Program Analytics & Charts',
+                          'eyebrow' => 'Affiliate growth',
+                          'description' => 'Partner/affiliate architecture with attribution, referral workflows, revenue visibility, dashboards, chart-ready reporting, payouts context, and commerce performance signals.',
+                          'image' => '/images/product-systems/posmall-admin-orders-menu.webp',
+                          'url' => '/october-laravel-products#systems',
+                          'groups' => ['all', 'partners', 'operations', 'commerce'],
+                          'tags' => ['Affiliate', 'Charts', 'Revenue'],
+                      ],
+                  ];
+                @endphp
+                <header class="products-hero">
+                  <div>
+                    <div class="section-title-block">
+                      <div class="section-title-wrapper">
+                        <h2 class="section-title">Products</h2>
+                        <h5 class="section-description">Store wrappers, subscriptions, device cabinet, geo data, calculators, partner analytics</h5>
+                      </div>
+                    </div>
+                    <p>
+                      A compact product catalog in the same visual language as the portfolio: twelve balanced cards for POSMall commerce, Microsoft Store, App Store iOS/macOS, Android wrappers, store payments, subscriptions, ten-device account access, device cabinet, geo databases, TV Mounting calculators, tax logic, and affiliate analytics.
+                    </p>
                   </div>
+                  <div class="products-hero-metrics">
+                    <div class="products-metric"><strong>12</strong><span>Balanced cards</span></div>
+                    <div class="products-metric"><strong>4 lanes</strong><span>Microsoft / Apple / Android</span></div>
+                    <div class="products-metric"><strong>10 devices</strong><span>One paid account</span></div>
+                    <div class="products-metric"><strong>Tax + Geo</strong><span>Service commerce logic</span></div>
+                  </div>
+                </header>
+
+                <ul class="products-filter-bar" aria-label="Filter product cards">
+                  <li><button type="button" class="active" data-filter="all">All</button></li>
+                  <li><button type="button" data-filter="commerce">Commerce</button></li>
+                  <li><button type="button" data-filter="wrappers">Store Wrappers</button></li>
+                  <li><button type="button" data-filter="microsoft">Microsoft</button></li>
+                  <li><button type="button" data-filter="appstore">App Store</button></li>
+                  <li><button type="button" data-filter="android">Android</button></li>
+                  <li><button type="button" data-filter="subscriptions">Subscriptions</button></li>
+                  <li><button type="button" data-filter="devices">Devices</button></li>
+                  <li><button type="button" data-filter="geo">Geo DB</button></li>
+                  <li><button type="button" data-filter="calculators">Calculators</button></li>
+                  <li><button type="button" data-filter="partners">Partners</button></li>
+                  <li><button type="button" data-filter="ai">AI/API</button></li>
+                  <li><button type="button" data-filter="postgresql">PostgreSQL</button></li>
+                </ul>
+
+                <div class="products-grid" id="products_grid">
+                  @foreach ($products as $product)
+                    <a class="product-card" href="{{ $product['url'] }}" data-groups="{{ implode(' ', $product['groups']) }}" @if(str_starts_with($product['url'], 'http')) target="_blank" rel="noreferrer" @endif>
+                      <div class="product-shot">
+                        <img src="{{ $product['image'] }}" alt="{{ $product['title'] }} screenshot" loading="lazy">
+                        <span>{{ $product['eyebrow'] }}</span>
+                      </div>
+                      <div class="product-card-body">
+                        <h2>{{ $product['title'] }}</h2>
+                        <p>{{ $product['description'] }}</p>
+                        <div class="product-tags">
+                          @foreach ($product['tags'] as $tag)
+                            <span>{{ $tag }}</span>
+                          @endforeach
+                        </div>
+                        <span class="product-link">Open product →</span>
+                      </div>
+                    </a>
+                  @endforeach
                 </div>
 
-                <p class="products-tab-intro">
-                  This is the short homepage preview. The full Products page combines the strongest parts of the work:
-                  POSMall Core with public US tax automation, POSMall Pro / CRM / Cashflow, AI-ready APIs for phone-call
-                  and chat agents, native Microsoft / Apple / Android store wrappers, shared subscriptions for up to
-                  10 devices, PostgreSQL-first data design, TV Mounting-style calculators, and partner analytics.
-                </p>
-
-                <div class="products-tab-actions">
-                  <a class="button" href="/products">Open Full Products Catalog</a>
-                  <a class="button" href="/products?filter=wrappers">Store Wrappers</a>
-                  <a class="button" href="/products?filter=subscriptions">Subscriptions & Devices</a>
-                  <a class="button" href="/benchmarks/posmall-postgresql-vs-aimeos-postgresql">Benchmark Proof</a>
-                </div>
-
-                <div class="products-tab-grid">
-                  <a class="products-tab-card" href="/products?filter=commerce">
-                    <img src="images/product-systems/posmall-admin-products-menu.webp" alt="POSMall admin products screen">
-                    <span class="products-tab-card-body">
-                      <span class="products-tab-card-label">Public commerce core</span>
-                      <h4>POSMall Core + US Taxes</h4>
-                      <p>Open October CMS / Laravel ecommerce core for physical goods, virtual products, services, checkout, orders, APIs, PostgreSQL catalogs, and detailed US state/county/local tax rules.</p>
-                    </span>
-                  </a>
-
-                  <a class="products-tab-card" href="/october-laravel-products#systems">
-                    <img src="images/product-systems/posmall-admin-orders-menu.webp" alt="POSMall Pro orders and commercial operations screen">
-                    <span class="products-tab-card-body">
-                      <span class="products-tab-card-label">Private business suite</span>
-                      <h4>POSMall Pro / CRM / Cashflow</h4>
-                      <p>Private extensions around leads, deals, service commerce, order links, attribution, cashflow visibility, affiliate workflows, and commercial operations beyond basic shop packages.</p>
-                    </span>
-                  </a>
-
-                  <a class="products-tab-card" href="/capabilities/conversational-commerce">
-                    <img src="images/product-systems/posmall-admin-api-documentation.webp" alt="POSMall API documentation for AI commerce agents">
-                    <span class="products-tab-card-body">
-                      <span class="products-tab-card-label">AI-ready API</span>
-                      <h4>Voice & Chat Commerce APIs</h4>
-                      <p>API surface prepared for assistants that can handle phone calls, chats, catalog discovery, carts, orders, returns, and handoff workflows.</p>
-                    </span>
-                  </a>
-
-                  <a class="products-tab-card" href="/products?filter=wrappers">
-                    <img src="images/product-systems/circuit-couriers-core-route-active.webp" alt="Native store wrapper architecture for Microsoft, Apple, and Android lanes">
-                    <span class="products-tab-card-body">
-                      <span class="products-tab-card-label">Microsoft / Apple / Android</span>
-                      <h4>Native Store Wrappers</h4>
-                      <p>Windows, iOS, macOS, and Android wrapper architecture: store purchase, restore, subscription recognition, paid-feature access, and Laravel / October CMS backend validation.</p>
-                    </span>
-                  </a>
-
-                  <a class="products-tab-card" href="/products?filter=subscriptions">
-                    <img src="images/product-systems/circuit-couriers-support-feedback.webp" alt="Shared account dashboard for subscriptions, devices, and support visibility">
-                    <span class="products-tab-card-body">
-                      <span class="products-tab-card-label">Account authority</span>
-                      <h4>Subscriptions + 10 Devices</h4>
-                      <p>Shared account entitlement logic where a person buys through Apple, Google, or Microsoft stores and the backend manages paid access across up to 10 devices.</p>
-                    </span>
-                  </a>
-
-                  <a class="products-tab-card" href="/benchmarks/posmall-postgresql-vs-aimeos-postgresql">
-                    <img src="images/product-systems/posmall-admin-products-menu.webp" alt="POSMall benchmark proof and product catalog evidence">
-                    <span class="products-tab-card-body">
-                      <span class="products-tab-card-label">Measured proof</span>
-                      <h4>POSMall vs Aimeos PostgreSQL</h4>
-                      <p>Homestead PostgreSQL benchmark proof: POSMall holds roughly 33–35 ms through 300k SKUs. No numbers = SEO manipulation, not proof.</p>
-                    </span>
-                  </a>
+                <div class="products-note">
+                  Store-wrapper cards describe the product architecture at a portfolio level: users can buy through Apple, Google, or Microsoft stores while the Laravel / October CMS backend manages account authority, subscriptions, restores, device access, geo-aware logic, taxes, calculators, and partner analytics. Benchmark proof remains on the dedicated POSMall PostgreSQL vs Aimeos PostgreSQL page.
                 </div>
               </div>
             </section>
@@ -1227,5 +1489,40 @@ Achievements:
     <script src="js/main.js"></script>
     @verbatim<script defer="defer" type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"Full Stack Web Development Services - PHP, JavaScript, MySQL. 🇺🇸","description":"Maximize your web potential with custom Full Stack Web Development tailored to your needs. Expertise in Laravel & AWS, delivering high-performance websites and applications.","image":"https://solarneutrino.com/images/android-chrome-512x512.png","url":"https://solarneutrino.com","brand":{"@type":"Brand","name":"Solar Neutrino"},"offers":{"@type":"AggregateOffer","offerCount":1,"priceCurrency":"USD","lowPrice":"100.00","highPrice":"150000.00","availability":"https://schema.org/InStock","itemCondition":"https://schema.org/NewCondition","seller":{"@type":"Organization","name":"Solar Neutrino LLC","url":"https://solarneutrino.com"}}}</script>
     <script defer="defer" type="application/ld+json">{"@context":"https://schema.org/","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Laravel Full Stack Development ✉️ j@solarneutrino.com 🚀","item":"https://solarneutrino.com"}]}</script>@endverbatim
+
+      <script id="portfolio-products-filter-script">
+          (function () {
+              function initPortfolioProductsFilter() {
+                  var root = document.querySelector('section[data-id="products"]');
+                  if (!root) { return; }
+                  var buttons = root.querySelectorAll('.products-filter-bar button');
+                  var cards = root.querySelectorAll('.product-card');
+                  if (!buttons.length || !cards.length) { return; }
+
+                  function applyFilter(filter) {
+                      buttons.forEach(function (item) {
+                          item.classList.toggle('active', item.getAttribute('data-filter') === filter);
+                      });
+                      cards.forEach(function (card) {
+                          var groups = (card.getAttribute('data-groups') || '').split(' ');
+                          card.style.display = groups.indexOf(filter) !== -1 ? '' : 'none';
+                      });
+                  }
+
+                  buttons.forEach(function (button) {
+                      button.addEventListener('click', function () {
+                          applyFilter(button.getAttribute('data-filter') || 'all');
+                      });
+                  });
+              }
+
+              if (document.readyState === 'loading') {
+                  document.addEventListener('DOMContentLoaded', initPortfolioProductsFilter);
+              } else {
+                  initPortfolioProductsFilter();
+              }
+          })();
+      </script>
+
   </body>
 </html>
