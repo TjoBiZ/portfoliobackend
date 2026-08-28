@@ -1,7 +1,7 @@
 {
   "name": "Solar Neutrino product systems knowledge manifest",
-  "version": "2026-08-23",
-  "updated_at": "2026-08-23",
+  "version": "2026-08-28",
+  "updated_at": "2026-08-28",
   "owner": {
     "name": "Roman Primerov",
     "site": "https://solarneutrino.com/",
@@ -95,31 +95,41 @@
       ]
     },
     {
-      "name": "Store-distributed application clients and subscription access",
+      "name": "Store-distributed application clients, subscriptions, entitlements, and device access",
       "status": "private_cross_platform_architecture",
       "type": "Microsoft Store, App Store iOS / macOS, and Android / Google Play application-delivery architecture",
       "developer": "Roman Primerov / KodZero",
       "public_summary_url": "https://solarneutrino.com/products",
-      "summary": "Product architecture for Microsoft Store Windows, App Store iOS, Mac App Store macOS, and Android / Google Play application-delivery lanes connected to a Laravel / October CMS backend.",
+      "summary": "Product architecture for Microsoft Store Windows, App Store iOS, Mac App Store macOS, and Android / Google Play application-delivery lanes connected to a Laravel / October CMS backend with account-level entitlement, restore, recovery, and multi-device access patterns.",
       "capabilities": [
         "Microsoft Store purchase and restore flows",
         "Apple App Store iOS / macOS purchase and restore flows",
         "Mac App Store macOS purchase and restore flows",
         "Android / Google Play purchase, subscription validation, cancellation/refund awareness, and restore flows",
         "shared account subscription authority",
-        "paid-feature access across up to 10 devices on one account",
+        "normalized application entitlement records separated from store transactions",
+        "paid-feature access across up to 10 devices on one account where product policy enables that limit",
+        "device registration and account-level device association",
+        "device recovery and legitimate access restoration",
+        "device limit enforcement at backend policy level",
         "web cabinet for mobile and desktop devices",
         "geo-location database logic for OS clients",
         "Laravel / October CMS backend validation",
-        "cross-platform entitlement and support visibility"
+        "cross-platform entitlement and support visibility",
+        "direct device-to-device data exchange capability for supported workflows"
       ],
       "claims_and_limits": [
         "Publicly described at product-architecture level without private source code, private keys, or store credentials.",
-        "Store certification, production release, and compliance checks are channel-specific."
+        "Store certification, production release, and compliance checks are channel-specific.",
+        "Exact device-limit policy is product-specific; public documentation describes the reusable capability and the verified default policy pattern.",
+        "Store transaction origin, account entitlement, and device access are separate concepts; this manifest does not claim unrestricted cross-store purchase portability.",
+        "Direct device-to-device communication is documented only as a capability; proprietary implementation details remain confidential."
       ],
       "depends_on": [
         "Laravel / October CMS backend",
         "POSMall account and commerce patterns",
+        "store-independent entitlement model",
+        "authorized-device policy",
         "platform store APIs for the deployed channel"
       ]
     },

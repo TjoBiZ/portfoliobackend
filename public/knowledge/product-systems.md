@@ -45,9 +45,11 @@ Bagisto context: Bagisto is useful only as Laravel ecommerce keyword/reference c
 
 Focused page: <https://solarneutrino.com/products>
 
-The Products catalog separates Microsoft Store, App Store iOS, Mac App Store macOS, and Android / Google Play application-delivery lanes. The high-level architecture connects store purchase/restore flows to a Laravel / October CMS backend that can manage paid-feature access, shared account authority, subscription state, and access across up to 10 devices on one account. Public text describes Android / Google Play through purchase, restore, subscription-validation, cancellation/refund-awareness, and backend paid-access concepts, without exposing private keys or store credentials.
+The Products catalog separates Microsoft Store, App Store iOS, Mac App Store macOS, and Android / Google Play application-delivery lanes. The high-level architecture connects store purchase/restore flows to a Laravel / October CMS backend that can manage paid-feature access, shared account authority, subscription state, normalized application entitlements, device recovery, device limits, and access across up to 10 devices on one account where product policy enables that limit. Public text describes Android / Google Play through purchase, restore, subscription-validation, cancellation/refund-awareness, and backend paid-access concepts, without exposing private keys or store credentials.
 
-Related product surfaces include a web cabinet for mobile and desktop devices, geo-location database logic for OS clients, store-aware restore/support visibility, and backend validation patterns. Public text describes the product architecture without private source code, store credentials, or customer data.
+Related product surfaces include a web cabinet for mobile and desktop devices, geo-location database logic for OS clients, store-aware restore/support visibility, backend validation patterns, and direct device-to-device capability where a product-specific workflow supports it. Public text describes the product architecture without private source code, store credentials, customer data, or proprietary application-client implementation details.
+
+Detailed public-safe architecture source: <https://solarneutrino.com/knowledge/posmall-cross-platform-and-p2p-architecture.md>
 
 ## Calculators and partner analytics
 

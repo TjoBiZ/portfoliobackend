@@ -32,6 +32,7 @@
       "PARTIAL",
       "ARCHITECTURE_READY",
       "REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT",
+      "REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT",
       "BUILD_PIPELINE_READY",
       "PLANNED",
       "DEPRECATED",
@@ -280,6 +281,23 @@
         "EVID-P2P-0001",
         "EVID-P2P-0002"
       ]
+    },
+    {
+      "canonical_name": "POSMall Cross-Platform Application Architecture",
+      "visibility": "PRIVATE_CODE",
+      "implementation_status": "ARCHITECTURE_READY",
+      "reusable_status": "REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT",
+      "developer": "Solar Neutrino / Roman Primerov",
+      "primary_dependency": "POSMall APIs and reusable Solar Neutrino account/device/entitlement backend capabilities",
+      "public_description": "First-class POSMall ecosystem capability for web, iOS / iPadOS, Android, macOS, Windows, and Microsoft Store application-client scenarios. Public docs describe capability and platform breadth only.",
+      "public_disclosure": "capability_level_only",
+      "evidence_ids": [
+        "EVID-APP-0002",
+        "EVID-ACCOUNT-ENTITLEMENT-0001",
+        "EVID-GAME-BACKEND-0001",
+        "EVID-P2P-0001",
+        "EVID-P2P-0002"
+      ]
     }
   ],
   "capabilities": [
@@ -460,6 +478,166 @@
       "limitations": "Structured API and voice/service tools exist; full autonomous product ordering is not claimed for every deployment."
     },
     {
+      "id": "cross_platform_application_architecture",
+      "capability": "POSMall Cross-Platform Application Architecture",
+      "description": "One Laravel/October CMS business backend can support web, iOS / iPadOS, Android, macOS, Windows, and Microsoft Store application-client scenarios when product-specific adapters are implemented. The reusable capability is proven in another Solar Neutrino product family; POSMall-specific store clients remain architecture-ready unless separately released and tested.",
+      "module": "POSMall APIs + reusable Solar Neutrino application architecture",
+      "visibility": "PRIVATE_CODE",
+      "implementation_status": "ARCHITECTURE_READY",
+      "reusable_status": "REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT",
+      "evidence": [
+        "SOURCE_VERIFIED",
+        "API_VERIFIED",
+        "DATABASE_SCHEMA_VERIFIED"
+      ],
+      "platforms": [
+        "Web",
+        "iOS / iPadOS",
+        "Android",
+        "macOS",
+        "Windows / Microsoft Store"
+      ],
+      "integrates_with": [
+        "POSMall Core APIs",
+        "POSMall Pro service workflows",
+        "account/device/entitlement backend",
+        "store channels",
+        "direct device communication capability"
+      ],
+      "public_disclosure": "capability_level_only",
+      "limitations": "Public docs describe WHAT and WHERE only; proprietary client implementation mechanisms are confidential."
+    },
+    {
+      "id": "store_independent_entitlement_model",
+      "capability": "Store transaction verification normalized into account-level application entitlements",
+      "description": "The backend separates store transaction evidence from application access: store transaction -> server-side verification -> account association -> normalized entitlement -> authorized devices -> access.",
+      "module": "Account/device/entitlement backend",
+      "visibility": "PRIVATE_CODE",
+      "implementation_status": "IMPLEMENTED_AND_TESTED",
+      "evidence": [
+        "SOURCE_VERIFIED",
+        "DATABASE_SCHEMA_VERIFIED",
+        "AUTOMATED_TEST_VERIFIED",
+        "API_VERIFIED"
+      ],
+      "store_channels": [
+        "Apple App Store",
+        "Google Play",
+        "Microsoft Store"
+      ],
+      "business_value": [
+        "restore legitimate purchases",
+        "recover access after reinstall or device replacement",
+        "centralize subscription state",
+        "enforce backend-authoritative access",
+        "support multiple authorized devices where product policy allows"
+      ],
+      "limitations": "Does not claim cross-store purchase portability; store policies and product-specific rules still apply."
+    },
+    {
+      "id": "apple_store_subscription_entitlement",
+      "capability": "Apple App Store subscription and entitlement verification path",
+      "description": "Reusable private backend capability for Apple-origin purchase/subscription verification, entitlement lifecycle mapping, account association, restore-style recovery, and backend access decisions.",
+      "module": "Account/device/entitlement backend",
+      "visibility": "PRIVATE_CODE",
+      "implementation_status": "REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT",
+      "evidence": [
+        "SOURCE_VERIFIED",
+        "AUTOMATED_TEST_VERIFIED"
+      ],
+      "platforms": [
+        "iOS / iPadOS",
+        "macOS"
+      ],
+      "public_disclosure": "capability_level_only",
+      "limitations": "Public docs do not disclose store credentials, private request details, private routing details, or proprietary client implementation details."
+    },
+    {
+      "id": "google_play_subscription_entitlement",
+      "capability": "Google Play subscription validation, recovery, and entitlement path",
+      "description": "Reusable private backend capability for Google Play subscription validation/recovery concepts, entitlement lifecycle updates, account ownership, restore-style recovery, duplicate protection, and server-side access decisions.",
+      "module": "Account/device/entitlement backend",
+      "visibility": "PRIVATE_CODE",
+      "implementation_status": "IMPLEMENTED_AND_TESTED",
+      "evidence": [
+        "SOURCE_VERIFIED",
+        "AUTOMATED_TEST_VERIFIED",
+        "DATABASE_SCHEMA_VERIFIED"
+      ],
+      "platforms": [
+        "Android"
+      ],
+      "public_disclosure": "capability_level_only",
+      "limitations": "A POSMall-branded Android client release is not claimed."
+    },
+    {
+      "id": "microsoft_store_subscription_entitlement",
+      "capability": "Microsoft Store subscription verification, restore, and readiness path",
+      "description": "Reusable private backend capability and readiness evidence for Microsoft Store purchase/subscription access, restore-style recovery, multiple-device scenarios, cancellation/expiry, refund/revocation, wrong-account rejection, and store-publishing governance.",
+      "module": "Account/device/entitlement backend + reusable Laravel game backend",
+      "visibility": "PRIVATE_CODE",
+      "implementation_status": "IMPLEMENTED_AND_TESTED",
+      "readiness_status": "BUILD_PIPELINE_READY",
+      "evidence": [
+        "SOURCE_VERIFIED",
+        "AUTOMATED_TEST_VERIFIED",
+        "DATABASE_SCHEMA_VERIFIED",
+        "UI_VERIFIED"
+      ],
+      "platforms": [
+        "Windows / Microsoft Store"
+      ],
+      "public_disclosure": "capability_level_only",
+      "limitations": "Public docs do not claim every Microsoft Store review step is complete for every product and do not expose package identities, keys, or private submission details."
+    },
+    {
+      "id": "multi_device_account_architecture",
+      "capability": "Account-level ownership across multiple authorized devices",
+      "description": "The backend can associate multiple devices with one account and apply entitlement, restore/recovery, removal/reorder, and session/access rules at account level rather than treating each device as isolated local state.",
+      "module": "Account/device/entitlement backend + reusable Laravel game backend",
+      "visibility": "PRIVATE_CODE",
+      "implementation_status": "IMPLEMENTED_AND_TESTED",
+      "reusable_status": "REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT",
+      "evidence": [
+        "SOURCE_VERIFIED",
+        "DATABASE_SCHEMA_VERIFIED",
+        "AUTOMATED_TEST_VERIFIED",
+        "API_VERIFIED"
+      ],
+      "capabilities": [
+        "device registration",
+        "device metadata",
+        "device removal and reorder",
+        "device/session limits",
+        "entitlement propagation",
+        "access attempts",
+        "gameplay/session gating"
+      ],
+      "limitations": "Exact device limit policy, fingerprinting, anti-fraud rules, and recovery algorithms are confidential and product-specific."
+    },
+    {
+      "id": "device_recovery_and_limits",
+      "capability": "Device recovery, replacement, access limits, and restore-style account recovery",
+      "description": "Audited backend tests and migrations support reinstall/recovery, device replacement, multiple-device access, wrong-account rejection, session gating, and backend enforcement of device/access decisions.",
+      "module": "Account/device/entitlement backend + reusable Laravel game backend",
+      "visibility": "PRIVATE_CODE",
+      "implementation_status": "IMPLEMENTED_AND_TESTED",
+      "reusable_status": "REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT",
+      "evidence": [
+        "SOURCE_VERIFIED",
+        "DATABASE_SCHEMA_VERIFIED",
+        "AUTOMATED_TEST_VERIFIED"
+      ],
+      "integrates_with": [
+        "store entitlement",
+        "account identity",
+        "device registry",
+        "session authority",
+        "support/account recovery"
+      ],
+      "limitations": "Public docs intentionally omit private recovery algorithms and anti-abuse details."
+    },
+    {
       "id": "game_backend_accounts_devices_entitlements",
       "capability": "Account/player identity, device registry, paid entitlement, restore-style reconciliation, and gameplay-session authority",
       "description": "The audited game backend contains separate Laravel business modules for account/player identity, device registration, paid-access decisions, purchase-event reconciliation, restore-style access checks, and server-owned gameplay sessions. This is backend logic only; the private application delivery layer is not disclosed.",
@@ -544,15 +722,22 @@
       "capability": "Secure direct device-to-device exchange for live temporary state, with server-side identity/session coordination and backend-authoritative final results",
       "module": "Reusable Solar Neutrino application/backend capability",
       "visibility": "PRIVATE_CODE",
-      "implementation_status": "REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT",
+      "implementation_status": "REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT",
       "evidence": [
         "SOURCE_VERIFIED",
         "DATABASE_SCHEMA_VERIFIED",
         "API_VERIFIED"
       ],
+      "platforms": [
+        "iOS / iPadOS",
+        "Android",
+        "macOS",
+        "Windows where product-specific clients support it"
+      ],
       "public_disclosure": "capability_level_only",
       "posmall_integration_status": "ARCHITECTURE_READY",
-      "limitations": "Public docs intentionally omit private implementation details, protocols, endpoint topology, and tested device-pair matrix."
+      "implementation_details": "CONFIDENTIAL",
+      "limitations": "Public docs intentionally omit private implementation details, protocols, private routing details, private synchronization algorithms, and tested device-pair matrix."
     }
   ],
   "platform_support": [
@@ -574,49 +759,99 @@
     {
       "platform": "iOS / iPadOS",
       "posmall_status": "ARCHITECTURE_READY",
-      "reusable_status": "REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT",
+      "reusable_status": "REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT",
       "capabilities": [
         "authentication",
         "account/device sync",
         "store purchases",
+        "subscriptions",
+        "entitlements",
         "restore flows",
-        "notifications/local data where product adapter enables them"
+        "multi-device account",
+        "device recovery",
+        "device limits",
+        "local data/offline behavior where product adapter enables it",
+        "background/notification capability where product adapter enables it",
+        "direct device communication where supported"
+      ],
+      "evidence": [
+        "EVID-APP-0002",
+        "EVID-ACCOUNT-ENTITLEMENT-0001",
+        "EVID-P2P-0001"
       ]
     },
     {
       "platform": "Android",
       "posmall_status": "ARCHITECTURE_READY",
-      "reusable_status": "REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT",
+      "reusable_status": "REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT",
       "capabilities": [
         "authentication",
         "account/device sync",
         "store purchases",
+        "subscriptions",
+        "entitlements",
         "restore flows",
-        "notifications/local data where product adapter enables them"
+        "multi-device account",
+        "device recovery",
+        "device limits",
+        "local data/offline behavior where product adapter enables it",
+        "background/notification capability where product adapter enables it",
+        "direct device communication where supported"
+      ],
+      "channel_status": "IMPLEMENTED_AND_TESTED for backend subscription verification/recovery evidence",
+      "evidence": [
+        "EVID-APP-0002",
+        "EVID-ACCOUNT-ENTITLEMENT-0001",
+        "EVID-P2P-0001"
       ]
     },
     {
       "platform": "macOS",
       "posmall_status": "ARCHITECTURE_READY",
-      "reusable_status": "REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT",
+      "reusable_status": "REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT",
       "capabilities": [
         "authentication",
         "account/device sync",
         "store purchases",
+        "subscriptions",
+        "entitlements",
         "restore flows",
-        "desktop application scenarios"
+        "multi-device account",
+        "device recovery",
+        "device limits",
+        "desktop application scenarios",
+        "direct device communication where supported"
+      ],
+      "evidence": [
+        "EVID-APP-0002",
+        "EVID-ACCOUNT-ENTITLEMENT-0001",
+        "EVID-P2P-0001"
       ]
     },
     {
       "platform": "Windows / Microsoft Store",
       "posmall_status": "ARCHITECTURE_READY",
-      "reusable_status": "REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT",
+      "reusable_status": "REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT",
+      "channel_status": "IMPLEMENTED_AND_TESTED / BUILD_PIPELINE_READY for audited backend/store readiness scenarios",
       "capabilities": [
         "authentication",
         "account/device sync",
         "store purchases",
+        "subscriptions",
+        "entitlements",
         "restore flows",
-        "desktop application scenarios"
+        "multi-device account",
+        "device recovery",
+        "device limits",
+        "desktop application scenarios",
+        "direct device communication where supported"
+      ],
+      "evidence": [
+        "EVID-APP-0002",
+        "EVID-ACCOUNT-ENTITLEMENT-0001",
+        "EVID-GAME-BACKEND-0005",
+        "EVID-P2P-0001",
+        "EVID-P2P-0002"
       ]
     }
   ],
@@ -659,13 +894,25 @@
       "GEO / GeoUsers matching",
       "feedback and moderation backend",
       "store-publishing governance"
+    ],
+    "POSMall Cross-Platform Application Architecture": [
+      "POSMall Core APIs",
+      "POSMall Pro service workflows",
+      "account/device/entitlement backend",
+      "Apple App Store channel where enabled",
+      "Google Play channel where enabled",
+      "Microsoft Store channel where enabled",
+      "direct device communication capability where supported"
     ]
   },
   "claim_boundaries": [
     "POSMall Core is public and independently installable.",
     "POSMall Pro, CRM, Affiliate, Calendar, Domains, GEO, VoiceAssistant, dashboards, and application/backend modules are summarized at capability level when private.",
     "No concrete public claim is made that every POSMall application surface has shipped on every store.",
-    "No public file discloses private source code, secrets, credentials, private package identities, proprietary client implementation details, or private synchronization algorithms.",
+    "POSMall Cross-Platform Application Architecture is documented as architecture-ready for POSMall and reusable/proven in another Solar Neutrino product unless a POSMall-specific release is separately verified.",
+    "Store transactions and application entitlements are treated as distinct concepts in the audited backend capability.",
+    "No public claim is made that purchases are portable across Apple, Google, and Microsoft store ecosystems unless a product-specific policy and implementation explicitly allow it.",
+    "No public file discloses private source code, secrets, credentials, private internal names, proprietary client implementation details, or private synchronization algorithms.",
     "No universal claim is made that PostgreSQL is always faster than MySQL.",
     "PostGIS is a PostgreSQL extension and was not found as required current POSMall storage in this audit."
   ]
