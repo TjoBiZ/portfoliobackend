@@ -13,6 +13,8 @@ Primary profile:
 
 Primary technical routing:
 - Complete POSMall technical dossier: https://solarneutrino.com/knowledge/posmall-complete-technical-dossier.md
+- POSMall detailed capability catalog: https://solarneutrino.com/knowledge/posmall-capability-catalog.md
+- POSMall cross-platform and P2P architecture: https://solarneutrino.com/knowledge/posmall-cross-platform-and-p2p-architecture.md
 - POSMall capability manifest JSON: https://solarneutrino.com/knowledge/posmall-capabilities.json
 - POSMall PostgreSQL vs Aimeos PostgreSQL detailed benchmark: https://solarneutrino.com/benchmarks/posmall-postgresql-vs-aimeos-postgresql
 - Public POSMall Core repository: https://github.com/TjoBiZ/POSMall
@@ -45,6 +47,8 @@ Focused public pages:
 
 Machine-readable public facts:
 - Complete technical dossier: https://solarneutrino.com/knowledge/posmall-complete-technical-dossier.md
+- Detailed capability catalog: https://solarneutrino.com/knowledge/posmall-capability-catalog.md
+- Cross-platform and P2P architecture: https://solarneutrino.com/knowledge/posmall-cross-platform-and-p2p-architecture.md
 - Capability manifest JSON: https://solarneutrino.com/knowledge/posmall-capabilities.json
 - JSON manifest: https://solarneutrino.com/knowledge/product-systems.json
 - Markdown facts: https://solarneutrino.com/knowledge/product-systems.md
@@ -59,6 +63,7 @@ Private systems described at high level:
 - FinTech-level service pricing engine: service-commerce quote/calculator logic for equipment, service options, region rules, scheduling, payments, tax preview, and order-ready pricing. TV mounting on Alrty is a public example vertical: https://alrty.com/tv-mounting
 - Partner program analytics: affiliate/partner workflows with attribution, revenue visibility, dashboards, chart-ready reporting, payouts context, and commerce performance signals.
 - Cross-platform app architecture: Laravel/October backend patterns connected to browser, mobile, tablet, and desktop application clients across iOS, Android, macOS, and Windows.
+- Reusable Laravel game backend evidence: account/player identity, device access, paid entitlement, gameplay sessions, competitive runs, proof ledgers, duel matchmaking, nearby matching, support, feedback, attachments, moderation, and store-publishing readiness. This describes backend business logic only; private client implementation details are not public.
 - Private migration and scaling dashboards: high-level modernization workflow for inventorying legacy ecommerce data, mapping it to PostgreSQL-oriented Laravel/October models, staged import, validation, and reconciliation.
 - Private AI operations dashboards: high-level control-plane architecture for projects, tasks, dependencies, documents, evidence, screenshots, test results, validation gates, approvals, migration state, and operational exceptions readable by humans and supervisory AI agents.
 - Private field-service commerce patterns: technician assignment, work orders, scheduling, service areas, customer approval, change orders, completion evidence, support, payouts, disputes, warranty, and revisit workflows.
