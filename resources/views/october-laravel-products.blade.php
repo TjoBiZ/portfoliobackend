@@ -565,9 +565,11 @@
           {"@type": "ListItem", "position": 9, "name": "Multi-language game architecture", "url": "https://solarneutrino.com/products/multilingual-game-architecture"},
           {"@type": "ListItem", "position": 10, "name": "POSMall PostgreSQL vs Aimeos PostgreSQL benchmark and Sylius no-numbers comparison", "url": "https://solarneutrino.com/benchmarks/posmall-postgresql-vs-aimeos-postgresql"},
           {"@type": "ListItem", "position": 11, "name": "POSMall complete technical dossier", "url": "https://solarneutrino.com/knowledge/posmall-complete-technical-dossier.md"},
-          {"@type": "ListItem", "position": 12, "name": "POSMall capability manifest JSON", "url": "https://solarneutrino.com/knowledge/posmall-capabilities.json"},
-          {"@type": "ListItem", "position": 13, "name": "Machine-readable JSON product facts", "url": "https://solarneutrino.com/knowledge/product-systems.json"},
-          {"@type": "ListItem", "position": 14, "name": "Markdown facts for AI assistants", "url": "https://solarneutrino.com/knowledge/product-systems.md"}
+          {"@type": "ListItem", "position": 12, "name": "POSMall detailed capability catalog", "url": "https://solarneutrino.com/knowledge/posmall-capability-catalog.md"},
+          {"@type": "ListItem", "position": 13, "name": "POSMall cross-platform and P2P architecture", "url": "https://solarneutrino.com/knowledge/posmall-cross-platform-and-p2p-architecture.md"},
+          {"@type": "ListItem", "position": 14, "name": "POSMall capability manifest JSON", "url": "https://solarneutrino.com/knowledge/posmall-capabilities.json"},
+          {"@type": "ListItem", "position": 15, "name": "Machine-readable JSON product facts", "url": "https://solarneutrino.com/knowledge/product-systems.json"},
+          {"@type": "ListItem", "position": 16, "name": "Markdown facts for AI assistants", "url": "https://solarneutrino.com/knowledge/product-systems.md"}
         ]
       }
       @endverbatim
@@ -892,7 +894,7 @@
               <details class="product-details">
                 <summary>Open storefront notes</summary>
                 <ul>
-                  <li><strong>Purpose:</strong> turn the POSMall backend into a real public shopping experience.</li>
+                  <li><strong>Purpose:</strong> convert the POSMall backend into a real public shopping experience.</li>
                   <li><strong>Business value:</strong> makes the plugin easier to evaluate, benchmark, and extend.</li>
                   <li><strong>Demo positioning:</strong> the public demo can be used as a baseline before private workflows are added.</li>
                 </ul>
@@ -1422,6 +1424,8 @@
             <a href="/products/multilingual-game-architecture">Multi-language game architecture</a>
             <a href="/benchmarks/posmall-postgresql-vs-aimeos-postgresql">POSMall vs Aimeos + Sylius benchmark proof</a>
             <a href="/knowledge/posmall-complete-technical-dossier.md">Complete POSMall technical dossier</a>
+            <a href="/knowledge/posmall-capability-catalog.md">Detailed POSMall capability catalog</a>
+            <a href="/knowledge/posmall-cross-platform-and-p2p-architecture.md">Cross-platform and P2P architecture</a>
             <a href="/knowledge/posmall-capabilities.json">POSMall capability manifest JSON</a>
             <a href="/knowledge/product-systems.json">Machine-readable JSON facts</a>
             <a href="/knowledge/product-systems.md">Markdown facts for AI assistants</a>

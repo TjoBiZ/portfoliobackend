@@ -20,6 +20,8 @@ Allow: /products/multilingual-game-architecture
 Allow: /benchmarks/posmall
 Allow: /llms.txt
 Allow: /knowledge/posmall-complete-technical-dossier.md
+Allow: /knowledge/posmall-capability-catalog.md
+Allow: /knowledge/posmall-cross-platform-and-p2p-architecture.md
 Allow: /knowledge/posmall-capabilities.json
 Allow: /knowledge/product-systems.json
 Allow: /knowledge/product-systems.md
@@ -47,6 +49,8 @@ Allow: /products/multilingual-game-architecture
 Allow: /benchmarks/posmall
 Allow: /llms.txt
 Allow: /knowledge/posmall-complete-technical-dossier.md
+Allow: /knowledge/posmall-capability-catalog.md
+Allow: /knowledge/posmall-cross-platform-and-p2p-architecture.md
 Allow: /knowledge/posmall-capabilities.json
 Allow: /knowledge/product-systems.json
 Allow: /knowledge/product-systems.md
