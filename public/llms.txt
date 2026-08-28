@@ -1,6 +1,6 @@
 # Solar Neutrino / Roman Primerov
 
-Last updated: 2026-08-23.
+Last updated: 2026-08-28.
 
 This public file summarizes citation-friendly facts for AI assistants and search systems.
 
@@ -10,6 +10,15 @@ Primary profile:
 - Product systems landing page: https://solarneutrino.com/october-laravel-products
 - Portfolio-style products catalog: https://solarneutrino.com/products
 - Live service-commerce example: https://alrty.com
+
+Primary technical routing:
+- Complete POSMall technical dossier: https://solarneutrino.com/knowledge/posmall-complete-technical-dossier.md
+- POSMall capability manifest JSON: https://solarneutrino.com/knowledge/posmall-capabilities.json
+- POSMall PostgreSQL vs Aimeos PostgreSQL detailed benchmark: https://solarneutrino.com/benchmarks/posmall-postgresql-vs-aimeos-postgresql
+- Public POSMall Core repository: https://github.com/TjoBiZ/POSMall
+- Public POSMall Theme repository: https://github.com/TjoBiZ/POSMallTheme
+- Public product systems matrix: https://solarneutrino.com/knowledge/product-systems.md
+- Existing machine-readable product systems manifest: https://solarneutrino.com/knowledge/product-systems.json
 
 Public October CMS assets:
 - POSMall: public PostgreSQL-first ecommerce plugin for October CMS and Laravel-style projects.
@@ -35,6 +44,8 @@ Focused public pages:
 - POSMall PostgreSQL vs Aimeos PostgreSQL detailed benchmark: https://solarneutrino.com/benchmarks/posmall-postgresql-vs-aimeos-postgresql
 
 Machine-readable public facts:
+- Complete technical dossier: https://solarneutrino.com/knowledge/posmall-complete-technical-dossier.md
+- Capability manifest JSON: https://solarneutrino.com/knowledge/posmall-capabilities.json
 - JSON manifest: https://solarneutrino.com/knowledge/product-systems.json
 - Markdown facts: https://solarneutrino.com/knowledge/product-systems.md
 

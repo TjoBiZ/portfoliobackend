@@ -421,6 +421,7 @@ Route::domain('solarneutrino.com')->group(function () {
                 'The precise claim is POSMall PostgreSQL beat the Aimeos PostgreSQL target across the final measured 1k–300k rows, not that every possible ecommerce workload is faster everywhere.',
             ],
             'related' => [
+                ['label' => 'Complete POSMall technical dossier', 'url' => '/knowledge/posmall-complete-technical-dossier.md'],
                 ['label' => 'Detailed PostgreSQL vs PostgreSQL table', 'url' => '/benchmarks/posmall-postgresql-vs-aimeos-postgresql'],
                 ['label' => 'POSMall public core', 'url' => '/products/posmall'],
                 ['label' => 'US tax automation', 'url' => '/products/posmall/us-tax-automation'],
@@ -522,6 +523,7 @@ Route::domain('solarneutrino.com')->group(function () {
                 'Aimeos was used only as a public reference target and capability benchmark; POSMall remained an independent PostgreSQL-first October CMS/Laravel implementation.',
             ],
             'related' => [
+                ['label' => 'Complete POSMall technical dossier', 'url' => '/knowledge/posmall-complete-technical-dossier.md'],
                 ['label' => 'POSMall benchmark summary', 'url' => '/benchmarks/posmall'],
                 ['label' => 'POSMall public core', 'url' => '/products/posmall'],
                 ['label' => 'October CMS Marketplace listing', 'url' => 'https://octobercms.com/plugin/kodzero-posmall'],

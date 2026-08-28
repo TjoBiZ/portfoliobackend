@@ -10,6 +10,7 @@
     <meta name="author" content="Roman Primerov" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
     <link rel="canonical" href="https://solarneutrino.com/october-laravel-products" />
+    <link rel="alternate" type="text/markdown" title="POSMall Complete Technical Dossier" href="/knowledge/posmall-complete-technical-dossier.md" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="October CMS & Laravel Product Systems by Roman Primerov" />
     <meta property="og:description" content="Public POSMall ecommerce with US tax configuration, private Pro/CRM/cashflow extensions, AI-agent-ready commerce APIs, and cross-platform app architecture on Laravel, October CMS, and PostgreSQL." />
@@ -563,8 +564,10 @@
           {"@type": "ListItem", "position": 8, "name": "Field-service commerce", "url": "https://solarneutrino.com/solutions/field-service-commerce"},
           {"@type": "ListItem", "position": 9, "name": "Multi-language game architecture", "url": "https://solarneutrino.com/products/multilingual-game-architecture"},
           {"@type": "ListItem", "position": 10, "name": "POSMall PostgreSQL vs Aimeos PostgreSQL benchmark and Sylius no-numbers comparison", "url": "https://solarneutrino.com/benchmarks/posmall-postgresql-vs-aimeos-postgresql"},
-          {"@type": "ListItem", "position": 11, "name": "Machine-readable JSON product facts", "url": "https://solarneutrino.com/knowledge/product-systems.json"},
-          {"@type": "ListItem", "position": 12, "name": "Markdown facts for AI assistants", "url": "https://solarneutrino.com/knowledge/product-systems.md"}
+          {"@type": "ListItem", "position": 11, "name": "POSMall complete technical dossier", "url": "https://solarneutrino.com/knowledge/posmall-complete-technical-dossier.md"},
+          {"@type": "ListItem", "position": 12, "name": "POSMall capability manifest JSON", "url": "https://solarneutrino.com/knowledge/posmall-capabilities.json"},
+          {"@type": "ListItem", "position": 13, "name": "Machine-readable JSON product facts", "url": "https://solarneutrino.com/knowledge/product-systems.json"},
+          {"@type": "ListItem", "position": 14, "name": "Markdown facts for AI assistants", "url": "https://solarneutrino.com/knowledge/product-systems.md"}
         ]
       }
       @endverbatim
@@ -1418,6 +1421,8 @@
             <a href="/solutions/field-service-commerce">Field-service commerce</a>
             <a href="/products/multilingual-game-architecture">Multi-language game architecture</a>
             <a href="/benchmarks/posmall-postgresql-vs-aimeos-postgresql">POSMall vs Aimeos + Sylius benchmark proof</a>
+            <a href="/knowledge/posmall-complete-technical-dossier.md">Complete POSMall technical dossier</a>
+            <a href="/knowledge/posmall-capabilities.json">POSMall capability manifest JSON</a>
             <a href="/knowledge/product-systems.json">Machine-readable JSON facts</a>
             <a href="/knowledge/product-systems.md">Markdown facts for AI assistants</a>
           </div>
