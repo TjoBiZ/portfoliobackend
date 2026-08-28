@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Products by Roman Primerov | POSMall, App Store, Microsoft Store, Android, Subscriptions</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-    <meta name="description" content="A portfolio-style product catalog by Roman Primerov: POSMall Core, POSMall Pro, Microsoft Store, App Store iOS/macOS, Apple App Store iOS/macOS and Android / Google Play wrappers, store payments, subscriptions, 10-device account access, mobile device cabinet, geo databases, fintech-level service pricing logic, tax logic, and affiliate analytics." />
-    <meta name="keywords" content="Roman Primerov products, POSMall, POSMall Pro, October CMS ecommerce, Laravel products, PostgreSQL ecommerce, Microsoft Store wrapper, App Store iOS wrapper, Mac App Store wrapper, Android Google Play Billing wrapper, subscription management, mobile device cabinet, fintech service pricing engine, field service calculator, affiliate program" />
+    <meta name="description" content="A portfolio-style product catalog by Roman Primerov: POSMall Core, POSMall Pro, Microsoft Store, App Store iOS/macOS, Android / Google Play application clients, store payments, subscriptions, 10-device account access, mobile device cabinet, geo databases, fintech-level service pricing logic, tax logic, and affiliate analytics." />
+    <meta name="keywords" content="Roman Primerov products, POSMall, POSMall Pro, October CMS ecommerce, Laravel products, PostgreSQL ecommerce, Microsoft Store application client, App Store iOS application client, Mac App Store application client, Android Google Play application client, subscription management, mobile device cabinet, fintech service pricing engine, field service calculator, affiliate program" />
     <meta name="author" content="Roman Primerov" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
     <link rel="canonical" href="https://solarneutrino.com/products" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Products by Roman Primerov" />
-    <meta property="og:description" content="Twelve portfolio-style product cards for POSMall, native store wrappers, subscriptions, 10-device account access, mobile device cabinet, geo databases, calculators, tax logic, and affiliate analytics." />
+    <meta property="og:description" content="Twelve portfolio-style product cards for POSMall, store-distributed application clients, subscriptions, 10-device account access, mobile device cabinet, geo databases, calculators, tax logic, and affiliate analytics." />
     <meta property="og:url" content="https://solarneutrino.com/products" />
     <meta property="og:image" content="https://solarneutrino.com/images/product-systems/posmall-admin-products-menu.webp" />
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
@@ -317,31 +317,31 @@
               'tags' => ['Phone Calls', 'Chat Agents', 'API'],
           ],
           [
-              'title' => 'Microsoft Store Windows Wrapper',
+              'title' => 'Microsoft Store Windows Client',
               'eyebrow' => 'Microsoft Store / Windows',
-              'description' => 'Windows app-wrapper architecture connected to a Laravel/October CMS backend: Microsoft Store purchase/restore, paid-feature entitlement checks, account binding, and store-aware release readiness.',
+              'description' => 'Windows application-client architecture connected to a Laravel/October CMS backend: Microsoft Store purchase/restore, paid-feature entitlement checks, account binding, and store-aware release readiness.',
               'image' => '/images/product-systems/circuit-couriers-core-route-active.webp',
               'url' => '/products/multilingual-game-architecture#windows-microsoft-store',
-              'groups' => ['all', 'wrappers', 'microsoft', 'subscriptions', 'devices'],
+              'groups' => ['all', 'appclients', 'microsoft', 'subscriptions', 'devices'],
               'tags' => ['Windows', 'Microsoft Store', 'Entitlements'],
           ],
           [
-              'title' => 'Apple / App Store iOS / macOS Wrapper',
+              'title' => 'Apple / App Store iOS / macOS Client',
               'eyebrow' => 'Apple / App Store',
-              'description' => 'Apple App Store wrapper path for iPhone, iPad, and macOS: purchase and restore flows, cold relaunch access, paid-feature unlocking, shared account authority, and Laravel/October backend validation.',
+              'description' => 'Apple App Store application-client path for iPhone, iPad, and macOS: purchase and restore flows, cold relaunch access, paid-feature unlocking, shared account authority, and Laravel/October backend validation.',
               'image' => '/images/portfolio/6.jpg',
               'url' => '/products/multilingual-game-architecture#apple-app-store-ios-macos',
-              'groups' => ['all', 'wrappers', 'appstore', 'subscriptions', 'devices'],
+              'groups' => ['all', 'appclients', 'appstore', 'subscriptions', 'devices'],
               'tags' => ['Apple', 'App Store', 'iOS / macOS'],
           ],
           [
-              'title' => 'Android / Google Play Wrapper',
+              'title' => 'Android / Google Play Client',
               'eyebrow' => 'Android / Google Play',
-              'description' => 'Android app-wrapper architecture with Google Play Billing: purchase-token validation, subscription state, restore flows, cancellation/refund awareness, device access, backend authority, and parity with Apple and Microsoft lanes.',
+              'description' => 'Android application-client architecture for Google Play: purchase, subscription, restore, cancellation/refund-awareness, device access, backend authority, and parity with Apple and Microsoft lanes.',
               'image' => '/images/product-systems/circuit-couriers-marble-maze-active.webp',
               'url' => '/products/multilingual-game-architecture#android-google-play',
-              'groups' => ['all', 'wrappers', 'android', 'subscriptions', 'devices'],
-              'tags' => ['Android', 'Google Play', 'Billing Tokens'],
+              'groups' => ['all', 'appclients', 'android', 'subscriptions', 'devices'],
+              'tags' => ['Android', 'Google Play', 'Subscriptions'],
           ],
           [
               'title' => 'Unified Store Subscriptions & 10 Devices',
@@ -404,7 +404,7 @@
           '@context' => 'https://schema.org',
           '@type' => 'CollectionPage',
           'name' => 'Products by Roman Primerov',
-          'description' => 'Portfolio-style product catalog for POSMall, Microsoft Store, App Store iOS/macOS, Apple App Store iOS/macOS and Android / Google Play wrappers, store payments, subscriptions, 10-device account access, mobile device cabinet, geo databases, fintech-level service pricing logic, tax logic, and affiliate analytics.',
+          'description' => 'Portfolio-style product catalog for POSMall, Microsoft Store, App Store iOS/macOS, Android / Google Play application clients, store payments, subscriptions, 10-device account access, mobile device cabinet, geo databases, fintech-level service pricing logic, tax logic, and affiliate analytics.',
           'url' => 'https://solarneutrino.com/products',
           'mainEntity' => [
               '@type' => 'ItemList',
@@ -470,11 +470,11 @@
                   <div class="section-title-block">
                     <div class="section-title-wrapper">
                       <h1 class="section-title">Products</h1>
-                      <h5 class="section-description">Store wrappers, subscriptions, device cabinet, geo data, calculators, partner analytics</h5>
+                      <h5 class="section-description">Store clients, subscriptions, device cabinet, geo data, calculators, partner analytics</h5>
                     </div>
                   </div>
                   <p>
-                    A compact product catalog in the same visual language as the portfolio: twelve balanced cards for POSMall commerce, Microsoft Store, App Store iOS/macOS, Apple App Store iOS/macOS and Android / Google Play wrappers, store payments, subscriptions, ten-device account access, device cabinet, geo databases, fintech-level service pricing logic, tax logic, and affiliate analytics.
+                    A compact product catalog in the same visual language as the portfolio: twelve balanced cards for POSMall commerce, Microsoft Store, App Store iOS/macOS, Android / Google Play application clients, store payments, subscriptions, ten-device account access, device cabinet, geo databases, fintech-level service pricing logic, tax logic, and affiliate analytics.
                   </p>
                 </div>
                 <div class="products-hero-metrics">
@@ -488,7 +488,7 @@
               <ul class="products-filter-bar" aria-label="Filter product cards">
                 <li><button type="button" class="active" data-filter="all">All</button></li>
                 <li><button type="button" data-filter="commerce">Commerce</button></li>
-                <li><button type="button" data-filter="wrappers">Store Wrappers</button></li>
+                <li><button type="button" data-filter="appclients">Store Clients</button></li>
                 <li><button type="button" data-filter="microsoft">Microsoft</button></li>
                 <li><button type="button" data-filter="appstore">Apple / App Store</button></li>
                 <li><button type="button" data-filter="android">Android / Google Play</button></li>
@@ -523,7 +523,7 @@
               </div>
 
               <div class="products-note">
-                Store-wrapper cards describe the product architecture at a portfolio level: users can buy through Apple, Google, or Microsoft stores while the Laravel / October CMS backend manages account authority, subscriptions, restores, device access, geo-aware logic, taxes, calculators, and partner analytics. Benchmark proof remains on the dedicated POSMall PostgreSQL vs Aimeos PostgreSQL page.
+                Store-client cards describe the product architecture at a portfolio level: users can buy through Apple, Google, or Microsoft stores while the Laravel / October CMS backend manages account authority, subscriptions, restores, device access, geo-aware logic, taxes, calculators, and partner analytics. Benchmark proof remains on the dedicated POSMall PostgreSQL vs Aimeos PostgreSQL page.
               </div>
             </div>
           </section>

@@ -95,17 +95,17 @@
       ]
     },
     {
-      "name": "Native store wrappers and subscription access",
+      "name": "Store-distributed application clients and subscription access",
       "status": "private_cross_platform_architecture",
-      "type": "Microsoft Store, App Store iOS / macOS, and Apple App Store iOS / macOS and Android / Google Play wrapper architecture",
+      "type": "Microsoft Store, App Store iOS / macOS, and Android / Google Play application-delivery architecture",
       "developer": "Roman Primerov / KodZero",
       "public_summary_url": "https://solarneutrino.com/products",
-      "summary": "Product architecture for Microsoft Store Windows, App Store iOS, Mac App Store macOS, and Apple App Store iOS / macOS and Android / Google Play wrapper lanes connected to a Laravel / October CMS backend.",
+      "summary": "Product architecture for Microsoft Store Windows, App Store iOS, Mac App Store macOS, and Android / Google Play application-delivery lanes connected to a Laravel / October CMS backend.",
       "capabilities": [
         "Microsoft Store purchase and restore flows",
         "Apple App Store iOS / macOS purchase and restore flows",
         "Mac App Store macOS purchase and restore flows",
-        "Android / Google Play Billing purchase-token validation, subscription validation, cancellation/refund awareness, and restore flows",
+        "Android / Google Play purchase, subscription validation, cancellation/refund awareness, and restore flows",
         "shared account subscription authority",
         "paid-feature access across up to 10 devices on one account",
         "web cabinet for mobile and desktop devices",
@@ -185,7 +185,7 @@
       "type": "Cross-platform product-family architecture",
       "developer": "Roman Primerov / KodZero",
       "public_summary_url": "https://solarneutrino.com/products/multilingual-game-architecture",
-      "summary": "Shared game mechanics, reusable screen templates, language/content packages, localization workflows, account/progress sync, entitlement, purchase/restore patterns, backend services, and web/native wrapper delivery for a product-family architecture.",
+      "summary": "Shared game mechanics, reusable screen templates, language/content packages, localization workflows, account/progress sync, entitlement, purchase/restore patterns, backend services, and browser/mobile/desktop client delivery for a product-family architecture.",
       "claims_and_limits": [
         "Describes reusable architecture and readiness patterns.",
         "Does not claim that every language edition and every store channel has completed public release."

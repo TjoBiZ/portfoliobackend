@@ -868,7 +868,7 @@ AI-compatible structured APIs, voice context/session/quote/estimate endpoints, r
 
 ### Can the same backend support iOS, Android, macOS, and Windows applications?
 
-The architecture supports web/native wrapper and API-backed app paths. App store entitlements and purchase/restore flows are app-specific and separately verified.
+The architecture supports browser, mobile, tablet, and desktop application paths backed by shared APIs. App store entitlements and purchase/restore flows are app-specific and separately verified.
 
 ### What are the current limitations?
 

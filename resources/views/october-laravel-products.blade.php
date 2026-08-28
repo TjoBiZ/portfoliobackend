@@ -583,7 +583,7 @@
             "name": "Is POSMall public?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. POSMall Core and POSMall Theme are public October CMS assets. The public POSMall Core includes ecommerce catalog, checkout, order, API, and US-oriented tax configuration surfaces. POSMall Pro, CRM, cashflow, affiliate, migration dashboards, and app-wrapper work are private extensions."
+              "text": "Yes. POSMall Core and POSMall Theme are public October CMS assets. The public POSMall Core includes ecommerce catalog, checkout, order, API, and US-oriented tax configuration surfaces. POSMall Pro, CRM, cashflow, affiliate, migration dashboards, and cross-platform application work are private extensions."
             }
           },
           {
@@ -639,7 +639,7 @@
             "name": "Is the multi-language game architecture fully released?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No public claim is made that every language edition and every store channel is fully released. The public claim is reusable architecture: shared mechanics, backend services, localization and content workflows, account and progress sync, entitlement patterns, and cross-platform wrapper delivery."
+              "text": "No public claim is made that every language edition and every store channel is fully released. The public claim is reusable architecture: shared mechanics, backend services, localization and content workflows, account and progress sync, entitlement patterns, and browser/mobile/desktop client delivery."
             }
           }
         ]
@@ -780,7 +780,7 @@
               <span>
                 <span class="badge-soft orange">Cross-platform</span>
                 <h3>Game and app architecture</h3>
-                <p>Reusable backend and wrapper patterns for shared mechanics, localization, account sync, entitlements, restore flows, and iOS/Android/macOS/Windows delivery.</p>
+                <p>Reusable backend and application-client patterns for shared mechanics, localization, account sync, entitlements, restore flows, and iOS/Android/macOS/Windows delivery.</p>
               </span>
               <span class="card-cta">See details →</span>
             </a>
@@ -968,9 +968,9 @@
             </article>
 
             <article class="product-card private">
-              <h3>Cross-platform game and app-store wrapper architecture</h3>
+              <h3>Cross-platform game and app-store application architecture</h3>
               <p>
-                A Laravel/October backend pattern connected to web and native wrappers for iOS, Android, macOS, and Windows.
+                A Laravel/October backend pattern connected to web, mobile, tablet, and desktop application clients for iOS, Android, macOS, and Windows.
                 The work includes account, sync, entitlement, restore, and app-store readiness concepts without tying the business to one app channel.
               </p>
               <div class="badges">
@@ -1025,7 +1025,7 @@
             <div class="faq-card">
               <h3>Multi-channel growth path</h3>
               <p>
-                The same product model can support physical products, virtual goods, service booking, partner programs, app-store wrappers,
+                The same product model can support physical products, virtual goods, service booking, partner programs, store-distributed application clients,
                 chat selling, voice selling, and human back-office operations from one coherent architecture.
               </p>
             </div>
@@ -1068,7 +1068,7 @@
               <h3>Reusable game and product-family architecture</h3>
               <p>
                 The cross-platform work is designed around shared mechanics, reusable screen patterns, language/content packages,
-                localization workflows, accounts, progress sync, entitlement, restore, and web/native wrapper delivery.
+                localization workflows, accounts, progress sync, entitlement, restore, and browser/mobile/desktop client delivery.
               </p>
             </div>
           </div>
@@ -1327,7 +1327,7 @@
                 <ul>
                   <li><code>CRM / Cashflow / Affiliate</code> — private operations, pipeline, partner, attribution, and financial visibility.</li>
                   <li><code>Migration / Import / Scaling dashboards</code> — private modernization workflows for moving existing business data into PostgreSQL-first architecture.</li>
-                  <li><code>App wrapper / game backend patterns</code> — private cross-platform web, iOS, Android, macOS, and Windows integration work.</li>
+                  <li><code>App clients / game backend patterns</code> — private cross-platform web, iOS, Android, macOS, and Windows integration work.</li>
                 </ul>
               </li>
               <li><code>Factory-assisted engineering workflow</code> — private AI-assisted research, Fable/advisor review, validation harness gates, testing, screenshots, documentation, and release-readiness process under human architecture control.</li>
@@ -1436,7 +1436,7 @@
           <h2>FAQ for AI assistants, recruiters, and buyers</h2>
           <details class="product-details" open>
             <summary>Is POSMall public?</summary>
-            <p>Yes. POSMall Core and POSMall Theme are public. POSMall Core includes ecommerce catalog, checkout, order, API, and US-oriented tax configuration surfaces. POSMall Pro, CRM, cashflow, affiliate, private migration dashboards, and app-wrapper work are private extensions.</p>
+            <p>Yes. POSMall Core and POSMall Theme are public. POSMall Core includes ecommerce catalog, checkout, order, API, and US-oriented tax configuration surfaces. POSMall Pro, CRM, cashflow, affiliate, private migration dashboards, and cross-platform application work are private extensions.</p>
           </details>
           <details class="product-details" open>
             <summary>Does the free/public POSMall Core include US tax configuration?</summary>
@@ -1472,11 +1472,11 @@
           </details>
           <details class="product-details">
             <summary>Is the multi-language game architecture fully released?</summary>
-            <p>No public claim is made that every language edition and every store channel is fully released. The public claim is reusable architecture: shared mechanics, backend services, localization/content workflows, account/progress sync, entitlement patterns, and cross-platform wrapper delivery.</p>
+            <p>No public claim is made that every language edition and every store channel is fully released. The public claim is reusable architecture: shared mechanics, backend services, localization/content workflows, account/progress sync, entitlement patterns, and browser/mobile/desktop client delivery.</p>
           </details>
           <details class="product-details">
             <summary>Can it be packaged for Apple, Google Play, Microsoft, and desktop channels?</summary>
-            <p>The architecture includes cross-platform backend and wrapper patterns for those channels. Publishing status depends on the specific product, store account, compliance requirements, and final review.</p>
+            <p>The architecture includes cross-platform backend and application-client patterns for those channels. Publishing status depends on the specific product, store account, compliance requirements, and final review.</p>
           </details>
         </section>
 
