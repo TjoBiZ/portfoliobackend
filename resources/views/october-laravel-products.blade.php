@@ -973,7 +973,7 @@
               <h3>Cross-platform game and store-distributed application architecture</h3>
               <p>
                 A Laravel/October backend pattern connected to web, mobile, tablet, and desktop application clients for iOS, Android, macOS, and Windows.
-                The work includes account synchronization, store subscriptions, server-side entitlements, purchase restoration, multi-device account access, device recovery, device limits, direct device communication, and store-readiness concepts without tying the business to one app channel.
+                The work includes account synchronization, store subscriptions, server-side entitlements, purchase restoration, multi-device account access, device recovery, device limits, Direct Device-to-Device Communication, and store-readiness concepts without tying the business to one app channel.
               </p>
               <div class="badges">
                 <span class="badge-soft orange">Private</span>
@@ -988,7 +988,7 @@
                   <li><strong>Business value:</strong> one backend architecture can support web, mobile, tablet, desktop, subscriptions, purchases, restores, multi-device accounts, and cold relaunch scenarios.</li>
                   <li><strong>Store channels:</strong> designed for Apple, Google Play, and Microsoft Store style purchase, subscription, entitlement, and restore flows.</li>
                   <li><strong>Account model:</strong> store transactions can be reconciled into backend account-level access so legitimate users can recover access on authorized devices according to product policy.</li>
-                  <li><strong>Device model:</strong> backend device registration, device recovery, device limits, and direct device communication are described at capability level only.</li>
+                  <li><strong>Device model:</strong> backend device registration, device recovery, device limits, and Direct Device-to-Device Communication are described at capability level only.</li>
                   <li><strong>Status wording:</strong> this page describes engineering capability and readiness patterns, not a claim that every app is already published in every store.</li>
                 </ul>
                 <p><a href="/knowledge/posmall-cross-platform-and-p2p-architecture.md">Read the public-safe cross-platform and P2P architecture document.</a></p>
