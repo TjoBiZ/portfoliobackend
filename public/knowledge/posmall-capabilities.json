@@ -1,8 +1,56 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
   "last_verified_at": "2026-08-28",
   "canonical_url": "https://solarneutrino.com/knowledge/posmall-complete-technical-dossier.md",
   "public_source_repository": "https://github.com/TjoBiZ/POSMall",
+  "disclosure_policy": {
+    "summary": "This public manifest describes capabilities, statuses, dependencies, and evidence categories. It does not disclose private source code, secrets, customer data, private repository URLs, or proprietary client implementation mechanisms.",
+    "cross_platform_public_boundary": "Describe what platforms and business capabilities are supported or reusable. Do not disclose how the proprietary client/application layer is implemented.",
+    "game_backend_boundary": "Game-project evidence is represented as reusable Laravel backend business logic only."
+  },
+  "documents": {
+    "complete_dossier": "https://solarneutrino.com/knowledge/posmall-complete-technical-dossier.md",
+    "capability_catalog": "https://solarneutrino.com/knowledge/posmall-capability-catalog.md",
+    "cross_platform_and_p2p": "https://solarneutrino.com/knowledge/posmall-cross-platform-and-p2p-architecture.md",
+    "benchmark": "https://solarneutrino.com/benchmarks/posmall-postgresql-vs-aimeos-postgresql",
+    "product_page": "https://solarneutrino.com/products/posmall",
+    "public_repository": "https://github.com/TjoBiZ/POSMall",
+    "theme_repository": "https://github.com/TjoBiZ/POSMallTheme"
+  },
+  "classification_models": {
+    "visibility": [
+      "PUBLIC_CODE",
+      "PRIVATE_CODE",
+      "PUBLIC_DOCUMENTATION_ONLY",
+      "PRIVATE_DOCUMENTATION_ONLY"
+    ],
+    "implementation_status": [
+      "PRODUCTION",
+      "IMPLEMENTED_AND_TESTED",
+      "IMPLEMENTED_NOT_RUNTIME_VERIFIED",
+      "BETA",
+      "PARTIAL",
+      "ARCHITECTURE_READY",
+      "REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT",
+      "BUILD_PIPELINE_READY",
+      "PLANNED",
+      "DEPRECATED",
+      "NOT_FOUND",
+      "NOT_CLAIMED"
+    ],
+    "evidence_tags": [
+      "SOURCE_VERIFIED",
+      "DATABASE_SCHEMA_VERIFIED",
+      "RUNTIME_VERIFIED",
+      "AUTOMATED_TEST_VERIFIED",
+      "BENCHMARK_VERIFIED",
+      "UI_VERIFIED",
+      "API_VERIFIED",
+      "SCREENSHOT_VERIFIED",
+      "PRODUCTION_DATASET_EVIDENCE",
+      "DOCUMENTED_ONLY"
+    ]
+  },
   "benchmark": {
     "checkpoint": "posmall-aimeos-5way-current-checkpoint-20260610-024820",
     "environment": "local Homestead/Vagrant-class environment",
@@ -84,8 +132,7 @@
     "laravel_framework": "12.62.0",
     "posmall_package": "kodzero/posmall-plugin v1.0.24",
     "posmall_theme_package": "kodzero/posmalltheme-theme dev-main",
-    "database_positioning": "PostgreSQL-first; MySQL is acknowledged as capable and not universally slower.",
-    "factory_agents_dashboard_docs_used": true
+    "database_positioning": "PostgreSQL-first; MySQL is acknowledged as capable and not universally slower."
   },
   "installation": {
     "commands": [
@@ -105,63 +152,17 @@
   "modules": [
     {
       "canonical_name": "POSMall Core",
-      "internal_code_name": "KodZero.POSMall",
       "visibility": "PUBLIC_CODE",
       "implementation_status": "IMPLEMENTED_AND_TESTED",
       "developer": "KodZero / Roman Primerov",
       "primary_dependency": "October CMS / Laravel / PostgreSQL",
-      "capabilities": [
-        "products",
-        "categories",
-        "brands",
-        "properties",
-        "filters",
-        "variants",
-        "variant prices",
-        "stock",
-        "warehouses",
-        "physical products",
-        "virtual products",
-        "downloads",
-        "services",
-        "service options",
-        "custom fields",
-        "carts",
-        "checkout",
-        "orders",
-        "order states",
-        "payments",
-        "Stripe",
-        "PayPal",
-        "Omnipay",
-        "payment links",
-        "shipping",
-        "USA taxes",
-        "discounts",
-        "wishlists",
-        "reviews",
-        "REST API",
-        "GraphQL",
-        "Google Merchant feed",
-        "load benchmark tooling",
-        "image optimization",
-        "PageSpeed asset generation"
-      ],
-      "evidence": [
-        "SOURCE_VERIFIED",
-        "DATABASE_SCHEMA_VERIFIED",
-        "API_VERIFIED",
-        "UI_VERIFIED",
-        "BENCHMARK_VERIFIED"
-      ],
       "evidence_ids": [
         "EVID-CORE-0001",
         "EVID-CORE-0002",
         "EVID-CORE-0003",
         "EVID-CORE-0004",
         "EVID-CORE-0005",
-        "EVID-CORE-0006",
-        "EVID-DASHBOARD-DOCS-0001"
+        "EVID-CORE-0006"
       ],
       "public_urls": [
         "https://github.com/TjoBiZ/POSMall",
@@ -171,27 +172,10 @@
     },
     {
       "canonical_name": "POSMall Theme",
-      "internal_code_name": "kodzero-posmalltheme",
       "visibility": "PUBLIC_CODE",
       "implementation_status": "IMPLEMENTED_AND_TESTED",
       "developer": "KodZero / Roman Primerov",
       "primary_dependency": "POSMall Core",
-      "capabilities": [
-        "catalog pages",
-        "product pages",
-        "service pages",
-        "cart",
-        "checkout",
-        "account",
-        "payment link",
-        "SEO metadata",
-        "PageSpeed-oriented storefront rendering"
-      ],
-      "evidence": [
-        "SOURCE_VERIFIED",
-        "UI_VERIFIED",
-        "SCREENSHOT_VERIFIED"
-      ],
       "evidence_ids": [
         "EVID-THEME-0001",
         "EVID-THEME-0002"
@@ -203,7 +187,6 @@
     },
     {
       "canonical_name": "POSMall Pro",
-      "internal_code_name": "KodZero.POSMallPro",
       "visibility": "PRIVATE_CODE",
       "implementation_status": "IMPLEMENTED_AND_TESTED",
       "developer": "KodZero / Roman Primerov",
@@ -216,25 +199,6 @@
         "GEO",
         "VoiceAssistant"
       ],
-      "capabilities": [
-        "service landings",
-        "dynamic service options",
-        "landing estimates",
-        "order links",
-        "quote calculators",
-        "merchant feed diagnostics",
-        "feed remediation rules",
-        "performance observability",
-        "voice commerce API",
-        "technical load fixtures"
-      ],
-      "evidence": [
-        "SOURCE_VERIFIED",
-        "DATABASE_SCHEMA_VERIFIED",
-        "API_VERIFIED",
-        "UI_VERIFIED",
-        "AUTOMATED_TEST_VERIFIED"
-      ],
       "evidence_ids": [
         "EVID-PRO-0001",
         "EVID-PRO-0002",
@@ -242,43 +206,15 @@
         "EVID-PRO-0004",
         "EVID-PRO-0005",
         "EVID-PRO-0006",
-        "EVID-PRO-0007",
-        "EVID-DASHBOARD-DOCS-0002"
+        "EVID-PRO-0007"
       ]
     },
     {
       "canonical_name": "POSMall CRM",
-      "internal_code_name": "KodZero.POSMallCRM",
       "visibility": "PRIVATE_CODE",
       "implementation_status": "IMPLEMENTED_AND_TESTED",
       "developer": "KodZero / Roman Primerov",
       "primary_dependency": "POSMall Core",
-      "capabilities": [
-        "contacts",
-        "accounts",
-        "leads",
-        "deals",
-        "pipelines",
-        "stages",
-        "activities",
-        "timeline events",
-        "order links",
-        "abandoned carts",
-        "abandoned forms",
-        "recovery communications",
-        "campaigns",
-        "cashflow",
-        "traffic security",
-        "imports",
-        "SLA hardening"
-      ],
-      "evidence": [
-        "SOURCE_VERIFIED",
-        "DATABASE_SCHEMA_VERIFIED",
-        "UI_VERIFIED",
-        "AUTOMATED_TEST_VERIFIED",
-        "DOCUMENTED_ONLY"
-      ],
       "evidence_ids": [
         "EVID-CRM-0001",
         "EVID-CRM-0002",
@@ -286,36 +222,15 @@
         "EVID-CRM-0006",
         "EVID-CRM-0007",
         "EVID-CRM-0008",
-        "EVID-CRM-0009",
-        "EVID-DASHBOARD-DOCS-0003"
+        "EVID-CRM-0009"
       ]
     },
     {
       "canonical_name": "POSMall Affiliate / Partner Suite",
-      "internal_code_name": "KodZero.POSMallAffiliate",
       "visibility": "PRIVATE_CODE",
       "implementation_status": "IMPLEMENTED_AND_TESTED",
       "developer": "KodZero / Roman Primerov",
       "primary_dependency": "POSMall Core",
-      "capabilities": [
-        "partner accounts",
-        "referral links",
-        "click tracking",
-        "referrals",
-        "commission records",
-        "payout records",
-        "partner portal",
-        "QR exports",
-        "analytics API",
-        "GraphQL"
-      ],
-      "evidence": [
-        "SOURCE_VERIFIED",
-        "DATABASE_SCHEMA_VERIFIED",
-        "API_VERIFIED",
-        "UI_VERIFIED",
-        "AUTOMATED_TEST_VERIFIED"
-      ],
       "evidence_ids": [
         "EVID-AFFILIATE-0001",
         "EVID-AFFILIATE-0002",
@@ -325,147 +240,383 @@
     },
     {
       "canonical_name": "POSMall Calendar",
-      "internal_code_name": "KodZero.POSMallCalendar",
       "visibility": "PRIVATE_CODE",
       "implementation_status": "BETA",
       "developer": "KodZero / Roman Primerov",
-      "primary_dependency": "POSMall Domains / POSMall Core",
-      "capabilities": [
-        "calendars",
-        "resources",
-        "booking requests",
-        "booking windows",
-        "calendar events",
-        "subscriptions",
-        "booking holds",
-        "customer reminders",
-        "technician reminders",
-        "ICS feeds",
-        "availability API",
-        "technician portal"
-      ],
-      "evidence": [
-        "SOURCE_VERIFIED",
-        "DATABASE_SCHEMA_VERIFIED",
-        "API_VERIFIED",
-        "AUTOMATED_TEST_VERIFIED"
-      ],
+      "primary_dependency": "POSMall Core",
       "evidence_ids": [
         "EVID-CALENDAR-0001",
         "EVID-CALENDAR-0002",
         "EVID-CALENDAR-0003"
-      ],
-      "limitations": [
-        "Uses conventional UTC timestamp columns today.",
-        "Native PostgreSQL range/exclusion constraints not located."
-      ]
-    },
-    {
-      "canonical_name": "POSMall Domains",
-      "internal_code_name": "KodZero.POSMallDomains",
-      "visibility": "PRIVATE_CODE",
-      "implementation_status": "IMPLEMENTED_AND_TESTED",
-      "developer": "KodZero / Roman Primerov",
-      "capabilities": [
-        "domain policies",
-        "site channels",
-        "page policies",
-        "route policies",
-        "portal identities",
-        "portal roles",
-        "admin portal routing",
-        "mobile portal routing"
-      ],
-      "evidence": [
-        "SOURCE_VERIFIED",
-        "DATABASE_SCHEMA_VERIFIED",
-        "API_VERIFIED",
-        "AUTOMATED_TEST_VERIFIED"
-      ],
-      "evidence_ids": [
-        "EVID-DOMAINS-0001"
       ]
     },
     {
       "canonical_name": "GEO",
-      "internal_code_name": "KodZero.Geo",
       "visibility": "PRIVATE_CODE",
       "implementation_status": "BETA",
       "developer": "KodZero / Roman Primerov",
-      "capabilities": [
-        "geocoding",
-        "technician pings",
-        "customer locations",
-        "latitude/longitude storage",
-        "distance values",
-        "radius rules",
-        "within-radius dispatch matches",
-        "GraphQL API"
-      ],
-      "evidence": [
-        "SOURCE_VERIFIED",
-        "DATABASE_SCHEMA_VERIFIED",
-        "API_VERIFIED",
-        "AUTOMATED_TEST_VERIFIED"
-      ],
+      "primary_dependency": "POSMall Calendar / service operations where enabled",
       "evidence_ids": [
         "EVID-GEO-0001",
         "EVID-GEO-0002"
-      ],
-      "limitations": [
-        "Location-aware through application-level coordinates.",
-        "PostGIS-powered storage not found in current migrations."
       ]
     },
     {
-      "canonical_name": "AI Assistant / VoiceAssistant",
-      "internal_code_name": "KodZero.VoiceAssistant",
+      "canonical_name": "Reusable Solar Neutrino Laravel Game Backend",
       "visibility": "PRIVATE_CODE",
-      "implementation_status": "BETA",
-      "developer": "KodZero / Roman Primerov",
-      "capabilities": [
-        "runtime config",
-        "GraphQL runtime API",
-        "calls",
-        "documentation",
-        "change logs",
-        "location logs",
-        "scheduled pruning",
-        "voice-commerce-ready integration"
-      ],
+      "implementation_status": "REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT",
+      "developer": "Solar Neutrino / Roman Primerov",
+      "primary_dependency": "Laravel backend APIs and PostgreSQL-oriented data models",
+      "public_description": "Reusable backend business logic for accounts, devices, paid access, gameplay sessions, proof ledgers, duels, nearby matching, support, feedback, moderation, and store-publishing governance.",
+      "public_disclosure": "capability_level_only",
+      "evidence_ids": [
+        "EVID-GAME-BACKEND-0001",
+        "EVID-GAME-BACKEND-0002",
+        "EVID-GAME-BACKEND-0003",
+        "EVID-GAME-BACKEND-0004",
+        "EVID-GAME-BACKEND-0005",
+        "EVID-APP-0002",
+        "EVID-ACCOUNT-ENTITLEMENT-0001",
+        "EVID-P2P-0001",
+        "EVID-P2P-0002"
+      ]
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "core_catalog_search_benchmark",
+      "capability": "Large catalog category, filtered, and search performance",
+      "module": "POSMall Core",
+      "visibility": "PUBLIC_CODE",
+      "implementation_status": "IMPLEMENTED_AND_TESTED",
       "evidence": [
         "SOURCE_VERIFIED",
         "DATABASE_SCHEMA_VERIFIED",
-        "API_VERIFIED",
-        "AUTOMATED_TEST_VERIFIED"
+        "BENCHMARK_VERIFIED",
+        "UI_VERIFIED"
       ],
-      "evidence_ids": [
-        "EVID-VOICE-0001",
-        "EVID-DASHBOARD-DOCS-0004"
+      "safe_claim": "POSMall Core beat the selected Aimeos PostgreSQL reference in every measured benchmark row from 1k to 300k products.",
+      "limitations": "Internal synthetic benchmark; not independently certified; scoped to measured routes, data shape, environment, and catalog sizes."
+    },
+    {
+      "id": "usa_tax_automation",
+      "capability": "USA tax and regional configuration surfaces",
+      "module": "POSMall Core",
+      "visibility": "PUBLIC_CODE",
+      "implementation_status": "IMPLEMENTED_AND_TESTED",
+      "evidence": [
+        "SOURCE_VERIFIED",
+        "DATABASE_SCHEMA_VERIFIED",
+        "UI_VERIFIED",
+        "API_VERIFIED"
+      ],
+      "integrates_with": [
+        "cart tax preview",
+        "checkout",
+        "tax import/update commands"
+      ],
+      "limitations": "Software automation only; not tax/legal advice."
+    },
+    {
+      "id": "service_quote_calculator",
+      "capability": "Service-commerce quote/calculator workflow",
+      "module": "POSMall Pro",
+      "visibility": "PRIVATE_CODE",
+      "implementation_status": "IMPLEMENTED_AND_TESTED",
+      "evidence": [
+        "SOURCE_VERIFIED",
+        "DATABASE_SCHEMA_VERIFIED",
+        "AUTOMATED_TEST_VERIFIED",
+        "UI_VERIFIED",
+        "API_VERIFIED"
+      ],
+      "integrates_with": [
+        "POSMall Core services",
+        "landing estimates",
+        "cart",
+        "orders",
+        "voice service quote API"
+      ],
+      "limitations": "Business-specific calculators are summarized publicly; implementation details remain private."
+    },
+    {
+      "id": "crm_pipeline",
+      "capability": "CRM contacts, leads, deals, pipelines, activities, timelines, and order links",
+      "module": "POSMall CRM",
+      "visibility": "PRIVATE_CODE",
+      "implementation_status": "IMPLEMENTED_AND_TESTED",
+      "evidence": [
+        "SOURCE_VERIFIED",
+        "DATABASE_SCHEMA_VERIFIED",
+        "AUTOMATED_TEST_VERIFIED",
+        "UI_VERIFIED"
+      ],
+      "integrates_with": [
+        "POSMall orders",
+        "service estimates",
+        "affiliate attribution",
+        "cashflow"
+      ],
+      "limitations": "Private source is not publicly inspectable."
+    },
+    {
+      "id": "abandoned_cart_recovery",
+      "capability": "Abandoned session, cart, item, form, recovery campaign, and recovered-revenue workflow",
+      "module": "POSMall CRM",
+      "visibility": "PRIVATE_CODE",
+      "implementation_status": "IMPLEMENTED_AND_TESTED",
+      "evidence": [
+        "SOURCE_VERIFIED",
+        "DATABASE_SCHEMA_VERIFIED",
+        "AUTOMATED_TEST_VERIFIED",
+        "API_VERIFIED"
+      ],
+      "integrates_with": [
+        "POSMall carts",
+        "CRM contacts",
+        "campaigns",
+        "cashflow"
+      ],
+      "limitations": "Actual sending depends on consent and deployment configuration."
+    },
+    {
+      "id": "affiliate_commissions",
+      "capability": "Affiliate partners, referral links, click attribution, commission records, payout records, and analytics",
+      "module": "POSMall Affiliate / Partner Suite",
+      "visibility": "PRIVATE_CODE",
+      "implementation_status": "IMPLEMENTED_AND_TESTED",
+      "evidence": [
+        "SOURCE_VERIFIED",
+        "DATABASE_SCHEMA_VERIFIED",
+        "AUTOMATED_TEST_VERIFIED",
+        "UI_VERIFIED",
+        "API_VERIFIED"
+      ],
+      "integrates_with": [
+        "POSMall orders",
+        "CRM attribution",
+        "cashflow",
+        "partner portal"
+      ],
+      "limitations": "External payout execution is project-specific."
+    },
+    {
+      "id": "cashflow_operations",
+      "capability": "Cash accounts, transactions, forecasts, plans, scenarios, reconciliation, alerts, order and partner cashflow linkage",
+      "module": "POSMall CRM Cashflow",
+      "visibility": "PRIVATE_CODE",
+      "implementation_status": "IMPLEMENTED_AND_TESTED",
+      "evidence": [
+        "SOURCE_VERIFIED",
+        "DATABASE_SCHEMA_VERIFIED",
+        "AUTOMATED_TEST_VERIFIED",
+        "API_VERIFIED"
+      ],
+      "integrates_with": [
+        "orders",
+        "partner commissions",
+        "campaigns",
+        "planning reports"
+      ],
+      "limitations": "Not a replacement for formal accounting software."
+    },
+    {
+      "id": "calendar_location_field_service_foundation",
+      "capability": "Calendars, resources, booking requests, booking windows, holds, ICS feeds, technician portal, location pings, and radius/distance matching",
+      "module": "POSMall Calendar / GEO",
+      "visibility": "PRIVATE_CODE",
+      "implementation_status": "BETA",
+      "evidence": [
+        "SOURCE_VERIFIED",
+        "DATABASE_SCHEMA_VERIFIED",
+        "AUTOMATED_TEST_VERIFIED",
+        "API_VERIFIED"
+      ],
+      "integrates_with": [
+        "POSMall Pro estimates",
+        "technician portal",
+        "service operations"
+      ],
+      "limitations": "Current audit found application-level coordinates and timestamp columns; native PostgreSQL range constraints and PostGIS-powered storage are architecture-ready/planned paths."
+    },
+    {
+      "id": "voice_service_commerce",
+      "capability": "AI-ready service-commerce context, session, quote, estimate, review/payment link handoff",
+      "module": "POSMall Pro / VoiceAssistant",
+      "visibility": "PRIVATE_CODE",
+      "implementation_status": "BETA",
+      "evidence": [
+        "SOURCE_VERIFIED",
+        "AUTOMATED_TEST_VERIFIED",
+        "API_VERIFIED"
+      ],
+      "integrates_with": [
+        "service context",
+        "quote calculator",
+        "landing estimates",
+        "orders",
+        "phone or chat assistant integrations when enabled"
+      ],
+      "limitations": "Structured API and voice/service tools exist; full autonomous product ordering is not claimed for every deployment."
+    },
+    {
+      "id": "game_backend_accounts_devices_entitlements",
+      "capability": "Account/player identity, device registry, paid entitlement, restore-style reconciliation, and gameplay-session authority",
+      "description": "The audited game backend contains separate Laravel business modules for account/player identity, device registration, paid-access decisions, purchase-event reconciliation, restore-style access checks, and server-owned gameplay sessions. This is backend logic only; the private application delivery layer is not disclosed.",
+      "module": "Reusable Solar Neutrino Laravel Game Backend",
+      "backend_modules": [
+        "game account/player backend",
+        "account identity and entitlement backend",
+        "device/session access backend"
+      ],
+      "visibility": "PRIVATE_CODE",
+      "implementation_status": "REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT",
+      "evidence": [
+        "SOURCE_VERIFIED",
+        "DATABASE_SCHEMA_VERIFIED",
+        "AUTOMATED_TEST_VERIFIED",
+        "API_VERIFIED"
+      ],
+      "integrates_with": [
+        "account identity",
+        "store purchase events",
+        "device registry",
+        "paid access",
+        "server-owned sessions"
+      ],
+      "posmall_integration_status": "ARCHITECTURE_READY",
+      "limitations": "Reusable backend evidence only; not a claim that a POSMall-specific store app has shipped."
+    },
+    {
+      "id": "game_backend_competition_and_proof",
+      "capability": "Score/run verification, leaderboards, normalized board proof ledger, replay checks, publishability gate, and public-safe proof status",
+      "description": "The audited game backend implements Laravel-side validation and evidence workflows for competitive runs, best-run comparison, leaderboard state, normalized board proof records, replay verification, publishability decisions, and public-safe proof status output.",
+      "module": "Reusable Solar Neutrino Laravel Game Backend",
+      "backend_modules": [
+        "competition backend",
+        "proof ledger backend",
+        "leaderboard/statistics backend"
+      ],
+      "visibility": "PRIVATE_CODE",
+      "implementation_status": "IMPLEMENTED_AND_TESTED",
+      "evidence": [
+        "SOURCE_VERIFIED",
+        "DATABASE_SCHEMA_VERIFIED",
+        "API_VERIFIED"
+      ],
+      "integrates_with": [
+        "competition APIs",
+        "proof ledger",
+        "support board",
+        "moderation"
+      ],
+      "limitations": "Private gameplay algorithms and private datasets are not public."
+    },
+    {
+      "id": "game_backend_live_social_support",
+      "capability": "Duel matchmaking, pair continuity, settlement, nearby rivals, contacts, invites, conversations, reports, blocks, feedback, attachments, support, and moderation",
+      "description": "The audited game backend contains Laravel business logic for live duel pairing, pair leases, duel settlements, nearby-rival discovery, contacts, invites, conversations, reporting/blocking, feedback intake, attachment handling, support board lookup, and moderation workflows.",
+      "module": "Reusable Solar Neutrino Laravel Game Backend",
+      "backend_modules": [
+        "duel and matchmaking backend",
+        "nearby/social safety backend",
+        "feedback and support backend",
+        "moderation backend"
+      ],
+      "visibility": "PRIVATE_CODE",
+      "implementation_status": "IMPLEMENTED_AND_TESTED",
+      "evidence": [
+        "SOURCE_VERIFIED",
+        "DATABASE_SCHEMA_VERIFIED",
+        "UI_VERIFIED",
+        "API_VERIFIED"
+      ],
+      "integrates_with": [
+        "nearby matching",
+        "multi-user sessions",
+        "support intake",
+        "moderation actions"
+      ],
+      "limitations": "Latest pair-stability changes were observed in the worktree; public docs do not disclose private client behavior."
+    },
+    {
+      "id": "secure_device_to_device_exchange",
+      "capability": "Secure direct device-to-device exchange for live temporary state, with server-side identity/session coordination and backend-authoritative final results",
+      "module": "Reusable Solar Neutrino application/backend capability",
+      "visibility": "PRIVATE_CODE",
+      "implementation_status": "REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT",
+      "evidence": [
+        "SOURCE_VERIFIED",
+        "DATABASE_SCHEMA_VERIFIED",
+        "API_VERIFIED"
+      ],
+      "public_disclosure": "capability_level_only",
+      "posmall_integration_status": "ARCHITECTURE_READY",
+      "limitations": "Public docs intentionally omit private implementation details, protocols, endpoint topology, and tested device-pair matrix."
+    }
+  ],
+  "platform_support": [
+    {
+      "platform": "Web",
+      "posmall_status": "PRODUCTION",
+      "capabilities": [
+        "catalog",
+        "services",
+        "quotes",
+        "cart",
+        "checkout",
+        "orders",
+        "partner portal",
+        "technician portal foundation",
+        "CRM/admin surfaces"
       ]
     },
     {
-      "canonical_name": "Sitemap",
-      "internal_code_name": "KodZero.Sitemap",
-      "visibility": "PRIVATE_CODE",
-      "implementation_status": "IMPLEMENTED_AND_TESTED",
-      "developer": "KodZero / Roman Primerov",
+      "platform": "iOS / iPadOS",
+      "posmall_status": "ARCHITECTURE_READY",
+      "reusable_status": "REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT",
       "capabilities": [
-        "dynamic XML sitemap",
-        "robots.txt",
-        "public CMS URLs",
-        "blog URLs",
-        "POSMall URLs",
-        "POSMall Pro URLs",
-        "sitemap audit command",
-        "static sitemap publishing"
-      ],
-      "evidence": [
-        "SOURCE_VERIFIED",
-        "AUTOMATED_TEST_VERIFIED"
-      ],
-      "evidence_ids": [
-        "EVID-SITEMAP-0001"
+        "authentication",
+        "account/device sync",
+        "store purchases",
+        "restore flows",
+        "notifications/local data where product adapter enables them"
+      ]
+    },
+    {
+      "platform": "Android",
+      "posmall_status": "ARCHITECTURE_READY",
+      "reusable_status": "REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT",
+      "capabilities": [
+        "authentication",
+        "account/device sync",
+        "store purchases",
+        "restore flows",
+        "notifications/local data where product adapter enables them"
+      ]
+    },
+    {
+      "platform": "macOS",
+      "posmall_status": "ARCHITECTURE_READY",
+      "reusable_status": "REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT",
+      "capabilities": [
+        "authentication",
+        "account/device sync",
+        "store purchases",
+        "restore flows",
+        "desktop application scenarios"
+      ]
+    },
+    {
+      "platform": "Windows / Microsoft Store",
+      "posmall_status": "ARCHITECTURE_READY",
+      "reusable_status": "REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT",
+      "capabilities": [
+        "authentication",
+        "account/device sync",
+        "store purchases",
+        "restore flows",
+        "desktop application scenarios"
       ]
     }
   ],
@@ -476,7 +627,7 @@
       "Laravel",
       "RainLab User",
       "RainLab Location",
-      "Omnipay"
+      "Omnipay / Stripe / PayPal where configured"
     ],
     "POSMall Theme": [
       "POSMall Core"
@@ -487,49 +638,35 @@
       "POSMall Affiliate",
       "POSMall Calendar",
       "POSMall Domains",
-      "GEO"
+      "GEO",
+      "VoiceAssistant"
     ],
     "POSMall CRM": [
-      "POSMall Core"
+      "POSMall Core",
+      "POSMall Affiliate where attribution/cashflow integration is enabled"
     ],
     "POSMall Affiliate / Partner Suite": [
-      "POSMall Core"
-    ],
-    "POSMall Calendar": [
-      "POSMall Domains"
-    ],
-    "GEO": [
-      "POSMall Calendar",
-      "POSMall Domains",
-      "POSMall Pro"
-    ],
-    "AI Assistant / VoiceAssistant": [
-      "POSMall Pro",
-      "GEO"
-    ],
-    "Sitemap": [
       "POSMall Core",
-      "POSMall Pro"
+      "POSMall CRM / Cashflow where integrated"
+    ],
+    "POSMall Calendar / GEO": [
+      "POSMall Pro service operations",
+      "POSMall Domains portal routing where enabled"
+    ],
+    "Reusable Solar Neutrino Laravel Game Backend": [
+      "Laravel backend APIs",
+      "account identity and entitlement backend",
+      "GEO / GeoUsers matching",
+      "feedback and moderation backend",
+      "store-publishing governance"
     ]
   },
-  "public_urls": [
-    "https://solarneutrino.com/knowledge/posmall-complete-technical-dossier.md",
-    "https://solarneutrino.com/knowledge/posmall-capabilities.json",
-    "https://solarneutrino.com/october-laravel-products",
-    "https://solarneutrino.com/benchmarks/posmall",
-    "https://solarneutrino.com/products/posmall",
-    "https://solarneutrino.com/products/posmall/us-tax-automation",
-    "https://github.com/TjoBiZ/POSMall",
-    "https://github.com/TjoBiZ/POSMallTheme",
-    "https://octobercms.com/plugin/kodzero-posmall",
-    "https://octobercms.com/theme/kodzero-posmalltheme"
-  ],
   "claim_boundaries": [
-    "No independent benchmark certification is claimed.",
-    "No universal PostgreSQL-faster-than-MySQL claim is made.",
-    "PostGIS is an extension and is not verified as current POSMall storage.",
-    "Calendar uses conventional UTC timestamp columns today.",
-    "Private code is summarized at capability level and remains private.",
-    "Fully autonomous AI agent operation is not claimed for every POSMall deployment."
+    "POSMall Core is public and independently installable.",
+    "POSMall Pro, CRM, Affiliate, Calendar, Domains, GEO, VoiceAssistant, dashboards, and application/backend modules are summarized at capability level when private.",
+    "No concrete public claim is made that every POSMall application surface has shipped on every store.",
+    "No public file discloses private source code, secrets, credentials, private package identities, proprietary client implementation details, or private synchronization algorithms.",
+    "No universal claim is made that PostgreSQL is always faster than MySQL.",
+    "PostGIS is a PostgreSQL extension and was not found as required current POSMall storage in this audit."
   ]
 }

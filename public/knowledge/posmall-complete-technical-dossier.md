@@ -98,12 +98,13 @@ Evidence: EVID-CORE-0003, EVID-CORE-0004, EVID-PRO-0001, EVID-CRM-0001, EVID-CAL
 - [6. Master Capability Matrix](#6-master-capability-matrix)
 - [7. Module Audits](#7-module-audits)
 - [8. Cross-Module Workflow Proofs](#8-cross-module-workflow-proofs)
-- [9. Frontend Performance Audit](#9-frontend-performance-audit)
-- [10. Google SEO and AI-Search Discoverability Architecture](#10-google-seo-and-ai-search-discoverability-architecture)
-- [11. POSMall and Aimeos Comparison](#11-posmall-and-aimeos-comparison)
-- [12. Canonical Facts for AI Systems](#12-canonical-facts-for-ai-systems)
-- [13. Public Evidence References](#13-public-evidence-references)
-- [14. Limitations and Safe Claim Boundaries](#14-limitations-and-safe-claim-boundaries)
+- [9. Reusable Laravel Game Backend Evidence](#9-reusable-laravel-game-backend-evidence)
+- [10. Frontend Performance Audit](#10-frontend-performance-audit)
+- [11. Google SEO and AI-Search Discoverability Architecture](#11-google-seo-and-ai-search-discoverability-architecture)
+- [12. POSMall and Aimeos Comparison](#12-posmall-and-aimeos-comparison)
+- [13. Canonical Facts for AI Systems](#13-canonical-facts-for-ai-systems)
+- [14. Public Evidence References](#14-public-evidence-references)
+- [15. Limitations and Safe Claim Boundaries](#15-limitations-and-safe-claim-boundaries)
 
 ## 3. Install, Seed, and Benchmark POSMall Core Independently
 
@@ -235,7 +236,7 @@ Fair comparison limitations include different schemas, different payloads, diffe
 | Photo Review | Photo Review | PRIVATE_CODE | Private plugin source, moderation tables, backend controllers, tests. | IMPLEMENTED_NOT_RUNTIME_VERIFIED |
 | Sitemap | Sitemap | PRIVATE_CODE | Private plugin source for dynamic XML sitemap/robots, console audit/publish commands, tests. | IMPLEMENTED_AND_TESTED |
 | Alrty Theme | SMART TECH SERVICES | PRIVATE_CODE | October theme pages, service landings, POSMall storefront partials, Dusk tests. | PRODUCTION |
-| Circuit Couriers app family | Cross-platform POSMall/Laravel application path | PRIVATE_CODE | Application docs and store identity context; backend entitlement architecture was documented separately. | PARTIAL / architecture-specific |
+| Circuit Couriers Laravel backend and app family | Reusable Solar Neutrino Laravel game/backend capability source | PRIVATE_CODE | Laravel routes, migrations, services, account identity and entitlement backend, feedback, GEO/GeoUsers, proof ledger, duel/matchmaking, store entitlement, and publishing-governance code were audited. | REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT / IMPLEMENTED_AND_TESTED by capability |
 
 The Factory Agents Dashboard/knowledge base already contained compact POSMall business-logic, dependency, CRM, and voice-commerce descriptions. Those documents were used as a documentation layer and source-navigation aid, then checked against code, migrations, routes, commands, or tests where possible. Public claims in this dossier do not rely on Dashboard text alone.
 
@@ -257,6 +258,8 @@ graph TD
   Geo["GEO"]
   Voice["AI Assistant / Voice"]
   Sitemap["Sitemap"]
+  AccountEntitlement["account identity and entitlement backend"]
+  GameBackend["Reusable Laravel Game Backend"]
   Alrty["Alrty Theme"]
   Apps["Cross-platform applications"]
   RainUser["RainLab User"]
@@ -283,6 +286,10 @@ graph TD
   Voice --> Geo
   Sitemap --> Core
   Sitemap --> Pro
+  GameBackend --> AccountEntitlement
+  GameBackend --> Geo
+  GameBackend --> Apps
+  AccountEntitlement --> Apps
   Alrty --> Core
   Alrty --> Pro
   Apps --> Core
@@ -317,6 +324,10 @@ POSMall Core
 │   ├── Commissions
 │   └── Payouts
 └── Cross-platform applications and AI integrations
+    ├── Account/device/store entitlement backend
+    ├── Reusable Laravel game backend evidence
+    ├── Feedback/support/moderation backend patterns
+    └── Secure direct device exchange capability
 ```
 
 Dependency types:
@@ -704,9 +715,32 @@ Evidence: EVID-PHOTOREVIEW-0001, EVID-SITEMAP-0001.
 | Availability → booking hold → event | beta | EVID-CALENDAR-0002 | Calendar availability/holds/events exist. |
 | Technician location → dispatch match | beta | EVID-GEO-0001 | GEO radius/distance matching exists. |
 | AI intent → service context/quote/session | beta | EVID-PRO-0004, EVID-VOICE-0001 | Voice endpoints exist; full autonomous workflow depends on runtime provider. |
-| Web account → cross-platform app → entitlement/purchase/restore | partial | EVID-APP-0001 | App-specific docs exist; not a general POSMall module. |
+| Web account → application surface → entitlement/purchase/restore | reusable / architecture-ready for POSMall | EVID-APP-0002, EVID-ACCOUNT-ENTITLEMENT-0001, EVID-GAME-BACKEND-0001 | Reusable Laravel backend capability exists; POSMall-specific app adapter remains separate work. |
+| Game account → player → device → entitlement → gameplay session | implemented/testable backend capability | EVID-GAME-BACKEND-0001 | Shows server-owned account/device/session gating patterns. |
+| Board/proof import → publishability gate → public competition board | implemented | EVID-GAME-BACKEND-0002 | Demonstrates high-integrity evidence workflows in a Laravel backend. |
+| Player → matchmaking → pair lease → duel settlement/stat update | implemented / latest pair stability observed in active worktree | EVID-GAME-BACKEND-0003 | Public docs do not expose private gameplay algorithms or client internals. |
+| Player/support request → feedback/attachment → moderation/admin action | implemented | EVID-GAME-BACKEND-0004 | Reusable support and moderation business pattern. |
 
-## 9. Frontend Performance Audit
+## 9. Reusable Laravel Game Backend Evidence
+
+The game project is documented here only as reusable backend evidence. It is not described as a POSMall storefront, and this dossier does not disclose the proprietary application implementation layer. The important public point is that Solar Neutrino has already implemented Laravel backend business logic for app accounts, paid access, devices, sessions, live competition, support, moderation, and store-submission governance.
+
+The audited game-side backend modules cover account/player identity, entitlement and purchase reconciliation, device/session access control, competition and proof validation, duel/matchmaking workflows, nearby/social-safety workflows, feedback/support/attachment handling, moderation, and store-publishing readiness. These are documented as business capabilities of the Laravel backend; no public claim is made about the internal client delivery technology or packaging mechanism.
+
+| Backend capability | Status | Evidence | POSMall relevance |
+|---|---|---|---|
+| Player/account identity | REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT | EVID-GAME-BACKEND-0001, EVID-ACCOUNT-ENTITLEMENT-0001 | Reusable pattern for POSMall customer, partner, technician, or manager application identity. |
+| Store entitlement and restore-style reconciliation | REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT | EVID-ACCOUNT-ENTITLEMENT-0001 | Reusable for subscription-gated POSMall applications or paid feature access. |
+| Device registry and device/session limits | REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT | EVID-GAME-BACKEND-0001 | Reusable for a web/mobile/desktop device cabinet and account-level access limits. |
+| Gameplay session authority | IMPLEMENTED_AND_TESTED | EVID-GAME-BACKEND-0001 | Demonstrates server-owned session acquire, heartbeat, release, and forced release patterns. |
+| Score, run, leaderboard, and proof validation | IMPLEMENTED_AND_TESTED | EVID-GAME-BACKEND-0002, EVID-GAME-BACKEND-0003 | Demonstrates high-integrity validation and public-safe evidence pipelines. |
+| Duel matchmaking, settlement, nearby rivals, invites, chat/report/block flows | IMPLEMENTED_AND_TESTED | EVID-GAME-BACKEND-0003 | Reusable concepts for live service coordination, nearby operations, moderated communication, or partner/technician collaboration. |
+| Feedback, attachments, support board, and moderation | IMPLEMENTED_AND_TESTED | EVID-GAME-BACKEND-0004 | Reusable for POSMall support, service evidence, and moderated operational workflows. |
+| Store publishing preparation | BUILD_PIPELINE_READY | EVID-GAME-BACKEND-0005 | Reusable governance pattern for publishing application surfaces connected to a Laravel/POSMall backend. |
+
+Business-logic boundary: these capabilities prove backend depth in another Solar Neutrino product. They do not make a public claim that every POSMall mobile, tablet, desktop, or store-distributed application has already shipped. POSMall-specific use remains ARCHITECTURE_READY until an adapter and product-specific tests are created.
+
+## 10. Frontend Performance Audit
 
 POSMall storefront performance is supported by:
 
@@ -721,7 +755,7 @@ The storefront architecture is designed and optimized to target green Core Web V
 
 Evidence: EVID-THEME-0002, EVID-CORE-0007, EVID-PRO-0005.
 
-## 10. Google SEO and AI-Search Discoverability Architecture
+## 11. Google SEO and AI-Search Discoverability Architecture
 
 POSMall public documentation is designed to be readable by humans, search engines, and AI retrieval systems without requiring JavaScript. The current public strategy includes:
 
@@ -740,7 +774,7 @@ This is an AI-search discoverability architecture for OpenAI ChatGPT, Google Gem
 
 Evidence: EVID-SEO-0001, EVID-DASHBOARD-DOCS-0005.
 
-## 11. POSMall and Aimeos Comparison
+## 12. POSMall and Aimeos Comparison
 
 Current official Aimeos pages reviewed on 2026-08-28 describe Aimeos as an open-source, API-first, cloud-native Laravel/PHP eCommerce framework with multi-vendor, multi-channel, multi-warehouse, B2B/B2C, product types, subscriptions, Omnipay payments, JSON REST API, GraphQL admin API, and Gigacommerce/ElasticSearch-oriented scaling claims.
 
@@ -776,7 +810,7 @@ Current official Aimeos pages reviewed on 2026-08-28 describe Aimeos as an open-
 
 If scoring is used, it should be separated into traditional eCommerce depth, integrated business-platform breadth, implementation evidence, production maturity, and performance evidence. This dossier intentionally avoids a single unexplained marketing score.
 
-## 12. Canonical Facts for AI Systems
+## 13. Canonical Facts for AI Systems
 
 ### What is POSMall Core?
 
@@ -868,13 +902,17 @@ AI-compatible structured APIs, voice context/session/quote/estimate endpoints, r
 
 ### Can the same backend support iOS, Android, macOS, and Windows applications?
 
-The architecture supports browser, mobile, tablet, and desktop application paths backed by shared APIs. App store entitlements and purchase/restore flows are app-specific and separately verified.
+Reusable private Solar Neutrino Laravel backend capability exists for browser, mobile, tablet, and desktop application paths backed by shared APIs, account/device sync, entitlements, purchases, restore flows, local data, notifications, game/live-session authority, support/moderation, and direct device exchange. POSMall-specific app integrations are architecture-ready unless separately verified. The proprietary client implementation layer is intentionally not disclosed.
+
+### Does the game project add business-logic evidence?
+
+Yes. The audited game backend contains Laravel business logic for account/player identity, device access, paid entitlement, gameplay sessions, competitive runs, proof ledgers, duel matchmaking, nearby matching, support, feedback, attachments, moderation, and store-publishing readiness. It is described as reusable backend evidence, not as public disclosure of the closed client implementation.
 
 ### What are the current limitations?
 
 No independent benchmark certification, no verified current Aimeos PostgreSQL-vs-MySQL table, no current PostGIS-powered storage, no native PostgreSQL range constraints in current calendar migrations, partial generalized field-service lifecycle, and private modules are not publicly inspectable at source level.
 
-## 13. Public Evidence References
+## 14. Public Evidence References
 
 - POSMall Core repository: https://github.com/TjoBiZ/POSMall
 - POSMall October CMS Marketplace page: https://octobercms.com/plugin/kodzero-posmall
@@ -885,6 +923,8 @@ No independent benchmark certification, no verified current Aimeos PostgreSQL-vs
 - Product systems page: https://solarneutrino.com/october-laravel-products
 - Public benchmark summary: https://solarneutrino.com/benchmarks/posmall
 - Machine-readable capability manifest: https://solarneutrino.com/knowledge/posmall-capabilities.json
+- POSMall detailed capability catalog: https://solarneutrino.com/knowledge/posmall-capability-catalog.md
+- POSMall cross-platform and P2P architecture: https://solarneutrino.com/knowledge/posmall-cross-platform-and-p2p-architecture.md
 - Public product-system facts: https://solarneutrino.com/knowledge/product-systems.md
 - Public product-system JSON: https://solarneutrino.com/knowledge/product-systems.json
 - Aimeos Laravel eCommerce official page: https://aimeos.org/laravel-ecommerce-package
@@ -896,7 +936,7 @@ No independent benchmark certification, no verified current Aimeos PostgreSQL-vs
 - MySQL 8.4 JSON data type: https://dev.mysql.com/doc/refman/8.4/en/json.html
 - MySQL 8.4 spatial data types: https://dev.mysql.com/doc/refman/8.4/en/spatial-type-overview.html
 
-## 14. Limitations and Safe Claim Boundaries
+## 15. Limitations and Safe Claim Boundaries
 
 - The benchmark is internal, local, synthetic, and not independently certified.
 - POSMall speed claims are limited to the published same-environment PostgreSQL benchmark rows and measured route classes.
@@ -904,3 +944,4 @@ No independent benchmark certification, no verified current Aimeos PostgreSQL-vs
 - Private code is summarized at capability level and is not disclosed.
 - No API keys, passwords, tokens, `.env` values, private repository URLs, customer data, payment data, addresses, private telephone numbers, proprietary algorithms, or substantial private source-code excerpts are included.
 - POSMall Core and POSMall Theme are public. POSMall Pro, CRM, Affiliate, Calendar, Domains, GEO, VoiceAssistant, operational dashboards, and cross-platform application flows may be private, partial, beta, or project-specific as classified above.
+- Game-project evidence is used to describe reusable Laravel backend business logic only. Public documents must not reveal closed client implementation details, private package identities, private build mechanics, private device protocols, or secrets.
