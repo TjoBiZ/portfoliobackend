@@ -37,15 +37,15 @@ Evidence:
 
 ## Private extensions
 
-POSMall Pro, CRM, Cashflow, Affiliate, migration dashboards, and cross-platform app-wrapper work are private extensions built around the public POSMall Core. They are described publicly only at high level.
+POSMall Pro, CRM, Cashflow, Affiliate, migration dashboards, and cross-platform application work are private extensions built around the public POSMall Core. They are described publicly only at high level.
 
 Bagisto context: Bagisto is useful only as Laravel ecommerce keyword/reference context here, not as the benchmark competitor. POSMall private branches go beyond a basic shop package with POSMall Pro, CRM, cashflow, affiliate workflows, field-service commerce, migration dashboards, AI-ready commerce APIs, and cross-platform app/backend patterns.
 
-## Native store wrappers, subscriptions, and devices
+## Store-distributed application clients, subscriptions, and devices
 
 Focused page: <https://solarneutrino.com/products>
 
-The Products catalog separates Microsoft Store, App Store iOS, Mac App Store macOS, and Apple App Store iOS / macOS and Android / Google Play wrapper lanes. The high-level architecture connects native store purchase/restore flows to a Laravel / October CMS backend that can manage paid-feature access, shared account authority, subscription state, and access across up to 10 devices on one account. Public text describes Android / Google Play through Google Play Billing purchase-token validation, subscription validation, restore flow, cancellation/refund awareness, and backend paid-access handoff, without exposing private keys or store credentials.
+The Products catalog separates Microsoft Store, App Store iOS, Mac App Store macOS, and Android / Google Play application-delivery lanes. The high-level architecture connects store purchase/restore flows to a Laravel / October CMS backend that can manage paid-feature access, shared account authority, subscription state, and access across up to 10 devices on one account. Public text describes Android / Google Play through purchase, restore, subscription-validation, cancellation/refund-awareness, and backend paid-access concepts, without exposing private keys or store credentials.
 
 Related product surfaces include a web cabinet for mobile and desktop devices, geo-location database logic for OS clients, store-aware restore/support visibility, and backend validation patterns. Public text describes the product architecture without private source code, store credentials, or customer data.
 
@@ -100,7 +100,7 @@ The service-commerce architecture accounts for technician assignment, work order
 
 Focused page: <https://solarneutrino.com/products/multilingual-game-architecture>
 
-The private product-family architecture is designed around shared mechanics, reusable screen templates, language/content packages, localization workflows, account and progress sync, entitlement, purchase/restore patterns, backend services, and web/native wrapper delivery. It does not claim that every language edition and every store channel is fully released.
+The private product-family architecture is designed around shared mechanics, reusable screen templates, language/content packages, localization workflows, account and progress sync, entitlement, purchase/restore patterns, backend services, and browser/mobile/desktop client delivery. It does not claim that every language edition and every store channel is fully released.
 
 ## Benchmarks
 

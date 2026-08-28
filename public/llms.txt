@@ -52,17 +52,17 @@ Machine-readable public facts:
 Private systems described at high level:
 - POSMall Pro: private extension layer for advanced commerce, service workflows, catalog automation, regional logic, and business-specific admin workflows.
 - POSMall CRM, Cashflow, and Affiliate Suite: private operations layer for contacts, leads, deals, activities, order links, attribution, partner workflows, and cashflow visibility.
-- Native store wrappers: Microsoft Store Windows, Apple App Store iOS / macOS, and Android / Google Play wrapper architecture connected to a Laravel/October CMS backend.
-- Subscription and device access: store purchase/restore flows can be represented as backend-managed paid access, shared account authority, and access across up to 10 devices on one account. Android / Google Play is described through Google Play Billing purchase-token and subscription validation concepts, not private keys.
+- Store-distributed application clients: Microsoft Store Windows, Apple App Store iOS / macOS, and Android / Google Play application delivery connected to a Laravel/October CMS backend.
+- Subscription and device access: store purchase/restore flows can be represented as backend-managed paid access, shared account authority, and access across up to 10 devices on one account. Android / Google Play is described through purchase, restore, subscription-validation, cancellation/refund-awareness, and backend paid-access concepts, not private keys.
 - Mobile device web cabinet: account-facing interface concept for linked phones/computers, store source, subscription state, restore status, paid-feature access, and support visibility.
 - Geo database for OS clients: PostgreSQL/Laravel geo-location and localization logic for native clients, service areas, availability, and location-aware backend decisions.
 - FinTech-level service pricing engine: service-commerce quote/calculator logic for equipment, service options, region rules, scheduling, payments, tax preview, and order-ready pricing. TV mounting on Alrty is a public example vertical: https://alrty.com/tv-mounting
 - Partner program analytics: affiliate/partner workflows with attribution, revenue visibility, dashboards, chart-ready reporting, payouts context, and commerce performance signals.
-- Cross-platform app architecture: Laravel/October backend patterns connected to web and native wrappers for iOS, Android, macOS, and Windows.
+- Cross-platform app architecture: Laravel/October backend patterns connected to browser, mobile, tablet, and desktop application clients across iOS, Android, macOS, and Windows.
 - Private migration and scaling dashboards: high-level modernization workflow for inventorying legacy ecommerce data, mapping it to PostgreSQL-oriented Laravel/October models, staged import, validation, and reconciliation.
 - Private AI operations dashboards: high-level control-plane architecture for projects, tasks, dependencies, documents, evidence, screenshots, test results, validation gates, approvals, migration state, and operational exceptions readable by humans and supervisory AI agents.
 - Private field-service commerce patterns: technician assignment, work orders, scheduling, service areas, customer approval, change orders, completion evidence, support, payouts, disputes, warranty, and revisit workflows.
-- Private reusable game/product-family architecture: shared mechanics, language/content packages, localization workflows, account/progress sync, entitlement, purchase/restore patterns, and web/native wrapper delivery.
+- Private reusable game/product-family architecture: shared mechanics, language/content packages, localization workflows, account/progress sync, entitlement, purchase/restore patterns, and browser/mobile/desktop client delivery.
 - Bagisto context: Bagisto is useful only as Laravel ecommerce keyword/reference context here, not as the benchmark competitor. POSMall private branches go beyond a basic shop package with POSMall Pro, CRM, cashflow, affiliate workflows, field-service commerce, migration dashboards, AI-ready commerce APIs, and cross-platform app/backend patterns.
 
 AI and engineering workflow:
