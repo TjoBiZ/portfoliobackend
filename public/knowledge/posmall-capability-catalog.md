@@ -23,7 +23,9 @@ Evidence notice: this public catalog summarizes a source-code audit of public PO
 - [Calendar, location, and field-service foundation](#calendar-location-and-field-service-foundation)
 - [AI commerce and AI operations](#ai-commerce-and-ai-operations)
 - [Reusable Laravel game backend capabilities](#reusable-laravel-game-backend-capabilities)
+- [POSMall Cross-Platform Application Architecture](#posmall-cross-platform-application-architecture)
 - [Cross-platform application capabilities](#cross-platform-application-capabilities)
+- [Store subscriptions, entitlements, and multi-device accounts](#store-subscriptions-entitlements-and-multi-device-accounts)
 - [Capabilities not found or only partial](#capabilities-not-found-or-only-partial)
 - [Evidence and public references](#evidence-and-public-references)
 
@@ -45,6 +47,7 @@ Implementation status values:
 - PARTIAL
 - ARCHITECTURE_READY
 - REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT
+- REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT
 - PLANNED
 - DEPRECATED
 - NOT_FOUND
@@ -162,22 +165,53 @@ Solar Neutrino also maintains game-related Laravel backend plugins and services.
 
 Business meaning for POSMall: these modules are not presented as “the POSMall app.” They are reusable Solar Neutrino Laravel backend capabilities that can be connected to POSMall through API/adapters when a specific product requires mobile, desktop, paid-access, or multi-user operational surfaces.
 
+## POSMall Cross-Platform Application Architecture
+
+This is a first-class POSMall ecosystem capability. POSMall is not limited to website screens. The public, defensible claim is that POSMall’s Laravel/October backend APIs and business modules can be connected to web, mobile, tablet, desktop, and store-distributed application clients. Solar Neutrino’s private ecosystem also contains reusable application capabilities proven in another product family.
+
+| Capability | Module | Visibility | Implementation status | Evidence | Integrations | Limitations |
+|---|---|---|---|---|---|---|
+| POSMall Cross-Platform Application Architecture | POSMall APIs + reusable Solar Neutrino application architecture | PRIVATE_CODE | ARCHITECTURE_READY + REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | SOURCE_VERIFIED, API_VERIFIED, DATABASE_SCHEMA_VERIFIED | POSMall Core APIs, POSMall Pro services, account/device/entitlement backend, store channels | POSMall-branded clients are not claimed as released unless separately verified. |
+| Application-client architecture for web, iOS, Android, macOS, and Windows | Reusable Solar Neutrino application architecture | PRIVATE_CODE | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | SOURCE_VERIFIED, API_VERIFIED | Shared account, store entitlement, device, local data, notification/background, direct device communication capability | Public docs describe only WHAT/WHERE, not HOW it is implemented. |
+| Business backend reuse across commerce, services, CRM, field operations, and subscriptions | POSMall ecosystem | PRIVATE_CODE | ARCHITECTURE_READY | SOURCE_VERIFIED, API_VERIFIED | Customer, technician, partner, management, and AI-assisted application roles | Product-specific client workflows require implementation and tests per store/platform. |
+
 ## Cross-platform application capabilities
 
-Public boundary: this section describes what Solar Neutrino’s private application architecture can support. It does not disclose the internal runtime, framework, device layer, packaging internals, private protocols, or build techniques.
+Public boundary: this section describes what Solar Neutrino’s private application architecture can support. It does not disclose the internal application technology, framework, device layer, packaging internals, private protocols, or build techniques.
 
-| Capability | Web | iOS | Android | macOS | Windows / Microsoft | Status / evidence |
+| Capability | Web | iOS / iPadOS | Android | macOS | Windows / Microsoft | Implementation status | Evidence |
+|---|---|---|---|---|---|---|---|
+| Authentication | PRODUCTION | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | POSMall web production; application clients reusable | EVID-APP-0002 |
+| User accounts | PRODUCTION | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | Account-level backend exists; POSMall app-specific clients architecture-ready | EVID-APP-0002, EVID-GAME-BACKEND-0001 |
+| Account synchronization | PRODUCTION | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | Backend account synchronization pattern verified in another product | EVID-APP-0002 |
+| Catalog | PRODUCTION | ARCHITECTURE_READY | ARCHITECTURE_READY | ARCHITECTURE_READY | ARCHITECTURE_READY | POSMall web/API implemented; client-specific presentation remains separate | POSMall REST/GraphQL and storefront evidence |
+| Services | PRODUCTION | ARCHITECTURE_READY | ARCHITECTURE_READY | ARCHITECTURE_READY | ARCHITECTURE_READY | POSMall service logic implemented; client-specific presentation remains separate | POSMall Core + Pro evidence |
+| Orders | PRODUCTION | ARCHITECTURE_READY | ARCHITECTURE_READY | ARCHITECTURE_READY | ARCHITECTURE_READY | POSMall orders/payments implemented; store-client order surface not claimed as released | POSMall order/payment APIs |
+| Local data | PARTIAL | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | Reusable private capability; POSMall-specific offline catalog adapter not verified | EVID-APP-0002 |
+| Offline behavior | PARTIAL | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | Reusable private capability; final POSMall commerce state remains backend-authoritative | EVID-APP-0002 |
+| Background operation | PLANNED_FOR_POSMALL | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | Reusable private capability; POSMall-specific background jobs need product tests | EVID-APP-0002 |
+| Notifications | PLANNED_FOR_POSMALL | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | Reusable private capability; POSMall notification UX remains project-specific | EVID-APP-0002 |
+| Store purchases | ARCHITECTURE_READY | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | IMPLEMENTED_AND_TESTED / BUILD_PIPELINE_READY | Store-specific purchase verification paths audited; POSMall app release not claimed | EVID-ACCOUNT-ENTITLEMENT-0001, EVID-APP-0002 |
+| Subscriptions | ARCHITECTURE_READY | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | IMPLEMENTED_AND_TESTED | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | IMPLEMENTED_AND_TESTED / BUILD_PIPELINE_READY | Subscription metadata, lifecycle, and refresh scheduling verified in backend | EVID-ACCOUNT-ENTITLEMENT-0001 |
+| Entitlements | ARCHITECTURE_READY | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | IMPLEMENTED_AND_TESTED | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | IMPLEMENTED_AND_TESTED | Store transaction is normalized into backend access state where verified | EVID-ACCOUNT-ENTITLEMENT-0001 |
+| Purchase restoration | ARCHITECTURE_READY | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | IMPLEMENTED_AND_TESTED | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | IMPLEMENTED_AND_TESTED | Restore-style reconciliation and recovery tests exist; platform policies still apply | EVID-APP-0002, EVID-ACCOUNT-ENTITLEMENT-0001 |
+| Multi-device account | ARCHITECTURE_READY | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | IMPLEMENTED_AND_TESTED | Multiple devices can be tied to one account in the audited backend capability | EVID-GAME-BACKEND-0001 |
+| Device recovery | ARCHITECTURE_READY | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | IMPLEMENTED_AND_TESTED | Recovery and replacement behavior is source/test evidenced in the private backend | EVID-APP-0002, EVID-GAME-BACKEND-0001 |
+| Device limits | ARCHITECTURE_READY | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | IMPLEMENTED_AND_TESTED | Backend device controls exist; exact per-product limits are policy-specific | EVID-GAME-BACKEND-0001 |
+| Direct device-to-device communication | ARCHITECTURE_READY | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | Reusable capability exists in another product; POSMall workflow adapter not verified | EVID-P2P-0001, EVID-P2P-0002 |
+
+## Store subscriptions, entitlements, and multi-device accounts
+
+| Capability | Module | Visibility | Implementation status | Evidence | Integrations | Limitations |
 |---|---|---|---|---|---|---|
-| Authentication/account identity | PRODUCTION | REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT | REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT | REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT | REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT | EVID-APP-0002 |
-| Customer account sync | PRODUCTION | REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT | REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT | REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT | REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT | EVID-APP-0002 |
-| Store purchases and entitlement restore | ARCHITECTURE_READY | REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT | REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT | REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT | REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT | EVID-ACCOUNT-ENTITLEMENT-0001 |
-| Device registry and account device limits | ARCHITECTURE_READY | REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT | REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT | REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT | REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT | EVID-APP-0002 |
-| POSMall catalog browsing | PRODUCTION | ARCHITECTURE_READY | ARCHITECTURE_READY | ARCHITECTURE_READY | ARCHITECTURE_READY | POSMall REST/GraphQL and storefront evidence |
-| POSMall service quotes | PRODUCTION | ARCHITECTURE_READY | ARCHITECTURE_READY | ARCHITECTURE_READY | ARCHITECTURE_READY | POSMall Pro voice/service API evidence |
-| POSMall orders and payment handoff | PRODUCTION | ARCHITECTURE_READY | ARCHITECTURE_READY | ARCHITECTURE_READY | ARCHITECTURE_READY | POSMall order/payment APIs; app adapter required |
-| Offline/local data handling | PARTIAL | REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT | REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT | REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT | REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT | EVID-APP-0002 |
-| Push/background operations | PLANNED_FOR_POSMALL | REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT | REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT | REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT | REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT | EVID-APP-0002 |
-| Secure direct device-to-device exchange | ARCHITECTURE_READY | REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT | REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT | REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT | REUSABLE_FROM_ANOTHER_SOLAR_NEUTRINO_PROJECT | EVID-P2P-0001, EVID-P2P-0002 |
+| Store-independent entitlement model | Account/device/entitlement backend | PRIVATE_CODE | IMPLEMENTED_AND_TESTED | SOURCE_VERIFIED, DATABASE_SCHEMA_VERIFIED, AUTOMATED_TEST_VERIFIED | Apple, Google Play, Microsoft Store channels; user account; device registry | Public docs do not claim cross-store purchase portability. |
+| Apple subscription verification path | Account/device/entitlement backend | PRIVATE_CODE | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | SOURCE_VERIFIED, AUTOMATED_TEST_VERIFIED | App Store account and purchase events, entitlement lifecycle | Public docs do not disclose private request details, keys, endpoints, or private client logic. |
+| Google Play subscription verification and recovery path | Account/device/entitlement backend | PRIVATE_CODE | IMPLEMENTED_AND_TESTED | SOURCE_VERIFIED, AUTOMATED_TEST_VERIFIED | Google Play subscription token validation/recovery concepts, entitlement lifecycle | POSMall Android client release is not claimed. |
+| Microsoft Store subscription verification and readiness path | Account/device/entitlement backend | PRIVATE_CODE | IMPLEMENTED_AND_TESTED / BUILD_PIPELINE_READY | SOURCE_VERIFIED, AUTOMATED_TEST_VERIFIED, UI_VERIFIED | Store preparation, entitlement verification, restore/recovery scenarios | Store review/public release status is product-specific. |
+| Account-level ownership | Account/device/entitlement backend | PRIVATE_CODE | IMPLEMENTED_AND_TESTED | SOURCE_VERIFIED, DATABASE_SCHEMA_VERIFIED | Store transaction, user account, device registry, access decisions | Does not mean a user can freely transfer purchases across unrelated store ecosystems. |
+| Multi-device account access | Account/device/entitlement backend | PRIVATE_CODE | IMPLEMENTED_AND_TESTED | SOURCE_VERIFIED, DATABASE_SCHEMA_VERIFIED, AUTOMATED_TEST_VERIFIED | Device registration, restore/recovery, session gating | Exact device limit policy is product-specific. |
+| Device recovery and replacement | Account/device/entitlement backend | PRIVATE_CODE | IMPLEMENTED_AND_TESTED | SOURCE_VERIFIED, AUTOMATED_TEST_VERIFIED | Reinstall, new device, lost local state, account recovery | Public docs do not expose fingerprinting, anti-fraud, or recovery algorithms. |
+| Server-authoritative access decision | Account/device/entitlement backend | PRIVATE_CODE | IMPLEMENTED_AND_TESTED | SOURCE_VERIFIED, DATABASE_SCHEMA_VERIFIED, API_VERIFIED | Store event journal, entitlement state, access attempts, device/session state | Store availability and platform rules can affect final access. |
 
 ## Capabilities not found or only partial
 

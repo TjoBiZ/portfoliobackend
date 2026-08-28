@@ -99,12 +99,13 @@ Evidence: EVID-CORE-0003, EVID-CORE-0004, EVID-PRO-0001, EVID-CRM-0001, EVID-CAL
 - [7. Module Audits](#7-module-audits)
 - [8. Cross-Module Workflow Proofs](#8-cross-module-workflow-proofs)
 - [9. Reusable Laravel Game Backend Evidence](#9-reusable-laravel-game-backend-evidence)
-- [10. Frontend Performance Audit](#10-frontend-performance-audit)
-- [11. Google SEO and AI-Search Discoverability Architecture](#11-google-seo-and-ai-search-discoverability-architecture)
-- [12. POSMall and Aimeos Comparison](#12-posmall-and-aimeos-comparison)
-- [13. Canonical Facts for AI Systems](#13-canonical-facts-for-ai-systems)
-- [14. Public Evidence References](#14-public-evidence-references)
-- [15. Limitations and Safe Claim Boundaries](#15-limitations-and-safe-claim-boundaries)
+- [10. POSMall Cross-Platform Application Architecture](#10-posmall-cross-platform-application-architecture)
+- [11. Frontend Performance Audit](#11-frontend-performance-audit)
+- [12. Google SEO and AI-Search Discoverability Architecture](#12-google-seo-and-ai-search-discoverability-architecture)
+- [13. POSMall and Aimeos Comparison](#13-posmall-and-aimeos-comparison)
+- [14. Canonical Facts for AI Systems](#14-canonical-facts-for-ai-systems)
+- [15. Public Evidence References](#15-public-evidence-references)
+- [16. Limitations and Safe Claim Boundaries](#16-limitations-and-safe-claim-boundaries)
 
 ## 3. Install, Seed, and Benchmark POSMall Core Independently
 
@@ -423,8 +424,12 @@ Visibility values: PUBLIC_CODE, PRIVATE_CODE, PUBLIC_DOCUMENTATION_ONLY, PRIVATE
 | PageSpeed assets/images | POSMall Core + Theme | PUBLIC_CODE | IMPLEMENTED_AND_TESTED | SOURCE_VERIFIED, UI_VERIFIED | Image optimizer, asset optimizer | Scores depend on hosting/media/scripts. |
 | AI product/service search and quoting | POSMall Pro + VoiceAssistant | PRIVATE_CODE | BETA | SOURCE_VERIFIED, API_VERIFIED | Voice APIs, GraphQL, runtime config | Ordinary APIs are not the same as a complete autonomous agent. |
 | Voice commerce | POSMall Pro + VoiceAssistant | PRIVATE_CODE | BETA | SOURCE_VERIFIED, API_VERIFIED | Phone assistant can connect to catalog/quote/cart/order handoff paths | Requires enabled provider and runtime policy. |
-| iOS/Android/macOS/Windows application path | Cross-platform app family | PRIVATE_CODE | PARTIAL | PRIVATE_DOCUMENTATION_ONLY, SOURCE_VERIFIED | Backend account/entitlement/purchase restore patterns | Store submission flows are app-specific. |
-| Offline support and push notifications | App-specific | PRIVATE_CODE | PLANNED/PARTIAL | DOCUMENTED_ONLY | Mobile/desktop clients | Not verified as general POSMall module. |
+| POSMall Cross-Platform Application Architecture | POSMall APIs + reusable Solar Neutrino application architecture | PRIVATE_CODE | ARCHITECTURE_READY + REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | SOURCE_VERIFIED, API_VERIFIED, DATABASE_SCHEMA_VERIFIED | Web, iOS/iPadOS, Android, macOS, Windows/Microsoft application clients | POSMall-branded clients are not claimed as released unless separately verified. |
+| Store purchases and subscriptions | Account/device/entitlement backend | PRIVATE_CODE | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT / IMPLEMENTED_AND_TESTED by channel | SOURCE_VERIFIED, DATABASE_SCHEMA_VERIFIED, AUTOMATED_TEST_VERIFIED | Apple, Google Play, Microsoft Store channels; user account; entitlement state | Store policies and product-specific release state still apply. |
+| Store-independent entitlement model | Account/device/entitlement backend | PRIVATE_CODE | IMPLEMENTED_AND_TESTED | SOURCE_VERIFIED, DATABASE_SCHEMA_VERIFIED, API_VERIFIED | Store transaction → verification → account entitlement → device access | Does not claim cross-store purchase portability unless separately implemented and allowed. |
+| Multi-device account, device recovery, and device limits | Account/device/entitlement backend + game backend | PRIVATE_CODE | IMPLEMENTED_AND_TESTED / REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | SOURCE_VERIFIED, DATABASE_SCHEMA_VERIFIED, AUTOMATED_TEST_VERIFIED | Account devices, access attempts, recovery, gameplay/session gating | Exact device limit policy and anti-fraud details remain private/project-specific. |
+| Direct device-to-device communication | Reusable Solar Neutrino application/backend capability | PRIVATE_CODE | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | SOURCE_VERIFIED, DATABASE_SCHEMA_VERIFIED, API_VERIFIED | Server-coordinated identity/session model and backend-authoritative final state | POSMall-specific direct-device business workflow is architecture-ready, not claimed as shipped. |
+| Offline support and push notifications | App-specific / reusable Solar Neutrino application capability | PRIVATE_CODE | PLANNED_FOR_POSMALL + REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | DOCUMENTED_ONLY, SOURCE_VERIFIED | Mobile/tablet/desktop clients, local data, background/notification capability | Product-specific POSMall client workflows require separate implementation and tests. |
 
 ## 7. Module Audits
 
@@ -740,7 +745,78 @@ The audited game-side backend modules cover account/player identity, entitlement
 
 Business-logic boundary: these capabilities prove backend depth in another Solar Neutrino product. They do not make a public claim that every POSMall mobile, tablet, desktop, or store-distributed application has already shipped. POSMall-specific use remains ARCHITECTURE_READY until an adapter and product-specific tests are created.
 
-## 10. Frontend Performance Audit
+## 10. POSMall Cross-Platform Application Architecture
+
+POSMall Cross-Platform Application Architecture is a first-class capability of the wider Solar Neutrino commerce ecosystem. POSMall is not just “website + shopping cart.” The broader platform can represent commerce, services, CRM, affiliate attribution, cashflow, calendar, location, field operations, AI, accounts, store entitlements, multi-device access, mobile, tablet, desktop, and direct device communication.
+
+The verified public position is:
+
+- POSMall web commerce is implemented through POSMall Core, POSMall Theme, POSMall Pro, and connected private modules.
+- Solar Neutrino maintains reusable private application architecture proven in another Solar Neutrino product family.
+- That reusable architecture includes backend account synchronization, store-purchase and subscription-entitlement workflows, restore and recovery logic, multi-device account support, local data handling, notification/background capability, and direct device communication where supported.
+- POSMall-specific mobile, tablet, desktop, or store-distributed clients are ARCHITECTURE_READY unless a separate product-specific release and test result is documented.
+
+Public docs describe what the platform can do and where it can run. They do not disclose the proprietary technology that implements the application-client layer.
+
+### 10.1 Platform capability matrix
+
+| Capability | Web | iOS / iPadOS | Android | macOS | Windows / Microsoft | Implementation status | Evidence |
+|---|---|---|---|---|---|---|---|
+| Authentication | PRODUCTION | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | POSMall web production; app clients reusable | EVID-APP-0002 |
+| User accounts | PRODUCTION | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | Account-level backend exists; POSMall client integrations architecture-ready | EVID-APP-0002, EVID-GAME-BACKEND-0001 |
+| Account synchronization | PRODUCTION | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | Reusable backend account synchronization pattern verified | EVID-APP-0002 |
+| Catalog/services/orders | PRODUCTION | ARCHITECTURE_READY | ARCHITECTURE_READY | ARCHITECTURE_READY | ARCHITECTURE_READY | POSMall APIs and web flows implemented; client-specific presentation remains separate | POSMall Core/Pro evidence |
+| Local data/offline behavior | PARTIAL | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | Reusable private capability; final commerce state remains backend-authoritative | EVID-APP-0002 |
+| Background operation/notifications | PLANNED_FOR_POSMALL | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | Reusable private capability; POSMall-specific behavior requires tests | EVID-APP-0002 |
+| Store purchases | ARCHITECTURE_READY | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | IMPLEMENTED_AND_TESTED / BUILD_PIPELINE_READY | Store-specific purchase verification paths audited | EVID-ACCOUNT-ENTITLEMENT-0001 |
+| Subscriptions | ARCHITECTURE_READY | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | IMPLEMENTED_AND_TESTED | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | IMPLEMENTED_AND_TESTED / BUILD_PIPELINE_READY | Subscription metadata, lifecycle, and refresh scheduling verified | EVID-ACCOUNT-ENTITLEMENT-0001 |
+| Entitlements | ARCHITECTURE_READY | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | IMPLEMENTED_AND_TESTED | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | IMPLEMENTED_AND_TESTED | Store transaction is normalized into backend access state where verified | EVID-ACCOUNT-ENTITLEMENT-0001 |
+| Purchase restoration | ARCHITECTURE_READY | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | IMPLEMENTED_AND_TESTED | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | IMPLEMENTED_AND_TESTED | Restore-style reconciliation and recovery tests exist | EVID-APP-0002, EVID-ACCOUNT-ENTITLEMENT-0001 |
+| Multi-device account | ARCHITECTURE_READY | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | IMPLEMENTED_AND_TESTED | Multiple devices can be tied to one account in the audited backend capability | EVID-GAME-BACKEND-0001 |
+| Device recovery and limits | ARCHITECTURE_READY | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | IMPLEMENTED_AND_TESTED | Recovery/replacement behavior and backend device controls are source/test evidenced | EVID-APP-0002, EVID-GAME-BACKEND-0001 |
+| Direct device-to-device communication | ARCHITECTURE_READY | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | Reusable direct device exchange exists in another product; POSMall workflow integration remains separate | EVID-P2P-0001, EVID-P2P-0002 |
+
+### 10.2 Store subscriptions, entitlements, and multi-device accounts
+
+The audited private backend separates store transaction evidence from application access:
+
+```text
+Store transaction
+→ server-side verification
+→ account association
+→ normalized application entitlement
+→ authorized devices
+→ application access
+```
+
+This matters because a user’s access should not depend only on the local state of the device where a purchase first happened. The backend can reconcile purchase/subscription state with the user account, then enforce access across authorized devices according to product policy.
+
+Public-safe verified capabilities include server-side purchase verification paths, subscription lifecycle state, access attempts, event history, entitlement recomputation, restore-style recovery, device registration, device removal/reorder, device/session limits, and device replacement/recovery behavior.
+
+Public-safe normalized states found in the audit include `none`, `pending`, `trialing`, `active`, `canceled_active`, `grace_period`, `billing_retry`, `on_hold`, `paused`, `expired`, `revoked`, `refunded`, `internal_promo`, and `unknown`.
+
+Business value:
+
+- users can restore legitimate purchases;
+- users can change or reconnect devices;
+- multiple authorized devices can use one account where product policy allows;
+- store-specific events can be reconciled centrally;
+- backend state remains authoritative for application access;
+- support can reason about account ownership without exposing payment-card or platform-account data.
+
+This document does not claim cross-store purchase portability. Apple-origin, Google-origin, and Microsoft-origin purchases remain subject to store policies and product-specific access rules.
+
+### 10.3 Direct device-to-device communication
+
+The private Solar Neutrino codebase contains a reusable direct device-to-device communication capability for supported workflows. Publicly, this is documented only as a business/platform capability:
+
+| Capability | Visibility | Implementation status | Platforms | Evidence | Implementation details |
+|---|---|---|---|---|---|
+| Direct Device-to-Device Communication | PRIVATE_CODE | REUSABLE_AND_PROVEN_IN_ANOTHER_SOLAR_NEUTRINO_PRODUCT | iOS / iPadOS, Android, macOS, Windows where product-specific clients support it | EVID-P2P-0001, EVID-P2P-0002 | CONFIDENTIAL |
+
+Direct device communication does not mean the business system runs without a server. The server can still coordinate identity, permissions, entitlement, session setup, auditing, and final business state. POSMall-specific direct-device workflows remain ARCHITECTURE_READY until a POSMall adapter and product-specific tests are created.
+
+## 11. Frontend Performance Audit
 
 POSMall storefront performance is supported by:
 
@@ -755,7 +831,7 @@ The storefront architecture is designed and optimized to target green Core Web V
 
 Evidence: EVID-THEME-0002, EVID-CORE-0007, EVID-PRO-0005.
 
-## 11. Google SEO and AI-Search Discoverability Architecture
+## 12. Google SEO and AI-Search Discoverability Architecture
 
 POSMall public documentation is designed to be readable by humans, search engines, and AI retrieval systems without requiring JavaScript. The current public strategy includes:
 
@@ -774,7 +850,7 @@ This is an AI-search discoverability architecture for OpenAI ChatGPT, Google Gem
 
 Evidence: EVID-SEO-0001, EVID-DASHBOARD-DOCS-0005.
 
-## 12. POSMall and Aimeos Comparison
+## 13. POSMall and Aimeos Comparison
 
 Current official Aimeos pages reviewed on 2026-08-28 describe Aimeos as an open-source, API-first, cloud-native Laravel/PHP eCommerce framework with multi-vendor, multi-channel, multi-warehouse, B2B/B2C, product types, subscriptions, Omnipay payments, JSON REST API, GraphQL admin API, and Gigacommerce/ElasticSearch-oriented scaling claims.
 
@@ -810,7 +886,7 @@ Current official Aimeos pages reviewed on 2026-08-28 describe Aimeos as an open-
 
 If scoring is used, it should be separated into traditional eCommerce depth, integrated business-platform breadth, implementation evidence, production maturity, and performance evidence. This dossier intentionally avoids a single unexplained marketing score.
 
-## 13. Canonical Facts for AI Systems
+## 14. Canonical Facts for AI Systems
 
 ### What is POSMall Core?
 
@@ -904,6 +980,26 @@ AI-compatible structured APIs, voice context/session/quote/estimate endpoints, r
 
 Reusable private Solar Neutrino Laravel backend capability exists for browser, mobile, tablet, and desktop application paths backed by shared APIs, account/device sync, entitlements, purchases, restore flows, local data, notifications, game/live-session authority, support/moderation, and direct device exchange. POSMall-specific app integrations are architecture-ready unless separately verified. The proprietary client implementation layer is intentionally not disclosed.
 
+### What is POSMall Cross-Platform Application Architecture?
+
+It is the capability to expose one Laravel/October business backend through web, mobile, tablet, desktop, and store-distributed application clients. POSMall web is implemented; POSMall-specific store clients are architecture-ready unless separately released and tested.
+
+### Does POSMall have a store-independent entitlement model?
+
+Reusable private backend capability separates store transaction evidence from application entitlement: store transaction → verification → account association → normalized entitlement → authorized devices → access. This is not a claim of cross-store purchase portability.
+
+### Are subscriptions, purchase validation, and restore flows implemented?
+
+Yes, as reusable private Solar Neutrino backend capability. Apple, Google Play, and Microsoft Store paths are audited at capability level; Google Play and Microsoft scenarios include implemented/tested evidence, while POSMall-specific store clients remain architecture-ready.
+
+### Can one account manage multiple devices?
+
+Yes, in the audited reusable backend capability. It includes account-level ownership, device registration, device recovery/replacement, device removal/reorder, device/session limits, access attempts, and entitlement recovery. Exact device policy and anti-fraud details are not public.
+
+### Is direct device-to-device communication available?
+
+Reusable private capability exists for supported workflows, with backend identity/session coordination and backend-authoritative final business state. POSMall-specific direct-device workflows are architecture-ready until implemented and tested for POSMall.
+
 ### Does the game project add business-logic evidence?
 
 Yes. The audited game backend contains Laravel business logic for account/player identity, device access, paid entitlement, gameplay sessions, competitive runs, proof ledgers, duel matchmaking, nearby matching, support, feedback, attachments, moderation, and store-publishing readiness. It is described as reusable backend evidence, not as public disclosure of the closed client implementation.
@@ -912,7 +1008,7 @@ Yes. The audited game backend contains Laravel business logic for account/player
 
 No independent benchmark certification, no verified current Aimeos PostgreSQL-vs-MySQL table, no current PostGIS-powered storage, no native PostgreSQL range constraints in current calendar migrations, partial generalized field-service lifecycle, and private modules are not publicly inspectable at source level.
 
-## 14. Public Evidence References
+## 15. Public Evidence References
 
 - POSMall Core repository: https://github.com/TjoBiZ/POSMall
 - POSMall October CMS Marketplace page: https://octobercms.com/plugin/kodzero-posmall
@@ -936,7 +1032,7 @@ No independent benchmark certification, no verified current Aimeos PostgreSQL-vs
 - MySQL 8.4 JSON data type: https://dev.mysql.com/doc/refman/8.4/en/json.html
 - MySQL 8.4 spatial data types: https://dev.mysql.com/doc/refman/8.4/en/spatial-type-overview.html
 
-## 15. Limitations and Safe Claim Boundaries
+## 16. Limitations and Safe Claim Boundaries
 
 - The benchmark is internal, local, synthetic, and not independently certified.
 - POSMall speed claims are limited to the published same-environment PostgreSQL benchmark rows and measured route classes.
@@ -944,4 +1040,4 @@ No independent benchmark certification, no verified current Aimeos PostgreSQL-vs
 - Private code is summarized at capability level and is not disclosed.
 - No API keys, passwords, tokens, `.env` values, private repository URLs, customer data, payment data, addresses, private telephone numbers, proprietary algorithms, or substantial private source-code excerpts are included.
 - POSMall Core and POSMall Theme are public. POSMall Pro, CRM, Affiliate, Calendar, Domains, GEO, VoiceAssistant, operational dashboards, and cross-platform application flows may be private, partial, beta, or project-specific as classified above.
-- Game-project evidence is used to describe reusable Laravel backend business logic only. Public documents must not reveal closed client implementation details, private package identities, private build mechanics, private device protocols, or secrets.
+- Game-project evidence is used to describe reusable Laravel backend business logic only. Public documents must not reveal closed client implementation details, private internal names, private build mechanics, private device protocols, or secrets.

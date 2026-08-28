@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>October CMS & Laravel Product Systems by Roman Primerov | POSMall, AI Commerce, CRM</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-    <meta name="description" content="A PostgreSQL-first October CMS and Laravel product suite by Roman Primerov: public POSMall ecommerce with US tax configuration, final POSMall PostgreSQL vs Aimeos PostgreSQL benchmark proof, Sylius no-numbers comparison, AI-agent-ready commerce APIs, CRM, cashflow, affiliate workflows, and cross-platform app architecture." />
+    <meta name="description" content="A PostgreSQL-first October CMS and Laravel product suite by Roman Primerov: public POSMall ecommerce with US tax configuration, final POSMall PostgreSQL vs Aimeos PostgreSQL benchmark proof, Sylius no-numbers comparison, AI-agent-ready commerce APIs, CRM, cashflow, affiliate workflows, store entitlements, multi-device accounts, and cross-platform app architecture." />
     <meta name="keywords" content="October CMS ecommerce, Laravel ecommerce, POSMall, PostgreSQL ecommerce, Aimeos PostgreSQL benchmark, Sylius PostgreSQL benchmark, US sales tax ecommerce, AI commerce API, voice commerce, POSMall Pro, October CMS CRM, Laravel CRM, cross-platform Laravel app, Roman Primerov" />
     <meta name="author" content="Roman Primerov" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
@@ -782,7 +782,7 @@
               <span>
                 <span class="badge-soft orange">Cross-platform</span>
                 <h3>Game and app architecture</h3>
-                <p>Reusable backend and application-client patterns for shared mechanics, localization, account sync, entitlements, restore flows, and iOS/Android/macOS/Windows delivery.</p>
+                <p>Reusable backend and application-client patterns for account sync, store subscriptions, entitlement restore, multi-device access, device recovery, and iOS/Android/macOS/Windows delivery.</p>
               </span>
               <span class="card-cta">See details →</span>
             </a>
@@ -970,10 +970,10 @@
             </article>
 
             <article class="product-card private">
-              <h3>Cross-platform game and app-store application architecture</h3>
+              <h3>Cross-platform game and store-distributed application architecture</h3>
               <p>
                 A Laravel/October backend pattern connected to web, mobile, tablet, and desktop application clients for iOS, Android, macOS, and Windows.
-                The work includes account, sync, entitlement, restore, and app-store readiness concepts without tying the business to one app channel.
+                The work includes account synchronization, store subscriptions, server-side entitlements, purchase restoration, multi-device account access, device recovery, device limits, direct device communication, and store-readiness concepts without tying the business to one app channel.
               </p>
               <div class="badges">
                 <span class="badge-soft orange">Private</span>
@@ -985,10 +985,13 @@
               <details class="product-details">
                 <summary>Open cross-platform notes</summary>
                 <ul>
-                  <li><strong>Business value:</strong> one backend architecture can support web, mobile, desktop, subscriptions, purchases, restores, and cold relaunch scenarios.</li>
-                  <li><strong>Store channels:</strong> designed for Apple, Google Play, and Microsoft Store style purchase/restore flows.</li>
+                  <li><strong>Business value:</strong> one backend architecture can support web, mobile, tablet, desktop, subscriptions, purchases, restores, multi-device accounts, and cold relaunch scenarios.</li>
+                  <li><strong>Store channels:</strong> designed for Apple, Google Play, and Microsoft Store style purchase, subscription, entitlement, and restore flows.</li>
+                  <li><strong>Account model:</strong> store transactions can be reconciled into backend account-level access so legitimate users can recover access on authorized devices according to product policy.</li>
+                  <li><strong>Device model:</strong> backend device registration, device recovery, device limits, and direct device communication are described at capability level only.</li>
                   <li><strong>Status wording:</strong> this page describes engineering capability and readiness patterns, not a claim that every app is already published in every store.</li>
                 </ul>
+                <p><a href="/knowledge/posmall-cross-platform-and-p2p-architecture.md">Read the public-safe cross-platform and P2P architecture document.</a></p>
               </details>
             </article>
           </div>
@@ -1480,7 +1483,7 @@
           </details>
           <details class="product-details">
             <summary>Can it be packaged for Apple, Google Play, Microsoft, and desktop channels?</summary>
-            <p>The architecture includes cross-platform backend and application-client patterns for those channels. Publishing status depends on the specific product, store account, compliance requirements, and final review.</p>
+            <p>The architecture includes cross-platform backend and application-client patterns for those channels, including store subscriptions, entitlement recovery, account-level ownership, multi-device access, device limits, and support visibility where a product enables them. Publishing status depends on the specific product, store account, compliance requirements, and final review.</p>
           </details>
         </section>
 
