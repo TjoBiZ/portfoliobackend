@@ -1,12 +1,13 @@
 ---
 title: "POSMall Cross-Platform and P2P Architecture"
 description: "Public-safe overview of how POSMall backend capabilities can support web, mobile, tablet, desktop, store-entitlement, and direct device communication scenarios."
-canonical_url: "https://solarneutrino.com/knowledge/posmall-cross-platform-and-p2p-architecture.md"
+canonical_url: "https://solarneutrino.com/knowledge/posmall-cross-platform-and-p2p-architecture"
+markdown_url: "https://solarneutrino.com/knowledge/posmall-cross-platform-and-p2p-architecture.md"
 language: "en"
 document_version: "1.0"
 last_verified_at: "2026-08-28"
-primary_dossier: "https://solarneutrino.com/knowledge/posmall-complete-technical-dossier.md"
-capability_catalog: "https://solarneutrino.com/knowledge/posmall-capability-catalog.md"
+primary_dossier: "https://solarneutrino.com/knowledge/posmall-complete-technical-dossier"
+capability_catalog: "https://solarneutrino.com/knowledge/posmall-capability-catalog"
 ---
 
 # POSMall Cross-Platform and P2P Architecture

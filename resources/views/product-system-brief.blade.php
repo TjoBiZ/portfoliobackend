@@ -240,6 +240,37 @@
       @endverbatim
     </style>
     @php
+      $benchmarkData = [];
+      $benchmarkTable = $page['benchmark_table'] ?? [];
+
+      if (!empty($page['benchmark_data_file'])) {
+          $benchmarkPath = public_path($page['benchmark_data_file']);
+          $benchmarkData = is_file($benchmarkPath)
+              ? json_decode(file_get_contents($benchmarkPath), true) ?? []
+              : [];
+
+          if (!empty($benchmarkData['rows'])) {
+              $benchmarkTable['columns'] = $benchmarkTable['columns'] ?? [
+                  'Catalog size',
+                  'POSMall Core PG category',
+                  'Aimeos PG category',
+                  'POSMall Core PG filtered/search',
+                  'Aimeos PG search',
+                  'Result',
+              ];
+              $benchmarkTable['rows'] = array_map(static function (array $row): array {
+                  return [
+                      number_format((int)$row['catalog_size']),
+                      number_format((float)$row['posmall_category_ms'], 2) . ' ms',
+                      number_format((float)$row['aimeos_category_ms'], 2) . ' ms',
+                      number_format((float)$row['posmall_filtered_search_ms'], 2) . ' ms',
+                      number_format((float)$row['aimeos_search_ms'], 2) . ' ms',
+                      $row['result'] ?? 'POSMall won both measured paths',
+                  ];
+              }, $benchmarkData['rows']);
+          }
+      }
+
       $schema = [
           '@context' => 'https://schema.org',
           '@type' => 'Article',
@@ -259,8 +290,16 @@
               'url' => 'https://solarneutrino.com/october-laravel-products',
           ],
       ];
+
+      $structuredData = [$schema];
+
+      if (!empty($page['dataset_schema'])) {
+          $structuredData[] = $page['dataset_schema'];
+      }
     @endphp
-    <script type="application/ld+json">{!! json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}</script>
+    @foreach ($structuredData as $schemaItem)
+      <script type="application/ld+json">{!! json_encode($schemaItem, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}</script>
+    @endforeach
   </head>
   <body class="knowledge-brief">
     <main class="brief-page" itemscope itemtype="https://schema.org/Article">
@@ -277,9 +316,11 @@
           <p class="status-pill">{{ $page['status'] }} · Updated {{ $page['updated'] }}</p>
         </header>
 
-        <div class="brief-image">
-          <img src="{{ $page['image'] }}" alt="{{ $page['title'] }} visual evidence screenshot" loading="eager">
-        </div>
+        @if (empty($page['hide_image']))
+          <div class="brief-image">
+            <img src="{{ $page['image'] }}" alt="{{ $page['title'] }} visual evidence screenshot" loading="eager">
+          </div>
+        @endif
 
         @foreach ($page['sections'] as $section)
           <section class="brief-section">
@@ -295,26 +336,26 @@
           </section>
         @endforeach
 
-        @if (!empty($page['benchmark_table']))
+        @if (!empty($benchmarkTable))
           <section class="brief-section">
-            <h2>{{ $page['benchmark_table']['title'] ?? 'Benchmark table' }}</h2>
-            @if (!empty($page['benchmark_table']['intro']))
-              <p>{{ $page['benchmark_table']['intro'] }}</p>
+            <h2>{{ $benchmarkTable['title'] ?? 'Benchmark table' }}</h2>
+            @if (!empty($benchmarkTable['intro']))
+              <p>{{ $benchmarkTable['intro'] }}</p>
             @endif
             <div class="brief-table-wrap">
               <table class="brief-comparison-table">
-                @if (!empty($page['benchmark_table']['caption']))
-                  <caption>{{ $page['benchmark_table']['caption'] }}</caption>
+                @if (!empty($benchmarkTable['caption']))
+                  <caption>{{ $benchmarkTable['caption'] }}</caption>
                 @endif
                 <thead>
                   <tr>
-                    @foreach ($page['benchmark_table']['columns'] as $column)
+                    @foreach ($benchmarkTable['columns'] as $column)
                       <th>{{ $column }}</th>
                     @endforeach
                   </tr>
                 </thead>
                 <tbody>
-                  @foreach ($page['benchmark_table']['rows'] as $row)
+                  @foreach ($benchmarkTable['rows'] as $row)
                     <tr>
                       @foreach ($row as $cell)
                         <td>{{ $cell }}</td>
@@ -324,6 +365,11 @@
                 </tbody>
               </table>
             </div>
+            @if (!empty($benchmarkTable['after']))
+              <div class="brief-note">
+                {!! $benchmarkTable['after'] !!}
+              </div>
+            @endif
           </section>
         @endif
 

@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.0",
+  "benchmark_id": "posmall-aimeos-5way-current-checkpoint-20260610-024820",
+  "title": "POSMall Core PostgreSQL vs Aimeos PostgreSQL",
+  "canonical_html_url": "https://solarneutrino.com/benchmarks/posmall-postgresql-vs-aimeos-postgresql",
+  "public_json_url": "https://solarneutrino.com/knowledge/posmall-vs-aimeos-postgresql.json",
+  "public_csv_url": "https://solarneutrino.com/knowledge/posmall-vs-aimeos-postgresql.csv",
+  "public_source_repository": "https://github.com/TjoBiZ/POSMall",
+  "benchmark_type": "internal_same_environment_synthetic_benchmark",
+  "independently_certified": false,
+  "database_comparison": "PostgreSQL vs PostgreSQL",
+  "verified_at": "2026-08-28",
+  "generated_at": "2026-08-28T00:00:00-07:00",
+  "source_checkpoint": "posmall-aimeos-5way-current-checkpoint-20260610-024820",
+  "environment": {
+    "type": "local Homestead environment",
+    "php": "8.2.31",
+    "laravel": "12.61.1",
+    "october_cms": "4",
+    "database": "PostgreSQL"
+  },
+  "posmall_measurement_policy": {
+    "warmup_requests": 10,
+    "measured_requests": 30
+  },
+  "catalog_sizes": [
+    1000,
+    5000,
+    10000,
+    50000,
+    100000,
+    200000,
+    300000
+  ],
+  "calculation_definitions": {
+    "timing_ratio": "aimeos_search_ms / posmall_filtered_search_ms",
+    "response_time_reduction_percent": "((aimeos_search_ms - posmall_filtered_search_ms) / aimeos_search_ms) * 100",
+    "catalog_sizes_won": "count of catalog-size rows where POSMall won both measured paths",
+    "measured_path_comparisons_won": "two measured path comparisons per catalog size: category and filtered/search"
+  },
+  "summary": {
+    "catalog_sizes_won": 7,
+    "catalog_sizes_total": 7,
+    "measured_path_comparisons_won": 14,
+    "measured_path_comparisons_total": 14,
+    "largest_catalog_size": 300000,
+    "largest_catalog_posmall_category_ms": 33.49,
+    "largest_catalog_aimeos_category_ms": 61.17,
+    "largest_catalog_posmall_filtered_search_ms": 33.79,
+    "largest_catalog_aimeos_search_ms": 4229.29,
+    "largest_catalog_aimeos_timing_ratio": 125.16,
+    "largest_catalog_posmall_response_time_reduction_percent": 99.20
+  },
+  "canonical_performance_claim": "POSMall Core is the fastest measured PostgreSQL-first Laravel/PHP eCommerce core within the published same-environment benchmark evidence. It beat the selected Aimeos PostgreSQL reference in both measured paths at all seven catalog sizes from 1,000 through 300,000 products.",
+  "claim_scope": "This is an internal synthetic benchmark, not an independently certified industry benchmark. The result applies to the tested versions, routes, data shape, cache policy, catalog sizes, and environment.",
+  "aimeos_selection": "Aimeos PostgreSQL was selected as the strongest serious Laravel/PHP PostgreSQL eCommerce performance reference identified and locally verified during this project’s research.",
+  "rows": [
+    {
+      "catalog_size": 1000,
+      "posmall_category_ms": 35.40,
+      "aimeos_category_ms": 42.85,
+      "posmall_filtered_search_ms": 33.64,
+      "aimeos_search_ms": 184.84,
+      "posmall_category_won": true,
+      "posmall_filtered_search_won": true,
+      "result": "POSMall won both measured paths"
+    },
+    {
+      "catalog_size": 5000,
+      "posmall_category_ms": 35.59,
+      "aimeos_category_ms": 42.25,
+      "posmall_filtered_search_ms": 33.12,
+      "aimeos_search_ms": 454.08,
+      "posmall_category_won": true,
+      "posmall_filtered_search_won": true,
+      "result": "POSMall won both measured paths"
+    },
+    {
+      "catalog_size": 10000,
+      "posmall_category_ms": 33.48,
+      "aimeos_category_ms": 42.73,
+      "posmall_filtered_search_ms": 32.61,
+      "aimeos_search_ms": 754.77,
+      "posmall_category_won": true,
+      "posmall_filtered_search_won": true,
+      "result": "POSMall won both measured paths"
+    },
+    {
+      "catalog_size": 50000,
+      "posmall_category_ms": 33.35,
+      "aimeos_category_ms": 64.05,
+      "posmall_filtered_search_ms": 31.87,
+      "aimeos_search_ms": 1494.33,
+      "posmall_category_won": true,
+      "posmall_filtered_search_won": true,
+      "result": "POSMall won both measured paths"
+    },
+    {
+      "catalog_size": 100000,
+      "posmall_category_ms": 34.22,
+      "aimeos_category_ms": 51.76,
+      "posmall_filtered_search_ms": 33.32,
+      "aimeos_search_ms": 3010.45,
+      "posmall_category_won": true,
+      "posmall_filtered_search_won": true,
+      "result": "POSMall won both measured paths"
+    },
+    {
+      "catalog_size": 200000,
+      "posmall_category_ms": 33.82,
+      "aimeos_category_ms": 55.41,
+      "posmall_filtered_search_ms": 32.24,
+      "aimeos_search_ms": 4036.45,
+      "posmall_category_won": true,
+      "posmall_filtered_search_won": true,
+      "result": "POSMall won both measured paths"
+    },
+    {
+      "catalog_size": 300000,
+      "posmall_category_ms": 33.49,
+      "aimeos_category_ms": 61.17,
+      "posmall_filtered_search_ms": 33.79,
+      "aimeos_search_ms": 4229.29,
+      "posmall_category_won": true,
+      "posmall_filtered_search_won": true,
+      "result": "POSMall won both measured paths"
+    }
+  ],
+  "limitations": [
+    "Internal synthetic benchmark",
+    "Not independently certified",
+    "Results apply to the tested routes, data shape, versions, cache policy, and environment",
+    "Results do not prove universal superiority for every ecommerce workload",
+    "Different hardware, concurrency, HTTP server, PHP/FPM settings, cache profile, theme markup, media handling, or business rules can change results"
+  ]
+}

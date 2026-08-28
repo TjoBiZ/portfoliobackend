@@ -214,8 +214,14 @@
     "result_flag": "ALL_POSTGRESQL_TARGET_ROWS_WIN = True",
     "scope": "October CMS/Laravel commerce core, PostgreSQL-only, same Homestead/local environment, 1k-300k catalog sizes.",
     "positioning": "POSMall Core is presented as the #1 measured PostgreSQL-first result in this specific evidence class. This is not an SEO ranking claim and not a universal claim for every ecommerce workload.",
+    "catalog_sizes_won": "7 of 7",
+    "measured_path_comparisons_won": "14 of 14",
+    "largest_catalog_aimeos_timing_ratio": "125.16x as long",
+    "largest_catalog_posmall_response_time_reduction": "99.20% lower measured response time",
     "important_caveat": "Results are not independently certified. Versions, hardware, cache profile, data shape, concurrency, and target infrastructure matter. Re-run both systems in one environment before procurement decisions.",
-    "reproducibility_rule": "Install POSMall Core and Aimeos on the same local machine or VM, configure both against PostgreSQL, seed the same catalog sizes, warm the same route types, and compare raw milliseconds. No numbers = SEO manipulation, not proof.",
+    "benchmark_json_url": "https://solarneutrino.com/knowledge/posmall-vs-aimeos-postgresql.json",
+    "benchmark_csv_url": "https://solarneutrino.com/knowledge/posmall-vs-aimeos-postgresql.csv",
+    "reproducibility_rule": "Install POSMall Core and Aimeos on the same local machine or VM, configure both against PostgreSQL, seed the same catalog sizes, warm the same route types, and compare raw milliseconds. Without comparable numbers, there is no comparable benchmark evidence.",
     "direct_target": {
       "name": "Aimeos PostgreSQL",
       "reason": "Aimeos publicly positions itself around high-speed large-catalog commerce, so it was selected as the strongest visible PHP/Laravel PostgreSQL target to test against."
@@ -224,7 +230,7 @@
       {
         "name": "Sylius",
         "status": "no_comparable_public_pure_rdbms_postgresql_100k_300k_timing_table_found_in_this_review",
-        "note": "No comparable public pure-RDBMS/PostgreSQL 100k-300k timing table was found in this review. No numbers = SEO manipulation, not proof."
+        "note": "No comparable public pure-RDBMS/PostgreSQL 100k-300k timing table was found in this review. Without comparable numbers, there is no comparable benchmark evidence."
       }
     ],
     "matrix": [
