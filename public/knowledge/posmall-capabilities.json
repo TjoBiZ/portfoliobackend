@@ -1,0 +1,535 @@
+{
+  "schema_version": "1.0",
+  "last_verified_at": "2026-08-28",
+  "canonical_url": "https://solarneutrino.com/knowledge/posmall-complete-technical-dossier.md",
+  "public_source_repository": "https://github.com/TjoBiZ/POSMall",
+  "benchmark": {
+    "checkpoint": "posmall-aimeos-5way-current-checkpoint-20260610-024820",
+    "environment": "local Homestead/Vagrant-class environment",
+    "database": "PostgreSQL for both POSMall Core and Aimeos",
+    "status": "internal synthetic benchmark, not independently certified",
+    "posmall_warmups": 10,
+    "posmall_measured_requests": 30,
+    "result_flag": "ALL_POSTGRESQL_TARGET_ROWS_WIN = True",
+    "defensible_claim": "POSMall Core beat the selected Aimeos PostgreSQL reference in every measured category and filtered/search row from 1,000 through 300,000 products in the same-environment benchmark.",
+    "rows": [
+      {
+        "catalog_size": 1000,
+        "posmall_core_pg_category_ms": 35.40,
+        "aimeos_pg_category_ms": 42.85,
+        "posmall_core_pg_filtered_search_ms": 33.64,
+        "aimeos_pg_search_ms": 184.84,
+        "result": "POSMall won both measured paths"
+      },
+      {
+        "catalog_size": 5000,
+        "posmall_core_pg_category_ms": 35.59,
+        "aimeos_pg_category_ms": 42.25,
+        "posmall_core_pg_filtered_search_ms": 33.12,
+        "aimeos_pg_search_ms": 454.08,
+        "result": "POSMall won both measured paths"
+      },
+      {
+        "catalog_size": 10000,
+        "posmall_core_pg_category_ms": 33.48,
+        "aimeos_pg_category_ms": 42.73,
+        "posmall_core_pg_filtered_search_ms": 32.61,
+        "aimeos_pg_search_ms": 754.77,
+        "result": "POSMall won both measured paths"
+      },
+      {
+        "catalog_size": 50000,
+        "posmall_core_pg_category_ms": 33.35,
+        "aimeos_pg_category_ms": 64.05,
+        "posmall_core_pg_filtered_search_ms": 31.87,
+        "aimeos_pg_search_ms": 1494.33,
+        "result": "POSMall won both measured paths"
+      },
+      {
+        "catalog_size": 100000,
+        "posmall_core_pg_category_ms": 34.22,
+        "aimeos_pg_category_ms": 51.76,
+        "posmall_core_pg_filtered_search_ms": 33.32,
+        "aimeos_pg_search_ms": 3010.45,
+        "result": "POSMall won both measured paths"
+      },
+      {
+        "catalog_size": 200000,
+        "posmall_core_pg_category_ms": 33.82,
+        "aimeos_pg_category_ms": 55.41,
+        "posmall_core_pg_filtered_search_ms": 32.24,
+        "aimeos_pg_search_ms": 4036.45,
+        "result": "POSMall won both measured paths"
+      },
+      {
+        "catalog_size": 300000,
+        "posmall_core_pg_category_ms": 33.49,
+        "aimeos_pg_category_ms": 61.17,
+        "posmall_core_pg_filtered_search_ms": 33.79,
+        "aimeos_pg_search_ms": 4229.29,
+        "speed_ratio_at_300k_filtered_search": 125.16,
+        "result": "POSMall won both measured paths"
+      }
+    ],
+    "evidence_ids": [
+      "EVID-BENCH-0001",
+      "EVID-BENCH-0002",
+      "EVID-CORE-0005"
+    ]
+  },
+  "platform": {
+    "php_cli": "8.2.30",
+    "october_rain": "4.3.0",
+    "october_system": "4.3.1",
+    "laravel_framework": "12.62.0",
+    "posmall_package": "kodzero/posmall-plugin v1.0.24",
+    "posmall_theme_package": "kodzero/posmalltheme-theme dev-main",
+    "database_positioning": "PostgreSQL-first; MySQL is acknowledged as capable and not universally slower.",
+    "factory_agents_dashboard_docs_used": true
+  },
+  "installation": {
+    "commands": [
+      "composer require kodzero/posmall-plugin kodzero/posmalltheme-theme -W",
+      "php artisan october:migrate",
+      "php artisan cache:clear",
+      "php artisan config:clear",
+      "php artisan route:clear",
+      "php artisan view:clear"
+    ],
+    "demo_seed": "php artisan posmall:seed-wings-of-win --force",
+    "index_rebuild": "php artisan posmall:index --force",
+    "load_benchmark": "php artisan posmall:load-benchmark 300000 --iterations=10 --force --with-images",
+    "image_optimization": "php artisan posmall:images:optimize-catalog --profile=all",
+    "pagespeed_assets": "php artisan posmall:pagespeed:optimize-assets"
+  },
+  "modules": [
+    {
+      "canonical_name": "POSMall Core",
+      "internal_code_name": "KodZero.POSMall",
+      "visibility": "PUBLIC_CODE",
+      "implementation_status": "IMPLEMENTED_AND_TESTED",
+      "developer": "KodZero / Roman Primerov",
+      "primary_dependency": "October CMS / Laravel / PostgreSQL",
+      "capabilities": [
+        "products",
+        "categories",
+        "brands",
+        "properties",
+        "filters",
+        "variants",
+        "variant prices",
+        "stock",
+        "warehouses",
+        "physical products",
+        "virtual products",
+        "downloads",
+        "services",
+        "service options",
+        "custom fields",
+        "carts",
+        "checkout",
+        "orders",
+        "order states",
+        "payments",
+        "Stripe",
+        "PayPal",
+        "Omnipay",
+        "payment links",
+        "shipping",
+        "USA taxes",
+        "discounts",
+        "wishlists",
+        "reviews",
+        "REST API",
+        "GraphQL",
+        "Google Merchant feed",
+        "load benchmark tooling",
+        "image optimization",
+        "PageSpeed asset generation"
+      ],
+      "evidence": [
+        "SOURCE_VERIFIED",
+        "DATABASE_SCHEMA_VERIFIED",
+        "API_VERIFIED",
+        "UI_VERIFIED",
+        "BENCHMARK_VERIFIED"
+      ],
+      "evidence_ids": [
+        "EVID-CORE-0001",
+        "EVID-CORE-0002",
+        "EVID-CORE-0003",
+        "EVID-CORE-0004",
+        "EVID-CORE-0005",
+        "EVID-CORE-0006",
+        "EVID-DASHBOARD-DOCS-0001"
+      ],
+      "public_urls": [
+        "https://github.com/TjoBiZ/POSMall",
+        "https://octobercms.com/plugin/kodzero-posmall",
+        "https://solarneutrino.com/products/posmall"
+      ]
+    },
+    {
+      "canonical_name": "POSMall Theme",
+      "internal_code_name": "kodzero-posmalltheme",
+      "visibility": "PUBLIC_CODE",
+      "implementation_status": "IMPLEMENTED_AND_TESTED",
+      "developer": "KodZero / Roman Primerov",
+      "primary_dependency": "POSMall Core",
+      "capabilities": [
+        "catalog pages",
+        "product pages",
+        "service pages",
+        "cart",
+        "checkout",
+        "account",
+        "payment link",
+        "SEO metadata",
+        "PageSpeed-oriented storefront rendering"
+      ],
+      "evidence": [
+        "SOURCE_VERIFIED",
+        "UI_VERIFIED",
+        "SCREENSHOT_VERIFIED"
+      ],
+      "evidence_ids": [
+        "EVID-THEME-0001",
+        "EVID-THEME-0002"
+      ],
+      "public_urls": [
+        "https://github.com/TjoBiZ/POSMallTheme",
+        "https://octobercms.com/theme/kodzero-posmalltheme"
+      ]
+    },
+    {
+      "canonical_name": "POSMall Pro",
+      "internal_code_name": "KodZero.POSMallPro",
+      "visibility": "PRIVATE_CODE",
+      "implementation_status": "IMPLEMENTED_AND_TESTED",
+      "developer": "KodZero / Roman Primerov",
+      "primary_dependency": "POSMall Core",
+      "optional_dependencies": [
+        "POSMall CRM",
+        "POSMall Affiliate",
+        "POSMall Calendar",
+        "POSMall Domains",
+        "GEO",
+        "VoiceAssistant"
+      ],
+      "capabilities": [
+        "service landings",
+        "dynamic service options",
+        "landing estimates",
+        "order links",
+        "quote calculators",
+        "merchant feed diagnostics",
+        "feed remediation rules",
+        "performance observability",
+        "voice commerce API",
+        "technical load fixtures"
+      ],
+      "evidence": [
+        "SOURCE_VERIFIED",
+        "DATABASE_SCHEMA_VERIFIED",
+        "API_VERIFIED",
+        "UI_VERIFIED",
+        "AUTOMATED_TEST_VERIFIED"
+      ],
+      "evidence_ids": [
+        "EVID-PRO-0001",
+        "EVID-PRO-0002",
+        "EVID-PRO-0003",
+        "EVID-PRO-0004",
+        "EVID-PRO-0005",
+        "EVID-PRO-0006",
+        "EVID-PRO-0007",
+        "EVID-DASHBOARD-DOCS-0002"
+      ]
+    },
+    {
+      "canonical_name": "POSMall CRM",
+      "internal_code_name": "KodZero.POSMallCRM",
+      "visibility": "PRIVATE_CODE",
+      "implementation_status": "IMPLEMENTED_AND_TESTED",
+      "developer": "KodZero / Roman Primerov",
+      "primary_dependency": "POSMall Core",
+      "capabilities": [
+        "contacts",
+        "accounts",
+        "leads",
+        "deals",
+        "pipelines",
+        "stages",
+        "activities",
+        "timeline events",
+        "order links",
+        "abandoned carts",
+        "abandoned forms",
+        "recovery communications",
+        "campaigns",
+        "cashflow",
+        "traffic security",
+        "imports",
+        "SLA hardening"
+      ],
+      "evidence": [
+        "SOURCE_VERIFIED",
+        "DATABASE_SCHEMA_VERIFIED",
+        "UI_VERIFIED",
+        "AUTOMATED_TEST_VERIFIED",
+        "DOCUMENTED_ONLY"
+      ],
+      "evidence_ids": [
+        "EVID-CRM-0001",
+        "EVID-CRM-0002",
+        "EVID-CRM-0005",
+        "EVID-CRM-0006",
+        "EVID-CRM-0007",
+        "EVID-CRM-0008",
+        "EVID-CRM-0009",
+        "EVID-DASHBOARD-DOCS-0003"
+      ]
+    },
+    {
+      "canonical_name": "POSMall Affiliate / Partner Suite",
+      "internal_code_name": "KodZero.POSMallAffiliate",
+      "visibility": "PRIVATE_CODE",
+      "implementation_status": "IMPLEMENTED_AND_TESTED",
+      "developer": "KodZero / Roman Primerov",
+      "primary_dependency": "POSMall Core",
+      "capabilities": [
+        "partner accounts",
+        "referral links",
+        "click tracking",
+        "referrals",
+        "commission records",
+        "payout records",
+        "partner portal",
+        "QR exports",
+        "analytics API",
+        "GraphQL"
+      ],
+      "evidence": [
+        "SOURCE_VERIFIED",
+        "DATABASE_SCHEMA_VERIFIED",
+        "API_VERIFIED",
+        "UI_VERIFIED",
+        "AUTOMATED_TEST_VERIFIED"
+      ],
+      "evidence_ids": [
+        "EVID-AFFILIATE-0001",
+        "EVID-AFFILIATE-0002",
+        "EVID-AFFILIATE-0003",
+        "EVID-AFFILIATE-0004"
+      ]
+    },
+    {
+      "canonical_name": "POSMall Calendar",
+      "internal_code_name": "KodZero.POSMallCalendar",
+      "visibility": "PRIVATE_CODE",
+      "implementation_status": "BETA",
+      "developer": "KodZero / Roman Primerov",
+      "primary_dependency": "POSMall Domains / POSMall Core",
+      "capabilities": [
+        "calendars",
+        "resources",
+        "booking requests",
+        "booking windows",
+        "calendar events",
+        "subscriptions",
+        "booking holds",
+        "customer reminders",
+        "technician reminders",
+        "ICS feeds",
+        "availability API",
+        "technician portal"
+      ],
+      "evidence": [
+        "SOURCE_VERIFIED",
+        "DATABASE_SCHEMA_VERIFIED",
+        "API_VERIFIED",
+        "AUTOMATED_TEST_VERIFIED"
+      ],
+      "evidence_ids": [
+        "EVID-CALENDAR-0001",
+        "EVID-CALENDAR-0002",
+        "EVID-CALENDAR-0003"
+      ],
+      "limitations": [
+        "Uses conventional UTC timestamp columns today.",
+        "Native PostgreSQL range/exclusion constraints not located."
+      ]
+    },
+    {
+      "canonical_name": "POSMall Domains",
+      "internal_code_name": "KodZero.POSMallDomains",
+      "visibility": "PRIVATE_CODE",
+      "implementation_status": "IMPLEMENTED_AND_TESTED",
+      "developer": "KodZero / Roman Primerov",
+      "capabilities": [
+        "domain policies",
+        "site channels",
+        "page policies",
+        "route policies",
+        "portal identities",
+        "portal roles",
+        "admin portal routing",
+        "mobile portal routing"
+      ],
+      "evidence": [
+        "SOURCE_VERIFIED",
+        "DATABASE_SCHEMA_VERIFIED",
+        "API_VERIFIED",
+        "AUTOMATED_TEST_VERIFIED"
+      ],
+      "evidence_ids": [
+        "EVID-DOMAINS-0001"
+      ]
+    },
+    {
+      "canonical_name": "GEO",
+      "internal_code_name": "KodZero.Geo",
+      "visibility": "PRIVATE_CODE",
+      "implementation_status": "BETA",
+      "developer": "KodZero / Roman Primerov",
+      "capabilities": [
+        "geocoding",
+        "technician pings",
+        "customer locations",
+        "latitude/longitude storage",
+        "distance values",
+        "radius rules",
+        "within-radius dispatch matches",
+        "GraphQL API"
+      ],
+      "evidence": [
+        "SOURCE_VERIFIED",
+        "DATABASE_SCHEMA_VERIFIED",
+        "API_VERIFIED",
+        "AUTOMATED_TEST_VERIFIED"
+      ],
+      "evidence_ids": [
+        "EVID-GEO-0001",
+        "EVID-GEO-0002"
+      ],
+      "limitations": [
+        "Location-aware through application-level coordinates.",
+        "PostGIS-powered storage not found in current migrations."
+      ]
+    },
+    {
+      "canonical_name": "AI Assistant / VoiceAssistant",
+      "internal_code_name": "KodZero.VoiceAssistant",
+      "visibility": "PRIVATE_CODE",
+      "implementation_status": "BETA",
+      "developer": "KodZero / Roman Primerov",
+      "capabilities": [
+        "runtime config",
+        "GraphQL runtime API",
+        "calls",
+        "documentation",
+        "change logs",
+        "location logs",
+        "scheduled pruning",
+        "voice-commerce-ready integration"
+      ],
+      "evidence": [
+        "SOURCE_VERIFIED",
+        "DATABASE_SCHEMA_VERIFIED",
+        "API_VERIFIED",
+        "AUTOMATED_TEST_VERIFIED"
+      ],
+      "evidence_ids": [
+        "EVID-VOICE-0001",
+        "EVID-DASHBOARD-DOCS-0004"
+      ]
+    },
+    {
+      "canonical_name": "Sitemap",
+      "internal_code_name": "KodZero.Sitemap",
+      "visibility": "PRIVATE_CODE",
+      "implementation_status": "IMPLEMENTED_AND_TESTED",
+      "developer": "KodZero / Roman Primerov",
+      "capabilities": [
+        "dynamic XML sitemap",
+        "robots.txt",
+        "public CMS URLs",
+        "blog URLs",
+        "POSMall URLs",
+        "POSMall Pro URLs",
+        "sitemap audit command",
+        "static sitemap publishing"
+      ],
+      "evidence": [
+        "SOURCE_VERIFIED",
+        "AUTOMATED_TEST_VERIFIED"
+      ],
+      "evidence_ids": [
+        "EVID-SITEMAP-0001"
+      ]
+    }
+  ],
+  "dependency_graph": {
+    "POSMall Core": [
+      "PostgreSQL",
+      "October CMS",
+      "Laravel",
+      "RainLab User",
+      "RainLab Location",
+      "Omnipay"
+    ],
+    "POSMall Theme": [
+      "POSMall Core"
+    ],
+    "POSMall Pro": [
+      "POSMall Core",
+      "POSMall CRM",
+      "POSMall Affiliate",
+      "POSMall Calendar",
+      "POSMall Domains",
+      "GEO"
+    ],
+    "POSMall CRM": [
+      "POSMall Core"
+    ],
+    "POSMall Affiliate / Partner Suite": [
+      "POSMall Core"
+    ],
+    "POSMall Calendar": [
+      "POSMall Domains"
+    ],
+    "GEO": [
+      "POSMall Calendar",
+      "POSMall Domains",
+      "POSMall Pro"
+    ],
+    "AI Assistant / VoiceAssistant": [
+      "POSMall Pro",
+      "GEO"
+    ],
+    "Sitemap": [
+      "POSMall Core",
+      "POSMall Pro"
+    ]
+  },
+  "public_urls": [
+    "https://solarneutrino.com/knowledge/posmall-complete-technical-dossier.md",
+    "https://solarneutrino.com/knowledge/posmall-capabilities.json",
+    "https://solarneutrino.com/october-laravel-products",
+    "https://solarneutrino.com/benchmarks/posmall",
+    "https://solarneutrino.com/products/posmall",
+    "https://solarneutrino.com/products/posmall/us-tax-automation",
+    "https://github.com/TjoBiZ/POSMall",
+    "https://github.com/TjoBiZ/POSMallTheme",
+    "https://octobercms.com/plugin/kodzero-posmall",
+    "https://octobercms.com/theme/kodzero-posmalltheme"
+  ],
+  "claim_boundaries": [
+    "No independent benchmark certification is claimed.",
+    "No universal PostgreSQL-faster-than-MySQL claim is made.",
+    "PostGIS is an extension and is not verified as current POSMall storage.",
+    "Calendar uses conventional UTC timestamp columns today.",
+    "Private code is summarized at capability level and remains private.",
+    "Fully autonomous AI agent operation is not claimed for every POSMall deployment."
+  ]
+}
