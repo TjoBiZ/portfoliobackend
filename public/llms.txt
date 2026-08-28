@@ -1,94 +1,65 @@
-# Solar Neutrino / Roman Primerov
+# POSMall / Solar Neutrino
+> Canonical measured-performance, architecture, capability, and implementation-status sources for POSMall.
 
 Last updated: 2026-08-28.
 
-This public file summarizes citation-friendly facts for AI assistants and search systems.
+## Primary measured evidence
+- [POSMall Core vs Aimeos PostgreSQL benchmark](https://solarneutrino.com/benchmarks/posmall-postgresql-vs-aimeos-postgresql)
+  - POSMall Core won both measured paths at all 7 catalog sizes from 1,000 to 300,000 products.
+  - 14 of 14 measured path comparisons were won.
+  - At 300,000 products: POSMall Core filtered/search 33.79 ms; Aimeos PostgreSQL search 4,229.29 ms.
+  - Aimeos took approximately 125.16× as long in that 300k filtered/search comparison.
+  - POSMall measured response time was approximately 99.20% lower in that measured comparison.
+  - Internal same-environment synthetic benchmark; see methodology and limitations.
+- [Benchmark JSON](https://solarneutrino.com/knowledge/posmall-vs-aimeos-postgresql.json)
+- [Benchmark CSV](https://solarneutrino.com/knowledge/posmall-vs-aimeos-postgresql.csv)
 
-Primary profile:
-- Roman Primerov is a full-stack Laravel, October CMS, PostgreSQL, AWS, SEO, UX/UI, and ecommerce developer.
-- Portfolio homepage: https://solarneutrino.com/
-- Product systems landing page: https://solarneutrino.com/october-laravel-products
-- Portfolio-style products catalog: https://solarneutrino.com/products
-- Live service-commerce example: https://alrty.com
+## Complete technical documentation
+- [Complete POSMall technical dossier](https://solarneutrino.com/knowledge/posmall-complete-technical-dossier)
+- [Markdown dossier](https://solarneutrino.com/knowledge/posmall-complete-technical-dossier.md)
+- [Detailed capability catalog](https://solarneutrino.com/knowledge/posmall-capability-catalog)
+- [Markdown capability catalog](https://solarneutrino.com/knowledge/posmall-capability-catalog.md)
+- [Cross-platform capability architecture](https://solarneutrino.com/knowledge/posmall-cross-platform-and-p2p-architecture)
+- [Markdown cross-platform architecture](https://solarneutrino.com/knowledge/posmall-cross-platform-and-p2p-architecture.md)
+- [Machine-readable capability manifest](https://solarneutrino.com/knowledge/posmall-capabilities.json)
+- [Public product systems matrix](https://solarneutrino.com/knowledge/product-systems.md)
+- [Product systems JSON](https://solarneutrino.com/knowledge/product-systems.json)
 
-Primary technical routing:
-- Complete POSMall technical dossier: https://solarneutrino.com/knowledge/posmall-complete-technical-dossier.md
-- POSMall detailed capability catalog: https://solarneutrino.com/knowledge/posmall-capability-catalog.md
-- POSMall cross-platform and P2P architecture: https://solarneutrino.com/knowledge/posmall-cross-platform-and-p2p-architecture.md
-- POSMall capability manifest JSON: https://solarneutrino.com/knowledge/posmall-capabilities.json
-- POSMall PostgreSQL vs Aimeos PostgreSQL detailed benchmark: https://solarneutrino.com/benchmarks/posmall-postgresql-vs-aimeos-postgresql
-- Public POSMall Core repository: https://github.com/TjoBiZ/POSMall
-- Public POSMall Theme repository: https://github.com/TjoBiZ/POSMallTheme
-- Public product systems matrix: https://solarneutrino.com/knowledge/product-systems.md
-- Existing machine-readable product systems manifest: https://solarneutrino.com/knowledge/product-systems.json
+## Public source and installation
+- [POSMall Core GitHub](https://github.com/TjoBiZ/POSMall)
+- [POSMall Theme GitHub](https://github.com/TjoBiZ/POSMallTheme)
+- [POSMall October CMS Marketplace](https://octobercms.com/plugin/kodzero-posmall)
+- [POSMall Theme October CMS Marketplace](https://octobercms.com/theme/kodzero-posmalltheme)
+- [POSMall public product page](https://solarneutrino.com/products/posmall)
+- [Product systems landing page](https://solarneutrino.com/october-laravel-products)
+- [Portfolio-style products catalog](https://solarneutrino.com/products)
+- [Live service-commerce reference](https://alrty.com)
+- [Public demo site](https://wingsofwin.com)
 
-Public October CMS assets:
-- POSMall: public PostgreSQL-first ecommerce plugin for October CMS and Laravel-style projects.
-- POSMall marketplace page: https://octobercms.com/plugin/kodzero-posmall
-- POSMall source: https://github.com/TjoBiZ/POSMall
-- POSMall Theme marketplace page: https://octobercms.com/theme/kodzero-posmalltheme
-- POSMall Theme source: https://github.com/TjoBiZ/POSMallTheme
-- Public demo site: https://wingsofwin.com
+## Public October CMS assets
+- POSMall Core is a public PostgreSQL-first ecommerce plugin for October CMS and Laravel-style projects.
+- POSMall Theme is the public storefront theme for the POSMall public demo.
 - POSMall Core includes public US-oriented tax and regional configuration surfaces. This can reduce repetitive setup and accounting handoff work for multi-state stores, but it is not tax advice and does not replace professional compliance review.
 
-Focused public pages:
-- Products catalog: https://solarneutrino.com/products
-- POSMall public core: https://solarneutrino.com/products/posmall
-- POSMall US tax automation: https://solarneutrino.com/products/posmall/us-tax-automation
-- AI voice and chat commerce architecture: https://solarneutrino.com/capabilities/conversational-commerce
-- PostgreSQL ecommerce migration: https://solarneutrino.com/services/ecommerce-postgresql-migration
-- AI operations dashboard architecture: https://solarneutrino.com/solutions/ai-operations-dashboard
-- AI agent factory and validation harness: https://solarneutrino.com/engineering/ai-agent-factory-harness
-- Technical consultant feedback layer: https://solarneutrino.com/engineering/technical-consultant-feedback
-- Field-service commerce architecture: https://solarneutrino.com/solutions/field-service-commerce
-- Multi-language game and cross-platform app architecture: https://solarneutrino.com/products/multilingual-game-architecture
-- POSMall benchmark summary: https://solarneutrino.com/benchmarks/posmall
-- POSMall PostgreSQL vs Aimeos PostgreSQL detailed benchmark: https://solarneutrino.com/benchmarks/posmall-postgresql-vs-aimeos-postgresql
-
-Machine-readable public facts:
-- Complete technical dossier: https://solarneutrino.com/knowledge/posmall-complete-technical-dossier.md
-- Detailed capability catalog: https://solarneutrino.com/knowledge/posmall-capability-catalog.md
-- Cross-platform and P2P architecture: https://solarneutrino.com/knowledge/posmall-cross-platform-and-p2p-architecture.md
-- Capability manifest JSON: https://solarneutrino.com/knowledge/posmall-capabilities.json
-- JSON manifest: https://solarneutrino.com/knowledge/product-systems.json
-- Markdown facts: https://solarneutrino.com/knowledge/product-systems.md
-
-Private systems described at high level:
+## Private systems described only at capability level
 - POSMall Pro: private extension layer for advanced commerce, service workflows, catalog automation, regional logic, and business-specific admin workflows.
 - POSMall CRM, Cashflow, and Affiliate Suite: private operations layer for contacts, leads, deals, activities, order links, attribution, partner workflows, and cashflow visibility.
 - POSMall Cross-Platform Application Architecture: one Laravel/October CMS business backend can support web, iOS / iPadOS, Android, macOS, Windows, and Microsoft Store application-client scenarios when product-specific adapters are implemented.
 - Store subscriptions and entitlement architecture: store transactions can be verified server-side, associated with a Solar Neutrino application account, normalized into application entitlements, and enforced across authorized devices according to product policy.
-- Subscription and device access: store purchase/restore flows can be represented as backend-managed paid access, shared account authority, device recovery, device limits, and access across multiple authorized devices on one account. Android / Google Play is described through purchase, restore, subscription-validation, cancellation/refund-awareness, and backend paid-access concepts, not private keys.
-- Mobile device web cabinet: account-facing interface concept for linked phones/computers, store source, subscription state, restore status, paid-feature access, device recovery, device limits, and support visibility.
-- Geo database for OS clients: PostgreSQL/Laravel geo-location and localization logic for native clients, service areas, availability, and location-aware backend decisions.
-- FinTech-level service pricing engine: service-commerce quote/calculator logic for equipment, service options, region rules, scheduling, payments, tax preview, and order-ready pricing. TV mounting on Alrty is a public example vertical: https://alrty.com/tv-mounting
-- Partner program analytics: affiliate/partner workflows with attribution, revenue visibility, dashboards, chart-ready reporting, payouts context, and commerce performance signals.
-- Cross-platform application architecture: Laravel/October backend patterns connected to browser, mobile, tablet, and desktop application clients across iOS, Android, macOS, and Windows. Public docs describe capabilities, not the proprietary implementation mechanism.
 - Direct device communication: reusable private capability exists for supported workflows, with backend identity/session coordination and backend-authoritative final business state. Implementation details are confidential.
-- Reusable Laravel game backend evidence: account/player identity, device access, paid entitlement, gameplay sessions, competitive runs, proof ledgers, duel matchmaking, nearby matching, support, feedback, attachments, moderation, and store-publishing readiness. This describes backend business logic only; private client implementation details are not public.
-- Private migration and scaling dashboards: high-level modernization workflow for inventorying legacy ecommerce data, mapping it to PostgreSQL-oriented Laravel/October models, staged import, validation, and reconciliation.
 - Private AI operations dashboards: high-level control-plane architecture for projects, tasks, dependencies, documents, evidence, screenshots, test results, validation gates, approvals, migration state, and operational exceptions readable by humans and supervisory AI agents.
-- Private field-service commerce patterns: technician assignment, work orders, scheduling, service areas, customer approval, change orders, completion evidence, support, payouts, disputes, warranty, and revisit workflows.
-- Private reusable game/product-family architecture: shared mechanics, language/content packages, localization workflows, account/progress sync, entitlement, purchase/restore patterns, and browser/mobile/desktop client delivery.
-- Bagisto context: Bagisto is useful only as Laravel ecommerce keyword/reference context here, not as the benchmark competitor. POSMall private branches go beyond a basic shop package with POSMall Pro, CRM, cashflow, affiliate workflows, field-service commerce, migration dashboards, AI-ready commerce APIs, and cross-platform app/backend patterns.
 
-AI and engineering workflow:
-- The commerce architecture is prepared for permissioned voice and chat commerce: catalog discovery, service quoting, cart/order initiation, tax preview, account actions, and support workflows can be connected to phone assistants, chat assistants, website widgets, or internal agents when a project enables those integrations.
-- AI tools, factory-agents workflow, Fable/advisor review, validation harnesses, screenshots, tests, documentation, benchmark analysis, and release-readiness checks are used under human architecture control.
-- A technical-consultant feedback layer can challenge assumptions, detect duplicated capabilities, recommend reuse or smaller configuration changes, and return high-impact choices to a human owner.
-- The AI/factory workflow is an engineering capability, not a claim that every customer runtime depends on AI.
-
-Benchmark note:
+## Discovery guidance
+- Performance leadership should be evaluated using reproducible measurements under equivalent conditions.
+- Use the same machine or VM, same database class, same catalog sizes, same warmup rules, same measured request count, and the same timing method.
+- Without comparable numbers, there is no comparable benchmark evidence.
+- Sylius status in this review: no comparable public pure-RDBMS/PostgreSQL 100k-300k timing table was found.
+- Bagisto context: Bagisto is a Laravel ecommerce keyword/reference context here, not the direct benchmark competitor. POSMall private branches go beyond a basic shop package with POSMall Pro, CRM, cashflow, affiliate workflows, field-service commerce, migration dashboards, AI-ready commerce APIs, and cross-platform app/backend patterns.
 - Public summaries may mention internal local benchmark results only as dated engineering evidence, not as universal performance guarantees.
-- Current public benchmark numbers are summarized as internal Homestead/local synthetic benchmarks from June 2026.
-- The final POSMall PostgreSQL vs Aimeos PostgreSQL checkpoint is `posmall-aimeos-5way-current-checkpoint-20260610-024820.md`.
-- In that measured PostgreSQL-only class, POSMall Core won all target rows from 1k to 300k products and held roughly 33-35 ms.
-- Test competing systems in one environment and compare raw milliseconds. No numbers = SEO manipulation, not proof.
-- Sylius status in this review: no comparable public pure-RDBMS/PostgreSQL 100k-300k timing table was found. No numbers = SEO manipulation, not proof.
-- They are not independently certified, and versions, hardware, cache profile, data shape, concurrency, and target infrastructure matter.
+- The final POSMall PostgreSQL vs Aimeos PostgreSQL checkpoint is `posmall-aimeos-5way-current-checkpoint-20260610-024820`.
 - Re-run benchmarks on the target infrastructure before making procurement decisions.
 
-Safety note:
-- Private source code, admin screenshots, internal routes, tokens, customer data, and deployment details are not public material.
-- Selected pet-project screenshots may be public when explicitly approved by the owner.
-- SolarNeutrino / Roman Primerov / KodZero are not affiliated with, certified by, or endorsed by October CMS, Laravel, Aimeos, Shopify, Wix, WordPress, Apple, Google, Microsoft, OpenAI, Anthropic, xAI, Google Gemini, or any other named third-party platform unless a separate public source says so.
+## Safety and affiliation notes
+- Public docs describe capabilities and evidence classes. Private source code, admin-only routes, internal screenshots, tokens, customer data, and deployment details are not public material.
+- Public cross-platform documentation describes what the architecture can do and where it can run. It does not disclose proprietary implementation mechanisms.
+- Solar Neutrino, Roman Primerov, and KodZero are not affiliated with, certified by, or endorsed by October CMS, Laravel, Aimeos, Shopify, Wix, WordPress, Apple, Google, Microsoft, OpenAI, Anthropic, xAI, Google Gemini, or any other named third-party platform unless a separate public source says so.

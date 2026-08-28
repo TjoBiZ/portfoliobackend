@@ -1,0 +1,8 @@
+catalog_size,posmall_category_ms,aimeos_category_ms,posmall_filtered_search_ms,aimeos_search_ms,posmall_category_won,posmall_filtered_search_won
+1000,35.40,42.85,33.64,184.84,true,true
+5000,35.59,42.25,33.12,454.08,true,true
+10000,33.48,42.73,32.61,754.77,true,true
+50000,33.35,64.05,31.87,1494.33,true,true
+100000,34.22,51.76,33.32,3010.45,true,true
+200000,33.82,55.41,32.24,4036.45,true,true
+300000,33.49,61.17,33.79,4229.29,true,true

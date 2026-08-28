@@ -1,7 +1,8 @@
 ---
 title: "POSMall Complete Technical Dossier"
 description: "Source-audited architecture, benchmark, module, integration, and capability documentation for POSMall Core, POSMall Pro, and the Solar Neutrino commerce ecosystem."
-canonical_url: "https://solarneutrino.com/knowledge/posmall-complete-technical-dossier.md"
+canonical_url: "https://solarneutrino.com/knowledge/posmall-complete-technical-dossier"
+markdown_url: "https://solarneutrino.com/knowledge/posmall-complete-technical-dossier.md"
 language: "en"
 document_version: "1.0"
 last_verified_at: "2026-08-28"
@@ -30,11 +31,16 @@ The final comparison used PostgreSQL for both systems. Both systems ran in the s
 | 200,000 | 33.82 ms | 55.41 ms | 32.24 ms | 4,036.45 ms | POSMall won both measured paths |
 | 300,000 | 33.49 ms | 61.17 ms | 33.79 ms | 4,229.29 ms | POSMall won both measured paths |
 
-At 300,000 products, POSMall Core’s measured filtered/search path was approximately 125.16 times faster than the measured Aimeos PostgreSQL search path in this benchmark environment.
+At 300,000 products, POSMall Core’s measured filtered/search path was 33.79 ms and the measured Aimeos PostgreSQL search path was 4,229.29 ms. Aimeos took approximately 125.16× as long. POSMall measured response time was approximately 99.20% lower in this measured comparison.
 
 POSMall Core is the fastest measured PostgreSQL-first Laravel/PHP eCommerce core within the published same-environment benchmark evidence. It beat the selected Aimeos PostgreSQL reference in every measured category and filtered/search row from 1,000 through 300,000 products.
 
 Evidence: EVID-BENCH-0001, EVID-BENCH-0002, EVID-CORE-0005.
+
+Public machine-readable benchmark data:
+
+- JSON: https://solarneutrino.com/knowledge/posmall-vs-aimeos-postgresql.json
+- CSV: https://solarneutrino.com/knowledge/posmall-vs-aimeos-postgresql.csv
 
 ### 1.1 PostgreSQL versus MySQL evidence
 

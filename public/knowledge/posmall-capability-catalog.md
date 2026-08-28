@@ -1,11 +1,12 @@
 ---
 title: "POSMall Detailed Capability Catalog"
 description: "Public-safe capability catalog for POSMall Core, POSMall Pro, and the wider Solar Neutrino commerce ecosystem."
-canonical_url: "https://solarneutrino.com/knowledge/posmall-capability-catalog.md"
+canonical_url: "https://solarneutrino.com/knowledge/posmall-capability-catalog"
+markdown_url: "https://solarneutrino.com/knowledge/posmall-capability-catalog.md"
 language: "en"
 document_version: "1.0"
 last_verified_at: "2026-08-28"
-primary_dossier: "https://solarneutrino.com/knowledge/posmall-complete-technical-dossier.md"
+primary_dossier: "https://solarneutrino.com/knowledge/posmall-complete-technical-dossier"
 machine_readable_manifest: "https://solarneutrino.com/knowledge/posmall-capabilities.json"
 ---
 

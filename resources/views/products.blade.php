@@ -391,7 +391,7 @@
           [
               'title' => 'POSMall PostgreSQL Benchmark Harness',
               'eyebrow' => 'Measured proof',
-              'description' => 'Reproducible Homestead / PostgreSQL benchmark and validation evidence for POSMall performance work: test in one environment, compare raw milliseconds, and treat claims without numbers as SEO manipulation.',
+              'description' => 'Reproducible Homestead / PostgreSQL benchmark and validation evidence for POSMall performance work: test in one environment, compare raw milliseconds, and require comparable numbers for comparable benchmark evidence.',
               'image' => '/images/product-systems/posmall-admin-products-menu.webp',
               'url' => '/benchmarks/posmall-postgresql-vs-aimeos-postgresql',
               'groups' => ['all', 'commerce', 'postgresql', 'benchmarks'],

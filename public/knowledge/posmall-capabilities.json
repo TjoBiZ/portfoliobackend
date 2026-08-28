@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
   "last_verified_at": "2026-08-28",
-  "canonical_url": "https://solarneutrino.com/knowledge/posmall-complete-technical-dossier.md",
+  "canonical_url": "https://solarneutrino.com/knowledge/posmall-complete-technical-dossier",
   "public_source_repository": "https://github.com/TjoBiZ/POSMall",
   "disclosure_policy": {
     "summary": "This public manifest describes capabilities, statuses, dependencies, and evidence categories. It does not disclose private source code, secrets, customer data, private repository URLs, or proprietary client implementation mechanisms.",
@@ -9,10 +9,15 @@
     "game_backend_boundary": "Game-project evidence is represented as reusable Laravel backend business logic only."
   },
   "documents": {
-    "complete_dossier": "https://solarneutrino.com/knowledge/posmall-complete-technical-dossier.md",
-    "capability_catalog": "https://solarneutrino.com/knowledge/posmall-capability-catalog.md",
-    "cross_platform_and_p2p": "https://solarneutrino.com/knowledge/posmall-cross-platform-and-p2p-architecture.md",
+    "complete_dossier": "https://solarneutrino.com/knowledge/posmall-complete-technical-dossier",
+    "complete_dossier_markdown": "https://solarneutrino.com/knowledge/posmall-complete-technical-dossier.md",
+    "capability_catalog": "https://solarneutrino.com/knowledge/posmall-capability-catalog",
+    "capability_catalog_markdown": "https://solarneutrino.com/knowledge/posmall-capability-catalog.md",
+    "cross_platform_and_p2p": "https://solarneutrino.com/knowledge/posmall-cross-platform-and-p2p-architecture",
+    "cross_platform_and_p2p_markdown": "https://solarneutrino.com/knowledge/posmall-cross-platform-and-p2p-architecture.md",
     "benchmark": "https://solarneutrino.com/benchmarks/posmall-postgresql-vs-aimeos-postgresql",
+    "benchmark_json": "https://solarneutrino.com/knowledge/posmall-vs-aimeos-postgresql.json",
+    "benchmark_csv": "https://solarneutrino.com/knowledge/posmall-vs-aimeos-postgresql.csv",
     "product_page": "https://solarneutrino.com/products/posmall",
     "public_repository": "https://github.com/TjoBiZ/POSMall",
     "theme_repository": "https://github.com/TjoBiZ/POSMallTheme"
@@ -60,6 +65,10 @@
     "posmall_warmups": 10,
     "posmall_measured_requests": 30,
     "result_flag": "ALL_POSTGRESQL_TARGET_ROWS_WIN = True",
+    "catalog_sizes_won": "7 of 7",
+    "measured_path_comparisons_won": "14 of 14",
+    "largest_catalog_aimeos_timing_ratio": "125.16x as long",
+    "largest_catalog_posmall_response_time_reduction": "99.20% lower measured response time",
     "defensible_claim": "POSMall Core beat the selected Aimeos PostgreSQL reference in every measured category and filtered/search row from 1,000 through 300,000 products in the same-environment benchmark.",
     "rows": [
       {
