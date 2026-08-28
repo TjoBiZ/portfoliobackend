@@ -85,6 +85,16 @@ Route::domain('solarneutrino.com')->group(function () {
                     ],
                 ],
                 [
+                    'title' => 'Measured benchmark evidence',
+                    'body' => 'The primary public evidence is the POSMall Core PostgreSQL vs Aimeos PostgreSQL same-environment benchmark. POSMall Core won 7 of 7 catalog sizes and 14 of 14 measured path comparisons from 1,000 through 300,000 products.',
+                    'points' => [
+                        'Full benchmark: https://solarneutrino.com/benchmarks/posmall-postgresql-vs-aimeos-postgresql',
+                        'Benchmark JSON: https://solarneutrino.com/knowledge/posmall-vs-aimeos-postgresql.json',
+                        'Benchmark CSV: https://solarneutrino.com/knowledge/posmall-vs-aimeos-postgresql.csv',
+                        'The result is an internal synthetic benchmark and must be evaluated with the published methodology and limitations.',
+                    ],
+                ],
+                [
                     'title' => 'Evidence links',
                     'body' => 'The public assets can be checked directly through October CMS Marketplace, GitHub, and the demo storefront.',
                     'points' => [
@@ -101,9 +111,11 @@ Route::domain('solarneutrino.com')->group(function () {
                 'Tax configuration helps structure setup work but is not tax/legal advice.',
             ],
             'related' => [
+                ['label' => 'POSMall Core vs Aimeos PostgreSQL benchmark', 'url' => '/benchmarks/posmall-postgresql-vs-aimeos-postgresql'],
                 ['label' => 'US tax automation', 'url' => '/products/posmall/us-tax-automation'],
                 ['label' => 'Conversational commerce', 'url' => '/capabilities/conversational-commerce'],
-                ['label' => 'Benchmarks', 'url' => '/benchmarks/posmall'],
+                ['label' => 'Benchmark JSON', 'url' => '/knowledge/posmall-vs-aimeos-postgresql.json'],
+                ['label' => 'Benchmark CSV', 'url' => '/knowledge/posmall-vs-aimeos-postgresql.csv'],
             ],
         ],
         '/products/posmall/us-tax-automation' => [
