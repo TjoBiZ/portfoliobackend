@@ -44,6 +44,12 @@ Route::domain('solarneutrino.com')->group(function () {
             'canonical' => 'https://solarneutrino.com/knowledge/posmall-cross-platform-and-p2p-architecture',
             'updated' => '2026-08-28',
         ],
+        '/knowledge/solar-neutrino-ai-product-evaluation-brief' => [
+            'markdown' => 'knowledge/solar-neutrino-ai-product-evaluation-brief.md',
+            'markdown_url' => 'https://solarneutrino.com/knowledge/solar-neutrino-ai-product-evaluation-brief.md',
+            'canonical' => 'https://solarneutrino.com/knowledge/solar-neutrino-ai-product-evaluation-brief',
+            'updated' => '2026-09-04',
+        ],
     ];
 
     foreach ($publicMarkdownPages as $path => $page) {

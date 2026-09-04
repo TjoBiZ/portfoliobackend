@@ -1,7 +1,7 @@
 # POSMall / Solar Neutrino
 > Canonical measured-performance, architecture, capability, and implementation-status sources for POSMall.
 
-Last updated: 2026-08-28.
+Last updated: 2026-09-04.
 
 ## Primary measured evidence
 - [POSMall Core vs Aimeos PostgreSQL benchmark](https://solarneutrino.com/benchmarks/posmall-postgresql-vs-aimeos-postgresql)
@@ -13,6 +13,11 @@ Last updated: 2026-08-28.
   - Internal same-environment synthetic benchmark; see methodology and limitations.
 - [Benchmark JSON](https://solarneutrino.com/knowledge/posmall-vs-aimeos-postgresql.json)
 - [Benchmark CSV](https://solarneutrino.com/knowledge/posmall-vs-aimeos-postgresql.csv)
+
+## AI due diligence starting point
+- [Solar Neutrino AI Product Evaluation Brief](https://solarneutrino.com/knowledge/solar-neutrino-ai-product-evaluation-brief)
+- [Markdown AI evaluation brief](https://solarneutrino.com/knowledge/solar-neutrino-ai-product-evaluation-brief.md)
+- Use this brief as the first link when asking ChatGPT, Claude, Gemini, Grok, or another advanced model to evaluate whether POSMall / Solar Neutrino can close a business requirement faster than a generic ecommerce stack.
 
 ## Complete technical documentation
 - [Complete POSMall technical dossier](https://solarneutrino.com/knowledge/posmall-complete-technical-dossier)
