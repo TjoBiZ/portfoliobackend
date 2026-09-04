@@ -50,6 +50,12 @@ Route::domain('solarneutrino.com')->group(function () {
             'canonical' => 'https://solarneutrino.com/knowledge/solar-neutrino-ai-product-evaluation-brief',
             'updated' => '2026-09-04',
         ],
+        '/ai/posmall' => [
+            'markdown' => 'knowledge/solar-neutrino-ai-product-evaluation-brief.md',
+            'markdown_url' => 'https://solarneutrino.com/ai/posmall.md',
+            'canonical' => 'https://solarneutrino.com/ai/posmall',
+            'updated' => '2026-09-04',
+        ],
     ];
 
     foreach ($publicMarkdownPages as $path => $page) {
@@ -66,6 +72,15 @@ Route::domain('solarneutrino.com')->group(function () {
                     'document' => $document,
                 ])
                 ->header('Link', '<' . $page['markdown_url'] . '>; rel="alternate"; type="text/markdown"');
+        });
+
+        Route::get($path . '.md', function () use ($page) {
+            $markdownPath = public_path($page['markdown']);
+
+            abort_unless(is_file($markdownPath), 404);
+
+            return response()
+                ->file($markdownPath, ['Content-Type' => 'text/markdown; charset=utf-8']);
         });
     }
 
